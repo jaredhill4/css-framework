@@ -1,0 +1,180 @@
+// --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$button-border-radius: .25rem;
+$button-border-width: 1px;
+$button-focus-box-shadow: 0 0 0 2px rgba(#0275d8, .5);
+$button-font-size: 1rem;
+$button-font-weight: 400;
+$button-line-height: 1.25;
+$button-padding-x: 1rem;
+$button-padding-y: .5rem;
+$button-transition: all .2s ease-in-out;
+
+// --------------------------------------------------
+// mixins
+// --------------------------------------------------
+
+@mixin button-variant($background, $border, $color) {
+  $hover-background: tint($background, 10%);
+  $hover-border: tint($border, 10%);
+  $hover-color: $color;
+  $active-background: shade($background, 10%);
+  $active-border: shade($border, 10%);
+  $active-color: $color;
+
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  &:hover, &.btn--hover {
+    background-color: $hover-background;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+
+  &:active, &.btn--active {
+    background-color: $active-background;
+    border-color: $active-border;
+    color: $active-color;
+  }
+
+  &.btn--outline {
+    $background-outline: transparent;
+    $border-outline: $background;
+    $color-outline: $background;
+    $hover-outline-background: $background;
+    $hover-outline-border: $border;
+    $hover-outline-color: #fff;
+    $active-outline-background: shade($hover-outline-background, 10%);
+    $active-outline-border: shade($hover-outline-border, 10%);
+    $active-outline-color: #fff;
+
+    background-color: $background-outline;
+    border-color: $border-outline;
+    color: $color-outline;
+
+    &:hover, &.btn--hover {
+      background-color: $hover-outline-background;
+      border-color: $hover-outline-border;
+      color: #fff;
+    }
+
+    &:active, &.btn--active {
+      background-color: $active-outline-background;
+      border-color: $active-outline-border;
+      color: #fff;
+    }
+  }
+}
+
+// --------------------------------------------------
+// base styles
+// --------------------------------------------------
+
+.btn {
+  border-style: solid;
+  border-width: $button-border-width;
+  border-radius: $button-border-radius;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  padding: $button-padding-y $button-padding-x;
+  text-align: center;
+  text-decoration: none;
+  transition: $button-transition;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover, &.btn--hover {
+    text-decoration: none;
+  }
+
+  &:focus, &.btn--focus {
+    outline: 0;
+    box-shadow: $button-focus-box-shadow;
+    text-decoration: none;
+  }
+
+  &:disabled, &.btn--disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: .65;
+  }
+
+  &:active, &.btn--active {
+    background-image: none;
+    box-shadow: none;
+  }
+}
+
+// prevent clicking of disabled `<a>` elements
+a.btn.btn--disabled, fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+// --------------------------------------------------
+// variants
+// --------------------------------------------------
+
+.btn {
+  @include button-variant(#bcbcbc, #bcbcbc, #292b2c);
+}
+
+.btn--red {
+  @include button-variant(#c9302c, #c9302c, #fff);
+}
+
+.btn--green {
+  @include button-variant(#449d44, #449d44, #fff);
+}
+
+.btn--blue {
+  @include button-variant(#0275d8, #0275d8, #fff);
+}
+
+// --------------------------------------------------
+// styles
+// --------------------------------------------------
+
+.btn--round {
+  border-radius: 4rem;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+// --------------------------------------------------
+// sizes
+// --------------------------------------------------
+
+.btn--xs {
+  font-size: $button-font-size * .75;
+  padding: $button-padding-y / 2 $button-padding-x / 2;
+}
+
+.btn--sm {
+  font-size: $button-font-size * .875;
+  padding: $button-padding-y / 1.5 $button-padding-x / 1.5;
+}
+
+.btn--md {
+  padding: $button-padding-y $button-padding-x;
+}
+
+.btn--lg {
+  font-size: $button-font-size * 1.25;
+  padding: $button-padding-y * 1.5 $button-padding-x * 1.5;
+}
+
+.btn--xlg {
+  font-size: $button-font-size * 1.5;
+  padding: $button-padding-y * 2 $button-padding-x * 2;
+}

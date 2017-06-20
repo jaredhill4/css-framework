@@ -1,0 +1,59 @@
+/*
+ * Reflex is a flexbox grid which provides a way to take advantage of emerging
+ * flexbox support while providing a fall back to inline-block on older browsers.
+ *
+ * All Reflex variables can be found in `node_modules/reflex-grid/scss/reflex/_variables.scss`
+ *
+ * Documentation: http://leejordan.github.io/reflex/docs/index.html
+ */
+
+// --------------------------------------------------
+// reflex variables
+// --------------------------------------------------
+
+$reflex-xs: 480px;
+$reflex-sm: 768px;
+$reflex-md: 992px;
+$reflex-lg: 1200px;
+$reflex-xlg: 1600px;
+
+$reflex-grid-spacing: 20px 20px;
+$reflex-cell-spacing: 20px;
+
+// --------------------------------------------------
+// reflex library
+// --------------------------------------------------
+
+@import "~reflex-grid/scss/reflex.scss";
+
+// --------------------------------------------------
+// container
+// --------------------------------------------------
+
+[class*="container"] {
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $reflex-lg;
+}
+
+.container--xs {
+  max-width: $reflex-xs;
+}
+
+.container--sm {
+  max-width: $reflex-sm;
+}
+
+.container--md {
+  max-width: $reflex-md;
+}
+
+.container--lg {
+  max-width: $reflex-lg;
+}
+
+.container--xlg {
+  max-width: $reflex-xlg;
+}

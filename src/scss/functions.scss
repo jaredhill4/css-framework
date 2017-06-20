@@ -1,0 +1,25 @@
+/*
+ * Functions are very similar to mixins but instead of outputting lines
+ * of sass, functions return a value.
+ *
+ * Defining a function: `@function my-function($arg1, $arg2) { @return $arg1 + $arg2; }`
+ * Using a function: `padding: my-function(10px, 20px);`
+ *
+ * Documentation: http://thesassway.com/advanced/pure-sass-functions
+ */
+
+// Tint
+// ---------------
+// Mix a color with white. The greater the percentage,
+// the closer the new color will be to white.
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+
+// Shade
+// ---------------
+// Mix a color with black. The greater the percentage,
+// the closer the new color will be to black.
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}

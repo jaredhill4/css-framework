@@ -1,0 +1,35 @@
+/*
+ * Placeholders help to make `@extend` generate more efficient output by
+ * bundling only the selectors that extend them.
+ *
+ * Defining a placeholder: `%my-placeholder { ... }`
+ * Using a placeholder: `@extend %my-placeholder;`
+ *
+ * Documentation: http://thesassway.com/intermediate/understanding-placeholder-selectors
+ */
+
+// --------------------------------------------------
+// clearfix
+// --------------------------------------------------
+
+%clearfix {
+  zoom: 1;
+  &::before, &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+// --------------------------------------------------
+// truncate
+// --------------------------------------------------
+
+%truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

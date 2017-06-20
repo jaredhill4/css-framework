@@ -1,0 +1,11 @@
+/*
+ * Utilities
+ */
+
+.u--cf, .u--clearfix {
+  @extend %clearfix;
+}
+
+.u--truncate {
+  @extend %truncate;
+}
