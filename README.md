@@ -1,10 +1,10 @@
 ## Table of Contents
 
 - [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
+  - [npm start](#npm-run-watch)
+  - [npm run prettier](#npm-run-prettier)
   - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
+  - [npm test](#npm-test)
 
 ## Available Scripts
 
