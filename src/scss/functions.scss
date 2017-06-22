@@ -8,7 +8,7 @@
  * Documentation: http://thesassway.com/advanced/pure-sass-functions
  */
 
-// Tint
+// tint
 // ---------------
 // Mix a color with white. The greater the percentage,
 // the closer the new color will be to white.
@@ -16,7 +16,7 @@
   @return mix(#fff, $color, $percent);
 }
 
-// Shade
+// shade
 // ---------------
 // Mix a color with black. The greater the percentage,
 // the closer the new color will be to black.

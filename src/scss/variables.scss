@@ -1,3 +1,53 @@
 // --------------------------------------------------
 // color palette
 // --------------------------------------------------
+
+$color-red: #e56767;
+$color-green: #3ecf8e;
+$color-blue: #6772e5;
+
+$color-white: #fff;
+$color-gray: #e3e3e3;
+$color-black: #292b2c;
+
+// --------------------------------------------------
+// media queries
+// --------------------------------------------------
+
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1600px;
+
+$mq-xs: "screen and (min-width: #{$breakpoint-xs})";
+$mq-sm: "screen and (min-width: #{$breakpoint-sm})";
+$mq-md: "screen and (min-width: #{$breakpoint-md})";
+$mq-lg: "screen and (min-width: #{$breakpoint-lg})";
+$mq-xl: "screen and (min-width: #{$breakpoint-xl})";
+
+// --------------------------------------------------
+// links
+// --------------------------------------------------
+
+$link-color: #6772e5;
+$link-color-hover: shade($link-color, 10%);
+
+// --------------------------------------------------
+// font families
+// --------------------------------------------------
+
+$font-family-sans-serif: -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  sans-serif;
+$font-family-serif: Georgia, serif;
+$font-family-monospace: Menlo,
+  Monaco,
+  Consolas,
+  "Liberation Mono",
+  "Courier New",
+  monospace;

@@ -1,0 +1,12 @@
+// --------------------------------------------------
+// links
+// --------------------------------------------------
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,51 @@
+// --------------------------------------------------
+// box-sizing
+// --------------------------------------------------
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+// --------------------------------------------------
+// html
+// --------------------------------------------------
+
+html {
+  font-size: 16px;
+
+  @media #{$mq-xs} {
+    font-size: 16px;
+  }
+
+  @media #{$mq-sm} {
+    font-size: 16px;
+  }
+
+  @media #{$mq-md} {
+    font-size: 16px;
+  }
+
+  @media #{$mq-lg} {
+    font-size: 16px;
+  }
+
+  @media #{$mq-xl} {
+    font-size: 16px;
+  }
+}
+
+// --------------------------------------------------
+// body
+// --------------------------------------------------
+
+body {
+  color: $color-black;
+  font-family: $font-family-sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}

@@ -10,8 +10,10 @@
 // modules
 // --------------------------------------------------
 
-@import "./reset.scss";
+@import "./normalize.scss";
+@import "./base.scss";
 @import "./grid.scss";
+@import "./links.scss";
 @import "./typography.scss";
 @import "./buttons.scss";
 @import "./forms.scss";
