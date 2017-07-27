@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: .5rem;
@@ -71,9 +71,10 @@ ul, ol {
 // --------------------------------------------------
 
 hr {
+  background-color: rgba(#000, .15);
   border: none;
-  border-top: 1px solid rgba(#000, .15);
-  height: 0;
+  display: block;
+  height: 1px;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }

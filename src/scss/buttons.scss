@@ -88,7 +88,7 @@ $button-transition: all .15s ease;
   text-transform: $button-text-transform;
   transition: $button-transition;
   user-select: none;
-  vertical-align: middle;
+  vertical-align: top;
   white-space: nowrap;
 
   &:hover {
