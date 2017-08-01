@@ -137,7 +137,8 @@ $grid-gutter-width: 20px;
 // grid__col
 // --------------------------------------------------
 
-.grid__col, [class*="grid__col-"] {
+.grid__col,
+[class*="grid__col-"] {
   display: block;
   flex-basis: 0;
   flex-grow: 1;

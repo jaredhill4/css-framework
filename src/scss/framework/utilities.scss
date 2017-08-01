@@ -2,7 +2,8 @@
 // utilities
 // --------------------------------------------------
 
-.u--cf, .u--clearfix {
+.u--cf,
+.u--clearfix {
   @extend %clearfix;
 }
 

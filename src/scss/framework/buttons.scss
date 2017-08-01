@@ -112,7 +112,8 @@ $button-transition: all .15s ease;
 }
 
 // try to prevent clicking of disabled `<a>` elements
-a.btn.btn--disabled, fieldset[disabled] a.btn {
+a.btn.btn--disabled,
+fieldset[disabled] a.btn {
   pointer-events: none;
 }
 

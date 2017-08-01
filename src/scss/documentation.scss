@@ -1,0 +1,48 @@
+/*
+ * This should be used for documentation specific css. Any styles here
+ * will not be part of the actual framework and are only used for
+ * previewing the framework components.
+ */
+
+body {
+  background-color: #fff;
+  padding: 40px 20px;
+}
+
+.example {
+  border: 1px solid #ffdd57;
+  border-top-right-radius: 3px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  position: relative;
+
+  &::before {
+    background: #ffdd57;
+    border-radius: 3px 3px 0 0;
+    bottom: 100%;
+    content: "Example";
+    display: inline-block;
+    font-size: 7px;
+    font-weight: bold;
+    left: -1px;
+    letter-spacing: 1px;
+    padding: 3px 5px;
+    position: absolute;
+    text-transform: uppercase;
+    vertical-align: top;
+  }
+}
+
+.framework__grid__col {
+  background-color: #3273dc;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.example .btn {
+  margin-bottom: 4px;
+}

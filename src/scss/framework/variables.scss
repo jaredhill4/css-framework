@@ -37,17 +37,8 @@ $link-color-hover: shade($link-color, 10%);
 // font families
 // --------------------------------------------------
 
-$font-family-sans-serif: -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  "Helvetica Neue",
-  Arial,
-  sans-serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
 $font-family-serif: Georgia, serif;
-$font-family-monospace: Menlo,
-  Monaco,
-  Consolas,
-  "Liberation Mono",
-  "Courier New",
-  monospace;
+$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono",
+  "Courier New", monospace;

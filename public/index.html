@@ -20,50 +20,6 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>CSS Framework | White Lion</title>
-
-    <!--
-      View styles that we don't want to be included in the framework css file
-    -->
-    <style>
-      body {
-        background-color: #fff;
-        padding: 40px 20px;
-      }
-      .example {
-        border: 1px solid #ffdd57;
-        border-top-right-radius: 3px;
-        color: rgba(0, 0, 0, 0.7);
-        margin-bottom: 1rem;
-        margin-top: 2rem;
-        padding: 1rem;
-        position: relative;
-      }
-      .example::before {
-        background: #ffdd57;
-        border-radius: 3px 3px 0 0;
-        bottom: 100%;
-        content: "Example";
-        display: inline-block;
-        font-size: 7px;
-        font-weight: bold;
-        left: -1px;
-        letter-spacing: 1px;
-        padding: 3px 5px;
-        position: absolute;
-        text-transform: uppercase;
-        vertical-align: top;
-      }
-      .framework__grid__col {
-        background-color: #3273dc;
-        border-radius: 3px;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-      }
-      .example .btn {
-        margin-bottom: 4px;
-      }
-    </style>
   </head>
   <body>
     <noscript>
@@ -75,7 +31,7 @@
         Grid
       -->
       <h2>Grid</h2>
-      <p>To build a grid, add a <code>.grid</code> container with as many <code>.grid__col-*</code> elements as you want.</p>
+      <p>To build a grid, add a <code>.grid</code> container with as many <code>.grid__col-*</code> elements as you want. A <code>.grid</code> element can be nested within a <code>.grid__col-*</code> element.</p>
       <div class="example">
         <div class="grid">
           <div class="grid__col"><div class="framework__grid__col">.grid__col</div></div>
