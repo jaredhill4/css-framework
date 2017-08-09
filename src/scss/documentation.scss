@@ -6,10 +6,10 @@
 
 body {
   background-color: #fff;
-  padding: 40px 20px;
 }
 
 .example {
+  background: #fff;
   border: 1px solid #ffdd57;
   border-top-right-radius: 3px;
   color: rgba(0, 0, 0, 0.7);
@@ -35,14 +35,26 @@ body {
   }
 }
 
-.framework__grid__col {
-  background-color: #3273dc;
+.example__grid {
+  background-color: rgba(#3273dc, .5);
   border-radius: 3px;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+  color: rgba(#fff, .9);
+  font-size: 14px;
+  height: 100%;
+  padding: 8px;
+  text-align: left;
+  width: 100%;
+}
+
+.example__grid--static-height {
+  height: 200px;
+}
+
+.example__grid__text {
+  margin-bottom: 8px;
 }
 
 .example .btn {
   margin-bottom: 4px;
+  margin-right: 4px;
 }

@@ -32,6 +32,8 @@ $grid-gutter-width: 20px;
   margin-left: auto;
   margin-right: auto;
   max-width: $breakpoint-lg;
+  padding-left: 15px;
+  padding-right: 15px;
 
   &.container--xs {
     max-width: $breakpoint-xs;
@@ -49,7 +51,7 @@ $grid-gutter-width: 20px;
     max-width: $breakpoint-lg;
   }
 
-  &.container--xlg {
+  &.container--xl {
     max-width: $breakpoint-xl;
   }
 }
@@ -74,62 +76,74 @@ $grid-gutter-width: 20px;
 }
 
 .grid--gapless {
-  margin: 0;
+  &,
+  .grid {
+    margin: 0;
+  }
 
-  &:last-child {
+  &:last-child,
+  .grid:last-child {
     margin-bottom: 0;
   }
 }
 
-.grid--align-stretch {
-  align-items: stretch;
-}
-
-.grid--align-start {
+.grid--valign-top {
   align-items: flex-start;
 }
 
-.grid--align-center {
+.grid--valign-center {
   align-items: center;
 }
 
-.grid--align-end {
+.grid--valign-bottom {
   align-items: flex-end;
 }
 
-.grid--align-content-stretch {
-  align-content: stretch;
+.grid--valign-stretch {
+  align-items: stretch;
 }
 
-.grid--align-content-start {
+.grid--valign-content-top {
   align-content: flex-start;
 }
 
-.grid--align-content-center {
+.grid--valign-content-center {
   align-content: center;
 }
 
-.grid--align-content-end {
+.grid--valign-content-bottom {
   align-content: flex-end;
 }
 
-.grid--justify-start {
+.grid--valign-content-stretch {
+  align-content: stretch;
+}
+
+.grid--valign-content-space-between {
+  align-content: space-between;
+}
+
+.grid--valign-content-space-around {
+  align-content: space-around;
+}
+
+.grid--halign-left {
   justify-content: flex-start;
 }
 
-.grid--justify-center {
+.grid--halign-center {
   justify-content: center;
 }
 
-.grid--justify-end {
+.grid--halign-right {
   justify-content: flex-end;
 }
 
-.grid--justify-space-between {
+.grid--halign-space-between {
   justify-content: space-between;
 }
 
-.grid--justify-space-around {
+.grid--halign-space-around {
   justify-content: space-around;
 }
 
@@ -139,31 +153,18 @@ $grid-gutter-width: 20px;
 
 .grid__col,
 [class*="grid__col-"] {
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex-basis: 0;
   flex-grow: 1;
-  flex-shrink: 1;
+  flex-shrink: 0;
+  max-width: 100%;
   padding: $grid-gutter-width / 2;
+  width: auto;
 
   .grid--gapless & {
     padding: 0;
   }
-}
-
-.grid__col--align-stretch {
-  align-self: stretch;
-}
-
-.grid__col--align-start {
-  align-self: flex-start;
-}
-
-.grid__col--align-center {
-  align-self: center;
-}
-
-.grid__col--align-end {
-  align-self: flex-end;
 }
 
 @include grid__col(xs);
