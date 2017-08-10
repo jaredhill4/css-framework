@@ -2,14 +2,14 @@
 // variables
 // --------------------------------------------------
 
-$button-border-radius: .25em;
+$button-border-radius: $global-border-radius;
 $button-border-width: 1px;
 $button-font-size: 1rem;
 $button-font-weight: 400;
-$button-letter-spacing: .025em;
+$button-letter-spacing: .025rem;
 $button-line-height: 1.25;
-$button-padding-x: 1em;
-$button-padding-y: .5em;
+$button-padding-x: 1rem;
+$button-padding-y: .5rem;
 $button-text-transform: none;
 $button-transition: all .15s ease;
 

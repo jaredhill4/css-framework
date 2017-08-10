@@ -1,4 +1,25 @@
 // --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$hr-border-color: rgba(#000, .1);
+$hr-width: 1px;
+
+$pre-background-color: #f8f9fa;
+$pre-border-radius: $global-border-radius;
+$pre-color: $color-black;
+
+$code-background-color: #f8f9fa;
+$code-border-radius: $global-border-radius;
+$code-color: #bd4147;
+
+$kbd-background-color: $color-black;
+$kbd-border-radius: $global-border-radius;
+$kbd-color: #fff;
+
+$mark-background-color: #ffff7c;
+
+// --------------------------------------------------
 // headings
 // --------------------------------------------------
 
@@ -90,29 +111,96 @@ ol {
 // --------------------------------------------------
 
 hr {
-  background-color: rgba(#000, .15);
+  background-color: $hr-border-color;
   border: none;
   display: block;
-  height: 1px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  height: $hr-width;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 // --------------------------------------------------
-// TODO: code styles
+// preformatted text
+// --------------------------------------------------
+
+pre {
+  background-color: $pre-background-color;
+  border-radius: $pre-border-radius;
+  color: $pre-color;
+  display: block;
+  font-family: $font-family-monospace;
+  font-size: 90%;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  overflow-x: auto;
+  padding: 1rem;
+  word-break: break-all;
+  word-wrap: break-word;
+
+  code {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    padding: 0;
+  }
+}
+
+// --------------------------------------------------
+// inline elements
 // --------------------------------------------------
 
 code,
 kbd,
-pre,
 samp {
   font-family: $font-family-monospace;
 }
 
 code {
-  background-color: #f8f9fa;
-  border-radius: 0.25rem;
-  color: #bd4147;
+  background-color: $code-background-color;
+  border-radius: $code-border-radius;
+  color: $code-color;
   font-size: 90%;
   padding: 0.2rem 0.4rem;
+
+  a > & {
+    padding: 0;
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+kbd {
+  background-color: $kbd-background-color;
+  border-radius: $kbd-border-radius;
+  color: $kbd-color;
+  font-size: 90%;
+  padding: 0.2rem 0.4rem;
+
+  kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: 700;
+  }
+}
+
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+mark {
+  padding: .2rem;
+  background-color: $mark-background-color;
+}
+
+abbr {
+  border-bottom: 0;
+  font-size: 90%;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+  }
 }

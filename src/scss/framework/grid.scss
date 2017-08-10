@@ -54,6 +54,10 @@ $grid-gutter-width: 20px;
   &.container--xl {
     max-width: $breakpoint-xl;
   }
+
+  &.container--full {
+    max-width: 100%;
+  }
 }
 
 // --------------------------------------------------
@@ -103,27 +107,27 @@ $grid-gutter-width: 20px;
   align-items: stretch;
 }
 
-.grid--valign-content-top {
+.grid--valign-row-top {
   align-content: flex-start;
 }
 
-.grid--valign-content-center {
+.grid--valign-row-center {
   align-content: center;
 }
 
-.grid--valign-content-bottom {
+.grid--valign-row-bottom {
   align-content: flex-end;
 }
 
-.grid--valign-content-stretch {
+.grid--valign-row-stretch {
   align-content: stretch;
 }
 
-.grid--valign-content-space-between {
+.grid--valign-row-between {
   align-content: space-between;
 }
 
-.grid--valign-content-space-around {
+.grid--valign-row-around {
   align-content: space-around;
 }
 
@@ -139,11 +143,11 @@ $grid-gutter-width: 20px;
   justify-content: flex-end;
 }
 
-.grid--halign-space-between {
+.grid--halign-between {
   justify-content: space-between;
 }
 
-.grid--halign-space-around {
+.grid--halign-around {
   justify-content: space-around;
 }
 
