@@ -15,17 +15,17 @@ const Section = ({ children, id, container = true }) => {
 };
 
 const Title = ({ children }) =>
-  <h2 className="h1">
+  <h2 className="h1 framework__title">
     {children}
   </h2>;
 
 const SubTitle = ({ children }) =>
-  <h3 className="h3" style={{ marginTop: '2rem' }}>
+  <h3 className="h3 framework__subtitle">
     {children}
   </h3>;
 
 const Description = ({ children }) =>
-  <p style={{ maxWidth: '800px' }}>
+  <p className="framework__description">
     {children}
   </p>;
 

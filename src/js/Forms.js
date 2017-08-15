@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, Title, SubTitle, Description, Example } from './Framework';
+import { Section, Title, Description } from './Framework';
 
 const Forms = () =>
   <Section id="forms">

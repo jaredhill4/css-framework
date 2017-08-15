@@ -1,3 +1,116 @@
 // --------------------------------------------------
-// tables
+// variables
 // --------------------------------------------------
+
+$table-border-color: $color-gray;
+$table-striped-background-color: rgba(#000, .03);
+$table-hover-background-color: $table-striped-background-color;
+
+// --------------------------------------------------
+// table
+// --------------------------------------------------
+
+.table {
+  background-color: transparent;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  width: 100%;
+
+  th,
+  td {
+    border-color: $table-border-color;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    padding: .6rem .75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: 2px;
+      border-top-width: 0;
+      vertical-align: bottom;
+    }
+  }
+
+  tfoot {
+    th,
+    td {
+      border-top-width: 2px;
+    }
+  }
+
+  tbody + tbody {
+    border-top: 2px solid $table-border-color;
+  }
+}
+
+.table--narrow {
+  width: auto;
+}
+
+.table--striped {
+  tbody tr:nth-of-type(even) {
+    background-color: $table-striped-background-color;
+  }
+}
+
+.table--hover {
+  tbody tr:hover {
+    background-color: $table-hover-background-color;
+  }
+}
+
+.table--compact {
+  th,
+  td {
+    padding: .3rem .4rem;
+  }
+}
+
+.table--bordered {
+  border: 1px solid $table-border-color;
+
+  th,
+  td {
+    border-width: 1px;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: 2px;
+    }
+  }
+
+  tfoot {
+    th,
+    td {
+      border-top-width: 2px;
+    }
+  }
+}
+
+.table--responsive {
+  display: block;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  @media #{$mq-md} {
+    display: table;
+  }
+
+  &.table--bordered {
+    border-width: 0;
+
+    thead {
+      th,
+      td {
+        border-top-width: 1px;
+      }
+    }
+  }
+}

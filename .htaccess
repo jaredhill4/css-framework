@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^css.wlreview3.com$
+RewriteCond %{REQUEST_URI} !build/
+RewriteRule (.*) /build/$1 [L]
