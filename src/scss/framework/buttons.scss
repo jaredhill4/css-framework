@@ -3,15 +3,17 @@
 // --------------------------------------------------
 
 $button-border-radius: $global-border-radius;
-$button-border-width: 1px;
+$button-border-width: $global-border-width;
 $button-font-size: 1rem;
 $button-font-weight: 400;
-$button-letter-spacing: .025rem;
+$button-letter-spacing: .025em;
 $button-line-height: 1.25;
-$button-padding-x: 1rem;
-$button-padding-y: .5rem;
+$button-padding-x: 1em;
+$button-padding-y: .5em;
 $button-text-transform: none;
-$button-transition: all .15s ease;
+$button-transition: $global-transition;
+
+$button-focus-box-shadow: $global-focus-box-shadow;
 
 // --------------------------------------------------
 // mixins
@@ -97,6 +99,8 @@ $button-transition: all .15s ease;
   }
 
   &:focus {
+    box-shadow: $button-focus-box-shadow;
+    outline: 0;
     text-decoration: none;
   }
 
@@ -188,26 +192,26 @@ fieldset[disabled] a.btn {
 // sizes
 // --------------------------------------------------
 
-.btn--xs {
-  font-size: $button-font-size * .75;
-  padding: $button-padding-y * .75 $button-padding-x * .75;
+.btn--xs,
+.form__input-group--xs .btn {
+  font-size: 0.75em;
 }
 
-.btn--sm {
-  font-size: $button-font-size * .875;
-  padding: $button-padding-y * .875 $button-padding-x * .875;
+.btn--sm,
+.form__input-group--sm .btn {
+  font-size: 0.875em;
 }
 
-.btn--md {
-  padding: $button-padding-y $button-padding-x;
+.btn--md,
+.form__input-group--md .btn {
 }
 
-.btn--lg {
-  font-size: $button-font-size * 1.25;
-  padding: $button-padding-y * 1.25 $button-padding-x * 1.25;
+.btn--lg,
+.form__input-group--lg .btn {
+  font-size: 1.25em;
 }
 
-.btn--xl {
-  font-size: $button-font-size * 1.5;
-  padding: $button-padding-y * 1.5 $button-padding-x * 1.5;
+.btn--xl,
+.form__input-group--xl .btn {
+  font-size: 1.5em;
 }

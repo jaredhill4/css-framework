@@ -71,7 +71,9 @@ const Grid = () =>
     <SubTitle>Gapless</SubTitle>
     <Description>
       You can remove column gutters by adding the <code>.grid--gapless</code>{' '}
-      modifier to a grid.
+      modifier to a grid. There are also <code>.grid--gapless-horizontal</code>{' '}
+      and <code>.grid--gapless-vertical</code> modifiers to remove the
+      corresponding gutters.
     </Description>
     <Example>
       <div className="example__grid">

@@ -91,6 +91,27 @@ $grid-gutter-width: 20px;
   }
 }
 
+.grid--gapless-horizontal {
+  &,
+  .grid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.grid--gapless-vertical {
+  &,
+  .grid {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &:last-child,
+  .grid:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .grid--valign-top {
   align-items: flex-start;
 }
@@ -168,6 +189,16 @@ $grid-gutter-width: 20px;
 
   .grid--gapless & {
     padding: 0;
+  }
+
+  .grid--gapless-horizontal & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .grid--gapless-vertical & {
+    padding-bottom: 0;
+    padding-top: 0;
   }
 }
 

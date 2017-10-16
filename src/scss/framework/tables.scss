@@ -2,8 +2,11 @@
 // variables
 // --------------------------------------------------
 
-$table-border-color: $color-gray;
+$table-border-color: $global-border-color;
+$table-border-width: $global-border-width;
+
 $table-striped-background-color: rgba(#000, .03);
+
 $table-hover-background-color: $table-striped-background-color;
 
 // --------------------------------------------------
@@ -21,7 +24,7 @@ $table-hover-background-color: $table-striped-background-color;
   td {
     border-color: $table-border-color;
     border-style: solid;
-    border-width: 1px 0 0 0;
+    border-width: $table-border-width 0 0 0;
     padding: .6rem .75rem;
     text-align: left;
     vertical-align: top;
@@ -30,7 +33,7 @@ $table-hover-background-color: $table-striped-background-color;
   thead {
     th,
     td {
-      border-bottom-width: 2px;
+      border-bottom-width: $table-border-width * 2;
       border-top-width: 0;
       vertical-align: bottom;
     }
@@ -39,12 +42,12 @@ $table-hover-background-color: $table-striped-background-color;
   tfoot {
     th,
     td {
-      border-top-width: 2px;
+      border-top-width: $table-border-width * 2;
     }
   }
 
   tbody + tbody {
-    border-top: 2px solid $table-border-color;
+    border-top: $table-border-width * 2 solid $table-border-color;
   }
 }
 
@@ -72,24 +75,24 @@ $table-hover-background-color: $table-striped-background-color;
 }
 
 .table--bordered {
-  border: 1px solid $table-border-color;
+  border: $table-border-width solid $table-border-color;
 
   th,
   td {
-    border-width: 1px;
+    border-width: $table-border-width;
   }
 
   thead {
     th,
     td {
-      border-bottom-width: 2px;
+      border-bottom-width: $table-border-width * 2;
     }
   }
 
   tfoot {
     th,
     td {
-      border-top-width: 2px;
+      border-top-width: $table-border-width * 2;
     }
   }
 }
@@ -109,7 +112,7 @@ $table-hover-background-color: $table-striped-background-color;
     thead {
       th,
       td {
-        border-top-width: 1px;
+        border-top-width: $table-border-width;
       }
     }
   }

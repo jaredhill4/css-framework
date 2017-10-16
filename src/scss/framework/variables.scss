@@ -2,6 +2,8 @@
 // color palette
 // --------------------------------------------------
 
+$color-primary: #6772e5;
+
 $color-red: #e56767;
 $color-green: #3ecf8e;
 $color-blue: #6772e5;
@@ -30,7 +32,7 @@ $mq-xl: "screen and (min-width: #{$breakpoint-xl})";
 // links
 // --------------------------------------------------
 
-$link-color: #6772e5;
+$link-color: $color-primary;
 $link-color-hover: shade($link-color, 10%);
 
 // --------------------------------------------------
@@ -39,6 +41,11 @@ $link-color-hover: shade($link-color, 10%);
 
 $global-border-color: $color-gray;
 $global-border-radius: .25rem;
+$global-border-width: 1px;
+
+$global-transition: all .15s ease;
+
+$global-focus-box-shadow: 0 0 0 2px rgba($color-primary, .5);
 
 // --------------------------------------------------
 // font families
