@@ -48,15 +48,15 @@ const createTableWithClassNames = classNames =>
   </table>;
 
 const Tables = () =>
-  <Section id="tables">
-    <Title>Tables</Title>
+  <Section>
+    <Title id="tables">Tables</Title>
     <Description>
       Style a table by adding the <code>.table</code> class.
     </Description>
     <Example>
       {createTableWithClassNames('table')}
     </Example>
-    <SubTitle>Striped rows</SubTitle>
+    <SubTitle id="tables-striped">Striped rows</SubTitle>
     <Description>
       Add the <code>.table--striped</code> modifier to add zebra-striping to
       table rows.
@@ -64,7 +64,7 @@ const Tables = () =>
     <Example>
       {createTableWithClassNames('table table--striped')}
     </Example>
-    <SubTitle>Bordered table</SubTitle>
+    <SubTitle id="tables-bordered">Bordered</SubTitle>
     <Description>
       Add the <code>.table--bordered</code> modifier to add borders around the
       table and table cells.
@@ -72,7 +72,7 @@ const Tables = () =>
     <Example>
       {createTableWithClassNames('table table--bordered')}
     </Example>
-    <SubTitle>Hoverable rows</SubTitle>
+    <SubTitle id="tables-hover">Hoverable rows</SubTitle>
     <Description>
       Add the <code>.table--hover</code> modifier to enable a hover state on
       table rows.
@@ -80,7 +80,7 @@ const Tables = () =>
     <Example>
       {createTableWithClassNames('table table--hover')}
     </Example>
-    <SubTitle>Compact table</SubTitle>
+    <SubTitle id="tables-compact">Compact</SubTitle>
     <Description>
       Add the <code>.table--compact</code> modifier to reduce padding within
       table cells.
@@ -88,14 +88,14 @@ const Tables = () =>
     <Example>
       {createTableWithClassNames('table table--compact')}
     </Example>
-    <SubTitle>Narrow table</SubTitle>
+    <SubTitle id="tables-narrow">Narrow</SubTitle>
     <Description>
       Add the <code>.table--narrow</code> modifier to reduce cell width.
     </Description>
     <Example>
       {createTableWithClassNames('table table--narrow')}
     </Example>
-    <SubTitle>Responsive table</SubTitle>
+    <SubTitle id="tables-responsive">Responsive</SubTitle>
     <Description>
       Add the <code>.table--responsive</code> modifier to make tables scroll
       horizontally at small screen sizes.

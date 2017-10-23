@@ -2,9 +2,9 @@ import React from 'react';
 import { Section, Title, Description, Example } from './Framework';
 
 const Containers = () =>
-  <Section id="containers" container={false}>
+  <Section container={false}>
     <div className="container container--md">
-      <Title>Containers</Title>
+      <Title id="containers">Containers</Title>
       <Description>
         Wrap content in a <code>.container</code> class to center it and give it
         a maximum width. Width of the container can be adjusted with size

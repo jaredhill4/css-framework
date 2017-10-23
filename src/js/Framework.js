@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 
-const Section = ({ children, id, container = true }) => {
+const Section = ({ children, id = '', container = true }) => {
   const containerClassNames = classnames({
     'container container--md': container,
   });
@@ -14,13 +14,13 @@ const Section = ({ children, id, container = true }) => {
   );
 };
 
-const Title = ({ children }) =>
-  <h2 className="h1 framework__title">
+const Title = ({ children, id = '' }) =>
+  <h2 id={id} className="h1 framework__title">
     {children}
   </h2>;
 
-const SubTitle = ({ children }) =>
-  <h3 className="h3 framework__subtitle">
+const SubTitle = ({ children, id = '' }) =>
+  <h3 id={id} className="h3 framework__subtitle">
     {children}
   </h3>;
 

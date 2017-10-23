@@ -2,8 +2,8 @@ import React from 'react';
 import { Section, Title, SubTitle, Description, Example } from './Framework';
 
 const Buttons = () =>
-  <Section id="buttons">
-    <Title>Buttons</Title>
+  <Section>
+    <Title id="buttons">Buttons</Title>
     <Description>
       Add a <code>.btn</code> class to an anchor tag or button.
     </Description>
@@ -12,7 +12,7 @@ const Buttons = () =>
         .btn
       </button>
     </Example>
-    <SubTitle>Colors</SubTitle>
+    <SubTitle id="buttons-colors">Colors</SubTitle>
     <Description>
       Different button colors can be created by adding a color modifier class
       like <code>.btn--red</code>.
@@ -34,7 +34,7 @@ const Buttons = () =>
         .btn--blue
       </button>
     </Example>
-    <SubTitle>Outlined</SubTitle>
+    <SubTitle id="buttons-outlined">Outlined</SubTitle>
     <Description>
       Create buttons stylized with an outline by adding a{' '}
       <code>.btn--outline</code> modifier.
@@ -56,7 +56,7 @@ const Buttons = () =>
         .btn--outline
       </button>
     </Example>
-    <SubTitle>Sizes</SubTitle>
+    <SubTitle id="buttons-sizes">Sizes</SubTitle>
     <Example>
       <button type="button" className="btn btn--xs">
         .btn--xs
@@ -74,7 +74,7 @@ const Buttons = () =>
         .btn--xl
       </button>
     </Example>
-    <SubTitle>Link</SubTitle>
+    <SubTitle id="buttons-link">Link</SubTitle>
     <Description>
       Add the <code>.btn--link</code> modifier to a button to disguise the
       button as an anchor tag.
@@ -84,13 +84,13 @@ const Buttons = () =>
         .btn--link
       </button>
     </Example>
-    <SubTitle>Rounded</SubTitle>
+    <SubTitle id="buttons-rounded">Rounded</SubTitle>
     <Example>
       <button type="button" className="btn btn--round">
         .btn--round
       </button>
     </Example>
-    <SubTitle>Block</SubTitle>
+    <SubTitle id="buttons-block">Block</SubTitle>
     <Example>
       <button type="button" className="btn btn--block">
         .btn--block

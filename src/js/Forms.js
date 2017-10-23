@@ -2,8 +2,8 @@ import React from 'react';
 import { Section, Title, SubTitle, Description, Example } from './Framework';
 
 const Forms = () =>
-  <Section id="forms">
-    <Title>Forms</Title>
+  <Section>
+    <Title id="forms">Forms</Title>
     <Example>
       <form className="form">
         <div className="grid grid--gapless-vertical">
@@ -153,7 +153,7 @@ const Forms = () =>
         </div>
       </form>
     </Example>
-    <SubTitle>Sizes</SubTitle>
+    <SubTitle id="forms-sizes">Sizes</SubTitle>
     <Example>
       <form className="form">
         <div className="form__field">
@@ -193,7 +193,7 @@ const Forms = () =>
         </div>
       </form>
     </Example>
-    <SubTitle>Rounded</SubTitle>
+    <SubTitle id="forms-rounded">Rounded</SubTitle>
     <Example>
       <form className="form">
         <div className="form__field">
@@ -212,7 +212,7 @@ const Forms = () =>
         </div>
       </form>
     </Example>
-    <SubTitle>Input group</SubTitle>
+    <SubTitle id="forms-input-group">Input group</SubTitle>
     <Description>
       Wrap a <code>.form__input</code> or <code>.form__select</code> with a{' '}
       <code>.form__input-group</code> to create an input group. You can also
@@ -231,7 +231,7 @@ const Forms = () =>
         </div>
       </form>
     </Example>
-    <SubTitle>Input group sizes</SubTitle>
+    <SubTitle id="forms-input-group-sizes">Input group sizes</SubTitle>
     <Description>
       Input groups can be sized by adding a size modifier like{' '}
       <code>.form__input-group--xs</code>.
@@ -280,17 +280,17 @@ const Forms = () =>
         </div>
       </form>
     </Example>
-    <SubTitle>Input states</SubTitle>
+    <SubTitle id="forms-input-states">Input states</SubTitle>
     <Example>
       <form className="form">
         <div className="form__field">
-          <input type="text" className="form__input" value="default" />
+          <input type="text" className="form__input" defaultValue="default" />
         </div>
         <div className="form__field">
           <input
             type="text"
             className="form__input"
-            value="disabled"
+            defaultValue="disabled"
             disabled
           />
         </div>
@@ -298,7 +298,7 @@ const Forms = () =>
           <input
             type="text"
             className="form__input"
-            value="readonly"
+            defaultValue="readonly"
             readOnly
           />
         </div>

@@ -1,11 +1,13 @@
 import React from 'react';
-import loremIpsum from 'lorem-ipsum';
 import { Section, Title, SubTitle, Description, Example } from './Framework';
 
+const loremIpsum =
+  'Est cupidatat mollit qui enim nisi enim elit aute excepteur. Lorem nulla sunt minim nulla irure ut. Ea excepteur laboris aliqua amet commodo reprehenderit excepteur culpa ex sunt.';
+
 const Typography = () =>
-  <Section id="typography">
-    <Title>Typography</Title>
-    <SubTitle>Headings</SubTitle>
+  <Section>
+    <Title id="typography">Typography</Title>
+    <SubTitle id="typography-headings">Headings</SubTitle>
     <Description>
       Each heading element has a corresponding class, such as <code>.h3</code>,
       that can be used to emulate heading styles.
@@ -18,64 +20,64 @@ const Typography = () =>
       <h5>Heading 5</h5>
       <h6>Heading 6</h6>
     </Example>
-    <SubTitle>Blockquote</SubTitle>
+    <SubTitle id="typography-blockquote">Blockquote</SubTitle>
     <Example>
       <blockquote>
-        {loremIpsum({ count: 6 })}
+        {loremIpsum}
       </blockquote>
     </Example>
-    <SubTitle>Lists</SubTitle>
+    <SubTitle id="typography-lists">Lists</SubTitle>
     <Example>
       <ul>
         <li>
-          {loremIpsum()}
+          {loremIpsum}
         </li>
         <li>
-          {loremIpsum()}
+          {loremIpsum}
         </li>
         <li>
-          {loremIpsum()}
+          {loremIpsum}
           <ul>
             <li>
-              {loremIpsum()}
+              {loremIpsum}
             </li>
             <li>
-              {loremIpsum()}
+              {loremIpsum}
             </li>
             <li>
-              {loremIpsum()}
+              {loremIpsum}
             </li>
           </ul>
         </li>
       </ul>
       <ol>
         <li>
-          {loremIpsum()}
+          {loremIpsum}
         </li>
         <li>
-          {loremIpsum()}
+          {loremIpsum}
         </li>
         <li>
-          {loremIpsum()}
+          {loremIpsum}
           <ol>
             <li>
-              {loremIpsum()}
+              {loremIpsum}
             </li>
             <li>
-              {loremIpsum()}
+              {loremIpsum}
             </li>
             <li>
-              {loremIpsum()}
+              {loremIpsum}
             </li>
           </ol>
         </li>
       </ol>
     </Example>
-    <SubTitle>Horizontal Rule</SubTitle>
+    <SubTitle id="typography-horizontal-rule">Horizontal Rule</SubTitle>
     <Example>
       <hr />
     </Example>
-    <SubTitle>Preformatted Text</SubTitle>
+    <SubTitle id="typography-preformatted-text">Preformatted Text</SubTitle>
     <Example>
       <pre>
         {`<!DOCTYPE html>
@@ -84,12 +86,12 @@ const Typography = () =>
     <title>Hello World</title>
   </head>
   <body>
-    <p>${loremIpsum()}</p>
+    <p>${loremIpsum}</p>
   </body>
 </html>`}
       </pre>
     </Example>
-    <SubTitle>Inline Elements</SubTitle>
+    <SubTitle id="typography-inline-elements">Inline Elements</SubTitle>
     <Example>
       <kbd>kbd</kbd> <code>code</code> <samp>samp</samp> <em>em</em>{' '}
       <sup>sup</sup> <sub>sub</sub> <strong>strong</strong> <small>small</small>{' '}

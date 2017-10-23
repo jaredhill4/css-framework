@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
+import MenuToggle from './MenuToggle';
 import Grid from './Grid';
 import Containers from './Containers';
 import Typography from './Typography';
@@ -8,18 +9,51 @@ import Forms from './Forms';
 import Tables from './Tables';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      mobileMenuOpen: false,
+    };
+
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.mobileMenuOpen === this.state.mobileMenuOpen) {
+      return false;
+    }
+    return true;
+  }
+
   render() {
     return (
-      <div>
-        <Menu />
-        <Grid />
-        <Containers />
-        <Typography />
-        <Buttons />
-        <Forms />
-        <Tables />
+      <div
+        className={this.state.mobileMenuOpen ? 'framework__menu-is-open' : ''}
+      >
+        <Menu
+          toggleMobileMenu={this.toggleMobileMenu}
+          menuIsOpen={this.state.mobileMenuOpen}
+        />
+        <MenuToggle toggleMobileMenu={this.toggleMobileMenu} />
+        <section className="framework">
+          <Grid />
+          <Containers />
+          <Typography />
+          <Buttons />
+          <Forms />
+          <Tables />
+        </section>
       </div>
     );
+  }
+
+  toggleMobileMenu(event) {
+    event.preventDefault();
+
+    this.setState({
+      mobileMenuOpen: !this.state.mobileMenuOpen,
+    });
   }
 }
 

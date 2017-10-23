@@ -1,10 +1,12 @@
 import React from 'react';
-import loremIpsum from 'lorem-ipsum';
 import { Section, Title, SubTitle, Description, Example } from './Framework';
 
+const loremIpsum =
+  'Est cupidatat mollit qui enim nisi enim elit aute excepteur. Lorem nulla sunt minim nulla irure ut. Ea excepteur laboris aliqua amet commodo reprehenderit excepteur culpa ex sunt.';
+
 const Grid = () =>
-  <Section id="grid">
-    <Title>Grid</Title>
+  <Section>
+    <Title id="grid">Grid</Title>
     <Description>
       To build a grid, add a <code>.grid</code> container with as many{' '}
       <code>.grid__col-*</code> elements as you want. A <code>.grid</code>{' '}
@@ -68,7 +70,7 @@ const Grid = () =>
         </div>
       </div>
     </Example>
-    <SubTitle>Gapless</SubTitle>
+    <SubTitle id="grid-gapless">Gapless</SubTitle>
     <Description>
       You can remove column gutters by adding the <code>.grid--gapless</code>{' '}
       modifier to a grid. There are also <code>.grid--gapless-horizontal</code>{' '}
@@ -97,7 +99,7 @@ const Grid = () =>
         </div>
       </div>
     </Example>
-    <SubTitle>Vertical Alignment</SubTitle>
+    <SubTitle id="grid-vertical-alignment">Vertical Alignment</SubTitle>
     <Description>
       Add the <code>.grid--valign-stretch</code> modifier for equal height
       columns. <em>This is the default setting.</em>
@@ -109,7 +111,7 @@ const Grid = () =>
           <div className="grid__col">
             <div className="example__grid">
               <p>.grid__col</p>
-              {loremIpsum({ count: 3 })}
+              {loremIpsum}
             </div>
           </div>
           <div className="grid__col">
@@ -129,7 +131,7 @@ const Grid = () =>
           <div className="grid__col">
             <div className="example__grid">
               <p>.grid__col</p>
-              {loremIpsum({ count: 3 })}
+              {loremIpsum}
             </div>
           </div>
           <div className="grid__col">
@@ -149,7 +151,7 @@ const Grid = () =>
           <div className="grid__col">
             <div className="example__grid">
               <p>.grid__col</p>
-              {loremIpsum({ count: 3 })}
+              {loremIpsum}
             </div>
           </div>
           <div className="grid__col">
@@ -169,7 +171,7 @@ const Grid = () =>
           <div className="grid__col">
             <div className="example__grid">
               <p>.grid__col</p>
-              {loremIpsum({ count: 3 })}
+              {loremIpsum}
             </div>
           </div>
           <div className="grid__col">
@@ -317,7 +319,7 @@ const Grid = () =>
         </div>
       </div>
     </Example>
-    <SubTitle>Horizontal Alignment</SubTitle>
+    <SubTitle id="grid-horizontal-alignment">Horizontal Alignment</SubTitle>
     <Description>
       Add the <code>.grid--halign-left</code> modifier to align columns on the
       left. <em>This is the default setting.</em>
