@@ -79,8 +79,13 @@ $form-input-group-background-color: $form-input-border-color;
   }
 
   &::-ms-expand {
-    background-color: transparent;
-    border: 0;
+    display: none;
+  }
+}
+
+.form__select > select {
+  &::-ms-expand {
+    display: none;
   }
 }
 

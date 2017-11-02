@@ -238,7 +238,8 @@ class Menu extends Component {
                 </li>
                 <li>
                   <a
-                    onClick={event => this.scrollTo(event, 'forms-input-states')}
+                    onClick={event =>
+                      this.scrollTo(event, 'forms-input-states')}
                     href="#forms-input-states"
                   >
                     Input states

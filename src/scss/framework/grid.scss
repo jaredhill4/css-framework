@@ -18,8 +18,9 @@ $grid-gutter-width: 20px;
 @mixin grid__col($suffix) {
   @for $i from 1 through $grid-column-count {
     .grid__col-#{$suffix}-#{$i} {
-      flex: none;
-      width: percentage(($i / $grid-column-count));
+      // flex: none;
+      flex-basis: percentage(($i / $grid-column-count));
+      max-width: percentage(($i / $grid-column-count));
     }
   }
 }
@@ -66,7 +67,10 @@ $grid-gutter-width: 20px;
 
 .grid {
   align-items: stretch;
+  box-sizing: border-box;
   display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: $grid-gutter-width / 2;
@@ -178,14 +182,8 @@ $grid-gutter-width: 20px;
 
 .grid__col,
 [class*="grid__col-"] {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
-  max-width: 100%;
+  box-sizing: border-box;
   padding: $grid-gutter-width / 2;
-  width: auto;
 
   .grid--gapless & {
     padding: 0;
@@ -200,6 +198,15 @@ $grid-gutter-width: 20px;
     padding-bottom: 0;
     padding-top: 0;
   }
+}
+
+.grid__col {
+  flex: 1 0 auto;
+  max-width: 100%;
+}
+
+[class*="grid__col-"] {
+  flex: 0 0 auto;
 }
 
 @include grid__col(xs);

@@ -83,7 +83,7 @@ body {
   @media screen and (min-width: 768px) {
     background: #3273dc;
     height: 60px;
-    overflow-y: initial;
+    overflow-y: inherit;
     padding: 0;
     transform: translateX(0);
     width: 100%;

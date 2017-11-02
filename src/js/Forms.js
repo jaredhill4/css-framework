@@ -48,8 +48,6 @@ const Forms = () =>
                 We'll never share your email with anyone else.
               </small>
             </div>
-          </div>
-          <div className="grid__col-xs-12">
             <div className="form__field">
               <label className="form__label" htmlFor="address1">
                 Address Line 1
@@ -132,8 +130,6 @@ const Forms = () =>
                 <input type="checkbox" /> I agree to the terms and conditions.
               </label>
             </div>
-          </div>
-          <div className="grid__col-xs-12">
             <div className="form__field">
               <label className="form__radio">
                 <input type="radio" name="yes_or_no" /> Yes
@@ -142,13 +138,9 @@ const Forms = () =>
                 <input type="radio" name="yes_or_no" /> No
               </label>
             </div>
-          </div>
-          <div className="grid__col-xs-12">
-            <div>
-              <button className="btn btn--blue" type="button">
-                Submit
-              </button>
-            </div>
+            <button className="btn btn--blue" type="button">
+              Submit
+            </button>
           </div>
         </div>
       </form>
