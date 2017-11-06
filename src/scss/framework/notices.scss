@@ -1,0 +1,76 @@
+// --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$notice-border-radius: $global-border-radius;
+$notice-border-width: $global-border-width;
+$notice-border-color: $global-border-color;
+
+$notice-border-left-width: 5px;
+
+$notice-padding: 1.25rem;
+
+// --------------------------------------------------
+// mixins
+// --------------------------------------------------
+
+@mixin notice($color) {
+  border-left-color: $color;
+
+  .notice__title {
+    color: $color;
+  }
+}
+
+// --------------------------------------------------
+// base styles
+// --------------------------------------------------
+
+.notice {
+  position: relative;
+  display: block;
+  padding: $notice-padding;
+  border: solid $notice-border-width $notice-border-color;
+  border-left: solid $notice-border-left-width $color-gray;
+  border-radius: $notice-border-radius;
+  margin-bottom: 1rem;
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  .notice__title {
+    font-weight: $font-weight-bold;
+    color: $color-black;
+  }
+}
+
+// --------------------------------------------------
+// variants
+// --------------------------------------------------
+
+.notice--red {
+  @include notice($color-red);
+}
+
+.notice--yellow {
+  @include notice($color-yellow);
+}
+
+.notice--green {
+  @include notice($color-green);
+}
+
+.notice--blue {
+  @include notice($color-blue);
+}
+
+// --------------------------------------------------
+// close
+// --------------------------------------------------
+
+.notice__close {
+  @extend %close;
+  top: $notice-padding;
+  right: $notice-padding;
+}

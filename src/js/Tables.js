@@ -11,14 +11,6 @@ const createTableWithClassNames = classNames =>
         <th>Col 4</th>
       </tr>
     </thead>
-    <tfoot>
-      <tr>
-        <th>Col 1</th>
-        <th>Col 2</th>
-        <th>Col 3</th>
-        <th>Col 4</th>
-      </tr>
-    </tfoot>
     <tbody>
       <tr>
         <td>Row 1 / Col 1</td>
@@ -45,6 +37,14 @@ const createTableWithClassNames = classNames =>
         <td>Row 4 / Col 4</td>
       </tr>
     </tbody>
+    <tfoot>
+      <tr>
+        <th>Col 1</th>
+        <th>Col 2</th>
+        <th>Col 3</th>
+        <th>Col 4</th>
+      </tr>
+    </tfoot>
   </table>;
 
 const Tables = () =>

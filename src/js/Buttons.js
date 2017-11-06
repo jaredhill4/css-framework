@@ -33,6 +33,9 @@ const Buttons = () =>
       <button type="button" className="btn btn--blue">
         .btn--blue
       </button>
+      <button type="button" className="btn btn--yellow">
+        .btn--yellow
+      </button>
     </Example>
     <SubTitle id="buttons-outlined">Outlined</SubTitle>
     <Description>
@@ -53,6 +56,9 @@ const Buttons = () =>
         .btn--outline
       </button>
       <button type="button" className="btn btn--blue btn--outline">
+        .btn--outline
+      </button>
+      <button type="button" className="btn btn--yellow btn--outline">
         .btn--outline
       </button>
     </Example>

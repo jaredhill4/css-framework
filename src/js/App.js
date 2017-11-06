@@ -7,6 +7,8 @@ import Typography from './Typography';
 import Buttons from './Buttons';
 import Forms from './Forms';
 import Tables from './Tables';
+import Notices from './Notices';
+import Utilities from './Utilities';
 
 class App extends Component {
   constructor() {
@@ -43,6 +45,8 @@ class App extends Component {
           <Buttons />
           <Forms />
           <Tables />
+          <Notices />
+          <Utilities />
         </section>
       </div>
     );

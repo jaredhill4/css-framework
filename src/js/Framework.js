@@ -25,9 +25,9 @@ const SubTitle = ({ children, id = '' }) =>
   </h3>;
 
 const Description = ({ children }) =>
-  <p className="framework__description">
+  <div className="framework__description">
     {children}
-  </p>;
+  </div>;
 
 const Example = ({ children }) =>
   <div className="example">

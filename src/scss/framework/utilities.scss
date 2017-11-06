@@ -1,12 +1,455 @@
 // --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$theme-options-media-queries: (
+  print: $mq-pr,
+  xs: $mq-xs,
+  sm: $mq-sm,
+  md: $mq-md,
+  lg: $mq-lg,
+  xl: $mq-xl
+);
+$theme-options-colors: (
+  black: $color-black,
+  white: $color-white,
+  gray: $color-gray,
+  red: $color-red,
+  yellow: $color-yellow,
+  green: $color-green,
+  blue: $color-blue
+);
+$theme-options-font-weight: (
+  normal: $font-weight-normal,
+  bold: $font-weight-bold
+);
+$theme-options-margin-sizes: (0, 5, 10, 15, 20, 30);
+$theme-options-padding-sizes: (0, 5, 10, 15, 20, 30);
+$theme-options-border-sizes: (0);
+$theme-options-display: (
+  none,
+  inline,
+  block,
+  inline-block,
+  table,
+  table-row,
+  table-cell,
+  flex,
+  inline-flex
+);
+$theme-options-text-align: (left, right, center, justify);
+$theme-options-font-style: (normal, italic, oblique);
+$theme-options-vertical-align: (
+  baseline,
+  sub,
+  super,
+  top,
+  text-top,
+  middle,
+  bottom,
+  text-bottom
+);
+$theme-options-text-transform: (uppercase, lowercase, capitalize);
+$theme-options-float: (left, right, none);
+$theme-options-width: (25, 33, 50, 66, 75, 100);
+$theme-options-aspect-ratios: ((21, 9),  (16, 9),  (4, 3),  (1, 1));
+$theme-options-sides: (top, right, bottom, left);
+
+// --------------------------------------------------
+// mixins
+// --------------------------------------------------
+
+// color
+@mixin u--color($colors) {
+  $selector: '.u--color';
+
+  @each $name, $value in $colors {
+    '#{$selector}-#{$name}' {
+      color: $value;
+    }
+    'a#{$selector}-#{$name}:hover' {
+      @if $name == black {
+        color: lighten($value, 30%);
+      } @else {
+        color: shade($value, 15%);
+      }
+    }
+  }
+}
+
+// background color
+@mixin u--background-color($colors) {
+  @each $name, $value in $colors {
+    .u--background-color-#{$name} {
+      background-color: $value;
+    }
+  }
+}
+
+// border color
+@mixin u--border-color($colors) {
+  @each $name, $value in $colors {
+    .u--border-color-#{$name} {
+      border-color: $value;
+    }
+  }
+}
+
+// border width
+@mixin u--border-width($sizes, $sides) {
+  $selector: '.u--border-width';
+
+  @each $size in $sizes {
+    '#{$selector}-#{$size}' {
+      border-width: #{$size}px;
+    }
+    @each $side in $sides {
+      '#{$selector}-#{$side}-#{$size}' {
+        border-#{$side}-width: #{$size}px;
+      }
+    }
+  }
+}
+
+// margin
+@mixin u--margin($sizes, $sides, $media-queries) {
+  $selector: '.u--margin';
+
+  @each $size in $sizes {
+    '#{$selector}-#{$size}' {
+      margin: #{$size}px;
+    }
+    @each $side in $sides {
+      '#{$selector}-#{$side}-#{$size}' {
+        margin-#{$side}: #{$size}px;
+      }
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $size in $sizes {
+        '#{$selector}-#{$size}-#{$key}' {
+          margin: #{$size}px;
+        }
+        @each $side in $sides {
+          '#{$selector}-#{$side}-#{$size}' {
+            margin-#{$side}: #{$size}px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// padding
+@mixin u--padding($sizes, $sides, $media-queries) {
+  $selector: '.u--padding';
+
+  @each $size in $sizes {
+    '#{$selector}-#{$size}' {
+      padding: #{$size}px;
+    }
+    @each $side in $sides {
+      '#{$selector}-#{$side}-#{$size}' {
+        padding-#{$side}: #{$size}px;
+      }
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $size in $sizes {
+        '#{$selector}-#{$size}-#{$key}' {
+          padding: #{$size}px;
+        }
+        @each $side in $sides {
+          '#{$selector}-#{$side}-#{$size}' {
+            border-#{$side}: #{$size}px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin u--width($sizes, $media-queries) {
+  $selector: '.u--width';
+
+  @each $size in $sizes {
+    '#{$selector}-#{$size}' {
+      width: percentage($size) / 100;
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $size in $sizes {
+        '#{$selector}-#{$size}-#{$key}' {
+          width: percentage($size) / 100;
+        }
+      }
+    }
+  }
+}
+
+// font weight
+@mixin u--font-weight($options) {
+  @each $key, $value in $options {
+    .u--font-weight-#{$key} {
+      font-weight: $value;
+    }
+  }
+}
+
+// font style
+@mixin u--font-style($options) {
+  @each $option in $options {
+    .u--font-style-#{$option} {
+      font-style: $option;
+    }
+  }
+}
+
+// text alignment
+@mixin u--text-align($options, $media-queries) {
+  $selector: '.u--text-align';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      text-align: $option;
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $option in $options {
+        '#{$selector}-#{$option}-#{$key}' {
+          text-align: $option;
+        }
+      }
+    }
+  }
+}
+
+// text transform
+@mixin u--text-transform($options) {
+  @each $option in $options {
+    .u--text-transform-#{$option} {
+      text-transform: $option;
+    }
+  }
+}
+
+// vertical alignment
+@mixin u--vertical-align($options, $media-queries) {
+  $selector: '.u--vertical-align';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      vertical-align: $option;
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $option in $options {
+        '#{$selector}-#{$option}-#{$key}' {
+          vertical-align: $option;
+        }
+      }
+    }
+  }
+}
+
+// float
+@mixin u--float($options, $media-queries) {
+  $selector: '.u--float';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      float: $option;
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $option in $options {
+        '#{$selector}-#{$option}-#{$key}' {
+          float: $option;
+        }
+      }
+    }
+  }
+}
+
+// display
+@mixin u--display($options, $media-queries) {
+  $selector: '.u--display';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      display: $option;
+    }
+  }
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      @each $option in $options {
+        '#{$selector}-#{$option}-#{$key}' {
+          display: $option;
+        }
+      }
+    }
+  }
+}
+
+// hidden
+@mixin u--hidden($media-queries) {
+  $selector: '.u--hidden';
+
+  #{$selector} {
+    display: none;
+  }
+
+  @each $key, $mq in $media-queries {
+    @media #{$mq} {
+      '#{$selector}-#{$key}' {
+        display: none;
+      }
+    }
+  }
+}
+
+// responsive embed
+@mixin u--embed-responsive($aspect-ratios) {
+  $selector: '.u--embed-responsive';
+
+  #{$selector} {
+    position: relative;
+    display: block;
+    padding-bottom: ((9 * 100) / 16) * 1%;
+
+    iframe,
+    video,
+    embed,
+    object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none !important;
+    }
+  }
+
+  @each $aspect-ratio in $aspect-ratios {
+    '#{$selector}--#{nth($aspect-ratio, 1)}x#{nth($aspect-ratio, 2)}' {
+      padding-bottom: ((nth($aspect-ratio, 2) * 100) / nth($aspect-ratio, 1)) *
+        1%;
+    }
+  }
+}
+
+// --------------------------------------------------
 // utilities
 // --------------------------------------------------
 
-.u--cf,
 .u--clearfix {
   @extend %clearfix;
 }
-
 .u--truncate {
   @extend %truncate;
 }
+
+// --------------------------------------------------
+// text color
+// --------------------------------------------------
+
+@include u--color($theme-options-colors);
+
+// --------------------------------------------------
+// background color
+// --------------------------------------------------
+
+@include u--background-color($theme-options-colors);
+
+// --------------------------------------------------
+// borders
+// --------------------------------------------------
+
+// border
+.u--border {
+  border: solid $global-border-width $global-border-color;
+}
+
+// border color
+@include u--border-color($theme-options-colors);
+
+// border width
+@include u--border-width($theme-options-border-sizes, $theme-options-sides);
+
+// --------------------------------------------------
+// margins
+// --------------------------------------------------
+
+@include u--margin($theme-options-margin-sizes, $theme-options-sides, $theme-options-media-queries);
+
+// --------------------------------------------------
+// padding
+// --------------------------------------------------
+
+@include u--padding($theme-options-padding-sizes, $theme-options-sides, $theme-options-media-queries);
+
+// --------------------------------------------------
+// width
+// --------------------------------------------------
+
+@include u--width($theme-options-width, $theme-options-media-queries);
+
+// --------------------------------------------------
+// font weight
+// --------------------------------------------------
+
+@include u--font-weight($theme-options-font-weight);
+
+// --------------------------------------------------
+// font style
+// --------------------------------------------------
+
+@include u--font-style($theme-options-font-style);
+
+// --------------------------------------------------
+// text alignment
+// --------------------------------------------------
+
+@include u--text-align($theme-options-text-align, $theme-options-media-queries);
+
+// --------------------------------------------------
+// vertical alignment
+// --------------------------------------------------
+
+@include u--vertical-align($theme-options-vertical-align, $theme-options-media-queries);
+
+// --------------------------------------------------
+// text transform
+// --------------------------------------------------
+
+@include u--text-transform($theme-options-text-transform);
+
+// --------------------------------------------------
+// floats
+// --------------------------------------------------
+
+@include u--float($theme-options-float, $theme-options-media-queries);
+
+// --------------------------------------------------
+// responsive embeds
+// --------------------------------------------------
+
+@include u--embed-responsive($theme-options-aspect-ratios);
+
+// --------------------------------------------------
+// display
+// --------------------------------------------------
+
+@include u--display($theme-options-display, $theme-options-media-queries);
+
+// --------------------------------------------------
+// hidden
+// --------------------------------------------------
+
+@include u--hidden($theme-options-media-queries);

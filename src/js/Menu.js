@@ -305,6 +305,144 @@ class Menu extends Component {
                 </li>
               </ul>
             </li>
+            <li>
+              <a
+                onClick={event => this.scrollTo(event, 'notices')}
+                href="#notices"
+              >
+                Notices
+              </a>
+              <ul>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'notices-colors')}
+                    href="#notices-colors"
+                  >
+                    Colors
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'notices-titles')}
+                    href="#notices-titles"
+                  >
+                    Titles
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'notices-dissmissable')}
+                    href="#notices-dissmissable"
+                  >
+                    Dismissable Notices
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                onClick={event => this.scrollTo(event, 'utilities')}
+                href="#utilities"
+              >
+                Utilities
+              </a>
+              <ul>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'utilities-text-color')}
+                    href="#utilities-text-color"
+                  >
+                    Text &amp; Link Color
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'utilities-background-color')}
+                    href="#utilities-background-color"
+                  >
+                    Background Color
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'utilities-borders')}
+                    href="#utilities-borders"
+                  >
+                    Borders
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'utilities-margins')}
+                    href="#utilities-margins"
+                  >
+                    Margins
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'utilities-padding')}
+                    href="#utilities-padding"
+                  >
+                    Padding
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'utilities-width')}
+                    href="#utilities-width"
+                  >
+                    Width
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'utilities-floats')}
+                    href="#utilities-floats"
+                  >
+                    Floats
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'utilities-text-styles')}
+                    href="#utilities-text-styles"
+                  >
+                    Text Styles &amp; Formatting
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'utilities-responsive-embeds')}
+                    href="#utilities-responsive-embeds"
+                  >
+                    Responsive Embeds
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event => this.scrollTo(event, 'utilities-display')}
+                    href="#utilities-display"
+                  >
+                    Display &amp; Visibility
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'utilities-responsive-postfixes')}
+                    href="#utilities-responsive-postfixes"
+                  >
+                    Responsive Utility Postfixes
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
