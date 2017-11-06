@@ -68,9 +68,9 @@ const Notices = () =>
         </p>
       </div>
     </Example>
-    <SubTitle id="notices-dissmissable">Dismissable Notices</SubTitle>
+    <SubTitle id="notices-dismissible">Dismissible</SubTitle>
     <Description>
-      To make a notice dismissable add a <code>span</code> or <code>a</code> tag
+      To make a notice dismissible add a <code>span</code> or <code>a</code> tag
       with the <code>.notice__close</code> class to the beginning of the notice.
       {
         // TODO: Add additional instructions about making a

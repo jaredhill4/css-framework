@@ -332,10 +332,10 @@ class Menu extends Component {
                 <li>
                   <a
                     onClick={event =>
-                      this.scrollTo(event, 'notices-dissmissable')}
-                    href="#notices-dissmissable"
+                      this.scrollTo(event, 'notices-dismissible')}
+                    href="#notices-dismissible"
                   >
-                    Dismissable Notices
+                    Dismissible
                   </a>
                 </li>
               </ul>
