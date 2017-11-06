@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 import MenuToggle from './MenuToggle';
+
 import Grid from './Grid';
 import Containers from './Containers';
 import Typography from './Typography';
 import Buttons from './Buttons';
 import Forms from './Forms';
 import Tables from './Tables';
+import Components from './Components';
 
 class App extends Component {
   constructor() {
@@ -43,6 +45,7 @@ class App extends Component {
           <Buttons />
           <Forms />
           <Tables />
+          <Components />
         </section>
       </div>
     );
