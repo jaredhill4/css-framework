@@ -81,7 +81,7 @@ const Notices = () =>
     <Example>
       <div className="notice notice--blue u--margin-bottom-0">
         <span className="notice__close" />
-        <h5 className="notice__title">This is a dismissable notice</h5>
+        <h5 className="notice__title">This is a dismissible notice</h5>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
           dolor at suscipit tristique.
