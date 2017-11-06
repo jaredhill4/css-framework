@@ -22,7 +22,7 @@ class Components extends Component {
             delay on show can be added with <code>[data-tooltip-delay]</code>.
           </p>
           <p>
-            In order to use the tooltip library you must import it and call{' '}
+            In order to use tooltips you must import the library and call{' '}
             <code>tooltips('[data-tooltip]');</code>
           </p>
         </Description>

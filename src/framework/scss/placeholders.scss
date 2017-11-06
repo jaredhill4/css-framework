@@ -44,9 +44,9 @@
   display: block;
   top: 0;
   right: 0;
-  width: 16px;
-  height: 16px;
-  opacity: 0.2;
+  width: 14px;
+  height: 14px;
+  opacity: 0.3;
   cursor: pointer;
 
   &::before,
@@ -54,20 +54,22 @@
     position: absolute;
     display: block;
     content: '';
-    width: 16px;
-    height: 3px;
+    width: 14px;
+    height: 1px;
     top: 50%;
-    margin-top: -(3px/2);
+    margin-top: -(1px / 2);
     background: $color-black;
   }
+
   &::before {
     transform: rotate(45deg);
   }
+
   &::after {
     transform: rotate(-45deg);
   }
 
   &:hover {
-    opacity: 0.4;
+    opacity: 0.5;
   }
 }

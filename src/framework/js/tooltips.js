@@ -24,7 +24,7 @@ class Tooltip {
   }
 
   _setListeners() {
-    $(this.reference)
+    this.reference
       .on('mouseenter', event => this.show(event))
       .on('mouseleave', event => this.hide(event));
   }
