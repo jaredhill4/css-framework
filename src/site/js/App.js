@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
 import MenuToggle from './MenuToggle';
+
 import Grid from './Grid';
 import Containers from './Containers';
 import Typography from './Typography';
@@ -8,6 +9,7 @@ import Buttons from './Buttons';
 import Forms from './Forms';
 import Tables from './Tables';
 import Notices from './Notices';
+import Components from './Components';
 import Utilities from './Utilities';
 
 class App extends Component {
@@ -46,6 +48,7 @@ class App extends Component {
           <Forms />
           <Tables />
           <Notices />
+          <Components />
           <Utilities />
         </section>
       </div>

@@ -342,6 +342,25 @@ class Menu extends Component {
             </li>
             <li>
               <a
+                onClick={event => this.scrollTo(event, 'components')}
+                href="#components"
+              >
+                Components
+              </a>
+              <ul>
+                <li>
+                  <a
+                    onClick={event =>
+                      this.scrollTo(event, 'components-tooltips')}
+                    href="#components-tooltips"
+                  >
+                    Tooltips
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
                 onClick={event => this.scrollTo(event, 'utilities')}
                 href="#utilities"
               >
