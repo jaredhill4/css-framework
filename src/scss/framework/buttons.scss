@@ -144,6 +144,11 @@ fieldset[disabled] a.btn {
   @include btn--outline($color-red, $color-red, $color-red);
 }
 
+.btn--yellow {
+  @include btn($color-yellow, $color-yellow, $color-white);
+  @include btn--outline($color-yellow, $color-yellow, $color-yellow);
+}
+
 .btn--green {
   @include btn($color-green, $color-green, $color-white);
   @include btn--outline($color-green, $color-green, $color-green);

@@ -7,6 +7,7 @@ $color-primary: #6772e5;
 $color-red: #e56767;
 $color-green: #3ecf8e;
 $color-blue: #6772e5;
+$color-yellow: #ffd65a;
 
 $color-white: #fff;
 $color-gray: #e3e3e3;
@@ -22,18 +23,19 @@ $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1600px;
 
-$mq-xs: "screen and (min-width: #{$breakpoint-xs})";
-$mq-sm: "screen and (min-width: #{$breakpoint-sm})";
-$mq-md: "screen and (min-width: #{$breakpoint-md})";
-$mq-lg: "screen and (min-width: #{$breakpoint-lg})";
-$mq-xl: "screen and (min-width: #{$breakpoint-xl})";
+$mq-pr: 'print';
+$mq-xs: 'screen and (min-width: #{$breakpoint-xs})';
+$mq-sm: 'screen and (min-width: #{$breakpoint-sm})';
+$mq-md: 'screen and (min-width: #{$breakpoint-md})';
+$mq-lg: 'screen and (min-width: #{$breakpoint-lg})';
+$mq-xl: 'screen and (min-width: #{$breakpoint-xl})';
 
 // --------------------------------------------------
 // links
 // --------------------------------------------------
 
 $link-color: $color-primary;
-$link-color-hover: shade($link-color, 10%);
+$link-color-hover: shade($link-color, 15%);
 
 // --------------------------------------------------
 // globals
@@ -51,8 +53,15 @@ $global-focus-box-shadow: 0 0 0 2px rgba($color-primary, .5);
 // font families
 // --------------------------------------------------
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif;
 $font-family-serif: Georgia, serif;
-$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono",
-  "Courier New", monospace;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono',
+  'Courier New', monospace;
+
+// --------------------------------------------------
+// font weight
+// --------------------------------------------------
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
