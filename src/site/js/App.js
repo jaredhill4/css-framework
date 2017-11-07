@@ -17,14 +17,14 @@ class App extends Component {
     super();
 
     this.state = {
-      mobileMenuOpen: false,
+      menuOpen: false,
     };
 
-    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (nextState.mobileMenuOpen === this.state.mobileMenuOpen) {
+    if (nextState.menuOpen === this.state.menuOpen) {
       return false;
     }
     return true;
@@ -32,14 +32,9 @@ class App extends Component {
 
   render() {
     return (
-      <div
-        className={this.state.mobileMenuOpen ? 'framework__menu-is-open' : ''}
-      >
-        <Menu
-          toggleMobileMenu={this.toggleMobileMenu}
-          menuIsOpen={this.state.mobileMenuOpen}
-        />
-        <MenuToggle toggleMobileMenu={this.toggleMobileMenu} />
+      <div className={this.state.menuOpen ? 'framework__menu-is-open' : ''}>
+        <Menu toggleMenu={this.toggleMenu} menuIsOpen={this.state.menuOpen} />
+        <MenuToggle toggleMenu={this.toggleMenu} />
         <section className="framework">
           <Grid />
           <Containers />
@@ -55,11 +50,11 @@ class App extends Component {
     );
   }
 
-  toggleMobileMenu(event) {
+  toggleMenu(event) {
     event.preventDefault();
 
     this.setState({
-      mobileMenuOpen: !this.state.mobileMenuOpen,
+      menuOpen: !this.state.menuOpen,
     });
   }
 }

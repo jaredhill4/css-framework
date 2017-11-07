@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MenuToggle = ({ toggleMobileMenu }) =>
+const MenuToggle = ({ toggleMenu }) =>
   <button
     className="framework__menu-toggle"
-    onClick={event => toggleMobileMenu(event)}
+    onClick={event => toggleMenu(event)}
   >
     <div>
       <span />

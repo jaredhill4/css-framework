@@ -4,15 +4,9 @@
  * previewing the framework components.
  */
 
-$menu-breakpoint: 900px;
-
 body {
   background-color: #fff;
   position: relative;
-
-  @media screen and (min-width: $menu-breakpoint) {
-    padding-top: 60px;
-  }
 }
 
 .framework__menu-is-open {
@@ -24,10 +18,6 @@ body {
 
   .framework__menu-is-open & {
     transform: translateX(260px);
-
-    @media screen and (min-width: $menu-breakpoint) {
-      transform: translateX(0);
-    }
   }
 }
 
@@ -46,10 +36,6 @@ body {
   transition: all .15s ease;
   width: 40px;
   z-index: 10;
-
-  @media screen and (min-width: $menu-breakpoint) {
-    display: none;
-  }
 
   .framework__menu-is-open & {
     transform: translateX(260px);
@@ -82,21 +68,8 @@ body {
   width: 260px;
   z-index: 5;
 
-  @media screen and (min-width: $menu-breakpoint) {
-    background: #3273dc;
-    height: 60px;
-    overflow-y: inherit;
-    padding: 0;
-    transform: translateX(0);
-    width: 100%;
-  }
-
   .framework__menu-is-open & {
     transform: translateX(0);
-
-    @media screen and (min-width: $menu-breakpoint) {
-      transform: translateX(0);
-    }
   }
 }
 
@@ -111,33 +84,17 @@ body {
   max-width: 800px;
 }
 
-.framework__topbar--sticky {
-  @media screen and (min-width: $menu-breakpoint) {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(#000, .1);
-  }
-}
-
 .framework__nav {
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
-
-  @media screen and (min-width: $menu-breakpoint) {
-    width: auto;
-  }
 }
 
 .framework__nav > li {
   border-bottom: 1px solid rgba(#fff, 0.08);
   display: block;
   position: relative;
-
-  @media screen and (min-width: $menu-breakpoint) {
-    border-bottom: none;
-    display: inline-block;
-  }
 
   &:last-child {
     border-bottom: none;
@@ -153,19 +110,8 @@ body {
   text-decoration: none;
   transition: all .15s ease;
 
-  @media screen and (min-width: $menu-breakpoint) {
-    line-height: 60px;
-    padding: 0 15px;
-  }
-
   &:hover {
     opacity: 1;
-  }
-
-  .framework__topbar--sticky & {
-    @media screen and (min-width: $menu-breakpoint) {
-      color: #292b2c;
-    }
   }
 }
 
@@ -173,29 +119,6 @@ body {
   list-style: none;
   margin: 0 0 4px 0;
   padding: 0 0 0 15px;
-
-  @media screen and (min-width: $menu-breakpoint) {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 40px rgba(#000, 0.2);
-    left: 0;
-    margin: -4px 0 0 0;
-    opacity: 0;
-    padding: 10px 0;
-    position: absolute;
-    top: 100%;
-    transform: translateY(20px);
-    transition: all .15s ease-in-out;
-    visibility: hidden;
-    width: 200px;
-  }
-}
-.framework__nav > li:hover > ul {
-  @media screen and (min-width: $menu-breakpoint) {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
 }
 
 .framework__nav > li > ul > li > a {
@@ -206,18 +129,8 @@ body {
   text-decoration: none;
   transition: all .15s ease;
 
-  @media screen and (min-width: $menu-breakpoint) {
-    color: #3273dc;
-    padding: 6px 20px;
-  }
-
   &:hover {
     color: rgba(#fff, 0.65);
-
-    @media screen and (min-width: $menu-breakpoint) {
-      background-color: #3273dc;
-      color: #fff;
-    }
   }
 }
 
@@ -227,6 +140,7 @@ body {
   &:nth-of-type(even) {
     background-color: #f8f9fa;
   }
+
   &:last-of-type {
     border-bottom: none;
   }
