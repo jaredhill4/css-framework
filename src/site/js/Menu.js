@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
+//import classnames from 'classnames';
 
 const navigation = [
   {
@@ -14,7 +14,6 @@ const navigation = [
   {
     name: 'Containers',
     id: 'containers',
-    children: [],
   },
   {
     name: 'Typography',
@@ -73,9 +72,19 @@ const navigation = [
     ],
   },
   {
-    name: 'Components',
-    id: 'components',
-    children: [{ name: 'Tooltips', id: 'components-tooltips' }],
+    name: 'Modals',
+    id: 'modals',
+    children: [
+      { name: 'Setup', id: 'modals-setup' },
+      { name: 'Showing & Hiding', id: 'modals-showing-and-hiding' },
+      { name: 'Sizes', id: 'modals-sizes' },
+      { name: 'Vertical Alignment', id: 'modals-vertical-alignment' },
+      { name: 'Listeners', id: 'modals-listeners' },
+    ],
+  },
+  {
+    name: 'Tooltips',
+    id: 'tooltips',
   },
   {
     name: 'Utilities',
@@ -113,14 +122,16 @@ class Menu extends Component {
     return (
       <ul className="framework__nav">
         {links.map(link =>
-          <li>
+          <li key={link.id}>
             <a
               onClick={event => this.scrollTo(event, link.id)}
               href={`#${link.id}`}
             >
               {link.name}
             </a>
-            {this.renderSubNav(link.children)}
+            {link.hasOwnProperty('children') && link.children.length
+              ? this.renderSubNav(link.children)
+              : ''}
           </li>
         )}
       </ul>
@@ -135,7 +146,7 @@ class Menu extends Component {
     return (
       <ul>
         {links.map(link =>
-          <li>
+          <li key={link.id}>
             <a
               onClick={event => this.scrollTo(event, link.id)}
               href={`#${link.id}`}

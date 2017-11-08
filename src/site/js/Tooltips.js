@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import { Section, Title, SubTitle, Description, Example } from './Framework';
+import { Section, Title, Description, Example } from './Framework';
 import tooltips from '../../framework/js/tooltips';
-import modals from '../../framework/js/modals';
 
-class Components extends Component {
+class Tooltips extends Component {
   componentDidMount() {
     tooltips('[data-tooltip]');
-    modals('[data-modal]');
   }
 
   render() {
     return (
       <Section>
-        <Title id="components">Components</Title>
-        <SubTitle id="components-tooltips">Tooltips</SubTitle>
+        <Title id="tooltips">Tooltips</Title>
         <Description>
           <p>
             Tooltips can be added to any element with{' '}
@@ -68,4 +65,4 @@ class Components extends Component {
   }
 }
 
-export default Components;
+export default Tooltips;

@@ -5,11 +5,11 @@
 $hr-border-color: rgba(#000, .1);
 $hr-width: 1px;
 
-$pre-background-color: #f8f9fa;
+$pre-background-color: darken(#f8f9fa, 2.5%);
 $pre-border-radius: $global-border-radius;
 $pre-color: $color-black;
 
-$code-background-color: #f8f9fa;
+$code-background-color: darken(#f8f9fa, 2.5%);
 $code-border-radius: $global-border-radius;
 $code-color: #bd4147;
 
@@ -37,7 +37,7 @@ h6,
 .h6 {
   font-weight: 300;
   line-height: 1.1;
-  margin-top: 0;
+  margin-top: 1.75rem;
   margin-bottom: .5rem;
 }
 
@@ -76,7 +76,7 @@ h6,
 // --------------------------------------------------
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   margin-top: 0;
 }
 

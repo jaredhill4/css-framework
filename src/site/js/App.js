@@ -9,7 +9,8 @@ import Buttons from './Buttons';
 import Forms from './Forms';
 import Tables from './Tables';
 import Notices from './Notices';
-import Components from './Components';
+import Modals from './Modals';
+import Tooltips from './Tooltips';
 import Utilities from './Utilities';
 
 class App extends Component {
@@ -43,7 +44,8 @@ class App extends Component {
           <Forms />
           <Tables />
           <Notices />
-          <Components />
+          <Modals />
+          <Tooltips />
           <Utilities />
         </section>
       </div>

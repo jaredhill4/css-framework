@@ -27,6 +27,7 @@ $notice-padding: 1.25rem;
 // --------------------------------------------------
 
 .notice {
+  @extend %trim-child-margins;
   position: relative;
   display: block;
   padding: $notice-padding;
@@ -34,15 +35,12 @@ $notice-padding: 1.25rem;
   border-left: solid $notice-border-left-width $color-gray;
   border-radius: $notice-border-radius;
   margin-bottom: 1rem;
+}
 
-  & > :last-child {
-    margin-bottom: 0;
-  }
-
-  .notice__title {
-    font-weight: $font-weight-bold;
-    color: $color-black;
-  }
+.notice__title {
+  font-weight: $font-weight-bold;
+  color: $color-black;
+  margin-top: 0;
 }
 
 // --------------------------------------------------

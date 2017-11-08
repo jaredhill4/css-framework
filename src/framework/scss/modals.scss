@@ -1,0 +1,167 @@
+// --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$modal-z-index: 1050;
+$modal-padding: 1.875em;
+
+$modal-dialog-padding: 2.5em;
+$modal-dialog-border-radius: $global-border-radius;
+
+$modal-width-xs: 370px;
+$modal-width-sm: 570px;
+$modal-width-md: 770px;
+$modal-width-lg: 970px;
+$modal-width-xl: 1170px;
+$modal-width-full: 100%;
+
+// --------------------------------------------------
+// base styles
+// --------------------------------------------------
+
+html.html--modal-visible {
+  overflow: hidden;
+}
+
+.modal {
+  z-index: $modal-z-index;
+  position: fixed;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.15s ease-in-out;
+
+  @media #{$mq-xs} {
+    padding: $modal-padding;
+  }
+}
+
+.modal--visible {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal--valign-center {
+  align-items: center;
+}
+
+// --------------------------------------------------
+// dialog
+// --------------------------------------------------
+
+.modal__dialog {
+  position: relative;
+  margin: 0 auto;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.9, 0.9);
+  transform-origin: 50% 25%;
+  transition: all 0.1s ease-in-out;
+
+  @media #{$mq-xs} {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    height: auto;
+  }
+
+  .modal--visible & {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: transform 0.2s cubic-bezier(0.480, -0.600, 0.480, 1.650),
+      opacity 0.2s cubic-bezier(0.480, -0.600, 0.480, 1.650);
+    pointer-events: initial;
+  }
+}
+.modal__dialog--valign-center {
+  align-items: center;
+}
+
+.modal__content {
+  z-index: 1;
+  position: relative;
+  display: block;
+  max-height: 100%;
+  padding: $modal-dialog-padding / 2;
+  background: $color-white;
+  border-radius: $modal-dialog-border-radius;
+  overflow-y: auto;
+
+  @media #{$mq-xs} {
+    max-height: calc(100vh - #{$modal-padding} * 2);
+    padding: $modal-dialog-padding;
+  }
+}
+
+.modal__header,
+.modal__body,
+.modal__footer {
+  @extend %trim-child-margins;
+}
+
+.modal__header {
+  padding-bottom: $modal-dialog-padding / 2;
+}
+
+.modal__footer {
+  padding-top: $modal-dialog-padding / 2;
+}
+
+// --------------------------------------------------
+// sizes
+// --------------------------------------------------
+
+@media #{$mq-xs} {
+  .modal__dialog {
+    max-width: $modal-width-sm;
+  }
+
+  .modal--xs .modal__dialog {
+    max-width: $modal-width-xs;
+  }
+
+  .modal--sm .modal__dialog {
+    max-width: $modal-width-sm;
+  }
+
+  .modal--md .modal__dialog {
+    max-width: $modal-width-md;
+  }
+
+  .modal--lg .modal__dialog {
+    max-width: $modal-width-lg;
+  }
+
+  .modal--xl .modal__dialog {
+    max-width: $modal-width-xl;
+  }
+
+  .modal--full .modal__dialog {
+    max-width: $modal-width-full;
+  }
+}
+
+// --------------------------------------------------
+// close
+// --------------------------------------------------
+
+.modal__close {
+  @extend %close;
+  z-index: 5;
+  top: $modal-dialog-padding / 2;
+  right: $modal-dialog-padding / 2;
+}
