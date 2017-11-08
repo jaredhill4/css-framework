@@ -4,6 +4,7 @@
 
 $tooltip-background: $color-black;
 $tooltip-border-radius: $global-border-radius;
+$tooltip-box-shadow: none;
 $tooltip-color: $color-white;
 $tooltip-font-size: .9rem;
 $tooltip-line-height: 1.15;
@@ -22,6 +23,7 @@ $tooltip-z-index: 1070;
 .tooltip {
   background-color: $tooltip-background;
   border-radius: $tooltip-border-radius;
+  box-shadow: $tooltip-box-shadow;
   color: $tooltip-color;
   display: block;
   font-size: $tooltip-font-size;

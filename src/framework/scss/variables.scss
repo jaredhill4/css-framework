@@ -45,9 +45,11 @@ $global-border-color: $color-gray;
 $global-border-radius: .25rem;
 $global-border-width: 1px;
 
-$global-transition: all .15s ease;
+$global-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
 $global-focus-box-shadow: 0 0 0 2px rgba($color-primary, .5);
+
+$global-transition: all .15s ease;
 
 // --------------------------------------------------
 // font families

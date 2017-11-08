@@ -20,7 +20,14 @@ class Tooltip {
       transition: 250, // This should match the CSS transition duration
     };
 
+    this._moveTitle();
     this._setListeners();
+  }
+
+  _moveTitle() {
+    this.reference
+      .attr('data-original-title', this.reference.attr('title'))
+      .attr('title', '');
   }
 
   _setListeners() {
@@ -30,7 +37,7 @@ class Tooltip {
   }
 
   getTitle() {
-    return this.reference.attr('title') || '';
+    return this.reference.attr('data-original-title') || '';
   }
 
   isActive() {

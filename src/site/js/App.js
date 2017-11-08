@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import Menu from './Menu';
 import MenuToggle from './MenuToggle';
 
@@ -10,6 +11,7 @@ import Forms from './Forms';
 import Tables from './Tables';
 import Notices from './Notices';
 import Modals from './Modals';
+import Dropdowns from './Dropdowns';
 import Tooltips from './Tooltips';
 import Utilities from './Utilities';
 
@@ -31,23 +33,39 @@ class App extends Component {
     return true;
   }
 
+  componentDidMount() {
+    this.sideEffects();
+  }
+
+  componentDidUpdate() {
+    this.sideEffects();
+  }
+
+  sideEffects() {
+    if (this.state.menuOpen) {
+      $('body').addClass('html--menu-open');
+    } else {
+      $('body').removeClass('html--menu-open');
+    }
+  }
+
   render() {
     return (
-      <div className={this.state.menuOpen ? 'framework__menu-is-open' : ''}>
+      <div>
         <Menu toggleMenu={this.toggleMenu} menuIsOpen={this.state.menuOpen} />
         <MenuToggle toggleMenu={this.toggleMenu} />
-        <section className="framework">
-          <Grid />
-          <Containers />
-          <Typography />
-          <Buttons />
-          <Forms />
-          <Tables />
-          <Notices />
-          <Modals />
-          <Tooltips />
-          <Utilities />
-        </section>
+        <Grid />
+        <Containers />
+        <Typography />
+        <Buttons />
+        <Forms />
+        <Tables />
+        <Notices />
+        <Modals />
+        <Dropdowns />
+        <Tooltips />
+        <Utilities />
+        <div className="framework__backdrop" onClick={this.toggleMenu} />
       </div>
     );
   }

@@ -108,14 +108,14 @@ const Grid = () =>
       <div className="example__grid">
         <div className="example__grid__text">.grid--valign-stretch</div>
         <div className="grid grid--valign-stretch">
-          <div className="grid__col">
+          <div className="grid__col-xs-6">
             <div className="example__grid">
-              <p>.grid__col</p>
+              <p>.grid__col-xs-6</p>
               {loremIpsum}
             </div>
           </div>
-          <div className="grid__col">
-            <div className="example__grid">.grid__col</div>
+          <div className="grid__col-xs-6">
+            <div className="example__grid">.grid__col-xs-6</div>
           </div>
         </div>
       </div>
@@ -128,14 +128,14 @@ const Grid = () =>
       <div className="example__grid">
         <div className="example__grid__text">.grid--valign-top</div>
         <div className="grid grid--valign-top">
-          <div className="grid__col">
+          <div className="grid__col-xs-6">
             <div className="example__grid">
-              <p>.grid__col</p>
+              <p>.grid__col-xs-6</p>
               {loremIpsum}
             </div>
           </div>
-          <div className="grid__col">
-            <div className="example__grid">.grid__col</div>
+          <div className="grid__col-xs-6">
+            <div className="example__grid">.grid__col-xs-6</div>
           </div>
         </div>
       </div>
@@ -148,14 +148,14 @@ const Grid = () =>
       <div className="example__grid">
         <div className="example__grid__text">.grid--valign-center</div>
         <div className="grid grid--valign-center">
-          <div className="grid__col">
+          <div className="grid__col-xs-6">
             <div className="example__grid">
-              <p>.grid__col</p>
+              <p>.grid__col-xs-6</p>
               {loremIpsum}
             </div>
           </div>
-          <div className="grid__col">
-            <div className="example__grid">.grid__col</div>
+          <div className="grid__col-xs-6">
+            <div className="example__grid">.grid__col-xs-6</div>
           </div>
         </div>
       </div>
@@ -168,14 +168,14 @@ const Grid = () =>
       <div className="example__grid">
         <div className="example__grid__text">.grid--valign-bottom</div>
         <div className="grid grid--valign-bottom">
-          <div className="grid__col">
+          <div className="grid__col-xs-6">
             <div className="example__grid">
-              <p>.grid__col</p>
+              <p>.grid__col-xs-6</p>
               {loremIpsum}
             </div>
           </div>
-          <div className="grid__col">
-            <div className="example__grid">.grid__col</div>
+          <div className="grid__col-xs-6">
+            <div className="example__grid">.grid__col-xs-6</div>
           </div>
         </div>
       </div>

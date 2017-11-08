@@ -9,16 +9,12 @@ body {
   position: relative;
 }
 
-.framework__menu-is-open {
+.html--menu-open {
   overflow: hidden;
 }
 
-.framework {
-  transition: all .15s ease;
-
-  .framework__menu-is-open & {
-    transform: translateX(260px);
-  }
+.html--menu-open {
+  overflow: hidden;
 }
 
 .framework__menu-toggle {
@@ -35,9 +31,9 @@ body {
   transform: translateX(10px) translateY(10px);
   transition: all .15s ease;
   width: 40px;
-  z-index: 10;
+  z-index: 1000;
 
-  .framework__menu-is-open & {
+  .html--menu-open & {
     transform: translateX(260px);
   }
 }
@@ -55,7 +51,7 @@ body {
   width: 100%;
 }
 
-.framework__topbar {
+.framework__sidebar {
   background-color: #444;
   bottom: 0;
   left: 0;
@@ -66,10 +62,28 @@ body {
   transform: translateX(-260px);
   transition: all .15s ease;
   width: 260px;
-  z-index: 5;
+  z-index: 1000;
 
-  .framework__menu-is-open & {
+  .html--menu-open & {
     transform: translateX(0);
+  }
+}
+
+.framework__backdrop {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all .15s ease;
+  visibility: hidden;
+  z-index: 990;
+
+  .html--menu-open & {
+    opacity: 0.25;
+    visibility: visible;
   }
 }
 
@@ -151,7 +165,6 @@ body {
   border: 1px solid #ffdd57;
   margin-bottom: 2rem;
   margin-top: 1rem;
-  overflow: hidden;
   padding: 2rem 1rem 1rem;
   position: relative;
 

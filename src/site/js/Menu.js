@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import classnames from 'classnames';
 
 const navigation = [
   {
@@ -83,6 +82,15 @@ const navigation = [
     ],
   },
   {
+    name: 'Dropdowns',
+    id: 'dropdowns',
+    children: [
+      { name: 'Setup', id: 'dropdowns-setup' },
+      { name: 'Showing & Hiding', id: 'dropdowns-showing-hiding' },
+      { name: 'Positioning', id: 'dropdowns-positioning' },
+    ],
+  },
+  {
     name: 'Tooltips',
     id: 'tooltips',
   },
@@ -161,7 +169,7 @@ class Menu extends Component {
 
   render() {
     return (
-      <div className="framework__topbar">
+      <div className="framework__sidebar">
         <div className="container container--md">
           {this.renderNav(navigation)}
         </div>
