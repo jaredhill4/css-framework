@@ -4,7 +4,7 @@ class Notice {
   constructor(element) {
     // Protected
     this.notice = $(element);
-    this.noticeClose = this.notice.children('.notice__close');
+    this.noticeClose = this.notice.find('[data-notice-close]');
 
     this._setListeners();
   }
@@ -16,6 +16,7 @@ class Notice {
   hide(event) {
     event.preventDefault();
     this.notice.remove();
+    this.notice.trigger('notice:afterHide');
   }
 }
 

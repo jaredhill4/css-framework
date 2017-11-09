@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { Section, Title, Description, Example } from './Framework';
+import {
+  Section,
+  Title,
+  Description,
+  Example,
+  ExampleView,
+  Code,
+} from './Framework';
 import tooltips from '../../framework/js/tooltips';
 
 class Tooltips extends Component {
@@ -26,39 +33,47 @@ class Tooltips extends Component {
           </p>
         </Description>
         <Example>
-          <button
-            type="button"
-            className="btn"
-            data-tooltip="top"
-            title="Tooltip top"
-          >
-            Tooltip top
-          </button>
-          <button
-            type="button"
-            className="btn"
-            data-tooltip="right"
-            title="Tooltip right"
-          >
-            Tooltip right
-          </button>
-          <button
-            type="button"
-            className="btn"
-            data-tooltip="bottom"
-            title="Tooltip bottom"
-          >
-            Tooltip bottom
-          </button>
-          <button
-            type="button"
-            className="btn"
-            data-tooltip="left"
-            data-tooltip-delay="500"
-            title="Tooltip left with delay"
-          >
-            Tooltip left with delay
-          </button>
+          <ExampleView>
+            <button
+              type="button"
+              className="btn"
+              data-tooltip="top"
+              title="Tooltip top"
+            >
+              Tooltip top
+            </button>
+            <button
+              type="button"
+              className="btn"
+              data-tooltip="right"
+              title="Tooltip right"
+            >
+              Tooltip right
+            </button>
+            <button
+              type="button"
+              className="btn"
+              data-tooltip="bottom"
+              title="Tooltip bottom"
+            >
+              Tooltip bottom
+            </button>
+            <button
+              type="button"
+              className="btn"
+              data-tooltip="left"
+              data-tooltip-delay="500"
+              title="Tooltip left with delay"
+            >
+              Tooltip left with delay
+            </button>
+          </ExampleView>
+          <Code language="html">
+            {`<button type="button" class="btn" data-tooltip="top" title="Tooltip top">Tooltip top</button>
+<button type="button" class="btn" data-tooltip="right" title="Tooltip right" >Tooltip right</button>
+<button type="button" class="btn" data-tooltip="bottom" title="Tooltip bottom" >Tooltip bottom</button>
+<button type="button" class="btn" data-tooltip="left" data-tooltip-delay="500" title="Tooltip left with delay">Tooltip left with delay</button>`}
+          </Code>
         </Example>
       </Section>
     );

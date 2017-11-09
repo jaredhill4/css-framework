@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import code from '../../framework/js/code';
 import Menu from './Menu';
 import MenuToggle from './MenuToggle';
 
@@ -35,6 +36,7 @@ class App extends Component {
 
   componentDidMount() {
     this.sideEffects();
+    code('[data-code]');
   }
 
   componentDidUpdate() {

@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { Section, Title, SubTitle, Description, Example } from './Framework';
+import {
+  Section,
+  Title,
+  SubTitle,
+  Description,
+  Example,
+  ExampleView,
+  Code,
+} from './Framework';
 import dropdowns from '../../framework/js/dropdowns';
 
 class Dropdowns extends Component {
@@ -39,28 +47,40 @@ class Dropdowns extends Component {
           </p>
         </Description>
         <Example>
-          <button
-            type="button"
-            className="btn"
-            data-dropdown-toggle="dropdown-example-1"
-          >
-            Dropdown
-          </button>
-          <div className="dropdown" data-dropdown="dropdown-example-1">
-            <a href="#dropdown-example-link-1" className="dropdown__item">
-              Link 1
-            </a>
-            <a href="#dropdown-example-link-2" className="dropdown__item">
-              Link 2
-            </a>
-            <a href="#dropdown-example-link-3" className="dropdown__item">
-              Link 3
-            </a>
-            <div className="dropdown__divider" />
-            <a href="#dropdown-example-link-4" className="dropdown__item">
-              Link 4
-            </a>
-          </div>
+          <ExampleView>
+            <button
+              type="button"
+              className="btn"
+              data-dropdown-toggle="dropdown-example-1"
+            >
+              Dropdown
+            </button>
+            <div className="dropdown" data-dropdown="dropdown-example-1">
+              <a href="#dropdown-example-link-1" className="dropdown__item">
+                Link 1
+              </a>
+              <a href="#dropdown-example-link-2" className="dropdown__item">
+                Link 2
+              </a>
+              <a href="#dropdown-example-link-3" className="dropdown__item">
+                Link 3
+              </a>
+              <div className="dropdown__divider" />
+              <a href="#dropdown-example-link-4" className="dropdown__item">
+                Link 4
+              </a>
+            </div>
+          </ExampleView>
+          <Code language="html">
+            {`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1">Dropdown</button>
+<div class="dropdown" data-dropdown="dropdown-example-1">
+    <a href="#dropdown-example-link-1" class="dropdown__item">Link 1</a>
+    <a href="#dropdown-example-link-2" class="dropdown__item">Link 2</a>
+    <a href="#dropdown-example-link-3" class="dropdown__item">Link 3</a>
+    <div class="dropdown__divider" />
+    <a href="#dropdown-example-link-4" class="dropdown__item">Link 4</a>
+</div>`}
+          </Code>
         </Example>
         <SubTitle id="dropdowns-positioning">Positioning</SubTitle>
         <Description>
@@ -74,58 +94,60 @@ class Dropdowns extends Component {
           </p>
         </Description>
         <Example>
-          <button
-            type="button"
-            className="btn"
-            data-dropdown-toggle="dropdown-example-2"
-          >
-            Dropdown (top-end)
-          </button>
-          <div
-            className="dropdown"
-            data-dropdown="dropdown-example-2"
-            data-dropdown-position="top-end"
-          >
-            <a href="#dropdown-example-link-1" className="dropdown__item">
-              Link 1
-            </a>
-            <a href="#dropdown-example-link-2" className="dropdown__item">
-              Link 2
-            </a>
-            <a href="#dropdown-example-link-3" className="dropdown__item">
-              Link 3
-            </a>
-            <div className="dropdown__divider" />
-            <a href="#dropdown-example-link-4" className="dropdown__item">
-              Link 4
-            </a>
-          </div>
-          <button
-            type="button"
-            className="btn"
-            data-dropdown-toggle="dropdown-example-3"
-          >
-            Dropdown (right-start)
-          </button>
-          <div
-            className="dropdown"
-            data-dropdown="dropdown-example-3"
-            data-dropdown-position="right-start"
-          >
-            <a href="#dropdown-example-link-1" className="dropdown__item">
-              Link 1
-            </a>
-            <a href="#dropdown-example-link-2" className="dropdown__item">
-              Link 2
-            </a>
-            <a href="#dropdown-example-link-3" className="dropdown__item">
-              Link 3
-            </a>
-            <div className="dropdown__divider" />
-            <a href="#dropdown-example-link-4" className="dropdown__item">
-              Link 4
-            </a>
-          </div>
+          <ExampleView>
+            <button
+              type="button"
+              className="btn"
+              data-dropdown-toggle="dropdown-example-2"
+            >
+              Dropdown (top-end)
+            </button>
+            <div
+              className="dropdown"
+              data-dropdown="dropdown-example-2"
+              data-dropdown-position="top-end"
+            >
+              <a href="#dropdown-example-link-1" className="dropdown__item">
+                Link 1
+              </a>
+              <a href="#dropdown-example-link-2" className="dropdown__item">
+                Link 2
+              </a>
+              <a href="#dropdown-example-link-3" className="dropdown__item">
+                Link 3
+              </a>
+              <div className="dropdown__divider" />
+              <a href="#dropdown-example-link-4" className="dropdown__item">
+                Link 4
+              </a>
+            </div>
+            <button
+              type="button"
+              className="btn"
+              data-dropdown-toggle="dropdown-example-3"
+            >
+              Dropdown (right-start)
+            </button>
+            <div
+              className="dropdown"
+              data-dropdown="dropdown-example-3"
+              data-dropdown-position="right-start"
+            >
+              <a href="#dropdown-example-link-1" className="dropdown__item">
+                Link 1
+              </a>
+              <a href="#dropdown-example-link-2" className="dropdown__item">
+                Link 2
+              </a>
+              <a href="#dropdown-example-link-3" className="dropdown__item">
+                Link 3
+              </a>
+              <div className="dropdown__divider" />
+              <a href="#dropdown-example-link-4" className="dropdown__item">
+                Link 4
+              </a>
+            </div>
+          </ExampleView>
         </Example>
       </Section>
     );

@@ -33,9 +33,9 @@ class Modal {
   }
 
   _setListeners() {
-    this.modal.on('click', event => this.clickModal(event));
-    this.modal.on('keyup', event => this.pressEscapeKey(event));
-    this.modalDialog.on('click', event => this.clickModalDialog(event));
+    this.modal.on('click', event => this.hide(event));
+    this.modal.on('keyup', event => this.onKeyup(event));
+    this.modalDialog.on('click', event => event.stopPropagation());
     this.modalShow.on('click', event => this.show(event));
     this.modalHide.on('click', event => this.hide(event));
     this.modalClose.on('click', event => this.hide(event));
@@ -68,7 +68,7 @@ class Modal {
     this.modal.addClass('modal--visible');
 
     setTimeout(() => {
-      this.modal.focus();
+      this.modal.attr('tabindex', '-1').focus();
       this.modal.trigger('modal:afterShow');
     }, this._getTransitionDuration());
   }
@@ -92,21 +92,13 @@ class Modal {
 
   toggle(event) {
     if (this.isActive()) {
-      this.show(event);
+      this.hide(event);
     } else {
       this.show(event);
     }
   }
 
-  clickModal(event) {
-    this.hide(event);
-  }
-
-  clickModalDialog(event) {
-    event.stopPropagation();
-  }
-
-  pressEscapeKey(event) {
+  onKeyup(event) {
     if (event.which === 27) {
       event.preventDefault();
       this.hide();

@@ -1,5 +1,12 @@
 import React from 'react';
-import { Section, Title, Description, Example } from './Framework';
+import {
+  Section,
+  Title,
+  Description,
+  Example,
+  ExampleView,
+  Code,
+} from './Framework';
 
 const Containers = () =>
   <Section container={false}>
@@ -17,27 +24,29 @@ const Containers = () =>
     </div>
     <div className="container container--full">
       <Example>
-        <div className="container">
-          <div className="example__container">.container</div>
-        </div>
-        <div className="container container--xs">
-          <div className="example__container">.container--xs</div>
-        </div>
-        <div className="container container--sm">
-          <div className="example__container">.container--sm</div>
-        </div>
-        <div className="container container--md">
-          <div className="example__container">.container--md</div>
-        </div>
-        <div className="container container--lg">
-          <div className="example__container">.container--lg</div>
-        </div>
-        <div className="container container--xl">
-          <div className="example__container">.container--xl</div>
-        </div>
-        <div className="container container--full">
-          <div className="example__container">.container--full</div>
-        </div>
+        <ExampleView>
+          <div className="container">
+            <div className="example__container">.container</div>
+          </div>
+          <div className="container container--xs">
+            <div className="example__container">.container--xs</div>
+          </div>
+          <div className="container container--sm">
+            <div className="example__container">.container--sm</div>
+          </div>
+          <div className="container container--md">
+            <div className="example__container">.container--md</div>
+          </div>
+          <div className="container container--lg">
+            <div className="example__container">.container--lg</div>
+          </div>
+          <div className="container container--xl">
+            <div className="example__container">.container--xl</div>
+          </div>
+          <div className="container container--full">
+            <div className="example__container">.container--full</div>
+          </div>
+        </ExampleView>
       </Example>
     </div>
   </Section>;

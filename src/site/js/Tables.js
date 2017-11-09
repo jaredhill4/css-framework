@@ -1,5 +1,13 @@
 import React from 'react';
-import { Section, Title, SubTitle, Description, Example } from './Framework';
+import {
+  Section,
+  Title,
+  SubTitle,
+  Description,
+  Example,
+  ExampleView,
+  Code,
+} from './Framework';
 
 const createTableWithClassNames = classNames =>
   <table className={classNames}>
@@ -54,7 +62,55 @@ const Tables = () =>
       Style a table by adding the <code>.table</code> class.
     </Description>
     <Example>
-      {createTableWithClassNames('table')}
+      <ExampleView>
+        {createTableWithClassNames('table')}
+      </ExampleView>
+      <Code language="html">
+        {`<table class='table'>
+    <thead>
+        <tr>
+          <th>Col 1</th>
+          <th>Col 2</th>
+          <th>Col 3</th>
+          <th>Col 4</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Row 1 / Col 1</td>
+          <td>Row 1 / Col 2</td>
+          <td>Row 1 / Col 3</td>
+          <td>Row 1 / Col 4</td>
+        </tr>
+        <tr>
+          <td>Row 2 / Col 1</td>
+          <td>Row 2 / Col 2</td>
+          <td>Row 2 / Col 3</td>
+          <td>Row 2 / Col 4</td>
+        </tr>
+        <tr>
+          <td>Row 3 / Col 1</td>
+          <td>Row 3 / Col 2</td>
+          <td>Row 3 / Col 3</td>
+          <td>Row 3 / Col 4</td>
+        </tr>
+        <tr>
+          <td>Row 4 / Col 1</td>
+          <td>Row 4 / Col 2</td>
+          <td>Row 4 / Col 3</td>
+          <td>Row 4 / Col 4</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+          <th>Col 1</th>
+          <th>Col 2</th>
+          <th>Col 3</th>
+          <th>Col 4</th>
+        </tr>
+    </tfoot>
+</table>`}
+      </Code>
     </Example>
     <SubTitle id="tables-striped">Striped rows</SubTitle>
     <Description>
@@ -62,7 +118,9 @@ const Tables = () =>
       table rows.
     </Description>
     <Example>
-      {createTableWithClassNames('table table--striped')}
+      <ExampleView>
+        {createTableWithClassNames('table table--striped')}
+      </ExampleView>
     </Example>
     <SubTitle id="tables-bordered">Bordered</SubTitle>
     <Description>
@@ -70,7 +128,9 @@ const Tables = () =>
       table and table cells.
     </Description>
     <Example>
-      {createTableWithClassNames('table table--bordered')}
+      <ExampleView>
+        {createTableWithClassNames('table table--bordered')}
+      </ExampleView>
     </Example>
     <SubTitle id="tables-hover">Hoverable rows</SubTitle>
     <Description>
@@ -78,7 +138,9 @@ const Tables = () =>
       table rows.
     </Description>
     <Example>
-      {createTableWithClassNames('table table--hover')}
+      <ExampleView>
+        {createTableWithClassNames('table table--hover')}
+      </ExampleView>
     </Example>
     <SubTitle id="tables-compact">Compact</SubTitle>
     <Description>
@@ -86,14 +148,18 @@ const Tables = () =>
       table cells.
     </Description>
     <Example>
-      {createTableWithClassNames('table table--compact')}
+      <ExampleView>
+        {createTableWithClassNames('table table--compact')}
+      </ExampleView>
     </Example>
     <SubTitle id="tables-narrow">Narrow</SubTitle>
     <Description>
       Add the <code>.table--narrow</code> modifier to reduce cell width.
     </Description>
     <Example>
-      {createTableWithClassNames('table table--narrow')}
+      <ExampleView>
+        {createTableWithClassNames('table table--narrow')}
+      </ExampleView>
     </Example>
     <SubTitle id="tables-responsive">Responsive</SubTitle>
     <Description>
@@ -101,7 +167,9 @@ const Tables = () =>
       horizontally at small screen sizes.
     </Description>
     <Example>
-      {createTableWithClassNames('table table--responsive')}
+      <ExampleView>
+        {createTableWithClassNames('table table--responsive')}
+      </ExampleView>
     </Example>
   </Section>;
 

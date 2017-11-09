@@ -34,4 +34,18 @@ const Example = ({ children }) =>
     {children}
   </div>;
 
-export { Section, Title, SubTitle, Description, Example };
+const ExampleView = ({ children }) =>
+  <div className="example__view">
+    {children}
+  </div>;
+
+const Code = ({ children, language }) =>
+  <pre
+    className={`language-${language}`}
+    data-code
+    data-code-language={language}
+  >
+    {children}
+  </pre>;
+
+export { Section, Title, SubTitle, Description, Example, ExampleView, Code };

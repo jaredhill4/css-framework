@@ -165,10 +165,10 @@ body {
   border: 1px solid #ffdd57;
   margin-bottom: 2rem;
   margin-top: 1rem;
-  padding: 2rem 1rem 1rem;
   position: relative;
 
-  &:last-child {
+  &:last-child,
+  & > :last-child {
     margin-bottom: 0;
   }
 
@@ -187,6 +187,10 @@ body {
     top: -1px;
     vertical-align: top;
   }
+}
+
+.example__view {
+  padding: 2rem 1rem 1rem;
 }
 
 .example__grid,
