@@ -13,10 +13,12 @@ const unstyledCodeClass = 'code__unstyled-code';
 
 class Code {
   constructor(element) {
+    // Protected
     this.html = $('html');
     this.code = $(element);
     this.lines = null;
     this.lineHighlight = null;
+    this.copyBtn = null;
 
     this.code
       .addClass(`${preClass} prettyprint linenums`)
@@ -37,10 +39,13 @@ class Code {
 
     this.lines = this.code.find(`.${linesClass}`);
     this.lineHighlight = this.code.find(`.${lineHighlightClass}`);
+    this.copyBtn = this.code.find(`.${copyBtnClass}`);
 
-    this.lines.children('li').each((i, el) => {
-      this.code.find(`.${lineNumbersClass}`).append(`<li>${i + 1}</li>`);
-    });
+    this.lines
+      .children('li')
+      .each((i, el) =>
+        this.code.find(`.${lineNumbersClass}`).append(`<li>${i + 1}</li>`)
+      );
 
     this._setListeners();
   }
@@ -51,9 +56,8 @@ class Code {
     this.lines
       .children('li')
       .on('click', event => this.showLineHighlight(event));
-    this.code
-      .find(`.${copyBtnClass}`)
-      .on('click', event => this.copyCode(event));
+    this.copyBtn.on('click', event => this.copyCode(event));
+    this.copyBtn.on('mouseleave', event => this.removeCopiedClass(event));
   }
 
   onBodyClick(event) {
@@ -93,10 +97,10 @@ class Code {
     this.code.next(`.${unstyledCodeClass}`).select();
     document.execCommand('Copy');
     self.addClass(`${copyBtnClass}--copied`);
+  }
 
-    setTimeout(() => {
-      self.removeClass(`${copyBtnClass}--copied`);
-    }, 1500);
+  removeCopiedClass(event) {
+    $(event.currentTarget).removeClass(`${copyBtnClass}--copied`);
   }
 }
 

@@ -42,6 +42,10 @@ $form-input-group-background-color: $form-input-border-color;
   touch-action: manipulation;
 }
 
+// --------------------------------------------------
+// input
+// --------------------------------------------------
+
 .form__input,
 .form__select > select {
   background-color: $form-input-background-color;
@@ -83,6 +87,10 @@ $form-input-group-background-color: $form-input-border-color;
   }
 }
 
+// --------------------------------------------------
+// select
+// --------------------------------------------------
+
 .form__select > select {
   &::-ms-expand {
     display: none;
@@ -121,6 +129,10 @@ $form-input-group-background-color: $form-input-border-color;
     }
   }
 }
+
+// --------------------------------------------------
+// checkbox and radio
+// --------------------------------------------------
 
 .form__checkbox,
 .form__radio {
@@ -242,9 +254,22 @@ $form-input-group-background-color: $form-input-border-color;
   cursor: default;
 }
 
+// --------------------------------------------------
+// help text
+// --------------------------------------------------
+
 .form__help {
   display: block;
   margin-top: 0.25rem;
+}
+
+// --------------------------------------------------
+// submit
+// --------------------------------------------------
+
+.form__submit {
+  display: block;
+  position: relative;
 }
 
 // --------------------------------------------------

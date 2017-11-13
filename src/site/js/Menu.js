@@ -42,6 +42,11 @@ const navigation = [
     name: 'Forms',
     id: 'forms',
     children: [
+      { name: 'Inputs', id: 'forms-inputs' },
+      { name: 'Selects', id: 'forms-selects' },
+      { name: 'Checkboxes & Radios', id: 'forms-checkboxes-radios' },
+      { name: 'Submit', id: 'forms-submit' },
+      { name: 'Help Text', id: 'forms-help-text' },
       { name: 'Sizes', id: 'forms-sizes' },
       { name: 'Rounded', id: 'forms-rounded' },
       { name: 'Input group', id: 'forms-input-group' },

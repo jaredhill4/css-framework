@@ -79,6 +79,29 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid">
+    <div class="grid__col">.grid__col</div>
+    <div class="grid__col-lg-3">.grid__col-lg-3</div>
+    <div class="grid__col-xs-12">.grid__col-xs-12</div>
+    <div class="grid__col-xs-12 grid__col-md-6">
+        <div class="grid">
+            <div class="grid__col-xs-6">.grid__col-xs-6</div>
+            <div class="grid__col-xs-6">.grid__col-xs-6</div>
+            <div class="grid__col">.grid__col</div>
+        </div>
+    </div>
+    <div class="grid__col-xs-12 grid__col-md-6">
+        <div class="grid">
+            <div class="grid__col-xs-12">.grid__col-xs-12</div>
+            <div class="grid__col">.grid__col</div>
+            <div class="grid__col">.grid__col</div>
+            <div class="grid__col">.grid__col</div>
+            <div class="grid__col">.grid__col</div>
+        </div>
+    </div>
+</div>`}
+      </Code>
     </Example>
     <SubTitle id="grid-gapless">Gapless</SubTitle>
     <Description>
@@ -110,6 +133,15 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--gapless">
+    <div class="grid__col">.grid__col</div>
+    <div class="grid__col">.grid__col</div>
+    <div class="grid__col">.grid__col</div>
+    <div class="grid__col">.grid__col</div>
+    <div class="grid__col-xs-12">.grid__col-xs-12</div>
+</div>`}
+      </Code>
     </Example>
     <SubTitle id="grid-vertical-alignment">Vertical Alignment</SubTitle>
     <Description>
@@ -133,6 +165,15 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-stretch">
+    <div class="grid__col-xs-6">
+        <p>.grid__col-xs-6</p>
+        ${loremIpsum}
+    </div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-top</code> modifier to align columns along the
@@ -155,6 +196,15 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-top">
+    <div class="grid__col-xs-6">
+        <p>.grid__col-xs-6</p>
+        ${loremIpsum}
+    </div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-center</code> modifier to center columns
@@ -177,6 +227,15 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-center">
+    <div class="grid__col-xs-6">
+        <p>.grid__col-xs-6</p>
+        ${loremIpsum}
+    </div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-bottom</code> modifier to align columns along
@@ -199,6 +258,15 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-bottom">
+    <div class="grid__col-xs-6">
+        <p>.grid__col-xs-6</p>
+        ${loremIpsum}
+    </div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-row-top</code> modifier to align rows at the
@@ -224,6 +292,14 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-row-top">
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-row-center</code> modifier to align rows in
@@ -249,6 +325,14 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-row-center">
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-row-bottom</code> modifier to align rows at
@@ -274,6 +358,14 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-row-bottom">
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-row-stretch</code> modifier to stretch all of
@@ -299,6 +391,14 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-row-stretch">
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-row-between</code> modifier to add equal space
@@ -325,6 +425,14 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-row-between">
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--valign-row-around</code> modifier to add equal space
@@ -350,6 +458,14 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--valign-row-around">
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+</div>`}
+      </Code>
     </Example>
     <SubTitle id="grid-horizontal-alignment">Horizontal Alignment</SubTitle>
     <Description>
@@ -370,6 +486,12 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--halign-left">
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--halign-center</code> modifier to center columns
@@ -389,6 +511,12 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--halign-center">
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--halign-right</code> modifier to align columns on the
@@ -408,6 +536,12 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--halign-right">
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--halign-between</code> modifier to add equal space
@@ -428,6 +562,12 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--halign-between">
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+</div>`}
+      </Code>
     </Example>
     <Description>
       Add the <code>.grid--halign-around</code> modifier to add equal space
@@ -447,6 +587,12 @@ const Grid = () =>
           </div>
         </div>
       </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--halign-around">
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+</div>`}
+      </Code>
     </Example>
   </Section>;
 

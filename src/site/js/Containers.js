@@ -47,6 +47,15 @@ const Containers = () =>
             <div className="example__container">.container--full</div>
           </div>
         </ExampleView>
+        <Code language="html">
+          {`<div className="container">.container</div>
+<div className="container container--xs">.container--xs</div>
+<div className="container container--sm">.container--sm</div>
+<div className="container container--md">.container--md</div>
+<div className="container container--lg">.container--lg</div>
+<div className="container container--xl">.container--xl</div>
+<div className="container container--full">.container--full</div>`}
+        </Code>
       </Example>
     </div>
   </Section>;

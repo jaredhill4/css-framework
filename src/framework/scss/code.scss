@@ -1,4 +1,24 @@
 // --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$code-color-pln: #e6e9ed;
+$code-color-str: #ffcb6b;
+$code-color-kwd: #ac92ec;
+$code-color-com: #506e7a;
+$code-color-typ: #ac92ec;
+$code-color-lit: #f3886c;
+$code-color-pun: #aae1f4;
+$code-color-opn: #e6e9ed;
+$code-color-clo: #e6e9ed;
+$code-color-tag: #f3886c;
+$code-color-atn: #ffcb6b;
+$code-color-atv: #c3e889;
+$code-color-dec: #4fc1e9;
+$code-color-var: #e6e9ed;
+$code-color-fun: #e6e9ed;
+
+// --------------------------------------------------
 // base
 // --------------------------------------------------
 
@@ -28,9 +48,6 @@
       z-index: 3;
       position: relative;
       display: block;
-      background: #ffcb6b;
-      background: lighten(#4fc1e9, 20%);
-      background: #ac92ec;
       background: lighten(#263238, 10%);
       color: lighten(#263238, 60%);
       font-size: 12px;
@@ -213,8 +230,11 @@ ol.code__line-numbers {
 }
 
 .code__copy-btn--copied {
-  background: darken(#c3e889, 10%);
-  color: $color-white;
+  &,
+  &:hover {
+    background: darken(#c3e889, 10%);
+    color: $color-white;
+  }
 
   &::after {
     content: 'Copied!';
@@ -240,77 +260,77 @@ ol.code__line-numbers {
 @media screen {
   // plain text
   .pln {
-    color: #e6e9ed;
+    color: $code-color-pln;
   }
 
   // string content
   .str {
-    color: #ffcb6b;
+    color: $code-color-str;
   }
 
   // keyword
   .kwd {
-    color: #ac92ec;
+    color: $code-color-kwd;
   }
 
   // comment
   .com {
-    color: #506e7a;
+    color: $code-color-com;
     font-style: italic;
   }
 
   // type name
   .typ {
-    color: #ac92ec;
+    color: $code-color-typ;
   }
 
   // literal value
   .lit {
-    color: #f3886c;
+    color: $code-color-pln;
   }
 
   // punctuation
   .pun {
-    color: lighten(#4fc1e9, 20%);
+    color: $code-color-pun;
   }
 
   // lisp open bracket
   .opn {
-    color: #e6e9ed;
+    color: $code-color-opn;
   }
 
   // lisp close bracket
   .clo {
-    color: #e6e9ed;
+    color: $code-color-clo;
   }
 
   // markup tag name
   .tag {
-    color: #f3886c;
+    color: $code-color-tag;
   }
 
   // markup attribute name
   .atn {
-    color: #ffcb6b;
+    color: $code-color-atn;
   }
 
   // markup attribute value
   .atv {
-    color: #c3e889;
+    color: $code-color-atv;
   }
 
   // declaration
   .dec {
-    color: #4fc1e9;
+    color: $code-color-dec;
   }
 
   // variable name
   .var {
-    color: #e6e9ed;
+    color: $code-color-var;
   }
 
   // function name
   .fun {
-    color: #e6e9ed;
+    color: $code-color-fun;
   }
 }

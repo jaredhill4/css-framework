@@ -26,15 +26,13 @@ class Notices extends Component {
         <Example>
           <ExampleView>
             <div className="notice u--margin-bottom-0">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              tempor dolor at suscipit tristique.
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
 </div>`}
           </Code>
         </Example>
@@ -46,42 +44,34 @@ class Notices extends Component {
         <Example>
           <ExampleView>
             <div className="notice notice--red">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              tempor dolor at suscipit tristique.
             </div>
             <div className="notice notice--yellow">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              tempor dolor at suscipit tristique.
             </div>
             <div className="notice notice--green">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              tempor dolor at suscipit tristique.
             </div>
             <div className="notice notice--blue u--margin-bottom-0">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              tempor dolor at suscipit tristique.
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice notice--red">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
 </div>
 <div class="notice notice--yellow">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
 </div>
 <div class="notice notice--green">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
 </div>
 <div class="notice notice--blue">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
 </div>`}
           </Code>
         </Example>
@@ -102,11 +92,9 @@ class Notices extends Component {
               </p>
             </div>
             <div className="notice notice--red u--margin-bottom-0">
-              <p>
-                <span className="notice__title">Error</span> Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Donec tempor dolor at
-                suscipit tristique.
-              </p>
+              <span className="notice__title">Error</span> Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Donec tempor dolor at suscipit
+              tristique.
             </div>
           </ExampleView>
           <Code language="html">
@@ -115,7 +103,7 @@ class Notices extends Component {
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
 </div>
 <div class="notice notice--red">
-    <p><span class="notice__title">Error</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    <span class="notice__title">Error</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
 </div>`}
           </Code>
         </Example>

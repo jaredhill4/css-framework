@@ -66,7 +66,7 @@ const Tables = () =>
         {createTableWithClassNames('table')}
       </ExampleView>
       <Code language="html">
-        {`<table class='table'>
+        {`<table class="table">
     <thead>
         <tr>
           <th>Col 1</th>
@@ -121,6 +121,11 @@ const Tables = () =>
       <ExampleView>
         {createTableWithClassNames('table table--striped')}
       </ExampleView>
+      <Code language="html">
+        {`<table class="table table--striped">
+    <!-- Table content here -->
+</table>`}
+      </Code>
     </Example>
     <SubTitle id="tables-bordered">Bordered</SubTitle>
     <Description>
@@ -131,6 +136,11 @@ const Tables = () =>
       <ExampleView>
         {createTableWithClassNames('table table--bordered')}
       </ExampleView>
+      <Code language="html">
+        {`<table class="table table--bordered">
+    <!-- Table content here -->
+</table>`}
+      </Code>
     </Example>
     <SubTitle id="tables-hover">Hoverable rows</SubTitle>
     <Description>
@@ -141,6 +151,11 @@ const Tables = () =>
       <ExampleView>
         {createTableWithClassNames('table table--hover')}
       </ExampleView>
+      <Code language="html">
+        {`<table class="table table--hover">
+    <!-- Table content here -->
+</table>`}
+      </Code>
     </Example>
     <SubTitle id="tables-compact">Compact</SubTitle>
     <Description>
@@ -151,6 +166,11 @@ const Tables = () =>
       <ExampleView>
         {createTableWithClassNames('table table--compact')}
       </ExampleView>
+      <Code language="html">
+        {`<table class="table table--compact">
+    <!-- Table content here -->
+</table>`}
+      </Code>
     </Example>
     <SubTitle id="tables-narrow">Narrow</SubTitle>
     <Description>
@@ -160,6 +180,11 @@ const Tables = () =>
       <ExampleView>
         {createTableWithClassNames('table table--narrow')}
       </ExampleView>
+      <Code language="html">
+        {`<table class="table table--narrow">
+    <!-- Table content here -->
+</table>`}
+      </Code>
     </Example>
     <SubTitle id="tables-responsive">Responsive</SubTitle>
     <Description>
@@ -170,6 +195,11 @@ const Tables = () =>
       <ExampleView>
         {createTableWithClassNames('table table--responsive')}
       </ExampleView>
+      <Code language="html">
+        {`<table class="table table--responsive">
+    <!-- Table content here -->
+</table>`}
+      </Code>
     </Example>
   </Section>;
 

@@ -99,48 +99,26 @@ const Typography = () =>
       </ExampleView>
       <Code language="html">
         {`<ul>
-        <li>
-            ${loremIpsum}
-        </li>
-        <li>
-            ${loremIpsum}
-        </li>
-        <li>
-            ${loremIpsum}
-          <ul>
-              <li>
-                  ${loremIpsum}
-              </li>
-              <li>
-                  ${loremIpsum}
-              </li>
-              <li>
-                  ${loremIpsum}
-              </li>
-          </ul>
-        </li>
-    </ul>
-    <ol>
-        <li>
-            ${loremIpsum}
-        </li>
-        <li>
-            ${loremIpsum}
-        </li>
-        <li>
-            ${loremIpsum}
-            <ol>
-                <li>
-                    ${loremIpsum}
-                </li>
-                <li>
-                    ${loremIpsum}
-                </li>
-                <li>
-                    ${loremIpsum}
-                </li>
-            </ol>
-      </li>
+    <li>${loremIpsum}</li>
+    <li>${loremIpsum}</li>
+    <li>${loremIpsum}
+      <ul>
+          <li>${loremIpsum}</li>
+          <li>${loremIpsum}</li>
+          <li>${loremIpsum}</li>
+      </ul>
+    </li>
+</ul>
+<ol>
+    <li>${loremIpsum}</li>
+    <li>${loremIpsum}</li>
+    <li>${loremIpsum}
+        <ol>
+            <li>${loremIpsum}</li>
+            <li>${loremIpsum}</li>
+            <li>${loremIpsum}</li>
+        </ol>
+  </li>
 </ol>`}
       </Code>
     </Example>
