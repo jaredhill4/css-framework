@@ -1,0 +1,44 @@
+// --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$section-padding-xs: 15px;
+$section-padding-sm: 30px;
+$section-padding-md: 50px;
+$section-padding-lg: 80px;
+$section-padding-xl: 100px;
+
+// --------------------------------------------------
+// base styles
+// --------------------------------------------------
+
+.section {
+  display: block;
+  padding-top: $section-padding-md;
+  padding-bottom: $section-padding-md;
+
+  &.section--xs {
+    padding-top: $section-padding-xs;
+    padding-bottom: $section-padding-xs;
+  }
+
+  &.section--sm {
+    padding-top: $section-padding-sm;
+    padding-bottom: $section-padding-sm;
+  }
+
+  &.section--md {
+    padding-top: $section-padding-md;
+    padding-bottom: $section-padding-md;
+  }
+
+  &.section--lg {
+    padding-top: $section-padding-lg;
+    padding-bottom: $section-padding-lg;
+  }
+
+  &.section--xl {
+    padding-top: $section-padding-xl;
+    padding-bottom: $section-padding-xl;
+  }
+}

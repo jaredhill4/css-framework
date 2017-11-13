@@ -15,13 +15,18 @@ const navigation = [
     id: 'containers',
   },
   {
+    name: 'Sections',
+    id: 'sections',
+  },
+  {
     name: 'Typography',
     id: 'typography',
     children: [
       { name: 'Headings', id: 'typography-headings' },
-      { name: 'Blockquote', id: 'typography-blockquote' },
+      { name: 'Paragraphs', id: 'typography-paragraphs' },
+      { name: 'Blockquotes', id: 'typography-blockquotes' },
       { name: 'Lists', id: 'typography-lists' },
-      { name: 'Horizontal Rule', id: 'typography-horizontal-rule' },
+      { name: 'Horizontal Rules', id: 'typography-horizontal-rules' },
       { name: 'Preformatted Text', id: 'typography-preformatted-text' },
       { name: 'Inline Elements', id: 'typography-inline-elements' },
     ],
