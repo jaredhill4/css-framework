@@ -123,7 +123,7 @@ const Tables = () =>
       </ExampleView>
       <Code language="html">
         {`<table class="table table--striped">
-    <!-- Table content here -->
+    ...
 </table>`}
       </Code>
     </Example>
@@ -138,7 +138,7 @@ const Tables = () =>
       </ExampleView>
       <Code language="html">
         {`<table class="table table--bordered">
-    <!-- Table content here -->
+    ...
 </table>`}
       </Code>
     </Example>
@@ -153,7 +153,7 @@ const Tables = () =>
       </ExampleView>
       <Code language="html">
         {`<table class="table table--hover">
-    <!-- Table content here -->
+    ...
 </table>`}
       </Code>
     </Example>
@@ -168,7 +168,7 @@ const Tables = () =>
       </ExampleView>
       <Code language="html">
         {`<table class="table table--compact">
-    <!-- Table content here -->
+    ...
 </table>`}
       </Code>
     </Example>
@@ -182,28 +182,25 @@ const Tables = () =>
       </ExampleView>
       <Code language="html">
         {`<table class="table table--narrow">
-    <!-- Table content here -->
+    ...
 </table>`}
       </Code>
     </Example>
     <SubTitle id="tables-responsive">Responsive</SubTitle>
     <Description>
-      Add a wrapper element around the table with the{' '}
-      <code>.table--responsive</code> modifier to make tables scroll
-      horizontally at small screen sizes.
+      Add the <code>.table--responsive</code> modifier to make tables scroll
+      horizontally across all viewports. You may use the <code>sm</code>,{' '}
+      <code>md</code>, <code>lg</code> and <code>xl</code> modifiers as needed
+      to create responsive tables up to a particular&nbsp;breakpoint.
     </Description>
     <Example>
       <ExampleView>
-        <div className="table--responsive">
-          {createTableWithClassNames('table')}
-        </div>
+        {createTableWithClassNames('table table--responsive')}
       </ExampleView>
       <Code language="html">
-        {`<div class="table--responsive">
-    <table class="table">
-        <!-- Table content here -->
-    </table>
-</div>`}
+        {`<table class="table table--responsive">
+    ...
+</table>`}
       </Code>
     </Example>
   </Section>;

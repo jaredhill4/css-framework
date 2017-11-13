@@ -476,28 +476,28 @@ const Utilities = () =>
     </Description>
     <Example>
       <ExampleView>
-        <p>Text align "left"</p>
+        <p>.u--text-align-left</p>
         <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-align-left">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
           ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
           finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
           sit amet ipsum eu nunc porttitor vehicula ut at metus.
         </span>
-        <p>Text align "center"</p>
+        <p>.u--text-align-center</p>
         <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-align-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
           ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
           finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
           sit amet ipsum eu nunc porttitor vehicula ut at metus.
         </span>
-        <p>Text align "right"</p>
+        <p>.u--text-align-right</p>
         <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-align-right">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
           ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
           finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
           sit amet ipsum eu nunc porttitor vehicula ut at metus.
         </span>
-        <p>Text align "justify"</p>
+        <p>.u--text-align-justify</p>
         <span className="u--display-block u--padding-30 u--background-color-gray u--text-align-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
           ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
@@ -517,15 +517,15 @@ const Utilities = () =>
     </Description>
     <Example>
       <ExampleView>
-        <p>Text transform "uppercase"</p>
+        <p>.u--text-transform-uppercase</p>
         <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-transform-uppercase">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </span>
-        <p>Text transform "lowercase"</p>
+        <p>.u--text-transform-lowercase</p>
         <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-transform-lowercase">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </span>
-        <p>Text transform "capitalize"</p>
+        <p>.u--text-transform-capitalize</p>
         <span className="u--display-block u--padding-30 u--background-color-gray u--text-transform-capitalize">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </span>

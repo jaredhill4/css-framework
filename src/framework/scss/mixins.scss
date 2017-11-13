@@ -1,0 +1,57 @@
+/*
+ * Mixins are similar to macros (i.e., functions or methods) from other programming languages,
+ * except they generate CSS code at compile time. They allow you to write less code
+ * by packaging up code into reusable chunks.
+ *
+ * Defining a mixin: `@mixin my-mixin($selector, $property, $value) { $selector { $property: $value } }`
+ * Using a mixin: `@include my-mixin('.item', 'width', 20px);`
+ *
+ * Documentation: http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+ */
+
+// --------------------------------------------------
+// breakpoint postfixes
+// --------------------------------------------------
+
+@mixin apply-breakpoint-postfixes($min-max: 'min', $selector: '&', $include-print: false, $include-default: false) {
+  $breakpoints: (
+    'xs': $breakpoint-xs,
+    'sm': $breakpoint-sm,
+    'md': $breakpoint-md,
+    'lg': $breakpoint-lg,
+    'xl': $breakpoint-xl
+  );
+
+  @if ($include-default) {
+    $breakpoints: map-merge(('default': ''), $breakpoints);
+  }
+
+  @if ($include-print) {
+    $breakpoints: map-merge(('pr': 'print'), $breakpoints);
+  }
+
+  @each $key, $value in $breakpoints {
+    $postfix: '';
+    $media: '';
+
+    @if ($key != 'default') {
+      $postfix: '-#{$key}';
+
+      @if ($key == 'pr') {
+        $media: 'print';
+      } @else {
+        $media: 'screen and (#{$min-max}-width: #{$value})';
+      }
+    }
+
+    #{$selector}#{$postfix} {
+      @if ($key != 'default') {
+        @media #{$media} {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
+  }
+}

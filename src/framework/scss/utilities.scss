@@ -2,31 +2,11 @@
 // variables
 // --------------------------------------------------
 
-$theme-options-media-queries: (
-  print: $mq-pr,
-  xs: $mq-xs,
-  sm: $mq-sm,
-  md: $mq-md,
-  lg: $mq-lg,
-  xl: $mq-xl
-);
-$theme-options-colors: (
-  black: $color-black,
-  white: $color-white,
-  gray: $color-gray,
-  red: $color-red,
-  yellow: $color-yellow,
-  green: $color-green,
-  blue: $color-blue
-);
-$theme-options-font-weight: (
-  normal: $font-weight-normal,
-  bold: $font-weight-bold
-);
-$theme-options-margin-sizes: (0, 5, 10, 15, 20, 30);
-$theme-options-padding-sizes: (0, 5, 10, 15, 20, 30);
-$theme-options-border-sizes: (0);
-$theme-options-display: (
+$theme-border-sizes: (0);
+$theme-margin-sizes: (0, 5, 10, 15, 20, 30);
+$theme-padding-sizes: (0, 5, 10, 15, 20, 30);
+$theme-width-sizes: (25, 33, 50, 66, 75, 100);
+$theme-display: (
   none,
   inline,
   block,
@@ -37,9 +17,10 @@ $theme-options-display: (
   flex,
   inline-flex
 );
-$theme-options-text-align: (left, right, center, justify);
-$theme-options-font-style: (normal, italic, oblique);
-$theme-options-vertical-align: (
+$theme-text-align: (left, right, center, justify);
+$theme-font-weights: (normal: $font-weight-normal, bold: $font-weight-bold);
+$theme-font-style: (normal, italic, oblique);
+$theme-vertical-align: (
   baseline,
   sub,
   super,
@@ -49,18 +30,17 @@ $theme-options-vertical-align: (
   bottom,
   text-bottom
 );
-$theme-options-text-transform: (uppercase, lowercase, capitalize);
-$theme-options-float: (left, right, none);
-$theme-options-width: (25, 33, 50, 66, 75, 100);
-$theme-options-aspect-ratios: ((21, 9),  (16, 9),  (4, 3),  (1, 1));
-$theme-options-sides: (top, right, bottom, left);
+$theme-text-transform: (uppercase, lowercase, capitalize);
+$theme-float: (left, right, none);
+$theme-aspect-ratios: ((21, 9),  (16, 9),  (4, 3),  (1, 1));
+$theme-sides: (top, right, bottom, left);
 
 // --------------------------------------------------
 // mixins
 // --------------------------------------------------
 
 // color
-@mixin u--color($colors) {
+@mixin u--color($colors: $theme-colors) {
   $selector: '.u--color';
 
   @each $name, $value in $colors {
@@ -78,7 +58,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // background color
-@mixin u--background-color($colors) {
+@mixin u--background-color($colors: $theme-colors) {
   @each $name, $value in $colors {
     .u--background-color-#{$name} {
       background-color: $value;
@@ -87,7 +67,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // border color
-@mixin u--border-color($colors) {
+@mixin u--border-color($colors: $theme-colors) {
   @each $name, $value in $colors {
     .u--border-color-#{$name} {
       border-color: $value;
@@ -96,7 +76,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // border width
-@mixin u--border-width($sizes, $sides) {
+@mixin u--border-width($sizes: $theme-border-sizes, $sides: $theme-sides) {
   $selector: '.u--border-width';
 
   @each $size in $sizes {
@@ -112,7 +92,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // margin
-@mixin u--margin($sizes, $sides, $media-queries) {
+@mixin u--margin($sizes: $theme-margin-sizes, $sides: $theme-sides) {
   $selector: '.u--margin';
 
   @each $size in $sizes {
@@ -125,24 +105,20 @@ $theme-options-sides: (top, right, bottom, left);
       }
     }
   }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $size in $sizes {
-        '#{$selector}-#{$size}-#{$key}' {
-          margin: #{$size}px;
-        }
-        @each $side in $sides {
-          '#{$selector}-#{$side}-#{$size}' {
-            margin-#{$side}: #{$size}px;
-          }
-        }
+  @each $size in $sizes {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+      margin: #{$size}px;
+    }
+    @each $side in $sides {
+      @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
+        margin-#{$side}: #{$size}px;
       }
     }
   }
 }
 
 // padding
-@mixin u--padding($sizes, $sides, $media-queries) {
+@mixin u--padding($sizes: $theme-padding-sizes, $sides: $theme-sides) {
   $selector: '.u--padding';
 
   @each $size in $sizes {
@@ -155,23 +131,20 @@ $theme-options-sides: (top, right, bottom, left);
       }
     }
   }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $size in $sizes {
-        '#{$selector}-#{$size}-#{$key}' {
-          padding: #{$size}px;
-        }
-        @each $side in $sides {
-          '#{$selector}-#{$side}-#{$size}' {
-            border-#{$side}: #{$size}px;
-          }
-        }
+
+  @each $size in $sizes {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+      padding: #{$size}px;
+    }
+    @each $side in $sides {
+      @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
+        padding-#{$side}: #{$size}px;
       }
     }
   }
 }
 
-@mixin u--width($sizes, $media-queries) {
+@mixin u--width($sizes: $theme-width-sizes) {
   $selector: '.u--width';
 
   @each $size in $sizes {
@@ -179,19 +152,15 @@ $theme-options-sides: (top, right, bottom, left);
       width: percentage($size) / 100;
     }
   }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $size in $sizes {
-        '#{$selector}-#{$size}-#{$key}' {
-          width: percentage($size) / 100;
-        }
-      }
+  @each $size in $sizes {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+      width: percentage($size) / 100;
     }
   }
 }
 
 // font weight
-@mixin u--font-weight($options) {
+@mixin u--font-weight($options: $theme-font-weights) {
   @each $key, $value in $options {
     .u--font-weight-#{$key} {
       font-weight: $value;
@@ -200,7 +169,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // font style
-@mixin u--font-style($options) {
+@mixin u--font-style($options: $theme-font-style) {
   @each $option in $options {
     .u--font-style-#{$option} {
       font-style: $option;
@@ -209,7 +178,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // text alignment
-@mixin u--text-align($options, $media-queries) {
+@mixin u--text-align($options: $theme-text-align) {
   $selector: '.u--text-align';
 
   @each $option in $options {
@@ -217,19 +186,15 @@ $theme-options-sides: (top, right, bottom, left);
       text-align: $option;
     }
   }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $option in $options {
-        '#{$selector}-#{$option}-#{$key}' {
-          text-align: $option;
-        }
-      }
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      text-align: $option;
     }
   }
 }
 
 // text transform
-@mixin u--text-transform($options) {
+@mixin u--text-transform($options: $theme-text-transform) {
   @each $option in $options {
     .u--text-transform-#{$option} {
       text-transform: $option;
@@ -238,7 +203,7 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // vertical alignment
-@mixin u--vertical-align($options, $media-queries) {
+@mixin u--vertical-align($options: $theme-vertical-align) {
   $selector: '.u--vertical-align';
 
   @each $option in $options {
@@ -246,19 +211,15 @@ $theme-options-sides: (top, right, bottom, left);
       vertical-align: $option;
     }
   }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $option in $options {
-        '#{$selector}-#{$option}-#{$key}' {
-          vertical-align: $option;
-        }
-      }
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      vertical-align: $option;
     }
   }
 }
 
 // float
-@mixin u--float($options, $media-queries) {
+@mixin u--float($options: $theme-float) {
   $selector: '.u--float';
 
   @each $option in $options {
@@ -266,56 +227,15 @@ $theme-options-sides: (top, right, bottom, left);
       float: $option;
     }
   }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $option in $options {
-        '#{$selector}-#{$option}-#{$key}' {
-          float: $option;
-        }
-      }
-    }
-  }
-}
-
-// display
-@mixin u--display($options, $media-queries) {
-  $selector: '.u--display';
-
   @each $option in $options {
-    '#{$selector}-#{$option}' {
-      display: $option;
-    }
-  }
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      @each $option in $options {
-        '#{$selector}-#{$option}-#{$key}' {
-          display: $option;
-        }
-      }
-    }
-  }
-}
-
-// hidden
-@mixin u--hidden($media-queries) {
-  $selector: '.u--hidden';
-
-  #{$selector} {
-    display: none;
-  }
-
-  @each $key, $mq in $media-queries {
-    @media #{$mq} {
-      '#{$selector}-#{$key}' {
-        display: none;
-      }
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      float: $option;
     }
   }
 }
 
 // responsive embed
-@mixin u--embed-responsive($aspect-ratios) {
+@mixin u--embed-responsive($aspect-ratios: $theme-aspect-ratios) {
   $selector: '.u--embed-responsive';
 
   #{$selector} {
@@ -344,13 +264,43 @@ $theme-options-sides: (top, right, bottom, left);
   }
 }
 
+// display
+@mixin u--display($options: $theme-display) {
+  $selector: '.u--display';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      display: $option;
+    }
+  }
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      display: $option;
+    }
+  }
+}
+
+// hidden
+@mixin u--hidden() {
+  $selector: '.u--hidden';
+
+  @include apply-breakpoint-postfixes('min', '#{$selector}', true, true) {
+    display: none;
+  }
+}
+
 // --------------------------------------------------
-// utilities
+// clear fix
 // --------------------------------------------------
 
 .u--clearfix {
   @extend %clearfix;
 }
+
+// --------------------------------------------------
+// truncate
+// --------------------------------------------------
+
 .u--truncate {
   @extend %truncate;
 }
@@ -359,13 +309,13 @@ $theme-options-sides: (top, right, bottom, left);
 // text color
 // --------------------------------------------------
 
-@include u--color($theme-options-colors);
+@include u--color();
 
 // --------------------------------------------------
 // background color
 // --------------------------------------------------
 
-@include u--background-color($theme-options-colors);
+@include u--background-color();
 
 // --------------------------------------------------
 // borders
@@ -377,79 +327,79 @@ $theme-options-sides: (top, right, bottom, left);
 }
 
 // border color
-@include u--border-color($theme-options-colors);
+@include u--border-color();
 
 // border width
-@include u--border-width($theme-options-border-sizes, $theme-options-sides);
+@include u--border-width();
 
 // --------------------------------------------------
 // margins
 // --------------------------------------------------
 
-@include u--margin($theme-options-margin-sizes, $theme-options-sides, $theme-options-media-queries);
+@include u--margin();
 
 // --------------------------------------------------
 // padding
 // --------------------------------------------------
 
-@include u--padding($theme-options-padding-sizes, $theme-options-sides, $theme-options-media-queries);
+@include u--padding();
 
 // --------------------------------------------------
 // width
 // --------------------------------------------------
 
-@include u--width($theme-options-width, $theme-options-media-queries);
+@include u--width();
 
 // --------------------------------------------------
 // font weight
 // --------------------------------------------------
 
-@include u--font-weight($theme-options-font-weight);
+@include u--font-weight();
 
 // --------------------------------------------------
 // font style
 // --------------------------------------------------
 
-@include u--font-style($theme-options-font-style);
+@include u--font-style();
 
 // --------------------------------------------------
 // text alignment
 // --------------------------------------------------
 
-@include u--text-align($theme-options-text-align, $theme-options-media-queries);
+@include u--text-align();
 
 // --------------------------------------------------
 // vertical alignment
 // --------------------------------------------------
 
-@include u--vertical-align($theme-options-vertical-align, $theme-options-media-queries);
+@include u--vertical-align();
 
 // --------------------------------------------------
 // text transform
 // --------------------------------------------------
 
-@include u--text-transform($theme-options-text-transform);
+@include u--text-transform();
 
 // --------------------------------------------------
 // floats
 // --------------------------------------------------
 
-@include u--float($theme-options-float, $theme-options-media-queries);
+@include u--float();
 
 // --------------------------------------------------
 // responsive embeds
 // --------------------------------------------------
 
-@include u--embed-responsive($theme-options-aspect-ratios);
+@include u--embed-responsive();
 
 // --------------------------------------------------
 // display
 // --------------------------------------------------
 
-@include u--display($theme-options-display, $theme-options-media-queries);
+@include u--display();
 
 // --------------------------------------------------
 // hidden
 // --------------------------------------------------
 
-@include u--hidden($theme-options-media-queries);
+@include u--hidden();

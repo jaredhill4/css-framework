@@ -98,7 +98,20 @@ $table-hover-background-color: $table-striped-background-color;
 }
 
 .table--responsive {
-  display: block;
-  overflow-x: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  @include apply-breakpoint-postfixes($min-max: 'max', $include-default: true) {
+    display: block;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &.table--bordered {
+      border-width: 0;
+
+      thead {
+        th,
+        td {
+          border-top-width: $table-border-width;
+        }
+      }
+    }
+  }
 }

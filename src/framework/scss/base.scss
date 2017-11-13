@@ -19,23 +19,23 @@ html {
 html {
   font-size: 16px;
 
-  @media #{$mq-xs} {
+  @media #{$mq-min-xs} {
     font-size: 16px;
   }
 
-  @media #{$mq-sm} {
+  @media #{$mq-min-sm} {
     font-size: 16px;
   }
 
-  @media #{$mq-md} {
+  @media #{$mq-min-md} {
     font-size: 16px;
   }
 
-  @media #{$mq-lg} {
+  @media #{$mq-min-lg} {
     font-size: 16px;
   }
 
-  @media #{$mq-xl} {
+  @media #{$mq-min-xl} {
     font-size: 16px;
   }
 }

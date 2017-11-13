@@ -148,7 +148,7 @@ const Forms = () =>
                 </label>
               </div>
               <div className="form__field">
-                <div class="form__submit">
+                <div className="form__submit">
                   <button className="btn btn--blue" type="button">
                     Submit
                   </button>
@@ -257,7 +257,7 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <div class="form__submit">
+            <div className="form__submit">
               <button type="submit" className="btn btn--blue">
                 .form__submit
               </button>
@@ -605,7 +605,7 @@ const Forms = () =>
         <input type="text" class="form__input" value="disabled" disabled />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input" value="readonly" readOnly />
+        <input type="text" class="form__input" value="readonly" readonly />
     </div>
     <div class="form__field">
         <div class="form__select">
@@ -623,7 +623,7 @@ const Forms = () =>
     </div>
     <div class="form__field">
         <div class="form__select">
-          <select readOnly>
+          <select readonly>
               <option>readonly</option>
           </select>
         </div>
