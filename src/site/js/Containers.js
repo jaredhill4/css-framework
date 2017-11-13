@@ -48,13 +48,13 @@ const Containers = () =>
           </div>
         </ExampleView>
         <Code language="html">
-          {`<div className="container">.container</div>
-<div className="container container--xs">.container--xs</div>
-<div className="container container--sm">.container--sm</div>
-<div className="container container--md">.container--md</div>
-<div className="container container--lg">.container--lg</div>
-<div className="container container--xl">.container--xl</div>
-<div className="container container--full">.container--full</div>`}
+          {`<div class="container">.container</div>
+<div class="container container--xs">.container--xs</div>
+<div class="container container--sm">.container--sm</div>
+<div class="container container--md">.container--md</div>
+<div class="container container--lg">.container--lg</div>
+<div class="container container--xl">.container--xl</div>
+<div class="container container--full">.container--full</div>`}
         </Code>
       </Example>
     </div>

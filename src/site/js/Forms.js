@@ -163,10 +163,10 @@ const Forms = () =>
     <Example>
       <ExampleView>
         <form className="form">
-          <label className="form__label" htmlFor="input-sample">
-            Sample Input
-          </label>
           <div className="form__field">
+            <label className="form__label" htmlFor="input-sample">
+              Sample Input
+            </label>
             <input
               id="input-sample"
               type="text"
@@ -179,8 +179,8 @@ const Forms = () =>
       </ExampleView>
       <Code language="html">
         {`<form class="form">
-    <label class="form__label" for="input-sample">Sample Input</label>
     <div class="form__field">
+      <label class="form__label" for="input-sample">Sample Input</label>
         <input id="input-sample" type="text" class="form__input" name="input-sample" placeholder=".form__input" />
     </div>
 </form>`}

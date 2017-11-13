@@ -188,17 +188,22 @@ const Tables = () =>
     </Example>
     <SubTitle id="tables-responsive">Responsive</SubTitle>
     <Description>
-      Add the <code>.table--responsive</code> modifier to make tables scroll
+      Add a wrapper element around the table with the{' '}
+      <code>.table--responsive</code> modifier to make tables scroll
       horizontally at small screen sizes.
     </Description>
     <Example>
       <ExampleView>
-        {createTableWithClassNames('table table--responsive')}
+        <div className="table--responsive">
+          {createTableWithClassNames('table')}
+        </div>
       </ExampleView>
       <Code language="html">
-        {`<table class="table table--responsive">
-    <!-- Table content here -->
-</table>`}
+        {`<div class="table--responsive">
+    <table class="table">
+        <!-- Table content here -->
+    </table>
+</div>`}
       </Code>
     </Example>
   </Section>;

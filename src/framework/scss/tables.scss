@@ -101,19 +101,4 @@ $table-hover-background-color: $table-striped-background-color;
   display: block;
   overflow-x: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-
-  @media #{$mq-md} {
-    display: table;
-  }
-
-  &.table--bordered {
-    border-width: 0;
-
-    thead {
-      th,
-      td {
-        border-top-width: $table-border-width;
-      }
-    }
-  }
 }
