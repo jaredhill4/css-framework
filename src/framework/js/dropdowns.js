@@ -14,6 +14,7 @@ class Dropdown {
     this._popper = null;
 
     // Protected
+    this.html = $('html');
     this.reference = reference;
     this.dropdown = dropdown;
     this.options = {

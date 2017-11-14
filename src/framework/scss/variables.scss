@@ -13,6 +13,16 @@ $color-white: #fff;
 $color-gray: #e3e3e3;
 $color-black: #292b2c;
 
+$theme-colors: (
+  'black': $color-black,
+  'white': $color-white,
+  'gray': $color-gray,
+  'red': $color-red,
+  'yellow': $color-yellow,
+  'green': $color-green,
+  'blue': $color-blue
+);
+
 // --------------------------------------------------
 // media queries
 // --------------------------------------------------
@@ -24,11 +34,18 @@ $breakpoint-lg: 1200px;
 $breakpoint-xl: 1600px;
 
 $mq-pr: 'print';
-$mq-xs: 'screen and (min-width: #{$breakpoint-xs})';
-$mq-sm: 'screen and (min-width: #{$breakpoint-sm})';
-$mq-md: 'screen and (min-width: #{$breakpoint-md})';
-$mq-lg: 'screen and (min-width: #{$breakpoint-lg})';
-$mq-xl: 'screen and (min-width: #{$breakpoint-xl})';
+
+$mq-min-xs: 'screen and (min-width: #{$breakpoint-xs})';
+$mq-min-sm: 'screen and (min-width: #{$breakpoint-sm})';
+$mq-min-md: 'screen and (min-width: #{$breakpoint-md})';
+$mq-min-lg: 'screen and (min-width: #{$breakpoint-lg})';
+$mq-min-xl: 'screen and (min-width: #{$breakpoint-xl})';
+
+$mq-max-xs: 'screen and (max-width: #{$breakpoint-xs - 1px})';
+$mq-max-sm: 'screen and (max-width: #{$breakpoint-sm - 1px})';
+$mq-max-md: 'screen and (max-width: #{$breakpoint-md - 1px})';
+$mq-max-lg: 'screen and (max-width: #{$breakpoint-lg - 1px})';
+$mq-max-xl: 'screen and (max-width: #{$breakpoint-xl - 1px})';
 
 // --------------------------------------------------
 // links

@@ -211,18 +211,18 @@ $grid-gutter-width: 20px;
 
 @include grid__col(xs);
 
-@media #{$mq-sm} {
+@media #{$mq-min-sm} {
   @include grid__col(sm);
 }
 
-@media #{$mq-md} {
+@media #{$mq-min-md} {
   @include grid__col(md);
 }
 
-@media #{$mq-lg} {
+@media #{$mq-min-lg} {
   @include grid__col(lg);
 }
 
-@media #{$mq-xl} {
+@media #{$mq-min-xl} {
   @include grid__col(xl);
 }

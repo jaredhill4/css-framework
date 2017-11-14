@@ -42,7 +42,7 @@ html.html--modal-visible {
   background: rgba(0, 0, 0, 0);
   transition: all 0.15s ease-in-out;
 
-  @media #{$mq-xs} {
+  @media #{$mq-min-xs} {
     padding: $modal-padding;
   }
 }
@@ -70,7 +70,7 @@ html.html--modal-visible {
   transform-origin: 50% 25%;
   transition: all 0.1s ease-in-out;
 
-  @media #{$mq-xs} {
+  @media #{$mq-min-xs} {
     position: relative;
     top: auto;
     left: auto;
@@ -101,7 +101,7 @@ html.html--modal-visible {
   border-radius: $modal-dialog-border-radius;
   overflow-y: auto;
 
-  @media #{$mq-xs} {
+  @media #{$mq-min-xs} {
     max-height: calc(100vh - #{$modal-padding} * 2);
     padding: $modal-dialog-padding;
   }
@@ -125,7 +125,7 @@ html.html--modal-visible {
 // sizes
 // --------------------------------------------------
 
-@media #{$mq-xs} {
+@media #{$mq-min-xs} {
   .modal__dialog {
     max-width: $modal-width-sm;
   }

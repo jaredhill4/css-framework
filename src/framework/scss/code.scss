@@ -1,0 +1,336 @@
+// --------------------------------------------------
+// variables
+// --------------------------------------------------
+
+$code-color-pln: #e6e9ed;
+$code-color-str: #ffcb6b;
+$code-color-kwd: #ac92ec;
+$code-color-com: #506e7a;
+$code-color-typ: #ac92ec;
+$code-color-lit: #f3886c;
+$code-color-pun: #aae1f4;
+$code-color-opn: #e6e9ed;
+$code-color-clo: #e6e9ed;
+$code-color-tag: #f3886c;
+$code-color-atn: #ffcb6b;
+$code-color-atv: #c3e889;
+$code-color-dec: #4fc1e9;
+$code-color-var: #e6e9ed;
+$code-color-fun: #e6e9ed;
+
+// --------------------------------------------------
+// base
+// --------------------------------------------------
+
+.code {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+// --------------------------------------------------
+// pre
+// --------------------------------------------------
+
+.code__pre {
+  position: relative;
+  background: #263238;
+  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
+    Consolas, monospace;
+  border: 0 !important;
+  border-radius: 0;
+  font-size: 14px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+
+  &[data-code-language] {
+    &::before {
+      z-index: 3;
+      position: relative;
+      display: block;
+      background: lighten(#263238, 10%);
+      color: lighten(#263238, 60%);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      height: 44px;
+      line-height: 44px;
+      padding: 0 15px;
+      content: attr(data-code-language);
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      transition: $global-transition;
+    }
+
+    &:hover {
+      &::before {
+        color: $color-white;
+        background: lighten(#263238, 20%);
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// code
+// --------------------------------------------------
+
+.code__code {
+  position: relative;
+  display: block;
+  max-height: 390px;
+  overflow-y: auto;
+  white-space: pre;
+}
+
+// --------------------------------------------------
+// lines
+// --------------------------------------------------
+
+ol.code__lines {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  padding: 10px 0;
+  color: #656d78;
+  list-style: none !important;
+  counter-reset: lines-counter;
+  overflow-x: auto;
+
+  & > li {
+    position: relative;
+    padding: 0;
+    counter-increment: lines-counter;
+    background: rgba(0, 0, 0, 0.0);
+    transition: $global-transition;
+
+    span {
+      display: inline-block;
+    }
+
+    &::before {
+      position: absolute;
+      display: none;
+      content: counter(linenums-counter);
+      top: 6px;
+      right: 100%;
+      margin-right: -40px;
+      color: #506e7a;
+      opacity: 0.4;
+    }
+
+    &::after {
+      display: inline;
+      content: '';
+      margin-left: 15px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// line numbers
+// --------------------------------------------------
+
+ol.code__line-numbers {
+  z-index: 4;
+  position: relative;
+  display: block;
+  float: left;
+  color: #506e7a;
+  opacity: 0.4;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  box-shadow: 3px 0 50px rgba(0, 0, 0, 0);
+  transition: $global-transition;
+
+  & > li {
+    display: block;
+    padding: 0 20px;
+    text-align: right;
+  }
+
+  .code__pre--scrolled & {
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// --------------------------------------------------
+// line highlight
+// --------------------------------------------------
+
+.code__line-highlight {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; // Set to height of the individual lines
+  background: #1e292d;
+  transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.code__line-highlight--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+// --------------------------------------------------
+// copy button
+// --------------------------------------------------
+
+.code__copy-btn {
+  z-index: 10;
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  color: $color-white;
+  color: lighten(#263238, 60%);
+  font-size: 12px;
+  line-height: 18px;
+  font-family: $font-family-sans-serif;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 3px;
+  transition: $global-transition;
+
+  &::after {
+    display: inline;
+    content: 'Copy';
+  }
+
+  &:hover {
+    background: #4fc1e9;
+    color: $color-white;
+  }
+
+  .code__pre:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+  .code__pre[data-code-language] & {
+    top: 7px;
+    right: 7px;
+  }
+  .code__pre[data-code-language]:hover & {
+    color: $color-white;
+  }
+}
+
+.code__copy-btn--copied {
+  &,
+  &:hover {
+    background: darken(#c3e889, 10%);
+    color: $color-white;
+  }
+
+  &::after {
+    content: 'Copied!';
+  }
+}
+
+// --------------------------------------------------
+// unstyled code
+// --------------------------------------------------
+
+.code__unstyled-code {
+  position: fixed;
+  left: -999999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+// --------------------------------------------------
+// syntax highlighting
+// --------------------------------------------------
+
+@media screen {
+  // plain text
+  .pln {
+    color: $code-color-pln;
+  }
+
+  // string content
+  .str {
+    color: $code-color-str;
+  }
+
+  // keyword
+  .kwd {
+    color: $code-color-kwd;
+  }
+
+  // comment
+  .com {
+    color: $code-color-com;
+    font-style: italic;
+  }
+
+  // type name
+  .typ {
+    color: $code-color-typ;
+  }
+
+  // literal value
+  .lit {
+    color: $code-color-pln;
+  }
+
+  // punctuation
+  .pun {
+    color: $code-color-pun;
+  }
+
+  // lisp open bracket
+  .opn {
+    color: $code-color-opn;
+  }
+
+  // lisp close bracket
+  .clo {
+    color: $code-color-clo;
+  }
+
+  // markup tag name
+  .tag {
+    color: $code-color-tag;
+  }
+
+  // markup attribute name
+  .atn {
+    color: $code-color-atn;
+  }
+
+  // markup attribute value
+  .atv {
+    color: $code-color-atv;
+  }
+
+  // declaration
+  .dec {
+    color: $code-color-dec;
+  }
+
+  // variable name
+  .var {
+    color: $code-color-var;
+  }
+
+  // function name
+  .fun {
+    color: $code-color-fun;
+  }
+}
