@@ -2,18 +2,39 @@
 // variables
 // --------------------------------------------------
 
-$modal-padding: 1.875em;
 $modal-z-index: 1050;
+$modal-padding: 1.875em;
 
 $modal-dialog-border-radius: $global-border-radius;
 $modal-dialog-padding: 2.5em;
 
-$modal-width-xs: 370px;
-$modal-width-sm: 570px;
-$modal-width-md: 770px;
-$modal-width-lg: 970px;
-$modal-width-xl: 1170px;
-$modal-width-full: 100%;
+$modal-sizes: (
+  'default': 570px,
+  'xs': 370px,
+  'sm': 570px,
+  'md': 770px,
+  'lg': 970px,
+  'xl': 1170px,
+  'full': 100%
+);
+
+// --------------------------------------------------
+// mixins
+// --------------------------------------------------
+
+@mixin modal-sizes($sizes: $modal-sizes) {
+  @each $key, $value in $sizes {
+    $selector: '.modal';
+
+    @if ($key != 'default') {
+      $selector: '#{$selector}--#{$key}';
+    }
+
+    #{$selector} .modal__dialog {
+      max-width: $value;
+    }
+  }
+}
 
 // --------------------------------------------------
 // base styles
@@ -126,33 +147,7 @@ html.html--modal-visible {
 // --------------------------------------------------
 
 @media #{$mq-min-xs} {
-  .modal__dialog {
-    max-width: $modal-width-sm;
-  }
-
-  .modal--xs .modal__dialog {
-    max-width: $modal-width-xs;
-  }
-
-  .modal--sm .modal__dialog {
-    max-width: $modal-width-sm;
-  }
-
-  .modal--md .modal__dialog {
-    max-width: $modal-width-md;
-  }
-
-  .modal--lg .modal__dialog {
-    max-width: $modal-width-lg;
-  }
-
-  .modal--xl .modal__dialog {
-    max-width: $modal-width-xl;
-  }
-
-  .modal--full .modal__dialog {
-    max-width: $modal-width-full;
-  }
+  @include modal-sizes();
 }
 
 // --------------------------------------------------
