@@ -16,7 +16,7 @@ const slideStyles = {
   padding: '150px',
   textAlign: 'center',
   backgroundColor: '#ccc',
-}
+};
 
 class Carousels extends Component {
   componentDidMount() {
@@ -28,13 +28,23 @@ class Carousels extends Component {
       <Section>
         <Title id="carousels">Carousels</Title>
         <Description>
-          <p>You can add carousels of images, text or other elements with the <strong>carousel</strong> component.</p>
+          <p>
+            You can add carousels of images, text or other elements using the{' '}
+            <strong>carousel</strong> component.
+          </p>
         </Description>
-        <SubTitle id="carousels-markup">Markup</SubTitle>
-        <Description>To create a carousel, you will first need to create the markup, which is simply a series of html elements (typically <code>&lt;div&gt;</code>s) nested inside a parent element with a unique selector, like an id, class name or data attribute. In this example we will use a data-attribute, with the value "sample-carousel."</Description>
+        <SubTitle id="carousels-setup">Setup</SubTitle>
+        <Description>
+          To create a carousel, you will first need to create the markup, which
+          is simply a series of html elements (typically <code>div</code>s)
+          nested inside a parent element (also typically a <code>div</code>)
+          with a unique selector (like an id, class name or data attribute). In
+          this example, we will use a data attribute selector, with the value
+          "sample-carousel."
+        </Description>
         <Example>
           <Code language="html">
-          {`<div data-carousel="sample-carousel">
+            {`<div data-carousel="sample-carousel">
     <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
       Slide 1
     </div>
@@ -53,9 +63,13 @@ class Carousels extends Component {
 </div>`}
           </Code>
         </Example>
-        <SubTitle id="carousels-initialization">Initialization</SubTitle>
         <Description>
-          <p>Now that the markup is in place, you will need to initialize the carousel using the javascript component like so:</p>
+          <p>
+            Now that the markup is in place, you will need to create a new
+            carousel instance. To do so, call the <code>carousel()</code>{' '}
+            javascript component function (with your unique selector as the
+            first argument) and assign it to a variable, like so:
+          </p>
         </Description>
         <Example>
           <Code language="javascript">
@@ -68,27 +82,21 @@ class Carousels extends Component {
         <Example>
           <ExampleView>
             <div data-carousel="sample-carousel">
-                <div style={slideStyles}>
-                  Slide 1
-                </div>
-                <div style={slideStyles}>
-                  Slide 2
-                </div>
-                <div style={slideStyles}>
-                  Slide 3
-                </div>
-                <div style={slideStyles}>
-                  Slide 4
-                </div>
-                <div style={slideStyles}>
-                  Slide 5
-                </div>
+              <div style={slideStyles}>Slide 1</div>
+              <div style={slideStyles}>Slide 2</div>
+              <div style={slideStyles}>Slide 3</div>
+              <div style={slideStyles}>Slide 4</div>
+              <div style={slideStyles}>Slide 5</div>
             </div>
           </ExampleView>
         </Example>
         <SubTitle id="carousels-settings">Settings</SubTitle>
         <Description>
-          <p>To adjust the settings of a particular carousel, you may pass in a settings object to the carousel function, like so:</p>
+          <p>
+            To adjust the settings of a particular carousel, you may pass in a
+            settings object to the inital <code>carousel()</code> function, like
+            so:
+          </p>
         </Description>
         <Code language="javascript">
           {`const sampleCarouselSettings = {
@@ -99,9 +107,14 @@ class Carousels extends Component {
 };
 const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarouselSettings);`}
         </Code>
-        <SubTitle id="carousels-settings">Events</SubTitle>
+        <SubTitle id="carousels-events">Events</SubTitle>
         <Description>
-          <p>You may also hook into the various events that are fired by the carousel. To see a full list of the events and their arguments, go to <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a>.</p>
+          <p>
+            You may also hook into the various events that are fired by the
+            carousel. To do so, pass the desired event to the carousel's{' '}
+            <code>on()</code> method, along with a callback function as the
+            second parameter, like so:
+          </p>
         </Description>
         <Code language="javascript">
           {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarouselSettings);
@@ -110,9 +123,19 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
   // do something after the slide changes...
 });`}
         </Code>
-        <SubTitle id="carousels-documentation">Methods</SubTitle>
         <Description>
-          <p>You can also hook into the various Slick methods, using our custom API methods. These include:</p>
+          Each event has its own unique arguments that it passes to the callback
+          function. To see a full list of events and their arguments, go to{' '}
+          <a href="http://kenwheeler.github.io/slick/">
+            http://kenwheeler.github.io/slick/
+          </a>.
+        </Description>
+        <SubTitle id="carousels-methods">Methods</SubTitle>
+        <Description>
+          <p>
+            You can also hook into the various Slick methods, using our custom
+            API methods. These include:
+          </p>
         </Description>
         <table className="table table--bordered">
           <thead>
@@ -128,7 +151,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>getCurrentSlide</code>
               </td>
               <td>Returns the current slide index</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
 
             <tr>
@@ -136,7 +161,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>goToSlide</code>
               </td>
               <td>Navigates to a slide by index</td>
-              <td><em>index (int), preventAnimation (boolean)</em></td>
+              <td>
+                <em>index (int), preventAnimation (boolean)</em>
+              </td>
             </tr>
 
             <tr>
@@ -144,7 +171,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>next</code>
               </td>
               <td>Navigates to the next slide</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
 
             <tr>
@@ -152,7 +181,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>prev</code>
               </td>
               <td>Navigates to the previous slide</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
 
             <tr>
@@ -160,7 +191,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>pause</code>
               </td>
               <td>Pauses autoplay</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
 
             <tr>
@@ -168,23 +201,41 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>play</code>
               </td>
               <td>Starts autoplay</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
 
             <tr>
               <td>
                 <code>addSlide</code>
               </td>
-              <td>Add a slide. If an index is provided, will add at that index, or before if addBefore is set. If no index is provided, add to the end or to the beginning if addBefore is set. Accepts HTML String || Object</td>
-              <td><em>html (html or DOM object), index (int), addBefore (boolean)</em></td>
+              <td>
+                Add a slide. If an index is provided, will add at that index, or
+                before if addBefore is set. If no index is provided, add to the
+                end or to the beginning if addBefore is set. Accepts HTML String
+                || Object
+              </td>
+              <td>
+                <em>
+                  html (html or DOM object), index (int), addBefore (boolean)
+                </em>
+              </td>
             </tr>
 
             <tr>
               <td>
                 <code>removeSlide</code>
               </td>
-              <td>Remove slide by index. If removeBefore is set true, remove slide preceding index, or the first slide if no index is specified. If removeBefore is set to false, remove the slide following index, or the last slide if no index is set.</td>
-              <td><em>index (int), removeBefore (boolean)</em></td>
+              <td>
+                Remove slide by index. If removeBefore is set true, remove slide
+                preceding index, or the first slide if no index is specified. If
+                removeBefore is set to false, remove the slide following index,
+                or the last slide if no index is set.
+              </td>
+              <td>
+                <em>index (int), removeBefore (boolean)</em>
+              </td>
             </tr>
 
             <tr>
@@ -192,7 +243,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>filter</code>
               </td>
               <td>Filters slides using jQuery .filter()</td>
-              <td><em>filter (selector or function)</em></td>
+              <td>
+                <em>filter (selector or function)</em>
+              </td>
             </tr>
 
             <tr>
@@ -200,7 +253,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>unfilter</code>
               </td>
               <td>Removes applied filtering</td>
-              <td><em>index (int)</em></td>
+              <td>
+                <em>index (int)</em>
+              </td>
             </tr>
 
             <tr>
@@ -208,15 +263,24 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>getOption</code>
               </td>
               <td>Gets an individual option value</td>
-              <td><em>option (string)</em></td>
+              <td>
+                <em>option (string)</em>
+              </td>
             </tr>
 
             <tr>
               <td>
                 <code>setOption</code>
               </td>
-              <td>Sets an individual value live. Set refresh to true if it's a UI update.</td>
-              <td><em>option (string), value (depends on option), refresh (boolean)</em></td>
+              <td>
+                Sets an individual value live. Set refresh to true if it's a UI
+                update.
+              </td>
+              <td>
+                <em>
+                  option (string), value (depends on option), refresh (boolean)
+                </em>
+              </td>
             </tr>
 
             <tr>
@@ -224,7 +288,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>destroy</code>
               </td>
               <td>Deconstructs slick.</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
 
             <tr>
@@ -232,7 +298,9 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
                 <code>getSlick</code>
               </td>
               <td>Get Slick Object</td>
-              <td><em>none</em></td>
+              <td>
+                <em>none</em>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -248,12 +316,17 @@ const sampleCarouselAutoplaySpeed = sampleCarousel.getOption('autoplaySpeed');`}
 
         <SubTitle id="carousels-documentation">Documentation</SubTitle>
         <Description>
-          <p>To view the full documentation for Slick JS, including the full list of available settings, events and methods, visit <a href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a>.</p>
+          <p>
+            To view the full documentation for Slick JS, including the full list
+            of available settings, events and methods, visit{' '}
+            <a href="http://kenwheeler.github.io/slick/">
+              http://kenwheeler.github.io/slick/
+            </a>.
+          </p>
         </Description>
       </Section>
-    )
+    );
   }
 }
 
 export default Carousels;
-
