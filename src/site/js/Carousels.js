@@ -134,7 +134,7 @@ const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarou
             You may also hook into the various events that are fired by the
             carousel. To do so, pass the desired event to the carousel's{' '}
             <code>on()</code> method, along with a callback function as the
-            second parameter, like so:
+            second argument, like so:
           </p>
         </Description>
         <Code language="javascript">
