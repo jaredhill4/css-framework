@@ -33,6 +33,27 @@ class Carousels extends Component {
             <strong>carousel</strong> component.
           </p>
         </Description>
+        <SubTitle id="carousels-documentation">Introduction</SubTitle>
+        <Description>
+          <p>
+            Our carousel component is an extension of the{' '}
+            <a href="http://kenwheeler.github.io/slick/">
+              Slick jQuery plugin
+            </a>, so all same settings, events and methods are available for you
+            to use.
+          </p>
+          <p>
+            One caveat to this is how we handle the Slick methods. For these, we
+            provide a custom API, to make hooking into them simpler and
+            consistent with our other JavaScript components.
+          </p>
+          <p>
+            To view the full documentation for Slick, visit{' '}
+            <a href="http://kenwheeler.github.io/slick/">
+              http://kenwheeler.github.io/slick/
+            </a>.
+          </p>
+        </Description>
         <SubTitle id="carousels-setup">Setup</SubTitle>
         <Description>
           To create a carousel, you will first need to create the markup, which
@@ -67,7 +88,7 @@ class Carousels extends Component {
           <p>
             Now that the markup is in place, you will need to create a new
             carousel instance. To do so, call the <code>carousel()</code>{' '}
-            javascript component function (with your unique selector as the
+            JavaScript component function (with your unique selector as the
             first argument) and assign it to a variable, like so:
           </p>
         </Description>
@@ -125,7 +146,8 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
         </Code>
         <Description>
           Each event has its own unique arguments that it passes to the callback
-          function. To see a full list of events and their arguments, go to{' '}
+          function. To see a full list of events and their arguments, review the
+          Slick documentation at{' '}
           <a href="http://kenwheeler.github.io/slick/">
             http://kenwheeler.github.io/slick/
           </a>.
@@ -313,17 +335,6 @@ const currentSlide = sampleCarousel.getCurrentSlide();
 // Return the autoplaySpeed (3000) and store it in a variable
 const sampleCarouselAutoplaySpeed = sampleCarousel.getOption('autoplaySpeed');`}
         </Code>
-
-        <SubTitle id="carousels-documentation">Documentation</SubTitle>
-        <Description>
-          <p>
-            To view the full documentation for Slick JS, including the full list
-            of available settings, events and methods, visit{' '}
-            <a href="http://kenwheeler.github.io/slick/">
-              http://kenwheeler.github.io/slick/
-            </a>.
-          </p>
-        </Description>
       </Section>
     );
   }
