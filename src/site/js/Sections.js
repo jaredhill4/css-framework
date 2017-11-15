@@ -2,15 +2,11 @@ import React from 'react';
 import {
   Section,
   Title,
-  SubTitle,
   Description,
   Example,
   ExampleView,
   Code,
 } from './Framework';
-
-const loremIpsum =
-  'Est cupidatat mollit qui enim nisi enim elit aute excepteur. Lorem nulla sunt minim nulla irure ut. Ea excepteur laboris aliqua amet commodo reprehenderit excepteur culpa ex sunt.';
 
 const Sections = () =>
   <Section>

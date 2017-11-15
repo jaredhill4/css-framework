@@ -105,6 +105,10 @@ const navigation = [
     id: 'tooltips',
   },
   {
+    name: 'Carousels',
+    id: 'carousels',
+  },
+  {
     name: 'Utilities',
     id: 'utilities',
     children: [
