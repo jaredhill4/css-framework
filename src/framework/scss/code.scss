@@ -2,21 +2,46 @@
 // variables
 // --------------------------------------------------
 
-$code-color-pln: #e6e9ed;
-$code-color-str: #ffcb6b;
-$code-color-kwd: #ac92ec;
-$code-color-com: #506e7a;
-$code-color-typ: #ac92ec;
-$code-color-lit: #f3886c;
-$code-color-pun: #aae1f4;
-$code-color-opn: #e6e9ed;
-$code-color-clo: #e6e9ed;
-$code-color-tag: #f3886c;
-$code-color-atn: #ffcb6b;
-$code-color-atv: #c3e889;
-$code-color-dec: #4fc1e9;
-$code-color-var: #e6e9ed;
-$code-color-fun: #e6e9ed;
+$code-background-color: #263238;
+
+$code-font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
+  Consolas, monospace;
+$code-font-size: 14px;
+$code-line-height: 40px;
+
+$code-max-height: 390px;
+
+$code-line-highlight-background-color: #1e292d;
+
+$code-syntax-colors: (
+  'pln': #e6e9ed,
+  'str': #ffcb6b,
+  'kwd': #ac92ec,
+  'com': #506e7a,
+  'typ': #ac92ec,
+  'lit': #f3886c,
+  'pun': #aae1f4,
+  'opn': #e6e9ed,
+  'clo': #e6e9ed,
+  'tag': #f3886c,
+  'atn': #ffcb6b,
+  'atv': #c3e889,
+  'dec': #4fc1e9,
+  'var': #e6e9ed,
+  'fun': #e6e9ed
+);
+
+// --------------------------------------------------
+// mixins
+// --------------------------------------------------
+
+@mixin code-syntax-colors($colors: $code-syntax-colors) {
+  @each $key, $value in $colors {
+    .code .#{$key} {
+      color: $value;
+    }
+  }
+}
 
 // --------------------------------------------------
 // base
@@ -33,13 +58,12 @@ $code-color-fun: #e6e9ed;
 
 .code__pre {
   position: relative;
-  background: #263238;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
-    Consolas, monospace;
+  background: $code-background-color;
+  font-family: $code-font-family;
   border: 0 !important;
   border-radius: 0;
-  font-size: 14px;
-  line-height: 40px;
+  font-size: $code-font-size;
+  line-height: $code-line-height;
   margin: 0;
   padding: 0;
 
@@ -48,8 +72,8 @@ $code-color-fun: #e6e9ed;
       z-index: 3;
       position: relative;
       display: block;
-      background: lighten(#263238, 10%);
-      color: lighten(#263238, 60%);
+      background: lighten($code-background-color, 10%);
+      color: lighten($code-background-color, 60%);
       font-size: 12px;
       letter-spacing: 0.1em;
       height: 44px;
@@ -64,7 +88,7 @@ $code-color-fun: #e6e9ed;
     &:hover {
       &::before {
         color: $color-white;
-        background: lighten(#263238, 20%);
+        background: lighten($code-background-color, 20%);
       }
     }
   }
@@ -77,7 +101,7 @@ $code-color-fun: #e6e9ed;
 .code__code {
   position: relative;
   display: block;
-  max-height: 390px;
+  max-height: $code-max-height;
   overflow-y: auto;
   white-space: pre;
 }
@@ -171,8 +195,8 @@ ol.code__line-numbers {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px; // Set to height of the individual lines
-  background: #1e292d;
+  height: $code-line-height;
+  background: $code-line-highlight-background-color;
   transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
   opacity: 0;
   visibility: hidden;
@@ -195,7 +219,7 @@ ol.code__line-numbers {
   right: 10px;
   padding: 6px 10px;
   color: $color-white;
-  color: lighten(#263238, 60%);
+  color: lighten($code-background-color, 60%);
   font-size: 12px;
   line-height: 18px;
   font-family: $font-family-sans-serif;
@@ -254,83 +278,17 @@ ol.code__line-numbers {
 }
 
 // --------------------------------------------------
-// syntax highlighting
+// syntax
+// --------------------------------------------------
+
+.com {
+  font-style: italic;
+}
+
+// --------------------------------------------------
+// syntax colors
 // --------------------------------------------------
 
 @media screen {
-  // plain text
-  .pln {
-    color: $code-color-pln;
-  }
-
-  // string content
-  .str {
-    color: $code-color-str;
-  }
-
-  // keyword
-  .kwd {
-    color: $code-color-kwd;
-  }
-
-  // comment
-  .com {
-    color: $code-color-com;
-    font-style: italic;
-  }
-
-  // type name
-  .typ {
-    color: $code-color-typ;
-  }
-
-  // literal value
-  .lit {
-    color: $code-color-pln;
-  }
-
-  // punctuation
-  .pun {
-    color: $code-color-pun;
-  }
-
-  // lisp open bracket
-  .opn {
-    color: $code-color-opn;
-  }
-
-  // lisp close bracket
-  .clo {
-    color: $code-color-clo;
-  }
-
-  // markup tag name
-  .tag {
-    color: $code-color-tag;
-  }
-
-  // markup attribute name
-  .atn {
-    color: $code-color-atn;
-  }
-
-  // markup attribute value
-  .atv {
-    color: $code-color-atv;
-  }
-
-  // declaration
-  .dec {
-    color: $code-color-dec;
-  }
-
-  // variable name
-  .var {
-    color: $code-color-var;
-  }
-
-  // function name
-  .fun {
-    color: $code-color-fun;
-  }
+  @include code-syntax-colors();
 }

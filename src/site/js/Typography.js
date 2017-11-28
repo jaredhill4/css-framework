@@ -38,15 +38,52 @@ const Typography = () =>
 <h6>Heading 6</h6>`}
       </Code>
     </Example>
-    <SubTitle id="typography-blockquote">Blockquote</SubTitle>
+    <SubTitle id="typography-paragraphs">Paragraphs</SubTitle>
+    <Example>
+      <ExampleView>
+        <p>
+          {loremIpsum}
+        </p>
+      </ExampleView>
+      <Code language="html">
+        {`<p>${loremIpsum}</p>`}
+      </Code>
+    </Example>
+    <Description>
+      Add the <code>.p--lead</code> class to a paragraph to apply the lead
+      paragraph styles.
+    </Description>
+    <Example>
+      <ExampleView>
+        <p class="p--lead">
+          {loremIpsum}
+        </p>
+        <p>
+          {loremIpsum}
+        </p>
+      </ExampleView>
+      <Code language="html">
+        {`<p class="p--lead">${loremIpsum}</p>
+<p>${loremIpsum}</p>`}
+      </Code>
+    </Example>
+    <SubTitle id="typography-blockquotes">Blockquotes</SubTitle>
     <Example>
       <ExampleView>
         <blockquote>
           {loremIpsum}
+          <footer>
+            <cite>&mdash; Some Person</cite>
+          </footer>
         </blockquote>
       </ExampleView>
       <Code language="html">
-        {`<blockquote>${loremIpsum}</blockquote>`}
+        {`<blockquote>
+    ${loremIpsum}
+    <footer>
+        <cite>&mdash; Some Person</cite>
+    </footer>
+</blockquote>`}
       </Code>
     </Example>
     <SubTitle id="typography-lists">Lists</SubTitle>
@@ -122,7 +159,7 @@ const Typography = () =>
 </ol>`}
       </Code>
     </Example>
-    <SubTitle id="typography-horizontal-rule">Horizontal Rule</SubTitle>
+    <SubTitle id="typography-horizontal-rules">Horizontal Rules</SubTitle>
     <Example>
       <ExampleView>
         <hr />
@@ -163,13 +200,25 @@ const Typography = () =>
     <SubTitle id="typography-inline-elements">Inline Elements</SubTitle>
     <Example>
       <ExampleView>
-        <kbd>kbd</kbd> <code>code</code> <samp>samp</samp> <em>em</em>{' '}
-        <sup>sup</sup> <sub>sub</sub> <strong>strong</strong>{' '}
+        <kbd>kbd</kbd> <code>code</code> <samp>samp</samp> <cite>cite</cite>{' '}
+        <em>em</em> <sup>sup</sup> <sub>sub</sub> <strong>strong</strong>{' '}
         <small>small</small> <abbr title="Abbreviation">abbr</abbr>{' '}
         <ins>ins</ins> <mark>mark</mark> <var>var</var>
       </ExampleView>
       <Code language="html">
-        {`<kbd>kbd</kbd> <code>code</code> <samp>samp</samp> <em>em</em> <sup>sup</sup> <sub>sub</sub> <strong>strong</strong> <small>small</small> <abbr title="Abbreviation">abbr</abbr> <ins>ins</ins> <mark>mark</mark> <var>var</var>`}
+        {`<kbd>kbd</kbd>
+<code>code</code>
+<samp>samp</samp>
+<cite>cite</cite>
+<em>em</em>
+<sup>sup</sup>
+<sub>sub</sub>
+<strong>strong</strong>
+<small>small</small>
+<abbr title="Abbreviation">abbr</abbr>
+<ins>ins</ins>
+<mark>mark</mark>
+<var>var</var>`}
       </Code>
     </Example>
   </Section>;

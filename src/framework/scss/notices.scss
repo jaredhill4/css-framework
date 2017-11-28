@@ -5,20 +5,41 @@
 $notice-border-radius: $global-border-radius;
 $notice-border-width: $global-border-width;
 $notice-border-color: $global-border-color;
-
 $notice-border-left-width: 5px;
 
 $notice-padding: 1.25rem;
+
+$notice-colors: (
+  'default': $color-gray,
+  'red': $color-red,
+  'yellow': $color-yellow,
+  'blue': $color-blue,
+  'green': $color-green
+);
 
 // --------------------------------------------------
 // mixins
 // --------------------------------------------------
 
-@mixin notice($color) {
-  border-left-color: $color;
+@mixin notice-colors($colors: $notice-colors) {
+  @each $key, $value in $colors {
+    $selector: '.notice';
+    $border-color: $value;
+    $title-color: $value;
 
-  .notice__title {
-    color: $color;
+    @if ($key != 'default') {
+      $selector: '#{$selector}--#{$key}';
+    } @else {
+      $title-color: $color-black;
+    }
+
+    #{$selector} {
+      border-left-color: $border-color;
+
+      .notice__title {
+        color: $title-color;
+      }
+    }
   }
 }
 
@@ -32,36 +53,21 @@ $notice-padding: 1.25rem;
   display: block;
   padding: $notice-padding;
   border: solid $notice-border-width $notice-border-color;
-  border-left: solid $notice-border-left-width $color-gray;
+  border-left: solid $notice-border-left-width;
   border-radius: $notice-border-radius;
   margin-bottom: 1rem;
 }
 
 .notice__title {
   font-weight: $font-weight-bold;
-  color: $color-black;
   margin-top: 0;
 }
 
 // --------------------------------------------------
-// variants
+// colors
 // --------------------------------------------------
 
-.notice--red {
-  @include notice($color-red);
-}
-
-.notice--yellow {
-  @include notice($color-yellow);
-}
-
-.notice--green {
-  @include notice($color-green);
-}
-
-.notice--blue {
-  @include notice($color-blue);
-}
+@include notice-colors();
 
 // --------------------------------------------------
 // close

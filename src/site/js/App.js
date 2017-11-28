@@ -6,6 +6,7 @@ import MenuToggle from './MenuToggle';
 
 import Grid from './Grid';
 import Containers from './Containers';
+import Sections from './Sections';
 import Typography from './Typography';
 import Buttons from './Buttons';
 import Forms from './Forms';
@@ -58,6 +59,7 @@ class App extends Component {
         <MenuToggle toggleMenu={this.toggleMenu} />
         <Grid />
         <Containers />
+        <Sections />
         <Typography />
         <Buttons />
         <Forms />

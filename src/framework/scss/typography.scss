@@ -76,8 +76,16 @@ h6,
 // --------------------------------------------------
 
 p {
-  margin-bottom: 1.25rem;
-  margin-top: 0;
+  margin: 0 0 1.25rem;
+}
+
+// --------------------------------------------------
+// lead paragraph
+// --------------------------------------------------
+
+.p--lead {
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
 }
 
 // --------------------------------------------------
@@ -86,8 +94,14 @@ p {
 
 blockquote {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  margin-top: 0;
+  margin: 0 0 1.25rem;
+  padding-left: 1.5rem;
+  border-left: solid 5px $color-gray;
+
+  footer {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+  }
 }
 
 // --------------------------------------------------
