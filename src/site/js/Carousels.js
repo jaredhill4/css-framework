@@ -19,9 +19,13 @@ const slideStyles = {
 
 class Carousels extends Component {
   componentDidMount() {
-    carousel('[data-carousel="sample-carousel"]', {
+    carousel('[data-carousel="sample-carousel"]');
+    carousel('[data-carousel="sample-carousel-dots"]', {
+      infinite: false,
+      autoplay: true,
       dots: true,
-      infinite: true,
+      autoplaySpeed: 5000,
+      speed: 500,
     });
   }
 
@@ -121,15 +125,32 @@ class Carousels extends Component {
             so:
           </p>
         </Description>
-        <Code language="javascript">
-          {`const sampleCarouselSettings = {
+        <Example>
+          <Code language="javascript">
+            {`const sampleCarouselSettings = {
+  infinite: false,     // prevent slides from looping
   autoplay: true,      // enable automatic slide progression
   dots: true,          // display dot indicators
   autoplaySpeed: 5000, // set the slide pause time to 5 seconds
   speed: 500,          // set the slide transition speed to half a second
 };
 const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarouselSettings);`}
-        </Code>
+          </Code>
+        </Example>
+        <Description>
+          <p>Now, your slideshow will look like this:</p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div data-carousel="sample-carousel-dots">
+              <div style={slideStyles}>Slide 1</div>
+              <div style={slideStyles}>Slide 2</div>
+              <div style={slideStyles}>Slide 3</div>
+              <div style={slideStyles}>Slide 4</div>
+              <div style={slideStyles}>Slide 5</div>
+            </div>
+          </ExampleView>
+        </Example>
         <SubTitle id="carousels-events">Events</SubTitle>
         <Description>
           <p>

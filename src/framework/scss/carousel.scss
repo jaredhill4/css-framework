@@ -6,6 +6,7 @@ $carousel-arrow-size: 50px;
 $carousel-arrow-icon-width: 12px;
 $carousel-arrow-icon-height: 2px;
 
+$carousel-dots-height: 50px;
 $carousel-dot-size: 12px;
 
 // --------------------------------------------------
@@ -21,7 +22,7 @@ $carousel-dot-size: 12px;
   -webkit-tap-highlight-color: transparent;
 
   &.slick-dotted {
-    margin-bottom: 50px;
+    margin-bottom: $carousel-dots-height;
   }
 }
 
@@ -183,11 +184,11 @@ $carousel-dot-size: 12px;
   display: block;
   left: 0;
   right: 0;
-  bottom: -50px;
+  bottom: -$carousel-dots-height;
   margin: 0;
   padding: 0;
-  height: 50px;
-  line-height: 50px;
+  height: $carousel-dots-height;
+  line-height: $carousel-dots-height;
   list-style: none;
   text-align: center;
 
