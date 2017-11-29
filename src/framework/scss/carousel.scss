@@ -44,7 +44,7 @@ $carousel-dot-size: 12px;
 
 .slick-slider .slick-track,
 .slick-slider .slick-list {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
@@ -125,11 +125,12 @@ $carousel-dot-size: 12px;
   margin-top: -($carousel-arrow-size/2);
   text-align: center;
   text-indent: -999999px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none !important;
   outline: none !important;
-  transition: $global-transition;
+  border-radius: 50%;
   cursor: pointer;
+  transition: $global-transition;
 
   &:hover {
     background: $color-primary;
@@ -165,11 +166,11 @@ $carousel-dot-size: 12px;
 }
 
 .slick-prev {
-  left: 0;
+  left: 15px;
 }
 
 .slick-next {
-  right: 0;
+  right: 15px;
   transform: rotate(180deg);
 }
 
@@ -199,26 +200,23 @@ $carousel-dot-size: 12px;
       width: $carousel-dot-size;
       height: $carousel-dot-size;
       padding: 0;
-      border: none !important;
       outline: none !important;
-      background: $color-gray;
+      background: transparent;
+      border: solid 1px $color-primary;
       border-radius: 50%;
       text-indent: -999999px;
       cursor: pointer;
       transition: $global-transition;
 
       &:hover {
-        background: shade($color-gray, 10%);
-      }
-
-      &:focus {
-        box-shadow: $global-focus-box-shadow;
+        background: $color-primary;
       }
     }
 
     &.slick-active {
       button {
         background: $color-primary;
+        box-shadow: 0 0 0 3px rgba($color-primary, 0.3);
       }
     }
   }
