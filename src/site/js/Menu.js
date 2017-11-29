@@ -105,6 +105,17 @@ const navigation = [
     id: 'tooltips',
   },
   {
+    name: 'Carousels',
+    id: 'carousels',
+    children: [
+      { name: 'Introduction', id: 'carousels-introduction' },
+      { name: 'Setup', id: 'carousels-setup' },
+      { name: 'Settings', id: 'carousels-settings' },
+      { name: 'Events', id: 'carousels-events' },
+      { name: 'Methods', id: 'carousels-methods' },
+    ],
+  },
+  {
     name: 'Utilities',
     id: 'utilities',
     children: [

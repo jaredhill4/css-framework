@@ -45,7 +45,7 @@ $theme-sides: (top, right, bottom, left);
 
   @each $name, $value in $colors {
     '#{$selector}-#{$name}' {
-      color: $value;
+      color: $value !important;
     }
     'a#{$selector}-#{$name}:hover' {
       @if $name == black {
@@ -61,7 +61,7 @@ $theme-sides: (top, right, bottom, left);
 @mixin u--background-color($colors: $theme-colors) {
   @each $name, $value in $colors {
     .u--background-color-#{$name} {
-      background-color: $value;
+      background-color: $value !important;
     }
   }
 }
@@ -70,7 +70,7 @@ $theme-sides: (top, right, bottom, left);
 @mixin u--border-color($colors: $theme-colors) {
   @each $name, $value in $colors {
     .u--border-color-#{$name} {
-      border-color: $value;
+      border-color: $value !important;
     }
   }
 }
@@ -81,11 +81,11 @@ $theme-sides: (top, right, bottom, left);
 
   @each $size in $sizes {
     '#{$selector}-#{$size}' {
-      border-width: #{$size}px;
+      border-width: #{$size}px !important;
     }
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
-        border-#{$side}-width: #{$size}px;
+        border-#{$side}-width: #{$size}px !important;
       }
     }
   }
@@ -97,21 +97,21 @@ $theme-sides: (top, right, bottom, left);
 
   @each $size in $sizes {
     '#{$selector}-#{$size}' {
-      margin: #{$size}px;
+      margin: #{$size}px !important;
     }
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
-        margin-#{$side}: #{$size}px;
+        margin-#{$side}: #{$size}px !important;
       }
     }
   }
   @each $size in $sizes {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      margin: #{$size}px;
+      margin: #{$size}px !important;
     }
     @each $side in $sides {
       @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
-        margin-#{$side}: #{$size}px;
+        margin-#{$side}: #{$size}px !important;
       }
     }
   }
@@ -123,22 +123,22 @@ $theme-sides: (top, right, bottom, left);
 
   @each $size in $sizes {
     '#{$selector}-#{$size}' {
-      padding: #{$size}px;
+      padding: #{$size}px !important;
     }
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
-        padding-#{$side}: #{$size}px;
+        padding-#{$side}: #{$size}px !important;
       }
     }
   }
 
   @each $size in $sizes {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      padding: #{$size}px;
+      padding: #{$size}px !important;
     }
     @each $side in $sides {
       @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
-        padding-#{$side}: #{$size}px;
+        padding-#{$side}: #{$size}px !important;
       }
     }
   }
@@ -149,12 +149,12 @@ $theme-sides: (top, right, bottom, left);
 
   @each $size in $sizes {
     '#{$selector}-#{$size}' {
-      width: percentage($size) / 100;
+      width: percentage($size) / 100 !important;
     }
   }
   @each $size in $sizes {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      width: percentage($size) / 100;
+      width: percentage($size) / 100 !important;
     }
   }
 }
@@ -163,7 +163,7 @@ $theme-sides: (top, right, bottom, left);
 @mixin u--font-weight($options: $theme-font-weights) {
   @each $key, $value in $options {
     .u--font-weight-#{$key} {
-      font-weight: $value;
+      font-weight: $value !important;
     }
   }
 }
@@ -172,7 +172,7 @@ $theme-sides: (top, right, bottom, left);
 @mixin u--font-style($options: $theme-font-style) {
   @each $option in $options {
     .u--font-style-#{$option} {
-      font-style: $option;
+      font-style: $option !important;
     }
   }
 }
@@ -183,12 +183,12 @@ $theme-sides: (top, right, bottom, left);
 
   @each $option in $options {
     '#{$selector}-#{$option}' {
-      text-align: $option;
+      text-align: $option !important;
     }
   }
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
-      text-align: $option;
+      text-align: $option !important;
     }
   }
 }
@@ -197,7 +197,7 @@ $theme-sides: (top, right, bottom, left);
 @mixin u--text-transform($options: $theme-text-transform) {
   @each $option in $options {
     .u--text-transform-#{$option} {
-      text-transform: $option;
+      text-transform: $option !important;
     }
   }
 }
@@ -208,12 +208,12 @@ $theme-sides: (top, right, bottom, left);
 
   @each $option in $options {
     '#{$selector}-#{$option}' {
-      vertical-align: $option;
+      vertical-align: $option !important;
     }
   }
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
-      vertical-align: $option;
+      vertical-align: $option !important;
     }
   }
 }
@@ -224,12 +224,12 @@ $theme-sides: (top, right, bottom, left);
 
   @each $option in $options {
     '#{$selector}-#{$option}' {
-      float: $option;
+      float: $option !important;
     }
   }
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
-      float: $option;
+      float: $option !important;
     }
   }
 }
@@ -270,12 +270,12 @@ $theme-sides: (top, right, bottom, left);
 
   @each $option in $options {
     '#{$selector}-#{$option}' {
-      display: $option;
+      display: $option !important;
     }
   }
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
-      display: $option;
+      display: $option !important;
     }
   }
 }
@@ -285,7 +285,7 @@ $theme-sides: (top, right, bottom, left);
   $selector: '.u--hidden';
 
   @include apply-breakpoint-postfixes('min', '#{$selector}', true, true) {
-    display: none;
+    display: none !important;
   }
 }
 

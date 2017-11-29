@@ -55,7 +55,7 @@ const Typography = () =>
     </Description>
     <Example>
       <ExampleView>
-        <p class="p--lead">
+        <p className="p--lead">
           {loremIpsum}
         </p>
         <p>

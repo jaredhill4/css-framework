@@ -429,10 +429,10 @@ class Modals extends Component {
             </div>
           </ExampleView>
         </Example>
-        <SubTitle id="modals-listeners">Listeners</SubTitle>
+        <SubTitle id="modals-listeners">Methods</SubTitle>
         <Description>
           <p>
-            You can trigger the modal show, hide and toggle listeners
+            You can trigger the modal show, hide and toggle methods
             programmatically by using the jQuery "trigger" method with one of
             the modal elements as the selector.
           </p>
