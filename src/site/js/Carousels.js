@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React, { Component } from 'react';
 import {
   Section,
@@ -13,14 +12,17 @@ import carousel from '../../framework/js/carousel';
 
 const slideStyles = {
   width: '100%',
-  padding: '150px',
+  padding: '150px 30px',
   textAlign: 'center',
   backgroundColor: '#ccc',
 };
 
 class Carousels extends Component {
   componentDidMount() {
-    const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
+    carousel('[data-carousel="sample-carousel"]', {
+      dots: true,
+      infinite: true,
+    });
   }
 
   render() {
@@ -72,13 +74,13 @@ class Carousels extends Component {
     <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
       Slide 2
     </div>
-    <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
+    <div style="width: 100%; padding: 150px 30px; text-align: center; background-color: #ccc;">
       Slide 3
     </div>
-    <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
+    <div style="width: 100%; padding: 150px 30px; text-align: center; background-color: #ccc;">
       Slide 4
     </div>
-    <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
+    <div style="width: 100%; padding: 150px 30px; text-align: center; background-color: #ccc;">
       Slide 5
     </div>
 </div>`}
@@ -138,7 +140,7 @@ const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarou
           </p>
         </Description>
         <Code language="javascript">
-          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarouselSettings);
+          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
 
 sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
   // do something after the slide changes...
@@ -327,7 +329,7 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
           </tbody>
         </table>
         <Code language="javascript">
-          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarouselSettings);
+          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
 // Set the autoplaySpeed to 3 seconds
 sampleCarousel.setOption('autoplaySpeed', 3000);
 // Return the current slide index and store it in a variable
