@@ -180,7 +180,7 @@ class Toggle {
     this.toggleSwitch.addClass(ClassName.SWITCH_ON);
   }
 
-  hide(event, preventSetTransitioning) {
+  hide(event, preventSetTransitioning = false) {
     if (typeof event !== 'undefined') {
       event.preventDefault();
     }
