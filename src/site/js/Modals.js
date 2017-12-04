@@ -21,7 +21,7 @@ class Modals extends Component {
         <Title id="modals">Modals</Title>
         <Description>
           <p>
-            In order to use dropdowns you must import the library and call{' '}
+            In order to use modals you must import the library and call{' '}
             <code>modals('[data-modal]');</code>
           </p>
           <p>
@@ -429,7 +429,7 @@ class Modals extends Component {
             </div>
           </ExampleView>
         </Example>
-        <SubTitle id="modals-listeners">Methods</SubTitle>
+        <SubTitle id="modals-methods">Methods</SubTitle>
         <Description>
           <p>
             You can trigger the modal show, hide and toggle methods
@@ -437,6 +437,28 @@ class Modals extends Component {
             the modal elements as the selector.
           </p>
         </Description>
+        <table className="table table--bordered">
+          <tbody>
+            <tr>
+              <td>
+                <code>modal:show</code>
+              </td>
+              <td>Shows a given modal</td>
+            </tr>
+            <tr>
+              <td>
+                <code>modal:hide</code>
+              </td>
+              <td>Hides a given modal</td>
+            </tr>
+            <tr>
+              <td>
+                <code>modal:toggle</code>
+              </td>
+              <td>Toggles a given modal</td>
+            </tr>
+          </tbody>
+        </table>
         <Code language="javascript">
           {`// show modal
 $('[data-modal="sample-modal"]').trigger('modal:show');

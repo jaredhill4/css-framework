@@ -1,0 +1,40 @@
+// --------------------------------------------------
+// base
+// --------------------------------------------------
+
+.accordion {
+  display: block;
+  margin: 0;
+
+  dd {
+    margin: 0;
+  }
+}
+
+// --------------------------------------------------
+// header
+// --------------------------------------------------
+
+.accordion__header {
+  display: block;
+  margin-top: 10px;
+  padding: 20px;
+  border: solid $global-border-width $global-border-color;
+  border-radius: $global-border-radius;
+
+  &.toggle__switch--on {
+    border-radius: $global-border-radius $global-border-radius 0 0;
+  }
+}
+
+// --------------------------------------------------
+// content
+// --------------------------------------------------
+
+.accordion__content {
+  margin: 0;
+  padding: 20px;
+  border: solid $global-border-width $global-border-color;
+  border-top: none;
+  border-radius: 0 0 $global-border-radius $global-border-radius;
+}

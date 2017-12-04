@@ -2,14 +2,16 @@ import $ from 'jquery';
 import 'google-code-prettify/src/prettify';
 import 'google-code-prettify/src/lang-css';
 
-const baseClass = 'code';
-const preClass = 'code__pre';
-const codeClass = 'code__code';
-const linesClass = 'code__lines';
-const lineNumbersClass = 'code__line-numbers';
-const lineHighlightClass = 'code__line-highlight';
-const copyBtnClass = 'code__copy-btn';
-const unstyledCodeClass = 'code__unstyled-code';
+const ClassName = {
+  BASE: 'code',
+  PRE: 'code__pre',
+  CODE: 'code__code',
+  LINES: 'code__lines',
+  LINE_NUMBERS: 'code__line-numbers',
+  LINE_HIGHLIGHT: 'code__line-highlight',
+  COPY_BTN: 'code__copy-btn',
+  UNSTYLED_CODE: 'code__unstyled-code',
+};
 
 class Code {
   constructor(element) {
@@ -21,30 +23,30 @@ class Code {
     this.copyBtn = null;
 
     this.code
-      .addClass(`${preClass} prettyprint linenums`)
-      .wrap(`<div class="${baseClass}"></div>`)
-      .after(`<textarea class="${unstyledCodeClass}"></textarea>`);
+      .addClass(`${ClassName.PRE} prettyprint linenums`)
+      .wrap(`<div class="${ClassName.BASE}"></div>`)
+      .after(`<textarea class="${ClassName.UNSTYLED_CODE}"></textarea>`);
 
-    this.code.next(`.${unstyledCodeClass}`).html(this.code.html()).text();
+    this.code.next(`.${ClassName.UNSTYLED_CODE}`).html(this.code.html()).text();
 
     window.prettyPrint();
 
     this.code
-      .prepend(`<div class="${lineHighlightClass}"></div>`)
-      .prepend(`<ol class="${lineNumbersClass}"></ol>`)
-      .wrapInner(`<code class="${codeClass}"></code>`)
-      .prepend(`<span class="${copyBtnClass}"></span>`);
+      .prepend(`<div class="${ClassName.LINE_HIGHLIGHT}"></div>`)
+      .prepend(`<ol class="${ClassName.LINE_NUMBERS}"></ol>`)
+      .wrapInner(`<code class="${ClassName.CODE}"></code>`)
+      .prepend(`<span class="${ClassName.COPY_BTN}"></span>`);
 
-    this.code.find('ol.linenums').addClass(linesClass);
+    this.code.find('ol.linenums').addClass(ClassName.LINES);
 
-    this.lines = this.code.find(`.${linesClass}`);
-    this.lineHighlight = this.code.find(`.${lineHighlightClass}`);
-    this.copyBtn = this.code.find(`.${copyBtnClass}`);
+    this.lines = this.code.find(`.${ClassName.LINES}`);
+    this.lineHighlight = this.code.find(`.${ClassName.LINE_HIGHLIGHT}`);
+    this.copyBtn = this.code.find(`.${ClassName.COPY_BTN}`);
 
     this.lines
       .children('li')
       .each((i, el) =>
-        this.code.find(`.${lineNumbersClass}`).append(`<li>${i + 1}</li>`)
+        this.code.find(`.${ClassName.LINE_NUMBERS}`).append(`<li>${i + 1}</li>`)
       );
 
     this._setListeners();
@@ -61,7 +63,7 @@ class Code {
   }
 
   onBodyClick(event) {
-    if ($(event.target).closest(`.${preClass}`)[0] !== this.code[0]) {
+    if ($(event.target).closest(`.${ClassName.PRE}`)[0] !== this.code[0]) {
       this.hideLineHighlight(event);
     }
   }
@@ -74,33 +76,33 @@ class Code {
         top: self.position().top,
         height: self.outerHeight(),
       })
-      .addClass(`${lineHighlightClass}--visible`);
+      .addClass(`${ClassName.LINE_HIGHLIGHT}--visible`);
   }
 
   hideLineHighlight(event) {
-    this.lineHighlight.removeClass(`${lineHighlightClass}--visible`);
+    this.lineHighlight.removeClass(`${ClassName.LINE_HIGHLIGHT}--visible`);
   }
 
   toggleScrollState(event) {
     const self = $(event.currentTarget);
 
     if (self.scrollLeft() > 0) {
-      this.code.addClass(`${preClass}--scrolled`);
+      this.code.addClass(`${ClassName.PRE}--scrolled`);
     } else {
-      this.code.removeClass(`${preClass}--scrolled`);
+      this.code.removeClass(`${ClassName.PRE}--scrolled`);
     }
   }
 
   copyCode(event) {
     const self = $(event.currentTarget);
 
-    this.code.next(`.${unstyledCodeClass}`).select();
+    this.code.next(`.${ClassName.UNSTYLED_CODE}`).select();
     document.execCommand('Copy');
-    self.addClass(`${copyBtnClass}--copied`);
+    self.addClass(`${ClassName.COPY_BTN}--copied`);
   }
 
   removeCopiedClass(event) {
-    $(event.currentTarget).removeClass(`${copyBtnClass}--copied`);
+    $(event.currentTarget).removeClass(`${ClassName.COPY_BTN}--copied`);
   }
 }
 

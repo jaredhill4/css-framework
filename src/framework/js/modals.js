@@ -1,6 +1,11 @@
 import $ from 'jquery';
 import { cssTimeToMilliseconds } from './utilities';
 
+const ClassName = {
+  HTML_VISIBLE: 'html--modal-visible',
+  VISIBLE: 'modal--visible',
+};
+
 class Modal {
   constructor(element) {
     const modal = $(element);
@@ -55,7 +60,7 @@ class Modal {
   }
 
   isActive() {
-    return this.modal.hasClass('modal--visible');
+    return this.modal.hasClass(ClassName.VISIBLE);
   }
 
   show(event) {
@@ -64,8 +69,8 @@ class Modal {
     }
 
     this.modal.trigger('modal:beforeShow');
-    this.html.addClass('html--modal-visible');
-    this.modal.addClass('modal--visible');
+    this.html.addClass(ClassName.HTML_VISIBLE);
+    this.modal.addClass(ClassName.VISIBLE);
 
     setTimeout(() => {
       this.modal.attr('tabindex', '-1').focus();
@@ -79,8 +84,8 @@ class Modal {
     }
 
     this.modal.trigger('modal:beforeHide');
-    this.html.removeClass('html--modal-visible');
-    this.modal.removeClass('modal--visible');
+    this.html.removeClass(ClassName.HTML_VISIBLE);
+    this.modal.removeClass(ClassName.VISIBLE);
 
     setTimeout(() => {
       this.modal.scrollTop(0);

@@ -1,6 +1,10 @@
 import $ from 'jquery';
 import Popper from 'popper.js';
 
+const ClassName = {
+  VISIBLE: 'dropdown--visible',
+};
+
 class Dropdown {
   constructor(element) {
     const dropdown = $(element).appendTo('body');
@@ -33,7 +37,7 @@ class Dropdown {
   }
 
   isActive() {
-    return this.dropdown.hasClass('dropdown--visible');
+    return this.dropdown.hasClass(ClassName.VISIBLE);
   }
 
   show(event) {
@@ -50,7 +54,7 @@ class Dropdown {
     });
 
     this.dropdown.show(0, () => {
-      this.dropdown.addClass('dropdown--visible');
+      this.dropdown.addClass(ClassName.VISIBLE);
     });
   }
 
@@ -72,7 +76,7 @@ class Dropdown {
     $(document).off(this._getBodyEvent());
     $(this.dropdown).off(this._getBodyEvent());
 
-    this.dropdown.removeClass('dropdown--visible');
+    this.dropdown.removeClass(ClassName.VISIBLE);
 
     setTimeout(() => {
       this.dropdown.hide();

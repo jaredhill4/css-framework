@@ -116,7 +116,7 @@ $carousel-dot-size: 12px;
 // --------------------------------------------------
 
 .slick-arrow {
-  z-index: 1000;
+  z-index: 10;
   position: absolute;
   top: 50%;
   width: $carousel-arrow-size;

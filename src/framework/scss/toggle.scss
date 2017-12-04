@@ -1,0 +1,33 @@
+// --------------------------------------------------
+// switch
+// --------------------------------------------------
+
+.toggle__switch {
+  &.toggle__switch--on {
+  }
+}
+
+// --------------------------------------------------
+// target
+// --------------------------------------------------
+
+.toggle__target {
+  display: none;
+  overflow: hidden;
+  transition: height 0.35s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+
+  &.toggle__target--showing,
+  &.toggle__target--hiding {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &.toggle__target--hidden {
+    display: none;
+  }
+
+  &.toggle__target--visible {
+    display: block;
+  }
+}

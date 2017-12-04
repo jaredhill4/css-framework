@@ -16,6 +16,7 @@ import Modals from './Modals';
 import Dropdowns from './Dropdowns';
 import Tooltips from './Tooltips';
 import Carousels from './Carousels';
+import Toggles from './Toggles';
 import Utilities from './Utilities';
 
 class App extends Component {
@@ -70,6 +71,7 @@ class App extends Component {
         <Dropdowns />
         <Tooltips />
         <Carousels />
+        <Toggles />
         <Utilities />
         <div className="framework__backdrop" onClick={this.toggleMenu} />
       </div>

@@ -8,7 +8,7 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import carousel from '../../framework/js/carousel';
+import carousels from '../../framework/js/carousels';
 
 const slideStyles = {
   width: '100%',
@@ -19,8 +19,8 @@ const slideStyles = {
 
 class Carousels extends Component {
   componentDidMount() {
-    carousel('[data-carousel="sample-carousel"]');
-    carousel('[data-carousel="sample-carousel-dots"]', {
+    carousels('[data-carousel="sample-carousel"]');
+    carousels('[data-carousel="sample-carousel-dots"]', {
       infinite: false,
       autoplay: true,
       dots: true,

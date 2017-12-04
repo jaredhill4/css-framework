@@ -1,6 +1,10 @@
 import $ from 'jquery';
 import Popper from 'popper.js';
 
+const ClassName = {
+  VISIBLE: 'tooltip--visible',
+};
+
 class Tooltip {
   constructor(element) {
     // Private
@@ -59,7 +63,7 @@ class Tooltip {
         });
       }
 
-      this._tooltip.addClass('tooltip--visible');
+      this._tooltip.addClass(ClassName.VISIBLE);
     }, this.options.delay);
   }
 
@@ -67,7 +71,7 @@ class Tooltip {
     clearTimeout(this._showTimeout);
 
     if (this.isActive()) {
-      this._tooltip.removeClass('tooltip--visible');
+      this._tooltip.removeClass(ClassName.VISIBLE);
 
       this._hideTimeout = setTimeout(() => {
         this._popper.destroy();

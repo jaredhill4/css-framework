@@ -88,7 +88,8 @@ const navigation = [
       { name: 'Showing & Hiding', id: 'modals-showing-and-hiding' },
       { name: 'Sizes', id: 'modals-sizes' },
       { name: 'Vertical Alignment', id: 'modals-vertical-alignment' },
-      { name: 'Listeners', id: 'modals-listeners' },
+      { name: 'Methods', id: 'modals-methods' },
+      { name: 'Events', id: 'modals-events' },
     ],
   },
   {
@@ -113,6 +114,18 @@ const navigation = [
       { name: 'Settings', id: 'carousels-settings' },
       { name: 'Events', id: 'carousels-events' },
       { name: 'Methods', id: 'carousels-methods' },
+    ],
+  },
+  {
+    name: 'Toggles',
+    id: 'toggles',
+    children: [
+      { name: 'Introduction', id: 'toggles-introduction' },
+      { name: 'Simple Toggle', id: 'toggles-simple' },
+      { name: 'Basic Accordion', id: 'toggles-accordion-basic' },
+      { name: 'Styled Accordion', id: 'toggles-accordion-styled' },
+      { name: 'Methods', id: 'toggles-methods' },
+      { name: 'Events', id: 'toggles-events' },
     ],
   },
   {
