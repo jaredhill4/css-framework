@@ -16,7 +16,7 @@ class Toggle {
     const toggleTarget = $(element);
     const toggleSwitch = toggleTarget.data('toggle-target');
 
-    if (typeof toggleTarget === 'undefined') {
+    if (typeof toggleSwitch === 'undefined') {
       throw new Error(
         'Toggle target element attribute "data-toggle-target" must have a value.'
       );
