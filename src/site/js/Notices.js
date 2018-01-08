@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import lorem from './lorem';
 import {
   Section,
   Title,
@@ -26,13 +27,12 @@ class Notices extends Component {
         <Example>
           <ExampleView>
             <div className="notice u--margin-bottom-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              tempor dolor at suscipit tristique.
+              {lorem(101)}
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
+    ...
 </div>`}
           </Code>
         </Example>
@@ -44,34 +44,30 @@ class Notices extends Component {
         <Example>
           <ExampleView>
             <div className="notice notice--red">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              tempor dolor at suscipit tristique.
+              {lorem(90)}
             </div>
             <div className="notice notice--yellow">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              tempor dolor at suscipit tristique.
+              {lorem(91)}
             </div>
             <div className="notice notice--green">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              tempor dolor at suscipit tristique.
+              {lorem(92)}
             </div>
             <div className="notice notice--blue u--margin-bottom-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              tempor dolor at suscipit tristique.
+              {lorem(93)}
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice notice--red">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
+    ...
 </div>
 <div class="notice notice--yellow">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
+    ...
 </div>
 <div class="notice notice--green">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
+    ...
 </div>
 <div class="notice notice--blue">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
+    ...
 </div>`}
           </Code>
         </Example>
@@ -87,23 +83,20 @@ class Notices extends Component {
                 This is a title for a success notice
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
+                {lorem(80)}
               </p>
             </div>
             <div className="notice notice--red u--margin-bottom-0">
-              <span className="notice__title">Error</span> Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Donec tempor dolor at suscipit
-              tristique.
+              <span className="notice__title">Error</span> {lorem(64)}
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice notice--green">
-    <h5 class="notice__title">This is a title for a success notice</h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    <h5 class="notice__title">...</h5>
+    <p>...</p>
 </div>
 <div class="notice notice--red">
-    <span class="notice__title">Error</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.
+    <span class="notice__title">...</span> ...
 </div>`}
           </Code>
         </Example>
@@ -129,16 +122,15 @@ class Notices extends Component {
               <span className="notice__close" data-notice-close />
               <h5 className="notice__title">This is a dismissible notice</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                tempor dolor at suscipit tristique.
+                {lorem(61)}
               </p>
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice notice--blue" data-notice-dismissible>
     <span class="notice__close" data-notice-close></span>
-    <h5 class="notice__title">This is a dismissible notice</h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique.</p>
+    <h5 class="notice__title">...</h5>
+    <p>...</p>
 </div>`}
           </Code>
         </Example>

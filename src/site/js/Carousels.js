@@ -72,20 +72,20 @@ class Carousels extends Component {
         <Example>
           <Code language="html">
             {`<div data-carousel="sample-carousel">
-    <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
-      Slide 1
+    <div>
+        Slide 1
     </div>
-    <div style="width: 100%; padding: 150px; text-align: center; background-color: #ccc;">
-      Slide 2
+    <div>
+        Slide 2
     </div>
-    <div style="width: 100%; padding: 150px 30px; text-align: center; background-color: #ccc;">
-      Slide 3
+    <div>
+        Slide 3
     </div>
-    <div style="width: 100%; padding: 150px 30px; text-align: center; background-color: #ccc;">
-      Slide 4
+    <div>
+        Slide 4
     </div>
-    <div style="width: 100%; padding: 150px 30px; text-align: center; background-color: #ccc;">
-      Slide 5
+    <div>
+        Slide 5
     </div>
 </div>`}
           </Code>

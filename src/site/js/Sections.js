@@ -24,31 +24,31 @@ const Sections = () =>
     <Example>
       <ExampleView>
         <section className="section u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
-          .section
+          Default
         </section>
         <section className="section section--xs u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
-          .section--xs
+          Extra small
         </section>
         <section className="section section--sm u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
-          .section--sm
+          Small
         </section>
         <section className="section section--md u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
-          .section--md
+          Medium (default)
         </section>
         <section className="section section--lg u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
-          .section--lg
+          Large
         </section>
         <section className="section section--xl u--padding-left-15 u--padding-right-15 u--background-color-gray">
-          .section--xl
+          Extra large
         </section>
       </ExampleView>
       <Code language="html">
-        {`<section class="section">.section</section>
-<section class="section section--xs">.section--xs</section>
-<section class="section section--sm">.section--sm</section>
-<section class="section section--md">.section--md</section>
-<section class="section section--lg">.section--lg</section>
-<section class="section section--xl">.section--xl</section>`}
+        {`<section class="section">...</section>
+<section class="section section--xs">...</section>
+<section class="section section--sm">...</section>
+<section class="section section--md">...</section>
+<section class="section section--lg">...</section>
+<section class="section section--xl">...</section>`}
       </Code>
     </Example>
   </Section>;

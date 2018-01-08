@@ -29,22 +29,34 @@
 // --------------------------------------------------
 
 %truncate {
-  width: 100%;
-  white-space: nowrap;
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 
 // --------------------------------------------------
-// trim child margins
+// squash
 // --------------------------------------------------
 
-%trim-child-margins {
-  & > :first-child {
-    margin-top: 0;
+%squash-start {
+  > :first-child {
+    margin-top: 0 !important;
+
+    > :first-child {
+      margin-top: 0 !important;
+    }
   }
-  & > :last-child {
-    margin-bottom: 0;
+}
+
+%squash-end {
+  > :last-child {
+    margin-bottom: 0 !important;
+
+    > :last-child {
+      margin-bottom: 0 !important;
+    }
   }
 }
 

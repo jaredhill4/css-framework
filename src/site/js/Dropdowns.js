@@ -72,13 +72,13 @@ class Dropdowns extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-            {`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1">Dropdown</button>
+            {`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1">...</button>
 <div class="dropdown" data-dropdown="dropdown-example-1">
-    <a href="#dropdown-example-link-1" class="dropdown__item">Link 1</a>
-    <a href="#dropdown-example-link-2" class="dropdown__item">Link 2</a>
-    <a href="#dropdown-example-link-3" class="dropdown__item">Link 3</a>
+    <a href="#" class="dropdown__item">...</a>
+    <a href="#" class="dropdown__item">...</a>
+    <a href="#" class="dropdown__item">...</a>
     <div class="dropdown__divider" />
-    <a href="#dropdown-example-link-4" class="dropdown__item">Link 4</a>
+    <a href="#" class="dropdown__item">...</a>
 </div>`}
           </Code>
         </Example>

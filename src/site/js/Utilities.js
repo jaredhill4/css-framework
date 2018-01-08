@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import lorem from './lorem';
 import {
   Section,
   Title,
@@ -19,31 +21,31 @@ const Utilities = () =>
     <Example>
       <ExampleView>
         <span className="u--display-inline-block u--padding-5 u--padding-left-10 u--padding-right-10 u--background-color-black u--color-white">
-          .u--color-white
+          White
         </span>
         <span className="u--display-inline-block u--padding-5 u--color-black">
-          .u--color-black
+          Black
         </span>
         <span className="u--display-inline-block u--padding-5 u--color-red">
-          .u--color-red
+          Red
         </span>
         <span className="u--display-inline-block u--padding-5 u--color-green">
-          .u--color-green
+          Green
         </span>
         <span className="u--display-inline-block u--padding-5 u--color-blue">
-          .u--color-blue
+          Blue
         </span>
         <span className="u--display-inline-block u--padding-5 u--color-yellow">
-          .u--color-yellow
+          Yellow
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--color-white">.u--color-white</span>
-<span class="u--color-black">.u--color-black</span>
-<span class="u--color-red">.u--color-red</span>
-<span class="u--color-green">.u--color-green</span>
-<span class="u--color-blue">.u--color-blue</span>
-<span class="u--color-yellow">.u--color-yellow</span>`}
+        {`<span class="u--color-white">...</span>
+<span class="u--color-black">...</span>
+<span class="u--color-red">...</span>
+<span class="u--color-green">...</span>
+<span class="u--color-blue">...</span>
+<span class="u--color-yellow">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -52,50 +54,50 @@ const Utilities = () =>
     </Description>
     <Example>
       <ExampleView>
-        <a
-          href="#hello"
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--padding-left-10 u--padding-right-10 u--background-color-black u--color-white"
         >
-          .u--color-white
-        </a>
-        <a
-          href="#hello"
+          White
+        </Link>
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--color-black"
         >
-          .u--color-black
-        </a>
-        <a
-          href="#hello"
+          Black
+        </Link>
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--color-red"
         >
-          .u--color-red
-        </a>
-        <a
-          href="#hello"
+          Red
+        </Link>
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--color-green"
         >
-          .u--color-green
-        </a>
-        <a
-          href="#hello"
+          Green
+        </Link>
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--color-blue"
         >
-          .u--color-blue
-        </a>
-        <a
-          href="#hello"
+          Blue
+        </Link>
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--color-yellow"
         >
-          .u--color-yellow
-        </a>
+          Yellow
+        </Link>
       </ExampleView>
       <Code language="html">
-        {`<a href="#hello" class="u--color-white">.u--color-white</a>
-<a href="#hello" class="u--color-black">.u--color-black</a>
-<a href="#hello" class="u--color-red">.u--color-red</a>
-<a href="#hello" class="u--color-green">.u--color-green</a>
-<a href="#hello" class="u--color-blue">.u--color-blue</a>
-<a href="#hello" class="u--color-yellow">.u--color-yellow</a>`}
+        {`<a href="#" class="u--color-white">...</a>
+<a href="#" class="u--color-black">...</a>
+<a href="#" class="u--color-red">...</a>
+<a href="#" class="u--color-green">...</a>
+<a href="#" class="u--color-blue">...</a>
+<a href="#" class="u--color-yellow">...</a>`}
       </Code>
     </Example>
 
@@ -107,35 +109,35 @@ const Utilities = () =>
     <Example>
       <ExampleView>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-white">
-          .u--background-color-white
+          White
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray">
-          .u--background-color-gray
+          Gray
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-black">
-          .u--background-color-black
+          Black
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-red">
-          .u--background-color-red
+          Red
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-yellow">
-          .u--background-color-yellow
+          Yellow
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-green">
-          .u--background-color-green
+          Green
         </span>
         <span className="u--display-block u--padding-20 u--color-white u--background-color-blue">
-          .u--background-color-blue
+          Blue
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--background-color-white">.u--background-color-white</span>
-<span class="u--background-color-gray">.u--background-color-gray</span>
-<span class="u--background-color-black">.u--background-color-black</span>
-<span class="u--background-color-red">.u--background-color-red</span>
-<span class="u--background-color-yellow">.u--background-color-yellow</span>
-<span class="u--background-color-green">.u--background-color-green</span>
-<span class="u--background-color-blue">.u--background-color-blue</span>`}
+        {`<span class="u--background-color-white">...</span>
+<span class="u--background-color-gray">...</span>
+<span class="u--background-color-black">...</span>
+<span class="u--background-color-red">...</span>
+<span class="u--background-color-yellow">...</span>
+<span class="u--background-color-green">...</span>
+<span class="u--background-color-blue">...</span>`}
       </Code>
     </Example>
 
@@ -150,7 +152,7 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--border">.u--border</span>`}
+        {`<span class="u--border">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -182,13 +184,13 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--border u--border-color-white">.u--border-color-white</span>
-<span class="u--border u--border-color-gray">.u--border-color-gray</span>
-<span class="u--border u--border-color-black">.u--border-color-black</span>
-<span class="u--border u--border-color-red">.u--border-color-red</span>
-<span class="u--border u--border-color-yellow">.u--border-color-yellow</span>
-<span class="u--border u--border-color-green">.u--border-color-green</span>
-<span class="u--border u--border-color-blue">.u--border-color-blue</span>`}
+        {`<span class="u--border u--border-color-white">...</span>
+<span class="u--border u--border-color-gray">...</span>
+<span class="u--border u--border-color-black">...</span>
+<span class="u--border u--border-color-red">...</span>
+<span class="u--border u--border-color-yellow">...</span>
+<span class="u--border u--border-color-green">...</span>
+<span class="u--border u--border-color-blue">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -214,11 +216,11 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--border u--border-width-0">.u--border-width-0</span>
-<span class="u--border u--border-width-top-0">.u--border-width-top-0</span>
-<span class="u--border u--border-width-right-0">.u--border-width-right-0</span>
-<span class="u--border u--border-width-bottom-0">.u--border-width-bottom-0</span>
-<span class="u--border u--border-width-left-0">.u--border-width-left-0</span>`}
+        {`<span class="u--border u--border-width-0">...</span>
+<span class="u--border u--border-width-top-0">...</span>
+<span class="u--border u--border-width-right-0">...</span>
+<span class="u--border u--border-width-bottom-0">...</span>
+<span class="u--border u--border-width-left-0">...</span>`}
       </Code>
     </Example>
 
@@ -252,12 +254,12 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--margin-0">.u--margin-0</span>
-<span class="u--margin-5">.u--margin-5</span>
-<span class="u--margin-10">.u--margin-10</span>
-<span class="u--margin-15">.u--margin-15</span>
-<span class="u--margin-20">.u--margin-20</span>
-<span class="u--margin-30">.u--margin-30</span>`}
+        {`<span class="u--margin-0">...</span>
+<span class="u--margin-5">...</span>
+<span class="u--margin-10">...</span>
+<span class="u--margin-15">...</span>
+<span class="u--margin-20">...</span>
+<span class="u--margin-30">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -272,7 +274,7 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--margin-top-10 u--margin-right-20 u--margin-bottom-15 u--margin-left-30">.u--margin-top-10.u--margin-right-20.u--margin-bottom-15.u--margin-left-30</span>`}
+        {`<span class="u--margin-top-10 u--margin-right-20 u--margin-bottom-15 u--margin-left-30">...</span>`}
       </Code>
     </Example>
 
@@ -306,12 +308,12 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--padding-0">.u--padding-0</span>
-<span class="u--padding-5">.u--padding-5</span>
-<span class="u--padding-10">.u--padding-10</span>
-<span class="u--padding-15">.u--padding-15</span>
-<span class="u--padding-20">.u--padding-20</span>
-<span class="u--padding-30">.u--padding-30</span>`}
+        {`<span class="u--padding-0">...</span>
+<span class="u--padding-5">...</span>
+<span class="u--padding-10">...</span>
+<span class="u--padding-15">...</span>
+<span class="u--padding-20">...</span>
+<span class="u--padding-30">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -326,7 +328,7 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--padding-top-20 u--padding-left-15 u--padding-top-30 u--padding-bottom-5">.u--padding-top-20.u--padding-left-15.u--padding-top-30.u--padding-bottom-5</span>`}
+        {`<span class="u--padding-top-20 u--padding-left-15 u--padding-top-30 u--padding-bottom-5">...</span>`}
       </Code>
     </Example>
 
@@ -342,31 +344,31 @@ const Utilities = () =>
     <Example>
       <ExampleView>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-25">
-          .u--width-25
+          25%
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-33">
-          .u--width-33
+          33%
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-50">
-          .u--width-50
+          50%
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-66">
-          .u--width-66
+          66%
         </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-75">
-          .u--width-75
+          75%
         </span>
         <span className="u--display-block u--padding-20 u--background-color-gray u--width-100">
-          .u--width-100
+          100%
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--width-25">.u--width-25</span>
-<span class="u--width-33">.u--width-33</span>
-<span class="u--width-50">.u--width-50</span>
-<span class="u--width-66">.u--width-66</span>
-<span class="u--width-75">.u--width-75</span>
-<span class="u--width-100">.u--width-100</span>`}
+        {`<span class="u--width-25">...</span>
+<span class="u--width-33">...</span>
+<span class="u--width-50">...</span>
+<span class="u--width-66">...</span>
+<span class="u--width-75">...</span>
+<span class="u--width-100">...</span>`}
       </Code>
     </Example>
 
@@ -379,23 +381,23 @@ const Utilities = () =>
     <Example>
       <ExampleView>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--float-left">
-          .u--float-left
+          Float left
         </span>
         <div className="u--clearfix" />
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--float-right">
-          .u--float-right
+          Float right
         </span>
         <div className="u--clearfix" />
         <span className="u--display-block u--padding-20 u--background-color-gray u--float-none">
-          .u--float-none
+          Float none
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--float-left">.u--float-left</span>
+        {`<span class="u--float-left">...</span>
 <div class="u--clearfix"></div>
-<span class="u--float-right">.u--float-right</span>
+<span class="u--float-right">...</span>
 <div class="u--clearfix"></div>
-<span class="u--float-none">.u--float-none</span>`}
+<span class="u--float-none">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -405,7 +407,7 @@ const Utilities = () =>
     <Example>
       <ExampleView>
         <span className="u--display-block u--padding-20 u--margin-left-30 u--margin-bottom-15 u--background-color-gray u--width-33 u--float-right">
-          .u--float-right.u--width-33.u--margin-left-30.u--margin-bottom-15
+          Float right
         </span>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
@@ -431,10 +433,58 @@ const Utilities = () =>
         </p>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--display-block u--padding-20 u--margin-left-30 u--margin-bottom-15 u--background-color-gray u--width-33 u--float-right">.u--float-right.u--width-33.u--margin-left-30.u--margin-bottom-15</span>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor dolor at suscipit tristique. Curabitur condimentum euismod velit non feugiat. Praesent tincidunt nibh non ullamcorper convallis. Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-<p>Donec euismod, turpis sed facilisis congue, sem risus tempus nunc, in rutrum mauris neque non est. Phasellus imperdiet gravida ligula. Mauris in augue blandit, iaculis turpis a, hendrerit nisl. Fusce sem sem, commodo id orci vel, mollis pellentesque nisi. Cras a lorem iaculis, cursus leo id, tempor neque.</p>
-<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras aliquam sit amet metus vel vestibulum. Suspendisse ultricies, eros et venenatis vulputate, lorem magna rhoncus eros, quis ultricies eros augue at felis. Phasellus finibus suscipit aliquet. Cras mattis dui a nisl dictum sagittis. Suspendisse pulvinar venenatis aliquet.</p>`}
+        {`<span class="u--float-right">...</span>
+<p>...</p>
+<p>...</p>
+<p>...</p>`}
+      </Code>
+    </Example>
+
+    <SubTitle id="utilities-truncate">Truncate</SubTitle>
+    <Description>
+      Strings can be truncated to fit on one line with a trailing ellipsis by
+      adding the class <code>.u--truncate</code>.
+    </Description>
+    <Example>
+      <ExampleView>
+        <span className="u--truncate">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+          dolor at suscipit tristique. Curabitur condimentum euismod velit non
+          feugiat. Praesent tincidunt nibh non ullamcorper convallis.
+          Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis
+          in faucibus.
+        </span>
+      </ExampleView>
+      <Code language="html">
+        {`<span class="u--truncate">...</span>`}
+      </Code>
+    </Example>
+
+    <SubTitle id="utilities-squash">Squash</SubTitle>
+    <Description>
+      A parent element can be given a class of <code>.u--squash</code> to remove
+      margin top from the first child and margin bottom from the last child.
+      Alternatively, classes of <code>.u--squash-start</code> or{' '}
+      <code>.u--squash-end</code> can be used to squash spacing individually. A
+      common use case, as seen below, is to remove the margin from the last
+      paragraph in a sequence of paragraphs.
+    </Description>
+    <Example>
+      <ExampleView>
+        <div className="u--squash">
+          <p>
+            {lorem(131)}
+          </p>
+          <p>
+            {lorem(132)}
+          </p>
+        </div>
+      </ExampleView>
+      <Code language="html">
+        {`<div class="u--squash">
+    <p>...</p>
+    <p>...</p>
+</div>`}
       </Code>
     </Example>
 
@@ -449,8 +499,8 @@ const Utilities = () =>
         <span className="u--font-weight-bold">.u--font-weight-bold</span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--font-weight-normal">.u--font-weight-normal</span>
-<span class="u--font-weight-bold">.u--font-weight-bold</span>`}
+        {`<span class="u--font-weight-normal">...</span>
+<span class="u--font-weight-bold">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -465,9 +515,9 @@ const Utilities = () =>
         <span className="u--font-style-oblique">.u--font-style-oblique</span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--font-style-normal">.u--font-style-normal</span>
-<span class="u--font-style-italic">.u--font-style-italic</span>
-<span class="u--font-style-oblique">.u--font-style-oblique</span>`}
+        {`<span class="u--font-style-normal">...</span>
+<span class="u--font-style-italic">...</span>
+<span class="u--font-style-oblique">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -476,40 +526,24 @@ const Utilities = () =>
     </Description>
     <Example>
       <ExampleView>
-        <p>.u--text-align-left</p>
-        <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-align-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-          ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
-          finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
-          sit amet ipsum eu nunc porttitor vehicula ut at metus.
-        </span>
-        <p>.u--text-align-center</p>
-        <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-align-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-          ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
-          finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
-          sit amet ipsum eu nunc porttitor vehicula ut at metus.
-        </span>
-        <p>.u--text-align-right</p>
-        <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-align-right">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-          ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
-          finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
-          sit amet ipsum eu nunc porttitor vehicula ut at metus.
-        </span>
-        <p>.u--text-align-justify</p>
-        <span className="u--display-block u--padding-30 u--background-color-gray u--text-align-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
-          ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a
-          finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec
-          sit amet ipsum eu nunc porttitor vehicula ut at metus.
-        </span>
+        <p className="u--text-align-left">
+          {lorem(1)}
+        </p>
+        <p className="u--text-align-center">
+          {lorem(2)}
+        </p>
+        <p className="u--text-align-right">
+          {lorem(3)}
+        </p>
+        <p className="u--text-align-justify">
+          {lorem(4)}
+        </p>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--text-align-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec sit amet ipsum eu nunc porttitor vehicula ut at metus.</span>
-<span class="u--text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec sit amet ipsum eu nunc porttitor vehicula ut at metus.</span>
-<span class="u--text-align-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec sit amet ipsum eu nunc porttitor vehicula ut at metus.</span>
-<span class="u--text-align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in ligula rutrum, ornare elit quis, consectetur quam. Fusce nunc a finibus ornare. Proin iaculis tellus id ipsum faucibus interdum. Donec sit amet ipsum eu nunc porttitor vehicula ut at metus.</span>`}
+        {`<p class="u--text-align-left">...</p>
+<p class="u--text-align-center">...</p>
+<p class="u--text-align-right">...</p>
+<p class="u--text-align-justify">...</p>`}
       </Code>
     </Example>
     <Description>
@@ -517,23 +551,20 @@ const Utilities = () =>
     </Description>
     <Example>
       <ExampleView>
-        <p>.u--text-transform-uppercase</p>
-        <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-transform-uppercase">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        </span>
-        <p>.u--text-transform-lowercase</p>
-        <span className="u--display-block u--padding-30 u--margin-bottom-15 u--background-color-gray u--text-transform-lowercase">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        </span>
-        <p>.u--text-transform-capitalize</p>
-        <span className="u--display-block u--padding-30 u--background-color-gray u--text-transform-capitalize">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        </span>
+        <p className="u--text-transform-uppercase">
+          {lorem(11)}
+        </p>
+        <p className="u--text-transform-lowercase">
+          {lorem(12)}
+        </p>
+        <p className="u--text-transform-capitalize">
+          {lorem(13)}
+        </p>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--text-transform-uppercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-<span class="u--text-transform-lowercase">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-<span class="u--text-transform-capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>`}
+        {`<p class="u--text-transform-uppercase">...</p>
+<p class="u--text-transform-lowercase">...</p>
+<p class="u--text-transform-capitalize">...</p>`}
       </Code>
     </Example>
 
@@ -558,7 +589,7 @@ const Utilities = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="u--embed-responsive">
-    <iframe src="https://www.youtube.com/embed/WQJuGeqdbn4" title="Responsive embed with default 16x9 aspect ratio" allowFullScreen />
+    <iframe src="..." title="..." allowfullscreen />
 </div>`}
       </Code>
     </Example>
@@ -595,7 +626,7 @@ const Utilities = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="u--embed-responsive u--embed-responsive--4x3">
-    <iframe src="https://www.youtube.com/embed/WQJuGeqdbn4" title="Responsive embed with 4x3 aspect ratio" allowFullScreen />
+    <iframe src="..." title="..." allowfullscreen />
 </div>`}
       </Code>
     </Example>
@@ -622,9 +653,9 @@ const Utilities = () =>
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--display-inline">.u--display-inline</span>
-<span class="u--display-inline-block">.u--display-inline-block</span>
-<span class="u--display-block">.u--display-block</span>`}
+        {`<span class="u--display-inline">...</span>
+<span class="u--display-inline-block">...</span>
+<span class="u--display-block">...</span>`}
       </Code>
     </Example>
     <Description>
@@ -670,7 +701,7 @@ const Utilities = () =>
         <code>.u--margin-</code>, <code>.u--padding-</code>,{' '}
         <code>.u--width-</code>, <code>.u--float-</code>,{' '}
         <code>.u--display-</code> and <code>.u--hidden</code> utility classes to
-        make them apply only for certain device sizes:
+        make them apply only for certain screen sizes:
       </p>
       <table className="table table--bordered">
         <tbody>
@@ -721,38 +752,33 @@ const Utilities = () =>
         </tbody>
       </table>
       <p>
-        For example, if you only wanted something to display for large devices (<code>lg</code>)
-        and up and not others, you might do the following:
+        For example, if you only wanted something to display on large screen
+        sizes (<code>lg</code>) and up and not others, you might do the
+        following:
       </p>
     </Description>
     <Example>
       <ExampleView>
-        <p>
-          <code>.u--display-none.u--display-block-lg</code>
+        <p className="u--display-none u--display-block-lg">
+          I'm only visible on large screen sizes!
         </p>
-        <span className="u--display-none u--display-block-lg u--padding-20 u--background-color-gray">
-          I'm only visible for large devices!
-        </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--display-none u--display-block-lg">I'm only visible for large devices!</span>`}
+        {`<p class="u--display-none u--display-block-lg">...</p>`}
       </Code>
     </Example>
     <Description>
       Or if you only wanted something to display for extra small (<code>xs</code>)
-      and small (<code>sm</code>) devices, you could do:
+      and small (<code>sm</code>) screen sizes, you could do:
     </Description>
     <Example>
       <ExampleView>
-        <p>
-          <code>.u--display-block.u--display-none-md</code>
+        <p className="u--display-block u--display-none-md">
+          I'm only visible on extra small and small screen sizes!
         </p>
-        <span className="u--display-block u--display-none-md u--padding-20 u--background-color-gray">
-          I'm only visible on extra small and small devices!
-        </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--display-block u--display-none-md">I'm only visible on extra small and small devices!</span>`}
+        {`<p class="u--display-block u--display-none-md">...</p>`}
       </Code>
     </Example>
   </Section>;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
+import code from '../../framework/js/code';
 
 const Section = ({ children, id = '', container = true }) => {
   const containerClassNames = classnames({
@@ -39,13 +40,25 @@ const ExampleView = ({ children }) =>
     {children}
   </div>;
 
-const Code = ({ children, language }) =>
-  <pre
-    className={`language-${language}`}
-    data-code
-    data-code-language={language}
-  >
-    {children}
-  </pre>;
+class Code extends Component {
+  componentDidMount() {
+    code(this.pre);
+  }
+
+  render() {
+    return (
+      <pre
+        className={`language-${this.props.language}`}
+        data-code
+        data-code-language={this.props.language}
+        ref={pre => {
+          this.pre = pre;
+        }}
+      >
+        {this.props.children}
+      </pre>
+    );
+  }
+}
 
 export { Section, Title, SubTitle, Description, Example, ExampleView, Code };

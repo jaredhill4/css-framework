@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import lorem from './lorem';
 import {
   Section,
   Title,
@@ -80,10 +81,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(77)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -101,13 +99,13 @@ class Modals extends Component {
         <div class="modal__content">
             <span class="modal__close" data-modal-close></span>
             <header class="modal__header">
-                <h2 class="modal__title">This is a modal title</h2>
+                <h2 class="modal__title">...</h2>
             </header>
             <section class="modal__body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna mi, posuere in lectus quis, auctor condimentum est. Proin blandit mauris at nisi accumsan, at aliquam quam blandit.</p>
+                <p>...</p>
             </section>
             <footer class="modal__footer u--text-align-right">
-                <a href="#modal-extra-small" class="btn" data-modal-close>Close</a>
+                <a href="#modal-extra-small" class="btn" data-modal-close>...</a>
             </footer>
         </div>
     </div>
@@ -142,13 +140,13 @@ class Modals extends Component {
         </Description>
         <Code language="html">
           {`<!-- show modal -->
-<a href="#sample-modal" data-modal-show="sample-modal">Show Modal</a>
+<a href="#sample-modal" data-modal-show="sample-modal">...</a>
 <!-- hide modal -->
-<a href="#sample-modal" data-modal-hide="sample-modal">Hide Modal</a>
+<a href="#sample-modal" data-modal-hide="sample-modal">...</a>
 <!-- toggle modal -->
-<a href="#sample-modal" data-modal-toggle="sample-modal">Toggle Modal</a>
+<a href="#sample-modal" data-modal-toggle="sample-modal">...</a>
 <!-- close modal - only works within [data-modal] -->
-<a href="#sample-modal" data-modal-close>Close Modal</a>`}
+<a href="#sample-modal" data-modal-close>...</a>`}
         </Code>
         <SubTitle id="modals-sizes">Sizes</SubTitle>
         <Description>
@@ -184,10 +182,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(94)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -223,10 +218,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(94)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -258,10 +250,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(94)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -293,10 +282,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(94)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -328,10 +314,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(94)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -363,10 +346,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(94)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
@@ -409,10 +389,7 @@ class Modals extends Component {
                   </header>
                   <section className="modal__body">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Proin magna mi, posuere in lectus quis, auctor condimentum
-                      est. Proin blandit mauris at nisi accumsan, at aliquam
-                      quam blandit.
+                      {lorem(13)}
                     </p>
                   </section>
                   <footer className="modal__footer u--text-align-right">

@@ -69,10 +69,10 @@ class Tooltips extends Component {
             </button>
           </ExampleView>
           <Code language="html">
-            {`<button type="button" class="btn" data-tooltip="top" title="Tooltip top">Tooltip top</button>
-<button type="button" class="btn" data-tooltip="right" title="Tooltip right" >Tooltip right</button>
-<button type="button" class="btn" data-tooltip="bottom" title="Tooltip bottom" >Tooltip bottom</button>
-<button type="button" class="btn" data-tooltip="left" data-tooltip-delay="500" title="Tooltip left with delay">Tooltip left with delay</button>`}
+            {`<button data-tooltip="top" title="Tooltip top">...</button>
+<button data-tooltip="right" title="Tooltip right">...</button>
+<button data-tooltip="bottom" title="Tooltip bottom">...</button>
+<button data-tooltip="left" data-tooltip-delay="500" title="Tooltip left with delay">...</button>`}
           </Code>
         </Example>
       </Section>

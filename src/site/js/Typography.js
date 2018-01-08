@@ -1,4 +1,5 @@
 import React from 'react';
+import lorem from './lorem';
 import {
   Section,
   Title,
@@ -8,9 +9,6 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-
-const loremIpsum =
-  'Est cupidatat mollit qui enim nisi enim elit aute excepteur. Lorem nulla sunt minim nulla irure ut. Ea excepteur laboris aliqua amet commodo reprehenderit excepteur culpa ex sunt.';
 
 const Typography = () =>
   <Section>
@@ -30,23 +28,23 @@ const Typography = () =>
         <h6>Heading 6</h6>
       </ExampleView>
       <Code language="html">
-        {`<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>`}
+        {`<h1>...</h1>
+<h2>...</h2>
+<h3>...</h3>
+<h4>...</h4>
+<h5>...</h5>
+<h6>...</h6>`}
       </Code>
     </Example>
     <SubTitle id="typography-paragraphs">Paragraphs</SubTitle>
     <Example>
       <ExampleView>
         <p>
-          {loremIpsum}
+          {lorem(9)}
         </p>
       </ExampleView>
       <Code language="html">
-        {`<p>${loremIpsum}</p>`}
+        {`<p>...</p>`}
       </Code>
     </Example>
     <Description>
@@ -56,22 +54,22 @@ const Typography = () =>
     <Example>
       <ExampleView>
         <p className="p--lead">
-          {loremIpsum}
+          {lorem(6)}
         </p>
         <p>
-          {loremIpsum}
+          {lorem(12)}
         </p>
       </ExampleView>
       <Code language="html">
-        {`<p class="p--lead">${loremIpsum}</p>
-<p>${loremIpsum}</p>`}
+        {`<p class="p--lead">...</p>
+<p>...</p>`}
       </Code>
     </Example>
     <SubTitle id="typography-blockquotes">Blockquotes</SubTitle>
     <Example>
       <ExampleView>
         <blockquote>
-          {loremIpsum}
+          {lorem(66)}
           <footer>
             <cite>&mdash; Some Person</cite>
           </footer>
@@ -79,9 +77,9 @@ const Typography = () =>
       </ExampleView>
       <Code language="html">
         {`<blockquote>
-    ${loremIpsum}
+    ...
     <footer>
-        <cite>&mdash; Some Person</cite>
+        <cite>&mdash; ...</cite>
     </footer>
 </blockquote>`}
       </Code>
@@ -91,70 +89,50 @@ const Typography = () =>
       <ExampleView>
         <ul>
           <li>
-            {loremIpsum}
+            {lorem(3)}
           </li>
           <li>
-            {loremIpsum}
-          </li>
-          <li>
-            {loremIpsum}
-            <ul>
+            {lorem(27)}
+            <ol>
               <li>
-                {loremIpsum}
+                {lorem(37)}
               </li>
               <li>
-                {loremIpsum}
+                {lorem(17)}
               </li>
-              <li>
-                {loremIpsum}
-              </li>
-            </ul>
+            </ol>
           </li>
         </ul>
         <ol>
           <li>
-            {loremIpsum}
+            {lorem(32)}
           </li>
           <li>
-            {loremIpsum}
-          </li>
-          <li>
-            {loremIpsum}
-            <ol>
+            {lorem(72)}
+            <ul>
               <li>
-                {loremIpsum}
+                {lorem(86)}
               </li>
-              <li>
-                {loremIpsum}
-              </li>
-              <li>
-                {loremIpsum}
-              </li>
-            </ol>
+            </ul>
           </li>
         </ol>
       </ExampleView>
       <Code language="html">
         {`<ul>
-    <li>${loremIpsum}</li>
-    <li>${loremIpsum}</li>
-    <li>${loremIpsum}
-      <ul>
-          <li>${loremIpsum}</li>
-          <li>${loremIpsum}</li>
-          <li>${loremIpsum}</li>
-      </ul>
+    <li>...</li>
+    <li>...
+      <ol>
+          <li>...</li>
+          <li>...</li>
+      </ol>
     </li>
 </ul>
 <ol>
-    <li>${loremIpsum}</li>
-    <li>${loremIpsum}</li>
-    <li>${loremIpsum}
-        <ol>
-            <li>${loremIpsum}</li>
-            <li>${loremIpsum}</li>
-            <li>${loremIpsum}</li>
-        </ol>
+    <li>...</li>
+    <li>...
+        <ul>
+            <li>...</li>
+        </ul>
   </li>
 </ol>`}
       </Code>
@@ -175,10 +153,10 @@ const Typography = () =>
           {`<!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World</title>
+    <title>...</title>
   </head>
   <body>
-    <p>${loremIpsum}</p>
+    <p>...</p>
   </body>
 </html>`}
         </pre>
@@ -188,10 +166,10 @@ const Typography = () =>
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello World</title>
+            <title>...</title>
         </head>
         <body>
-            <p>${loremIpsum}</p>
+            <p>...</p>
         </body>
     </html>
 </pre>`}
@@ -206,19 +184,19 @@ const Typography = () =>
         <ins>ins</ins> <mark>mark</mark> <var>var</var>
       </ExampleView>
       <Code language="html">
-        {`<kbd>kbd</kbd>
-<code>code</code>
-<samp>samp</samp>
-<cite>cite</cite>
-<em>em</em>
-<sup>sup</sup>
-<sub>sub</sub>
-<strong>strong</strong>
-<small>small</small>
-<abbr title="Abbreviation">abbr</abbr>
-<ins>ins</ins>
-<mark>mark</mark>
-<var>var</var>`}
+        {`<kbd>...</kbd>
+<code>...</code>
+<samp>...</samp>
+<cite>...</cite>
+<em>...</em>
+<sup>...</sup>
+<sub>...</sub>
+<strong>...</strong>
+<small>...</small>
+<abbr title="...">...</abbr>
+<ins>...</ins>
+<mark>...</mark>
+<var>...</var>`}
       </Code>
     </Example>
   </Section>;

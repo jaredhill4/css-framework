@@ -4,23 +4,23 @@
 
 $color-primary: #6772e5;
 
+$color-black: #292b2c;
+$color-white: #fff;
+$color-gray: #e3e3e3;
+
 $color-red: #e56767;
 $color-green: #3ecf8e;
 $color-blue: #6772e5;
 $color-yellow: #ffd65a;
-
-$color-white: #fff;
-$color-gray: #e3e3e3;
-$color-black: #292b2c;
 
 $theme-colors: (
   'black': $color-black,
   'white': $color-white,
   'gray': $color-gray,
   'red': $color-red,
-  'yellow': $color-yellow,
   'green': $color-green,
-  'blue': $color-blue
+  'blue': $color-blue,
+  'yellow': $color-yellow
 );
 
 // --------------------------------------------------

@@ -9,9 +9,6 @@ import {
   Code,
 } from './Framework';
 
-const loremIpsum =
-  'Est cupidatat mollit qui enim nisi enim elit aute excepteur. Lorem nulla sunt minim nulla irure ut. Ea excepteur laboris aliqua amet commodo reprehenderit excepteur culpa ex sunt.';
-
 const Grid = () =>
   <Section>
     <Title id="grid">Grid</Title>
@@ -40,38 +37,48 @@ const Grid = () =>
             </div>
             <div className="grid__col-xs-12 grid__col-md-6">
               <div className="example__grid">
-                <div className="example__grid__text">.grid</div>
-                <div className="grid">
-                  <div className="grid__col-xs-6">
-                    <div className="example__grid">.grid__col-xs-6</div>
-                  </div>
-                  <div className="grid__col-xs-6">
-                    <div className="example__grid">.grid__col-xs-6</div>
-                  </div>
-                  <div className="grid__col">
-                    <div className="example__grid">.grid__col</div>
+                <div className="example__grid__text">
+                  .grid__col-xs-12.grid__col-md-6
+                </div>
+                <div className="example__grid">
+                  <div className="example__grid__text">.grid</div>
+                  <div className="grid">
+                    <div className="grid__col-xs-6">
+                      <div className="example__grid">.grid__col-xs-6</div>
+                    </div>
+                    <div className="grid__col-xs-6">
+                      <div className="example__grid">.grid__col-xs-6</div>
+                    </div>
+                    <div className="grid__col">
+                      <div className="example__grid">.grid__col</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="grid__col-xs-12 grid__col-md-6">
               <div className="example__grid">
-                <div className="example__grid__text">.grid</div>
-                <div className="grid">
-                  <div className="grid__col-xs-12">
-                    <div className="example__grid">.grid__col-xs-12</div>
-                  </div>
-                  <div className="grid__col">
-                    <div className="example__grid">.grid__col</div>
-                  </div>
-                  <div className="grid__col">
-                    <div className="example__grid">.grid__col</div>
-                  </div>
-                  <div className="grid__col">
-                    <div className="example__grid">.grid__col</div>
-                  </div>
-                  <div className="grid__col">
-                    <div className="example__grid">.grid__col</div>
+                <div className="example__grid__text">
+                  .grid__col-xs-12.grid__col-md-6
+                </div>
+                <div className="example__grid">
+                  <div className="example__grid__text">.grid</div>
+                  <div className="grid">
+                    <div className="grid__col-xs-12">
+                      <div className="example__grid">.grid__col-xs-12</div>
+                    </div>
+                    <div className="grid__col">
+                      <div className="example__grid">.grid__col</div>
+                    </div>
+                    <div className="grid__col">
+                      <div className="example__grid">.grid__col</div>
+                    </div>
+                    <div className="grid__col">
+                      <div className="example__grid">.grid__col</div>
+                    </div>
+                    <div className="grid__col">
+                      <div className="example__grid">.grid__col</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -81,23 +88,23 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid">
-    <div class="grid__col">.grid__col</div>
-    <div class="grid__col-lg-3">.grid__col-lg-3</div>
-    <div class="grid__col-xs-12">.grid__col-xs-12</div>
+    <div class="grid__col">...</div>
+    <div class="grid__col-lg-3">...</div>
+    <div class="grid__col-xs-12">...</div>
     <div class="grid__col-xs-12 grid__col-md-6">
         <div class="grid">
-            <div class="grid__col-xs-6">.grid__col-xs-6</div>
-            <div class="grid__col-xs-6">.grid__col-xs-6</div>
-            <div class="grid__col">.grid__col</div>
+            <div class="grid__col-xs-6">...</div>
+            <div class="grid__col-xs-6">...</div>
+            <div class="grid__col">...</div>
         </div>
     </div>
     <div class="grid__col-xs-12 grid__col-md-6">
         <div class="grid">
-            <div class="grid__col-xs-12">.grid__col-xs-12</div>
-            <div class="grid__col">.grid__col</div>
-            <div class="grid__col">.grid__col</div>
-            <div class="grid__col">.grid__col</div>
-            <div class="grid__col">.grid__col</div>
+            <div class="grid__col-xs-12">...</div>
+            <div class="grid__col">...</div>
+            <div class="grid__col">...</div>
+            <div class="grid__col">...</div>
+            <div class="grid__col">...</div>
         </div>
     </div>
 </div>`}
@@ -113,7 +120,7 @@ const Grid = () =>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">.grid--gapless</div>
+          <div className="example__grid__text">.grid.grid--gapless</div>
           <div className="grid grid--gapless">
             <div className="grid__col">
               <div className="example__grid">.grid__col</div>
@@ -135,11 +142,11 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--gapless">
-    <div class="grid__col">.grid__col</div>
-    <div class="grid__col">.grid__col</div>
-    <div class="grid__col">.grid__col</div>
-    <div class="grid__col">.grid__col</div>
-    <div class="grid__col-xs-12">.grid__col-xs-12</div>
+    <div class="grid__col">...</div>
+    <div class="grid__col">...</div>
+    <div class="grid__col">...</div>
+    <div class="grid__col">...</div>
+    <div class="grid__col-xs-12">...</div>
 </div>`}
       </Code>
     </Example>
@@ -154,24 +161,22 @@ const Grid = () =>
           <div className="example__grid__text">.grid--valign-stretch</div>
           <div className="grid grid--valign-stretch">
             <div className="grid__col-xs-6">
-              <div className="example__grid">
-                <p>.grid__col-xs-6</p>
-                {loremIpsum}
+              <div className="example__grid example__grid--static-height">
+                .grid__col-xs-6
               </div>
             </div>
             <div className="grid__col-xs-6">
-              <div className="example__grid">.grid__col-xs-6</div>
+              <div className="example__grid example__grid--fill-height">
+                .grid__col-xs-6
+              </div>
             </div>
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-stretch">
-    <div class="grid__col-xs-6">
-        <p>.grid__col-xs-6</p>
-        ${loremIpsum}
-    </div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -185,9 +190,8 @@ const Grid = () =>
           <div className="example__grid__text">.grid--valign-top</div>
           <div className="grid grid--valign-top">
             <div className="grid__col-xs-6">
-              <div className="example__grid">
-                <p>.grid__col-xs-6</p>
-                {loremIpsum}
+              <div className="example__grid example__grid--static-height">
+                .grid__col-xs-6
               </div>
             </div>
             <div className="grid__col-xs-6">
@@ -198,11 +202,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-top">
-    <div class="grid__col-xs-6">
-        <p>.grid__col-xs-6</p>
-        ${loremIpsum}
-    </div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -216,9 +217,8 @@ const Grid = () =>
           <div className="example__grid__text">.grid--valign-center</div>
           <div className="grid grid--valign-center">
             <div className="grid__col-xs-6">
-              <div className="example__grid">
-                <p>.grid__col-xs-6</p>
-                {loremIpsum}
+              <div className="example__grid example__grid--static-height">
+                .grid__col-xs-6
               </div>
             </div>
             <div className="grid__col-xs-6">
@@ -229,11 +229,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-center">
-    <div class="grid__col-xs-6">
-        <p>.grid__col-xs-6</p>
-        ${loremIpsum}
-    </div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -244,12 +241,11 @@ const Grid = () =>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">.grid--valign-bottom</div>
+          <div className="example__grid__text">.grid--valign-center</div>
           <div className="grid grid--valign-bottom">
             <div className="grid__col-xs-6">
-              <div className="example__grid">
-                <p>.grid__col-xs-6</p>
-                {loremIpsum}
+              <div className="example__grid example__grid--static-height">
+                .grid__col-xs-6
               </div>
             </div>
             <div className="grid__col-xs-6">
@@ -260,11 +256,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-bottom">
-    <div class="grid__col-xs-6">
-        <p>.grid__col-xs-6</p>
-        ${loremIpsum}
-    </div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -294,10 +287,10 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-row-top">
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -327,10 +320,10 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-row-center">
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -360,10 +353,10 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-row-bottom">
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -377,26 +370,34 @@ const Grid = () =>
           <div className="example__grid__text">.grid--valign-row-stretch</div>
           <div className="grid grid--valign-row-stretch example__grid--static-height">
             <div className="grid__col-xs-6">
-              <div className="example__grid">.grid__col-xs-6</div>
+              <div className="example__grid example__grid--fill-height">
+                .grid__col-xs-6
+              </div>
             </div>
             <div className="grid__col-xs-6">
-              <div className="example__grid">.grid__col-xs-6</div>
+              <div className="example__grid example__grid--fill-height">
+                .grid__col-xs-6
+              </div>
             </div>
             <div className="grid__col-xs-6">
-              <div className="example__grid">.grid__col-xs-6</div>
+              <div className="example__grid example__grid--fill-height">
+                .grid__col-xs-6
+              </div>
             </div>
             <div className="grid__col-xs-6">
-              <div className="example__grid">.grid__col-xs-6</div>
+              <div className="example__grid example__grid--fill-height">
+                .grid__col-xs-6
+              </div>
             </div>
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-row-stretch">
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -427,10 +428,10 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-row-between">
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -460,10 +461,10 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--valign-row-around">
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
-    <div class="grid__col-xs-6">.grid__col-xs-6</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
+    <div class="grid__col-xs-6">...</div>
 </div>`}
       </Code>
     </Example>
@@ -488,8 +489,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--halign-left">
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">...</div>
+    <div class="grid__col-sm-4">...</div>
 </div>`}
       </Code>
     </Example>
@@ -513,8 +514,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--halign-center">
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">...</div>
+    <div class="grid__col-sm-4">...</div>
 </div>`}
       </Code>
     </Example>
@@ -538,8 +539,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--halign-right">
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">...</div>
+    <div class="grid__col-sm-4">...</div>
 </div>`}
       </Code>
     </Example>
@@ -564,8 +565,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--halign-between">
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">...</div>
+    <div class="grid__col-sm-4">...</div>
 </div>`}
       </Code>
     </Example>
@@ -589,8 +590,8 @@ const Grid = () =>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--halign-around">
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
-    <div class="grid__col-sm-4">.grid__col-sm-4</div>
+    <div class="grid__col-sm-4">...</div>
+    <div class="grid__col-sm-4">...</div>
 </div>`}
       </Code>
     </Example>

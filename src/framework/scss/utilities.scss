@@ -306,6 +306,23 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // --------------------------------------------------
+// squashing
+// --------------------------------------------------
+
+.u--squash {
+  @extend %squash-start;
+  @extend %squash-end;
+}
+
+.u--squash-start {
+  @extend %squash-start;
+}
+
+.u--squash-end {
+  @extend %squash-end;
+}
+
+// --------------------------------------------------
 // text color
 // --------------------------------------------------
 

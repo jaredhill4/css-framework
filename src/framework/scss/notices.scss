@@ -48,7 +48,8 @@ $notice-colors: (
 // --------------------------------------------------
 
 .notice {
-  @extend %trim-child-margins;
+  @extend %squash-start;
+  @extend %squash-end;
   position: relative;
   display: block;
   padding: $notice-padding;

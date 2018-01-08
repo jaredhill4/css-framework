@@ -114,7 +114,7 @@ const Forms = () =>
                 </label>
                 <div className="form__select">
                   <select id="state">
-                    <option>Select</option>
+                    <option>Choose...</option>
                     <option>TX</option>
                   </select>
                 </div>
@@ -164,15 +164,14 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <label className="form__label" htmlFor="input-sample">
-              Sample Input
+            <label className="form__label" htmlFor="input-sample-1">
+              Label
             </label>
             <input
-              id="input-sample"
+              id="input-sample-1"
               type="text"
               className="form__input"
-              name="input-sample"
-              placeholder=".form__input"
+              name="input-sample-1"
             />
           </div>
         </form>
@@ -180,8 +179,8 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-      <label class="form__label" for="input-sample">Sample Input</label>
-        <input id="input-sample" type="text" class="form__input" name="input-sample" placeholder=".form__input" />
+        <label class="form__label">...</label>
+        <input type="text" class="form__input" />
     </div>
 </form>`}
       </Code>
@@ -191,12 +190,12 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <label className="form__label" htmlFor="select-sample">
-              Sample Select
+            <label className="form__label" htmlFor="select-sample-1">
+              Label
             </label>
             <div className="form__select">
-              <select id="select-sample" name="select-sample">
-                <option>.form__select</option>
+              <select id="select-sample-1" name="select-sample-1">
+                <option>Choose...</option>
               </select>
             </div>
           </div>
@@ -205,10 +204,10 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-        <label class="form__label" for="select-sample">Sample Select</label>
+        <label class="form__label">...</label>
         <div class="form__select">
-          <select id="select-sample" name="select-sample">
-              <option>.form__select</option>
+          <select>
+              <option>...</option>
           </select>
         </div>
     </div>
@@ -220,19 +219,23 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <label className="form__checkbox" htmlFor="checkbox-sample">
+            <label className="form__checkbox" htmlFor="checkbox-sample-1">
               <input
-                id="checkbox-sample"
+                id="checkbox-sample-1"
                 type="checkbox"
-                name="checkbox-sample"
+                name="checkbox-sample-1"
               />{' '}
-              .form__checkbox
+              Checkbox
             </label>
           </div>
           <div className="form__field">
-            <label className="form__radio" htmlFor="radio-sample">
-              <input id="radio-sample" type="radio" name="radio-sample" />{' '}
-              .form__radio
+            <label className="form__radio" htmlFor="radio-sample-1">
+              <input
+                id="radio-sample-1"
+                type="radio"
+                name="radio-sample-1"
+              />{' '}
+              Radio
             </label>
           </div>
         </form>
@@ -240,13 +243,13 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-        <label class="form__checkbox" for="checkbox-sample">
-            <input id="checkbox-sample" type="checkbox" name="checkbox-sample" /> .form__checkbox
+        <label class="form__checkbox" for="...">
+            <input id="..." type="checkbox" name="..." /> ...
         </label>
     </div>
     <div class="form__field">
-        <label class="form__radio" for="radio-sample">
-            <input id="radio-sample" type="radio" name="radio-sample" /> .form__radio
+        <label class="form__radio" for="...">
+            <input id="..." type="radio" name="..." /> ...
         </label>
     </div>
 </form>`}
@@ -259,7 +262,7 @@ const Forms = () =>
           <div className="form__field">
             <div className="form__submit">
               <button type="submit" className="btn btn--blue">
-                .form__submit
+                Submit
               </button>
             </div>
           </div>
@@ -269,7 +272,7 @@ const Forms = () =>
         {`<form class="form">
     <div class="form__field">
         <div class="form__submit">
-            <button type="submit" class="btn btn--blue">.form__submit</button>
+            <button type="submit" class="btn btn--blue">...</button>
         </div>
     </div>
 </form>`}
@@ -279,16 +282,15 @@ const Forms = () =>
     <Example>
       <ExampleView>
         <form className="form">
-          <label className="form__label" htmlFor="input-sample">
-            Sample Input
+          <label className="form__label" htmlFor="input-sample-2">
+            Label
           </label>
           <div className="form__field">
             <input
-              id="input-sample"
+              id="input-sample-2"
               type="text"
               className="form__input"
-              name="input-sample"
-              placeholder=".form__input"
+              name="input-sample-2"
             />
             <small className="form__help">
               This is some help text for the form field.
@@ -298,10 +300,10 @@ const Forms = () =>
       </ExampleView>
       <Code language="html">
         {`<form class="form">
-    <label class="form__label" htmlFor="input-sample">Sample Input</label>
+    <label class="form__label">...</label>
     <div class="form__field">
-        <input id="input-sample" type="text" class="form__input" name="input-sample" placeholder=".form__input" />
-        <small class="form__help">This is some help text for the form field.</small>
+        <input type="text" class="form__input" placeholder="..." />
+        <small class="form__help">...</small>
     </div>
 </form>`}
       </Code>
@@ -314,35 +316,35 @@ const Forms = () =>
             <input
               type="text"
               className="form__input form__input--xs"
-              placeholder=".form__input--xs"
+              placeholder="Extra small"
             />
           </div>
           <div className="form__field">
             <input
               type="text"
               className="form__input form__input--sm"
-              placeholder=".form__input--sm"
+              placeholder="Small"
             />
           </div>
           <div className="form__field">
             <input
               type="text"
               className="form__input form__input--md"
-              placeholder=".form__input--md"
+              placeholder="Medium (default)"
             />
           </div>
           <div className="form__field">
             <input
               type="text"
               className="form__input form__input--lg"
-              placeholder=".form__input--lg"
+              placeholder="Large"
             />
           </div>
           <div className="form__field">
             <input
               type="text"
               className="form__input form__input--xl"
-              placeholder=".form__input--xl"
+              placeholder="Extra large"
             />
           </div>
         </form>
@@ -350,19 +352,19 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-        <input type="text" class="form__input form__input--xs" placeholder=".form__input--xs" />
+        <input type="text" class="form__input form__input--xs" />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input form__input--sm" placeholder=".form__input--sm" />
+        <input type="text" class="form__input form__input--sm" />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input form__input--md" placeholder=".form__input--md" />
+        <input type="text" class="form__input form__input--md" />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input form__input--lg" placeholder=".form__input--lg" />
+        <input type="text" class="form__input form__input--lg" />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input form__input--xl" placeholder=".form__input--xl" />
+        <input type="text" class="form__input form__input--xl" />
     </div>
 </form>`}
       </Code>
@@ -375,13 +377,13 @@ const Forms = () =>
             <input
               type="text"
               className="form__input form__input--round"
-              placeholder=".form__input--round"
+              placeholder="Rounded input"
             />
           </div>
           <div className="form__field">
             <div className="form__select form__select--round">
               <select>
-                <option>.form__select--round</option>
+                <option>Rounded select</option>
               </select>
             </div>
           </div>
@@ -390,12 +392,12 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-        <input type="text" class="form__input form__input--round" placeholder=".form__input--round" />
+        <input type="text" class="form__input form__input--round" />
     </div>
     <div class="form__field">
         <div class="form__select form__select--round">
             <select>
-                <option>.form__select--round</option>
+                <option>...</option>
             </select>
         </div>
     </div>
@@ -413,11 +415,10 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <label className="form__label">Default input group</label>
             <div className="form__input-group">
-              <span className="form__input-group-addon">addon</span>
+              <span className="form__input-group-addon">Addon</span>
               <input type="text" className="form__input" />
-              <button className="btn btn--blue">button</button>
+              <button className="btn btn--blue">Button</button>
             </div>
           </div>
         </form>
@@ -425,11 +426,10 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-        <label class="form__label">Default input group</label>
         <div class="form__input-group">
-            <span class="form__input-group-addon">addon</span>
+            <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">button</button>
+            <button class="btn btn--blue">...</button>
         </div>
     </div>
 </form>`}
@@ -444,89 +444,91 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <label className="form__label">Extra small input group</label>
             <div className="form__input-group form__input-group--xs">
-              <span className="form__input-group-addon">addon</span>
-              <input type="text" className="form__input" />
-              <button className="btn btn--blue">button</button>
+              <span className="form__input-group-addon">Addon</span>
+              <input
+                type="text"
+                className="form__input"
+                placeholder="Extra small"
+              />
+              <button className="btn btn--blue">Button</button>
             </div>
           </div>
           <div className="form__field">
-            <label className="form__label">Small input group</label>
             <div className="form__input-group form__input-group--sm">
-              <span className="form__input-group-addon">addon</span>
-              <input type="text" className="form__input" />
-              <button className="btn btn--blue">button</button>
+              <span className="form__input-group-addon">Addon</span>
+              <input type="text" className="form__input" placeholder="Small" />
+              <button className="btn btn--blue">Button</button>
             </div>
           </div>
           <div className="form__field">
-            <label className="form__label">Medium input group</label>
             <div className="form__input-group form__input-group--md">
-              <span className="form__input-group-addon">addon</span>
-              <input type="text" className="form__input" />
-              <button className="btn btn--blue">button</button>
+              <span className="form__input-group-addon">Addon</span>
+              <input
+                type="text"
+                className="form__input"
+                placeholder="Medium (default)"
+              />
+              <button className="btn btn--blue">Button</button>
             </div>
           </div>
           <div className="form__field">
-            <label className="form__label">Large input group</label>
             <div className="form__input-group form__input-group--lg">
-              <span className="form__input-group-addon">addon</span>
-              <input type="text" className="form__input" />
-              <button className="btn btn--blue">button</button>
+              <span className="form__input-group-addon">Addon</span>
+              <input type="text" className="form__input" placeholder="Large" />
+              <button className="btn btn--blue">Button</button>
             </div>
           </div>
           <div className="form__field">
-            <label className="form__label">Extra large input group</label>
             <div className="form__input-group form__input-group--xl">
-              <span className="form__input-group-addon">addon</span>
-              <input type="text" className="form__input" />
-              <button className="btn btn--blue">button</button>
+              <span className="form__input-group-addon">Addon</span>
+              <input
+                type="text"
+                className="form__input"
+                placeholder="Extra large"
+              />
+              <button className="btn btn--blue">Button</button>
             </div>
           </div>
         </form>
       </ExampleView>
       <Code language="html">
         {`<form class="form">
-  <div class="form__field">
-      <label class="form__label">Extra small input group</label>
-      <div class="form__input-group form__input-group--xs">
-          <span class="form__input-group-addon">addon</span>
-          <input type="text" class="form__input" />
-          <button class="btn btn--blue">button</button>
-      </div>
-  </div>
-  <div class="form__field">
-      <label class="form__label">Small input group</label>
-      <div class="form__input-group form__input-group--sm">
-          <span class="form__input-group-addon">addon</span>
-          <input type="text" class="form__input" />
-          <button class="btn btn--blue">button</button>
-      </div>
-  </div>
-  <div class="form__field">
-      <label class="form__label">Medium input group</label>
-      <div class="form__input-group form__input-group--md">
-          <span class="form__input-group-addon">addon</span>
-          <input type="text" class="form__input" />
-          <button class="btn btn--blue">button</button>
-      </div>
-  </div>
-  <div class="form__field">
-      <label class="form__label">Large input group</label>
-      <div class="form__input-group form__input-group--lg">
-          <span class="form__input-group-addon">addon</span>
-          <input type="text" class="form__input" />
-          <button class="btn btn--blue">button</button>
-      </div>
-  </div>
-  <div class="form__field">
-      <label class="form__label">Extra large input group</label>
-      <div class="form__input-group form__input-group--xl">
-          <span class="form__input-group-addon">addon</span>
-          <input type="text" class="form__input" />
-          <button class="btn btn--blue">button</button>
-      </div>
-  </div>
+    <div class="form__field">
+        <div class="form__input-group form__input-group--xs">
+            <span class="form__input-group-addon">...</span>
+            <input type="text" class="form__input" />
+            <button class="btn btn--blue">...</button>
+        </div>
+    </div>
+    <div class="form__field">
+        <div class="form__input-group form__input-group--sm">
+            <span class="form__input-group-addon">...</span>
+            <input type="text" class="form__input" />
+            <button class="btn btn--blue">...</button>
+        </div>
+    </div>
+    <div class="form__field">
+        <div class="form__input-group form__input-group--md">
+            <span class="form__input-group-addon">...</span>
+            <input type="text" class="form__input" />
+            <button class="btn btn--blue">...</button>
+        </div>
+    </div>
+    <div class="form__field">
+        <div class="form__input-group form__input-group--lg">
+            <span class="form__input-group-addon">...</span>
+            <input type="text" class="form__input" />
+            <button class="btn btn--blue">...</button>
+        </div>
+    </div>
+    <div class="form__field">
+        <div class="form__input-group form__input-group--xl">
+            <span class="form__input-group-addon">...</span>
+            <input type="text" class="form__input" />
+            <button class="btn btn--blue">...</button>
+        </div>
+    </div>
 </form>`}
       </Code>
     </Example>
@@ -535,13 +537,13 @@ const Forms = () =>
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <input type="text" className="form__input" defaultValue="default" />
+            <input type="text" className="form__input" defaultValue="Default" />
           </div>
           <div className="form__field">
             <input
               type="text"
               className="form__input"
-              defaultValue="disabled"
+              defaultValue="Disabled"
               disabled
             />
           </div>
@@ -549,49 +551,49 @@ const Forms = () =>
             <input
               type="text"
               className="form__input"
-              defaultValue="readonly"
+              defaultValue="Read-only"
               readOnly
             />
           </div>
           <div className="form__field">
             <div className="form__select">
               <select>
-                <option>default</option>
+                <option>Default</option>
               </select>
             </div>
           </div>
           <div className="form__field">
             <div className="form__select">
               <select disabled>
-                <option>disabled</option>
+                <option>Disabled</option>
               </select>
             </div>
           </div>
           <div className="form__field">
             <div className="form__select">
               <select readOnly>
-                <option>readonly</option>
+                <option>Read-only</option>
               </select>
             </div>
           </div>
           <div className="form__field">
             <label className="form__checkbox">
-              <input type="checkbox" /> default
+              <input type="checkbox" /> Default
             </label>
           </div>
           <div className="form__field">
             <label className="form__checkbox form__checkbox--disabled">
-              <input type="checkbox" disabled /> disabled
+              <input type="checkbox" disabled /> Disabled
             </label>
           </div>
           <div className="form__field">
             <label className="form__radio">
-              <input type="radio" /> default
+              <input type="radio" /> Default
             </label>
           </div>
           <div className="form__field">
             <label className="form__radio form__radio--disabled">
-              <input type="radio" disabled /> disabled
+              <input type="radio" disabled /> Disabled
             </label>
           </div>
         </form>
@@ -599,53 +601,53 @@ const Forms = () =>
       <Code language="html">
         {`<form class="form">
     <div class="form__field">
-        <input type="text" class="form__input" value="default" />
+        <input type="text" class="form__input" />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input" value="disabled" disabled />
+        <input type="text" class="form__input" disabled />
     </div>
     <div class="form__field">
-        <input type="text" class="form__input" value="readonly" readonly />
+        <input type="text" class="form__input" readonly />
     </div>
     <div class="form__field">
         <div class="form__select">
           <select>
-              <option>default</option>
+              <option>...</option>
           </select>
         </div>
     </div>
     <div class="form__field">
         <div class="form__select">
           <select disabled>
-              <option>disabled</option>
+              <option>...</option>
           </select>
         </div>
     </div>
     <div class="form__field">
         <div class="form__select">
           <select readonly>
-              <option>readonly</option>
+              <option>...</option>
           </select>
         </div>
     </div>
     <div class="form__field">
         <label class="form__checkbox">
-            <input type="checkbox" /> default
+            <input type="checkbox" /> ...
         </label>
     </div>
     <div class="form__field">
         <label class="form__checkbox form__checkbox--disabled">
-            <input type="checkbox" disabled /> disabled
+            <input type="checkbox" disabled /> ...
         </label>
     </div>
     <div class="form__field">
         <label class="form__radio">
-            <input type="radio" /> default
+            <input type="radio" /> ...
         </label>
     </div>
     <div class="form__field">
         <label class="form__radio form__radio--disabled">
-            <input type="radio" disabled /> disabled
+            <input type="radio" disabled /> ...
         </label>
     </div>
 </form>`}

@@ -18,11 +18,11 @@ const Buttons = () =>
     <Example>
       <ExampleView>
         <button type="button" className="btn">
-          .btn
+          Default
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn">.btn</button>`}
+        {`<button class="btn">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-colors">Colors</SubTitle>
@@ -33,31 +33,31 @@ const Buttons = () =>
     <Example>
       <ExampleView>
         <button type="button" className="btn btn--white">
-          .btn--white
+          White
         </button>
         <button type="button" className="btn btn--black">
-          .btn--black
+          Black
         </button>
         <button type="button" className="btn btn--red">
-          .btn--red
+          Red
         </button>
         <button type="button" className="btn btn--green">
-          .btn--green
+          Green
         </button>
         <button type="button" className="btn btn--blue">
-          .btn--blue
+          Blue
         </button>
         <button type="button" className="btn btn--yellow">
-          .btn--yellow
+          Yellow
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn btn--white">.btn--white</button>
-<button type="button" class="btn btn--black">.btn--black</button>
-<button type="button" class="btn btn--red">.btn--red</button>
-<button type="button" class="btn btn--green">.btn--green</button>
-<button type="button" class="btn btn--blue">.btn--blue</button>
-<button type="button" class="btn btn--yellow">.btn--yellow</button>`}
+        {`<button class="btn btn--white">...</button>
+<button class="btn btn--black">...</button>
+<button class="btn btn--red">...</button>
+<button class="btn btn--green">...</button>
+<button class="btn btn--blue">...</button>
+<button class="btn btn--yellow">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-outlined">Outlined</SubTitle>
@@ -68,58 +68,58 @@ const Buttons = () =>
     <Example>
       <ExampleView>
         <button type="button" className="btn btn--outline">
-          .btn--outline
+          Default
         </button>
         <button type="button" className="btn btn--black btn--outline">
-          .btn--outline
+          Black
         </button>
         <button type="button" className="btn btn--red btn--outline">
-          .btn--outline
+          Red
         </button>
         <button type="button" className="btn btn--green btn--outline">
-          .btn--outline
+          Green
         </button>
         <button type="button" className="btn btn--blue btn--outline">
-          .btn--outline
+          Blue
         </button>
         <button type="button" className="btn btn--yellow btn--outline">
-          .btn--outline
+          Yellow
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn btn--outline">.btn--outline</button>
-<button type="button" class="btn btn--black btn--outline">.btn--outline</button>
-<button type="button" class="btn btn--red btn--outline">.btn--outline</button>
-<button type="button" class="btn btn--green btn--outline">.btn--outline</button>
-<button type="button" class="btn btn--blue btn--outline">.btn--outline</button>
-<button type="button" class="btn btn--yellow btn--outline">.btn--outline</button>`}
+        {`<button class="btn btn--outline">...</button>
+<button class="btn btn--black btn--outline">...</button>
+<button class="btn btn--red btn--outline">...</button>
+<button class="btn btn--green btn--outline">...</button>
+<button class="btn btn--blue btn--outline">...</button>
+<button class="btn btn--yellow btn--outline">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-sizes">Sizes</SubTitle>
     <Example>
       <ExampleView>
         <button type="button" className="btn btn--xs">
-          .btn--xs
+          Extra small
         </button>
         <button type="button" className="btn btn--sm">
-          .btn--sm
+          Small
         </button>
         <button type="button" className="btn btn--md">
-          .btn--md
+          Medium (default)
         </button>
         <button type="button" className="btn btn--lg">
-          .btn--lg
+          Large
         </button>
         <button type="button" className="btn btn--xl">
-          .btn--xl
+          Extra large
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn btn--xs">.btn--xs</button>
-<button type="button" class="btn btn--sm">.btn--sm</button>
-<button type="button" class="btn btn--md">.btn--md</button>
-<button type="button" class="btn btn--lg">.btn--lg</button>
-<button type="button" class="btn btn--xl">.btn--xl</button>`}
+        {`<button class="btn btn--xs">...</button>
+<button class="btn btn--sm">...</button>
+<button class="btn btn--md">...</button>
+<button class="btn btn--lg">...</button>
+<button class="btn btn--xl">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-link">Link</SubTitle>
@@ -130,33 +130,33 @@ const Buttons = () =>
     <Example>
       <ExampleView>
         <button type="button" className="btn btn--link">
-          .btn--link
+          Link
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn btn--link">.btn--link</button>`}
+        {`<button class="btn btn--link">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-rounded">Rounded</SubTitle>
     <Example>
       <ExampleView>
         <button type="button" className="btn btn--round">
-          .btn--round
+          Rounded
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn btn--round">.btn--round</button>`}
+        {`<button class="btn btn--round">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-block">Block</SubTitle>
     <Example>
       <ExampleView>
         <button type="button" className="btn btn--block">
-          .btn--block
+          Block
         </button>
       </ExampleView>
       <Code language="html">
-        {`<button type="button" class="btn btn--block">.btn--block</button>`}
+        {`<button class="btn btn--block">...</button>`}
       </Code>
     </Example>
   </Section>;

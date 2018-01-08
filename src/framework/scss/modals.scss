@@ -60,7 +60,7 @@ html.html--modal-visible {
   overflow: hidden;
   visibility: hidden;
   padding: 5px;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(#000, 0);
   transition: all 0.15s ease-in-out;
 
   @media #{$mq-min-xs} {
@@ -70,7 +70,7 @@ html.html--modal-visible {
 
 .modal--visible {
   visibility: visible;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(#000, 0.7);
 }
 
 .modal--valign-center {
@@ -131,7 +131,8 @@ html.html--modal-visible {
 .modal__header,
 .modal__body,
 .modal__footer {
-  @extend %trim-child-margins;
+  @extend %squash-start;
+  @extend %squash-end;
 }
 
 .modal__header {

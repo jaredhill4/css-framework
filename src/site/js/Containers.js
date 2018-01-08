@@ -25,36 +25,36 @@ const Containers = () =>
     <div className="container container--full">
       <Example>
         <ExampleView>
-          <div className="container">
-            <div className="example__container">.container</div>
+          <div className="container u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Default</div>
           </div>
-          <div className="container container--xs">
-            <div className="example__container">.container--xs</div>
+          <div className="container container--xs u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Extra small</div>
           </div>
-          <div className="container container--sm">
-            <div className="example__container">.container--sm</div>
+          <div className="container container--sm u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Small</div>
           </div>
-          <div className="container container--md">
-            <div className="example__container">.container--md</div>
+          <div className="container container--md u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Medium</div>
           </div>
-          <div className="container container--lg">
-            <div className="example__container">.container--lg</div>
+          <div className="container container--lg u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Large (default)</div>
           </div>
-          <div className="container container--xl">
-            <div className="example__container">.container--xl</div>
+          <div className="container container--xl u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Extra large</div>
           </div>
-          <div className="container container--full">
-            <div className="example__container">.container--full</div>
+          <div className="container container--full u--padding-left-0 u--padding-right-0">
+            <div className="example__container">Full</div>
           </div>
         </ExampleView>
         <Code language="html">
-          {`<div class="container">.container</div>
-<div class="container container--xs">.container--xs</div>
-<div class="container container--sm">.container--sm</div>
-<div class="container container--md">.container--md</div>
-<div class="container container--lg">.container--lg</div>
-<div class="container container--xl">.container--xl</div>
-<div class="container container--full">.container--full</div>`}
+          {`<div class="container">...</div>
+<div class="container container--xs">...</div>
+<div class="container container--sm">...</div>
+<div class="container container--md">...</div>
+<div class="container container--lg">...</div>
+<div class="container container--xl">...</div>
+<div class="container container--full">...</div>`}
         </Code>
       </Example>
     </div>
