@@ -5,6 +5,7 @@ const Menu = ({ toggleMenu }) => {
   return (
     <div className="framework__sidebar">
       <ul className="framework__nav">
+        <li className="framework__nav-title">Layout</li>
         <li>
           <NavLink to="/grid" onClick={toggleMenu}>
             Grid
@@ -20,6 +21,7 @@ const Menu = ({ toggleMenu }) => {
             Sections
           </NavLink>
         </li>
+        <li className="framework__nav-title">Base</li>
         <li>
           <NavLink to="/typography" onClick={toggleMenu}>
             Typography
@@ -40,14 +42,10 @@ const Menu = ({ toggleMenu }) => {
             Tables
           </NavLink>
         </li>
+        <li className="framework__nav-title">Components</li>
         <li>
-          <NavLink to="/notices" onClick={toggleMenu}>
-            Notices
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/modals" onClick={toggleMenu}>
-            Modals
+          <NavLink to="/carousels" onClick={toggleMenu}>
+            Carousels
           </NavLink>
         </li>
         <li>
@@ -56,13 +54,13 @@ const Menu = ({ toggleMenu }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/tooltips" onClick={toggleMenu}>
-            Tooltips
+          <NavLink to="/modals" onClick={toggleMenu}>
+            Modals
           </NavLink>
         </li>
         <li>
-          <NavLink to="/carousels" onClick={toggleMenu}>
-            Carousels
+          <NavLink to="/notices" onClick={toggleMenu}>
+            Notices
           </NavLink>
         </li>
         <li>
@@ -70,6 +68,12 @@ const Menu = ({ toggleMenu }) => {
             Toggles
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/tooltips" onClick={toggleMenu}>
+            Tooltips
+          </NavLink>
+        </li>
+        <li className="framework__nav-title">Other</li>
         <li>
           <NavLink to="/utilities" onClick={toggleMenu}>
             Utilities

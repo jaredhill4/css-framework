@@ -39,6 +39,10 @@ body {
     background-color: $color-blue;
   }
 
+  .html--menu-open & {
+    transform: translateX(260px);
+  }
+
   &:focus {
     outline: none;
   }
@@ -50,7 +54,7 @@ body {
   top: 9px;
 
   span {
-    background-color: #000;
+    background-color: $color-black;
     border-radius: 0;
     display: block;
     height: 2px;
@@ -70,16 +74,27 @@ body {
 
   span:nth-child(1) {
     top: 0;
+    width: 17px;
+
+    .framework__toggle:hover & {
+      width: 20px;
+    }
 
     .html--menu-open & {
       left: 3px;
       top: -1px;
       transform: rotate(45deg);
+      width: 20px !important;
     }
   }
 
   span:nth-child(2) {
     top: 6px;
+    width: 14px;
+
+    .framework__toggle:hover & {
+      width: 17px;
+    }
 
     .html--menu-open & {
       opacity: 0;
@@ -90,10 +105,15 @@ body {
   span:nth-child(3) {
     top: 12px;
 
+    .framework__toggle:hover & {
+      width: 14px;
+    }
+
     .html--menu-open & {
       left: 3px;
       top: 13px;
       transform: rotate(-45deg);
+      width: 20px !important;
     }
   }
 }
@@ -106,7 +126,7 @@ body {
 
   &::before,
   &::after {
-    color: #000;
+    color: $color-black;
     font-size: 12px;
     font-weight: bold;
     left: 0;
@@ -148,11 +168,11 @@ body {
 }
 
 .framework__sidebar {
-  background-color: #fff;
+  background-color: tint($color-gray, 50%);
   bottom: 0;
   left: 0;
   overflow-y: auto;
-  padding-top: 52px;
+  padding: 0 0 20px 0;
   position: fixed;
   top: 0;
   transform: translateX(-260px);
@@ -211,7 +231,19 @@ body {
   }
 }
 
+.framework__nav > .framework__nav-title {
+  color: rgba($color-black, 0.5);
+  font-size: rem(12px);
+  padding: 20px 10px 2px 10px;
+  text-transform: uppercase;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
 .framework__nav > li > a {
+  background-color: $color-white;
   color: $color-black;
   display: block;
   line-height: 1.15;
@@ -220,8 +252,8 @@ body {
   transition: $global-transition;
 
   &:hover {
-    background-color: rgba($color-gray, 0.5);
-    color: $color-black;
+    background-color: $color-white;
+    color: $color-blue;
   }
 }
 
@@ -274,7 +306,7 @@ body {
 .example__container {
   background-color: rgba(#3ecf8e, .3);
   border-radius: 3px;
-  font-size: 14px;
+  font-size: rem(14px);
   padding: 8px;
   text-align: left;
   width: 100%;

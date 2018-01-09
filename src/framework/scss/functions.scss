@@ -23,3 +23,13 @@
 @function shade($color, $percent) {
   @return mix(#000, $color, $percent);
 }
+
+// rem
+// ---------------
+// Calculate the rem value for a given pixel value
+// based on the default font-size
+@function rem($size) {
+  $baseFontSize: 16px;
+  $remSize: $size / $baseFontSize;
+  @return #{$remSize}rem;
+}
