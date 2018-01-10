@@ -74,7 +74,7 @@ class Toggles extends Component {
               Simple Toggle
             </strong>
             <div
-              class="toggle__target"
+              className="toggle__target"
               data-toggle-target="simple-toggle-element"
             >
               {lorem(113)}

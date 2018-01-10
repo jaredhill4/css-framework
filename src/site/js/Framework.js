@@ -51,9 +51,7 @@ class Code extends Component {
         className={`language-${this.props.language}`}
         data-code
         data-code-language={this.props.language}
-        ref={pre => {
-          this.pre = pre;
-        }}
+        ref={pre => (this.pre = pre)}
       >
         {this.props.children}
       </pre>
