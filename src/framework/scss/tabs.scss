@@ -1,0 +1,74 @@
+// --------------------------------------------------
+// base
+// --------------------------------------------------
+
+.tabs {
+  display: block;
+}
+
+// --------------------------------------------------
+// nav
+// --------------------------------------------------
+
+.tabs__nav {
+  display: block;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: solid $global-border-width $global-border-color;
+  }
+
+  li {
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    margin-bottom: -1px;
+
+    & + li {
+      margin-left: 0.25em;
+    }
+
+    a,
+    button {
+      color: $link-color;
+      display: block;
+      padding: 0.875em 1.125em;
+      border: solid $global-border-width transparent;
+      border-bottom-color: $global-border-color;
+      border-radius: $global-border-radius $global-border-radius 0 0;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $link-color-hover;
+        background: lighten($color-gray, 5%);
+        outline: 0;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      &.toggle__switch--on {
+        color: $color-black;
+        background: $color-white;
+        border-color: $global-border-color;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// content
+// --------------------------------------------------
+
+.tabs__content {
+  padding: 1.25em;
+  border: solid $global-border-width $global-border-color;
+  border-top: 0;
+  border-radius: 0 0 $global-border-radius $global-border-radius;
+}

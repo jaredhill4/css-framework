@@ -13,6 +13,9 @@ class Menu extends Component {
         className="framework__sidebar"
         ref={sidebar => (this.sidebar = sidebar)}
       >
+        <NavLink to="/grid" onClick={toggleMenu} className="framework__logo">
+          WL CSS Framework
+        </NavLink>
         <ul className="framework__nav">
           <li className="framework__nav-title">Layout</li>
           <li>

@@ -7,7 +7,7 @@ $code-background-color: #263238;
 $code-font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
   Consolas, monospace;
 $code-font-size: 14px;
-$code-line-height: 22px;
+$code-line-height: 32px;
 
 $code-max-height: 390px;
 
@@ -82,7 +82,7 @@ $code-syntax-colors: (
       content: attr(data-code-language);
       text-transform: uppercase;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-      transition: $global-transition;
+      transition: $global-transition-fast;
     }
 
     &:hover {
@@ -125,7 +125,7 @@ ol.code__lines {
     padding: 0;
     counter-increment: lines-counter;
     background: rgba(0, 0, 0, 0.0);
-    transition: $global-transition;
+    transition: $global-transition-fast;
 
     span {
       display: inline-block;
@@ -171,7 +171,8 @@ ol.code__line-numbers {
   margin: 0;
   list-style: none;
   box-shadow: 3px 0 50px rgba(0, 0, 0, 0);
-  transition: $global-transition;
+  transition: $global-transition-fast;
+  user-select: none;
 
   & > li {
     display: block;
@@ -228,7 +229,7 @@ ol.code__line-numbers {
   opacity: 0;
   visibility: hidden;
   border-radius: 3px;
-  transition: $global-transition;
+  transition: $global-transition-fast;
 
   &::after {
     display: inline;

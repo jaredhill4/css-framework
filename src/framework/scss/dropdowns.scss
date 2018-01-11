@@ -11,8 +11,8 @@ $dropdown-color: $color-black;
 $dropdown-font-size: 1rem;
 $dropdown-line-height: 1.15;
 $dropdown-spacer: 4px;
-$dropdown-padding-x: .25em;
-$dropdown-padding-y: .25em;
+$dropdown-padding-x: .5em;
+$dropdown-padding-y: .5em;
 $dropdown-transition: opacity .25s ease;
 $dropdown-width: 200px;
 $dropdown-z-index: 1060;
@@ -22,11 +22,12 @@ $dropdown-link-color: $dropdown-color;
 $dropdown-link-hover-color: $dropdown-color;
 $dropdown-link-hover-background: rgba($color-gray, 0.6);
 $dropdown-link-padding-x: 1em;
-$dropdown-link-padding-y: .35em;
+$dropdown-link-padding-y: .5em;
 
 $dropdown-divider-border-color: $global-border-color;
 $dropdown-divider-border-width: $global-border-width;
 $dropdown-divider-margin-y: .5em;
+$dropdown-divider-margin-x: -.5em;
 
 // --------------------------------------------------
 // base styles
@@ -86,6 +87,6 @@ $dropdown-divider-margin-y: .5em;
   border-top: $dropdown-divider-border-width solid
     $dropdown-divider-border-color;
   height: 0;
-  margin: $dropdown-divider-margin-y 0;
+  margin: $dropdown-divider-margin-y $dropdown-divider-margin-x;
   overflow: hidden;
 }

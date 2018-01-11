@@ -66,7 +66,10 @@ $global-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
 $global-focus-box-shadow: 0 0 0 2px rgba($color-primary, .5);
 
-$global-transition: all .15s ease;
+$global-transition-fast: all .15s ease;
+$global-transition-slow: all .3s ease;
+
+$global-type-margin: 2em;
 
 // --------------------------------------------------
 // font families
@@ -84,3 +87,27 @@ $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono',
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+
+// --------------------------------------------------
+// font size
+// --------------------------------------------------
+
+$font-size-base: 16px;
+$font-size-xs: 0.777778rem;
+$font-size-sm: 0.888889rem;
+$font-size-md: 1em;
+$font-size-lg: 1.111111em;
+
+$font-size-h1: 2em; // 36px
+$font-size-h2: 1.666667em; // ~30px
+$font-size-h3: 1.333333em; // ~24px
+$font-size-h4: 1.222222em; // ~22px
+$font-size-h5: $font-size-lg; // ~20px
+$font-size-h6: 1em; // 18px
+
+// --------------------------------------------------
+// line height
+// --------------------------------------------------
+
+$line-height-base: 1.5;
+$line-height-headings: 1.15;

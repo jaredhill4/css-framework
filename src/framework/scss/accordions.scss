@@ -17,10 +17,19 @@
 
 .accordion__header {
   display: block;
-  margin-top: 10px;
-  padding: 20px;
+  margin-top: 0.625em;
+  padding: 1.25em;
   border: solid $global-border-width $global-border-color;
   border-radius: $global-border-radius;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-blue;
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 
   &.toggle__switch--on {
     border-radius: $global-border-radius $global-border-radius 0 0;
@@ -33,7 +42,7 @@
 
 .accordion__content {
   margin: 0;
-  padding: 20px;
+  padding: 1.25em;
   border: solid $global-border-width $global-border-color;
   border-top: none;
   border-radius: 0 0 $global-border-radius $global-border-radius;

@@ -173,7 +173,7 @@ class Toggles extends Component {
         <strong data-toggle-switch="basic-accordion-item-1" data-toggle-parent="basic-accordion">
             ...
         </strong>
-        <div className="toggle__target" data-toggle-target="basic-accordion-item-1">
+        <div class="toggle__target" data-toggle-target="basic-accordion-item-1">
             ...
         </div>
     </div>
@@ -181,7 +181,7 @@ class Toggles extends Component {
         <strong data-toggle-switch="basic-accordion-item-2" data-toggle-parent="basic-accordion">
             ...
         </strong>
-        <div className="toggle__target" data-toggle-target="basic-accordion-item-2">
+        <div class="toggle__target" data-toggle-target="basic-accordion-item-2">
             ...
         </div>
     </div>
@@ -189,7 +189,7 @@ class Toggles extends Component {
         <strong data-toggle-switch="basic-accordion-item-3" data-toggle-parent="basic-accordion">
             ...
         </strong>
-        <div className="toggle__target" data-toggle-target="basic-accordion-item-3">
+        <div class="toggle__target" data-toggle-target="basic-accordion-item-3">
             ...
         </div>
     </div>
@@ -221,7 +221,6 @@ class Toggles extends Component {
               <dd
                 className="toggle__target"
                 data-toggle-target="styled-accordion-item-1"
-                data-toggle-parent="styled-accordion"
               >
                 <div className="accordion__content">
                   {lorem(117)}
@@ -238,7 +237,6 @@ class Toggles extends Component {
               <dd
                 className="toggle__target"
                 data-toggle-target="styled-accordion-item-2"
-                data-toggle-parent="styled-accordion"
               >
                 <div className="accordion__content">
                   {lorem(118)}
@@ -255,7 +253,6 @@ class Toggles extends Component {
               <dd
                 className="toggle__target"
                 data-toggle-target="styled-accordion-item-3"
-                data-toggle-parent="styled-accordion"
               >
                 <div className="accordion__content">
                   {lorem(119)}
@@ -284,6 +281,117 @@ class Toggles extends Component {
         <div class="accordion__content">...</div>
     </dd>
 </dl>`}
+          </Code>
+        </Example>
+
+        <SubTitle id="toggles-tabs">Tabs</SubTitle>
+        <Description>
+          <p>
+            Similar to accordions, you can also create <strong>tabs</strong>{' '}
+            using toggle groups.
+          </p>
+          <p>
+            To ensure that one tab is always active and its content visible, add{' '}
+            <code>data-toggle-group-require-active</code> to the parent{' '}
+            <code>data-toggle-group</code> element. This will prevent the active
+            tab from closing when clicked.
+          </p>
+          <p>
+            Finally, add <code>data-toggle-target-transition="fade"</code> to
+            each of the <code>data-toggle-target</code> elements to change the
+            transition to "fade."
+          </p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div
+              className="tabs"
+              data-toggle-group="tabs"
+              data-toggle-group-require-active
+            >
+              <nav className="tabs__nav">
+                <ul>
+                  <li>
+                    <button
+                      className="toggle__switch--on"
+                      data-toggle-switch="tab-1"
+                      data-toggle-parent="tabs"
+                    >
+                      Tab 1
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      data-toggle-switch="tab-2"
+                      data-toggle-parent="tabs"
+                    >
+                      Tab 2
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      data-toggle-switch="tab-3"
+                      data-toggle-parent="tabs"
+                    >
+                      Tab 3
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+
+              <div className="tabs__content">
+                <div
+                  className="toggle__target toggle__target--visible"
+                  data-toggle-target="tab-1"
+                  data-toggle-target-transition="fade"
+                >
+                  {lorem(120)}
+                </div>
+                <div
+                  className="toggle__target"
+                  data-toggle-target="tab-2"
+                  data-toggle-target-transition="fade"
+                >
+                  {lorem(121)}
+                </div>
+                <div
+                  className="toggle__target"
+                  data-toggle-target="tab-3"
+                  data-toggle-target-transition="fade"
+                >
+                  {lorem(122)}
+                </div>
+              </div>
+            </div>
+          </ExampleView>
+          <Code language="html">
+            {`<div class="tabs" data-toggle-group="tabs" data-toggle-group-require-active>
+    <nav class="tabs__nav">
+        <ul>
+            <li>
+                <button class="toggle__switch--on" data-toggle-switch="tab-1" data-toggle-parent="tabs">...</button>
+            </li>
+            <li>
+                <button data-toggle-switch="tab-2" data-toggle-parent="tabs">...</button>
+            </li>
+            <li>
+                <button data-toggle-switch="tab-3" data-toggle-parent="tabs">...</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="tabs__content">
+      <div class="toggle__target toggle__target--visible" data-toggle-target="tab-1" data-toggle-target-transition="fade">
+          ...
+      </div>
+      <div class="toggle__target" data-toggle-target="tab-2" data-toggle-target-transition="fade">
+          ...
+      </div>
+      <div class="toggle__target" data-toggle-target="tab-3" data-toggle-target-transition="fade">
+          ...
+      </div>
+    </div>
+</div>`}
           </Code>
         </Example>
 

@@ -12,7 +12,7 @@ $form-input-font-weight: 400;
 $form-input-line-height: 1.25;
 $form-input-padding-x: .75em;
 $form-input-padding-y: .5em;
-$form-input-transition: $global-transition;
+$form-input-transition: $global-transition-fast;
 
 $form-input-focus-box-shadow: $global-focus-box-shadow;
 $form-input-focus-border-color: $color-primary;
@@ -157,7 +157,7 @@ $form-input-group-background-color: $form-input-border-color;
     outline: none;
     position: absolute;
     top: 50%;
-    transition: $global-transition;
+    transition: $global-transition-fast;
     width: 20px;
 
     &:focus {
@@ -187,7 +187,7 @@ $form-input-group-background-color: $form-input-border-color;
       position: absolute;
       top: 1px;
       transform: rotate(40deg) scale(0.5, 0.5);
-      transition: $global-transition;
+      transition: $global-transition-fast;
       width: 6px;
       z-index: 2;
     }
@@ -222,7 +222,7 @@ $form-input-group-background-color: $form-input-border-color;
       position: absolute;
       top: 3px;
       transform: scale(0.5, 0.5);
-      transition: $global-transition;
+      transition: $global-transition-fast;
       width: 12px;
       z-index: 1;
     }

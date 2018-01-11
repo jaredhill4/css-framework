@@ -29,11 +29,17 @@ class Toggle {
     this.toggleParent = this.toggleSwitch.data('toggle-parent');
     this.toggleGroup = null;
     this.toggleGroupAllowMultiple = false;
+    this.toggleTargetTransition = this.toggleTarget.data(
+      'toggle-target-transition'
+    );
 
     if (this.toggleParent) {
       this.toggleGroup = $(`[data-toggle-group='${this.toggleParent}']`);
       this.toggleGroupAllowMultiple = this.toggleGroup.data(
         'toggle-group-allow-multiple'
+      );
+      this.toggleGroupRequireActive = this.toggleGroup.data(
+        'toggle-group-require-active'
       );
       this.toggleGroup.data('toggle-group-child-is-transitioning', false);
     }
@@ -49,8 +55,10 @@ class Toggle {
     this.toggleTarget.on('toggle:show', (event, preventSetTransitioning) =>
       this.show(event, preventSetTransitioning)
     );
-    this.toggleTarget.on('toggle:hide', (event, preventSetTransitioning) =>
-      this.hide(event, preventSetTransitioning)
+    this.toggleTarget.on(
+      'toggle:hide',
+      (event, preventSetTransitioning, isSibling) =>
+        this.hide(event, preventSetTransitioning, isSibling)
     );
     this.toggleTarget.on('toggle:toggle', (event, preventSetTransitioning) =>
       this.toggle(event, preventSetTransitioning)
@@ -92,7 +100,19 @@ class Toggle {
   }
 
   _getTransitionDuration() {
-    return cssTimeToMilliseconds(this.toggleTarget.css('transition-duration'));
+    let transitionDuration = 0;
+
+    if (this.toggleTargetTransition !== 'none') {
+      transitionDuration = cssTimeToMilliseconds(
+        this.toggleTarget.css('transition-duration')
+      );
+
+      if (this.toggleTargetTransition === 'fade') {
+        transitionDuration = transitionDuration / 2;
+      }
+    }
+
+    return transitionDuration;
   }
 
   isActive() {
@@ -143,14 +163,14 @@ class Toggle {
       return;
     }
 
-    let actives = null;
+    let actives = [];
     let toggleTargetHeight = 0;
 
     this.toggleTarget.trigger('toggle:beforeShow');
 
     if (this.toggleGroup && !this.toggleGroupAllowMultiple) {
       actives = this.toggleGroup.find(`.${ClassName.TARGET_VISIBLE}`);
-      actives.trigger('toggle:hide', [true]);
+      actives.trigger('toggle:hide', [true, true]);
     }
 
     if (!preventSetTransitioning) {
@@ -180,7 +200,7 @@ class Toggle {
     this.toggleSwitch.addClass(ClassName.SWITCH_ON);
   }
 
-  hide(event, preventSetTransitioning = false) {
+  hide(event, preventSetTransitioning = false, isSibling = false) {
     if (typeof event !== 'undefined') {
       event.preventDefault();
     }
@@ -189,6 +209,16 @@ class Toggle {
       this._checkTransitioning() ||
       !this.toggleTarget.hasClass(ClassName.TARGET_VISIBLE)
     ) {
+      return;
+    }
+
+    let actives = [];
+
+    if (this.toggleGroup) {
+      actives = this.toggleGroup.find(`.${ClassName.TARGET_VISIBLE}`);
+    }
+
+    if (!isSibling && actives.length <= 1 && this.toggleGroupRequireActive) {
       return;
     }
 
