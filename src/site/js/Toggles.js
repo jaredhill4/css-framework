@@ -16,6 +16,10 @@ class Toggles extends Component {
     toggles('[data-toggle-target]');
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <Section>
@@ -410,7 +414,7 @@ class Toggles extends Component {
             </em>
           </p>
         </Description>
-        <table className="table table--bordered">
+        <table className="table table--responsive table--bordered">
           <tbody>
             <tr>
               <td>
@@ -458,7 +462,7 @@ $('[data-toggle-group="basic-accordion"]').trigger('toggle:groupShowAll');`}
             <em>target</em> element. These events include:
           </p>
         </Description>
-        <table className="table table--bordered">
+        <table className="table table--responsive table--bordered">
           <tbody>
             <tr>
               <td>

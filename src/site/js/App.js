@@ -40,20 +40,20 @@ class App extends Component {
         <Menu toggleMenu={this.toggleMenu} menuIsOpen={this.state.menuOpen} />
         <MenuToggle toggleMenu={this.toggleMenu} />
         <Switch>
-          <Route path="/grid" component={Grid} />
-          <Route path="/containers" component={Containers} />
-          <Route path="/sections" component={Sections} />
-          <Route path="/typography" component={Typography} />
-          <Route path="/buttons" component={Buttons} />
-          <Route path="/forms" component={Forms} />
-          <Route path="/tables" component={Tables} />
-          <Route path="/notices" component={Notices} />
-          <Route path="/modals" component={Modals} />
-          <Route path="/dropdowns" component={Dropdowns} />
-          <Route path="/tooltips" component={Tooltips} />
-          <Route path="/carousels" component={Carousels} />
-          <Route path="/toggles" component={Toggles} />
-          <Route path="/utilities" component={Utilities} />
+          <Route exact path="/grid" component={Grid} />
+          <Route exact path="/containers" component={Containers} />
+          <Route exact path="/sections" component={Sections} />
+          <Route exact path="/typography" component={Typography} />
+          <Route exact path="/buttons" component={Buttons} />
+          <Route exact path="/forms" component={Forms} />
+          <Route exact path="/tables" component={Tables} />
+          <Route exact path="/notices" component={Notices} />
+          <Route exact path="/modals" component={Modals} />
+          <Route exact path="/dropdowns" component={Dropdowns} />
+          <Route exact path="/tooltips" component={Tooltips} />
+          <Route exact path="/carousels" component={Carousels} />
+          <Route exact path="/toggles" component={Toggles} />
+          <Route exact path="/utilities" component={Utilities} />
           <Redirect exact from="/" to="/grid" />
           <Route component={NotFound} />
         </Switch>

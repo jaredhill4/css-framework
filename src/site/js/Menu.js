@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class Menu extends Component {
-  componentDidUpdate() {
-    this.setScrollPosition();
+  componentWillReceiveProps(nextProps) {
+    if (!this.props.menuIsOpen && nextProps.menuIsOpen) {
+      this.setScrollPosition();
+    }
   }
 
   render() {
@@ -13,7 +15,7 @@ class Menu extends Component {
         className="framework__sidebar"
         ref={sidebar => (this.sidebar = sidebar)}
       >
-        <NavLink to="/grid" onClick={toggleMenu} className="framework__logo">
+        <NavLink to="/" onClick={toggleMenu} className="framework__logo">
           WL CSS Framework
         </NavLink>
         <ul className="framework__nav">
@@ -97,10 +99,7 @@ class Menu extends Component {
   }
 
   setScrollPosition() {
-    const { menuIsOpen } = this.props;
-    if (menuIsOpen) {
-      this.sidebar.scrollTop = 0;
-    }
+    this.sidebar.scrollTop = 0;
   }
 }
 

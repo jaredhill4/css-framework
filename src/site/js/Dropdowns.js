@@ -15,6 +15,10 @@ class Dropdowns extends Component {
     dropdowns('[data-dropdown]');
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <Section>

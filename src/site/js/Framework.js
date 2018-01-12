@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/light';
+import js from 'react-syntax-highlighter/languages/hljs/javascript';
+import html from 'react-syntax-highlighter/languages/hljs/xml';
+import { ocean } from 'react-syntax-highlighter/styles/hljs';
 import classnames from 'classnames';
-import code from '../../framework/js/code';
+
+registerLanguage('html', html);
+registerLanguage('javascript', js);
 
 const Section = ({ children, id = '', container = true }) => {
   const containerClassNames = classnames({
@@ -40,23 +46,9 @@ const ExampleView = ({ children }) =>
     {children}
   </div>;
 
-class Code extends Component {
-  componentDidMount() {
-    code(this.pre);
-  }
-
-  render() {
-    return (
-      <pre
-        className={`language-${this.props.language}`}
-        data-code
-        data-code-language={this.props.language}
-        ref={pre => (this.pre = pre)}
-      >
-        {this.props.children}
-      </pre>
-    );
-  }
-}
+const Code = ({ children, language }) =>
+  <SyntaxHighlighter language={language} style={ocean} showLineNumbers={false} customStyle={{ borderRadius: 0, padding: '1rem' }} className="framework__code">
+    {children}
+  </SyntaxHighlighter>;
 
 export { Section, Title, SubTitle, Description, Example, ExampleView, Code };

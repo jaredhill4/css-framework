@@ -16,6 +16,10 @@ class Notices extends Component {
     notices('[data-notice-dismissible]');
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <Section>

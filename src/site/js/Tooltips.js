@@ -14,6 +14,10 @@ class Tooltips extends Component {
     tooltips('[data-tooltip]');
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <Section>

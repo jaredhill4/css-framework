@@ -29,6 +29,10 @@ class Carousels extends Component {
     });
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <Section>
@@ -69,9 +73,8 @@ class Carousels extends Component {
           this example, we will use a data attribute selector, with the value
           "sample-carousel."
         </Description>
-        <Example>
-          <Code language="html">
-            {`<div data-carousel="sample-carousel">
+        <Code language="html">
+          {`<div data-carousel="sample-carousel">
     <div>
         Slide 1
     </div>
@@ -88,8 +91,7 @@ class Carousels extends Component {
         Slide 5
     </div>
 </div>`}
-          </Code>
-        </Example>
+        </Code>
         <Description>
           <p>
             Now that the markup is in place, you will need to create a new
@@ -98,11 +100,9 @@ class Carousels extends Component {
             first argument) and assign it to a variable, like so:
           </p>
         </Description>
-        <Example>
-          <Code language="javascript">
-            {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');`}
-          </Code>
-        </Example>
+        <Code language="javascript">
+          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');`}
+        </Code>
         <Description>
           <p>Now, you should see a simple slideshow that looks like this:</p>
         </Description>
@@ -125,9 +125,8 @@ class Carousels extends Component {
             so:
           </p>
         </Description>
-        <Example>
-          <Code language="javascript">
-            {`const sampleCarouselSettings = {
+        <Code language="javascript">
+          {`const sampleCarouselSettings = {
   infinite: false,     // prevent slides from looping
   autoplay: true,      // enable automatic slide progression
   dots: true,          // display dot indicators
@@ -135,8 +134,7 @@ class Carousels extends Component {
   speed: 500,          // set the slide transition speed to half a second
 };
 const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarouselSettings);`}
-          </Code>
-        </Example>
+        </Code>
         <Description>
           <p>Now, your slideshow will look like this:</p>
         </Description>
@@ -182,7 +180,7 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
             API methods. These include:
           </p>
         </Description>
-        <table className="table table--bordered">
+        <table className="table table--responsive table--bordered">
           <thead>
             <tr>
               <th>Method</th>

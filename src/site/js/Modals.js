@@ -16,6 +16,10 @@ class Modals extends Component {
     modals('[data-modal]');
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return (
       <Section>
@@ -414,7 +418,7 @@ class Modals extends Component {
             the modal elements as the selector.
           </p>
         </Description>
-        <table className="table table--bordered">
+        <table className="table table--responsive table--bordered">
           <tbody>
             <tr>
               <td>
@@ -451,7 +455,7 @@ $('[data-modal="sample-modal"]').trigger('modal:toggle');`}
             events include:
           </p>
         </Description>
-        <table className="table table--bordered">
+        <table className="table table--responsive table--bordered">
           <tbody>
             <tr>
               <td>
