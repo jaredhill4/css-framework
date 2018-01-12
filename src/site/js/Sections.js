@@ -29,22 +29,22 @@ class Sections extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <section className="section u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
+            <section className="section u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray-lighter">
               Default
             </section>
-            <section className="section section--xs u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
+            <section className="section section--xs u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray-lighter">
               Extra small
             </section>
-            <section className="section section--sm u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
+            <section className="section section--sm u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray-lighter">
               Small
             </section>
-            <section className="section section--md u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
+            <section className="section section--md u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray-lighter">
               Medium (default)
             </section>
-            <section className="section section--lg u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray">
+            <section className="section section--lg u--padding-left-15 u--padding-right-15 u--margin-bottom-5 u--background-color-gray-lighter">
               Large
             </section>
-            <section className="section section--xl u--padding-left-15 u--padding-right-15 u--background-color-gray">
+            <section className="section section--xl u--padding-left-15 u--padding-right-15 u--background-color-gray-lighter">
               Extra large
             </section>
           </ExampleView>

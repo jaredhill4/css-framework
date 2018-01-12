@@ -17,27 +17,28 @@ html {
 // --------------------------------------------------
 
 html {
-  font-size: 16px;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
   overflow-x: hidden;
 
   @media #{$mq-min-xs} {
-    font-size: 16px;
+    font-size: $font-size-base;
   }
 
   @media #{$mq-min-sm} {
-    font-size: 16px;
+    font-size: $font-size-base;
   }
 
   @media #{$mq-min-md} {
-    font-size: 16px;
+    font-size: $font-size-base;
   }
 
   @media #{$mq-min-lg} {
-    font-size: 16px;
+    font-size: $font-size-base;
   }
 
   @media #{$mq-min-xl} {
-    font-size: 16px;
+    font-size: $font-size-base;
   }
 }
 
@@ -48,7 +49,7 @@ html {
 body {
   color: $color-black;
   font-family: $font-family-sans-serif;
-  line-height: 1.5;
+  line-height: $line-height-base;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }

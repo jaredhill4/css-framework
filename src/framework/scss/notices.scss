@@ -2,34 +2,19 @@
 // variables
 // --------------------------------------------------
 
-$notice-border-radius: $global-border-radius;
-$notice-border-width: $global-border-width;
-$notice-border-color: $global-border-color;
-$notice-border-left-width: 5px;
-
-$notice-padding: 1.25em;
-
-$notice-colors: (
-  'default': $color-gray,
-  'red': $color-red,
-  'yellow': $color-yellow,
-  'blue': $color-blue,
-  'green': $color-green
-);
+$notice-padding: $type-margin-base;
 
 // --------------------------------------------------
 // mixins
 // --------------------------------------------------
 
-@mixin notice-colors($colors: $notice-colors) {
-  @each $key, $value in $colors {
-    $selector: '.notice';
-    $border-color: $value;
-    $title-color: $value;
+@mixin notice-colors($colors: $colors-theme) {
+  @each $key, $color in $colors {
+    $selector: '.notice--#{$key}';
+    $border-color: map-get($color, 'base');
+    $title-color: map-get($color, 'base');
 
-    @if ($key != 'default') {
-      $selector: '#{$selector}--#{$key}';
-    } @else {
+    @if (str-index($key, 'gray-light') != null) {
       $title-color: $color-black;
     }
 
@@ -53,15 +38,16 @@ $notice-colors: (
   position: relative;
   display: block;
   padding: $notice-padding;
-  border: solid $notice-border-width $notice-border-color;
-  border-left: solid $notice-border-left-width;
-  border-radius: $notice-border-radius;
-  margin-bottom: 1rem;
+  border: solid $global-border-width $global-border-color;
+  border-left: solid 5px $global-border-color;
+  border-radius: $global-border-radius;
+  margin-bottom: $type-margin-base;
 }
 
 .notice__title {
   font-weight: $font-weight-bold;
   margin-top: 0;
+  margin-bottom: $type-margin-base / 2;
 }
 
 // --------------------------------------------------

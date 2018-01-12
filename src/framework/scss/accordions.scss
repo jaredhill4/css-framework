@@ -17,8 +17,8 @@
 
 .accordion__header {
   display: block;
-  margin-top: 0.625em;
-  padding: 1.25em;
+  margin-top: rem(12);
+  padding: $type-margin-base*0.8 $type-margin-base;
   border: solid $global-border-width $global-border-color;
   border-radius: $global-border-radius;
   cursor: pointer;
@@ -42,7 +42,7 @@
 
 .accordion__content {
   margin: 0;
-  padding: 1.25em;
+  padding: $type-margin-base;
   border: solid $global-border-width $global-border-color;
   border-top: none;
   border-radius: 0 0 $global-border-radius $global-border-radius;

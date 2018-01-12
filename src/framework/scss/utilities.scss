@@ -2,11 +2,11 @@
 // variables
 // --------------------------------------------------
 
-$theme-border-sizes: (0);
-$theme-margin-sizes: (0, 5, 10, 15, 20, 30);
-$theme-padding-sizes: (0, 5, 10, 15, 20, 30);
-$theme-width-sizes: (25, 33, 50, 66, 75, 100);
-$theme-display: (
+$utilities-border-sizes: (0);
+$utilities-margin-sizes: (0, 5, 10, 15, 20, 30);
+$utilities-padding-sizes: (0, 5, 10, 15, 20, 30);
+$utilities-width-sizes: (25, 33, 50, 66, 75, 100);
+$utilities-display: (
   none,
   inline,
   block,
@@ -17,10 +17,10 @@ $theme-display: (
   flex,
   inline-flex
 );
-$theme-text-align: (left, right, center, justify);
-$theme-font-weights: (normal: $font-weight-normal, bold: $font-weight-bold);
-$theme-font-style: (normal, italic, oblique);
-$theme-vertical-align: (
+$utilities-text-align: (left, right, center, justify);
+$utilities-font-weights: ('normal': $font-weight-normal, 'bold': $font-weight-bold);
+$utilities-font-style: (normal, italic, oblique);
+$utilities-vertical-align: (
   baseline,
   sub,
   super,
@@ -30,53 +30,56 @@ $theme-vertical-align: (
   bottom,
   text-bottom
 );
-$theme-text-transform: (uppercase, lowercase, capitalize);
-$theme-float: (left, right, none);
-$theme-aspect-ratios: ((21, 9),  (16, 9),  (4, 3),  (1, 1));
-$theme-sides: (top, right, bottom, left);
+$utilities-text-transform: (uppercase, lowercase, capitalize);
+$utilities-float: (left, right, none);
+$utilities-aspect-ratios: ((21, 9), (16, 9), (4, 3), (1, 1));
+$utilities-sides: (top, right, bottom, left);
 
 // --------------------------------------------------
 // mixins
 // --------------------------------------------------
 
 // color
-@mixin u--color($colors: $theme-colors) {
+@mixin u--color($colors: $colors-theme) {
   $selector: '.u--color';
 
-  @each $name, $value in $colors {
-    '#{$selector}-#{$name}' {
-      color: $value !important;
+  @each $key, $color in $colors {
+    $color-base: map-get($color, 'base');
+    $color-hover: map-get($color, 'hover');
+
+    '#{$selector}-#{$key}' {
+      color: $color-base !important;
     }
-    'a#{$selector}-#{$name}:hover' {
-      @if $name == black {
-        color: lighten($value, 30%);
-      } @else {
-        color: shade($value, 15%);
-      }
+    'a#{$selector}-#{$key}:hover' {
+      color: $color-hover !important;
     }
   }
 }
 
 // background color
-@mixin u--background-color($colors: $theme-colors) {
-  @each $name, $value in $colors {
-    .u--background-color-#{$name} {
-      background-color: $value !important;
+@mixin u--background-color($colors: $colors-theme) {
+  @each $key, $color in $colors {
+    $color-base: map-get($color, 'base');
+
+    .u--background-color-#{$key} {
+      background-color: $color-base !important;
     }
   }
 }
 
 // border color
-@mixin u--border-color($colors: $theme-colors) {
-  @each $name, $value in $colors {
-    .u--border-color-#{$name} {
-      border-color: $value !important;
+@mixin u--border-color($colors: $colors-theme) {
+  @each $key, $color in $colors {
+    $color-base: map-get($color, 'base');
+
+    .u--border-color-#{$key} {
+      border-color: $color-base !important;
     }
   }
 }
 
 // border width
-@mixin u--border-width($sizes: $theme-border-sizes, $sides: $theme-sides) {
+@mixin u--border-width($sizes: $utilities-border-sizes, $sides: $utilities-sides) {
   $selector: '.u--border-width';
 
   @each $size in $sizes {
@@ -92,59 +95,59 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // margin
-@mixin u--margin($sizes: $theme-margin-sizes, $sides: $theme-sides) {
+@mixin u--margin($sizes: $utilities-margin-sizes, $sides: $utilities-sides) {
   $selector: '.u--margin';
 
   @each $size in $sizes {
     '#{$selector}-#{$size}' {
-      margin: #{$size}px !important;
+      margin: rem($size) !important;
     }
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
-        margin-#{$side}: #{$size}px !important;
+        margin-#{$side}: rem($size) !important;
       }
     }
   }
   @each $size in $sizes {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      margin: #{$size}px !important;
+      margin: rem($size) !important;
     }
     @each $side in $sides {
       @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
-        margin-#{$side}: #{$size}px !important;
+        margin-#{$side}: rem($size) !important;
       }
     }
   }
 }
 
 // padding
-@mixin u--padding($sizes: $theme-padding-sizes, $sides: $theme-sides) {
+@mixin u--padding($sizes: $utilities-padding-sizes, $sides: $utilities-sides) {
   $selector: '.u--padding';
 
   @each $size in $sizes {
     '#{$selector}-#{$size}' {
-      padding: #{$size}px !important;
+      padding: rem($size) !important;
     }
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
-        padding-#{$side}: #{$size}px !important;
+        padding-#{$side}: rem($size) !important;
       }
     }
   }
 
   @each $size in $sizes {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      padding: #{$size}px !important;
+      padding: rem($size)!important;
     }
     @each $side in $sides {
       @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
-        padding-#{$side}: #{$size}px !important;
+        padding-#{$side}: rem($size) !important;
       }
     }
   }
 }
 
-@mixin u--width($sizes: $theme-width-sizes) {
+@mixin u--width($sizes: $utilities-width-sizes) {
   $selector: '.u--width';
 
   @each $size in $sizes {
@@ -160,7 +163,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // font weight
-@mixin u--font-weight($options: $theme-font-weights) {
+@mixin u--font-weight($options: $utilities-font-weights) {
   @each $key, $value in $options {
     .u--font-weight-#{$key} {
       font-weight: $value !important;
@@ -169,7 +172,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // font style
-@mixin u--font-style($options: $theme-font-style) {
+@mixin u--font-style($options: $utilities-font-style) {
   @each $option in $options {
     .u--font-style-#{$option} {
       font-style: $option !important;
@@ -178,7 +181,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // text alignment
-@mixin u--text-align($options: $theme-text-align) {
+@mixin u--text-align($options: $utilities-text-align) {
   $selector: '.u--text-align';
 
   @each $option in $options {
@@ -194,7 +197,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // text transform
-@mixin u--text-transform($options: $theme-text-transform) {
+@mixin u--text-transform($options: $utilities-text-transform) {
   @each $option in $options {
     .u--text-transform-#{$option} {
       text-transform: $option !important;
@@ -203,7 +206,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // vertical alignment
-@mixin u--vertical-align($options: $theme-vertical-align) {
+@mixin u--vertical-align($options: $utilities-vertical-align) {
   $selector: '.u--vertical-align';
 
   @each $option in $options {
@@ -219,7 +222,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // float
-@mixin u--float($options: $theme-float) {
+@mixin u--float($options: $utilities-float) {
   $selector: '.u--float';
 
   @each $option in $options {
@@ -235,7 +238,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // responsive embed
-@mixin u--embed-responsive($aspect-ratios: $theme-aspect-ratios) {
+@mixin u--embed-responsive($aspect-ratios: $utilities-aspect-ratios) {
   $selector: '.u--embed-responsive';
 
   #{$selector} {
@@ -265,7 +268,7 @@ $theme-sides: (top, right, bottom, left);
 }
 
 // display
-@mixin u--display($options: $theme-display) {
+@mixin u--display($options: $utilities-display) {
   $selector: '.u--display';
 
   @each $option in $options {

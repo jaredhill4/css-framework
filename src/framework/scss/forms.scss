@@ -20,7 +20,7 @@ $form-input-focus-color: $form-input-color;
 
 $form-input-placeholder-color: rgba($form-input-color, .35);
 
-$form-input-disabled-background-color: $color-gray;
+$form-input-disabled-background-color: $color-gray-lighter;
 
 $form-input-group-color: $form-input-color;
 $form-input-group-background-color: $form-input-border-color;
@@ -292,7 +292,7 @@ $form-input-group-background-color: $form-input-border-color;
 .form__select--xs > select,
 .form__input-group--xs .form__select > select,
 .form__input-group--xs .form__input {
-  font-size: 0.75rem;
+  font-size: $font-size-xs;
 }
 
 .form__input--sm,
@@ -302,7 +302,7 @@ $form-input-group-background-color: $form-input-border-color;
 .form__select--sm > select,
 .form__input-group--sm .form__select > select,
 .form__input-group--sm .form__input {
-  font-size: 0.875rem;
+  font-size: $font-size-sm;
 }
 
 .form__input--md,
@@ -321,7 +321,7 @@ $form-input-group-background-color: $form-input-border-color;
 .form__select--lg > select,
 .form__input-group--lg .form__select > select,
 .form__input-group--lg .form__input {
-  font-size: 1.25rem;
+  font-size: $font-size-lg;
 }
 
 .form__input--xl,
@@ -331,7 +331,7 @@ $form-input-group-background-color: $form-input-border-color;
 .form__select--xl > select,
 .form__input-group--xl .form__select > select,
 .form__input-group--xl .form__input {
-  font-size: 1.5rem;
+  font-size: $font-size-xl;
 }
 
 // --------------------------------------------------
@@ -400,22 +400,22 @@ $form-input-group-background-color: $form-input-border-color;
 // Input group addon sizes
 .form__input-group-addon--xs,
 .form__input-group--xs .form__input-group-addon {
-  font-size: 0.75em;
+  font-size: $font-size-xs;
 }
 .form__input-group-addon--sm,
 .form__input-group--sm .form__input-group-addon {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 }
 .form__input-group-addon--md,
 .form__input-group--md .form__input-group-addon {
 }
 .form__input-group-addon--lg,
 .form__input-group--lg .form__input-group-addon {
-  font-size: 1.25em;
+  font-size: $font-size-lg;
 }
 .form__input-group-addon--xl,
 .form__input-group--xl .form__input-group-addon {
-  font-size: 1.5em;
+  font-size: $font-size-xl;
 }
 
 // Input group buttons

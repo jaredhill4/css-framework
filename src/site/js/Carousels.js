@@ -14,7 +14,7 @@ const slideStyles = {
   width: '100%',
   padding: '150px 30px',
   textAlign: 'center',
-  backgroundColor: '#ccc',
+  backgroundColor: '#e3e3e3',
 };
 
 class Carousels extends Component {

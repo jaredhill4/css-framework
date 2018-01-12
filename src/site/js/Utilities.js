@@ -26,7 +26,7 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-inline-block u--padding-5 u--padding-left-10 u--padding-right-10 u--background-color-black u--color-white">
+            <span className="u--display-inline-block u--padding-0 u--padding-left-5 u--padding-right-5 u--background-color-black u--color-white">
               White
             </span>
             <span className="u--display-inline-block u--padding-5 u--color-black">
@@ -43,6 +43,27 @@ class Utilities extends Component {
             </span>
             <span className="u--display-inline-block u--padding-5 u--color-yellow">
               Yellow
+            </span><br />
+            <span className="u--display-inline-block u--padding-5 u--color-gray-darkest">
+              Gray Darkest
+            </span>
+            <span className="u--display-inline-block u--padding-5 u--color-gray-darker">
+              Gray Darker
+            </span>
+            <span className="u--display-inline-block u--padding-5 u--color-gray-dark">
+              Gray Dark
+            </span>
+            <span className="u--display-inline-block u--padding-5 u--color-gray">
+              Gray
+            </span>
+            <span className="u--display-inline-block u--padding-5 u--color-gray-light">
+              Gray Light
+            </span>
+            <span className="u--display-inline-block u--padding-5 u--color-gray-lighter">
+              Gray Lighter
+            </span>
+            <span className="u--display-inline-block u--padding-5 u--color-gray-lightest">
+              Gray Lightest
             </span>
           </ExampleView>
           <Code language="html">
@@ -51,7 +72,14 @@ class Utilities extends Component {
 <span class="u--color-red">...</span>
 <span class="u--color-green">...</span>
 <span class="u--color-blue">...</span>
-<span class="u--color-yellow">...</span>`}
+<span class="u--color-yellow">...</span>
+<span class="u--color-gray-darkest">...</span>
+<span class="u--color-gray-darker">...</span>
+<span class="u--color-gray-dark">...</span>
+<span class="u--color-gray">...</span>
+<span class="u--color-gray-light">...</span>
+<span class="u--color-gray-lighter">...</span>
+<span class="u--color-gray-lightest">...</span>`}
           </Code>
         </Example>
         <Description>
@@ -96,6 +124,28 @@ class Utilities extends Component {
             >
               Yellow
             </Link>
+            <br />
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-darkest">
+              Gray Darkest
+            </Link>
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-darker">
+              Gray Darker
+            </Link>
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-dark">
+              Gray Dark
+            </Link>
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray">
+              Gray
+            </Link>
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-light">
+              Gray Light
+            </Link>
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-lighter">
+              Gray Lighter
+            </Link>
+            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-lightest">
+              Gray Lightest
+            </Link>
           </ExampleView>
           <Code language="html">
             {`<a href="#" class="u--color-white">...</a>
@@ -103,7 +153,14 @@ class Utilities extends Component {
 <a href="#" class="u--color-red">...</a>
 <a href="#" class="u--color-green">...</a>
 <a href="#" class="u--color-blue">...</a>
-<a href="#" class="u--color-yellow">...</a>`}
+<a href="#" class="u--color-yellow">...</a>
+<a href="#" class="u--color-gray-darkest">...</a>
+<a href="#" class="u--color-gray-darker">...</a>
+<a href="#" class="u--color-gray-dark">...</a>
+<a href="#" class="u--color-gray">...</a>
+<a href="#" class="u--color-gray-light">...</a>
+<a href="#" class="u--color-gray-lighter">...</a>
+<a href="#" class="u--color-gray-lightest">...</a>`}
           </Code>
         </Example>
 
@@ -117,11 +174,29 @@ class Utilities extends Component {
             <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-white">
               White
             </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-black">
+              Black
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-gray-darkest">
+              Gray Darkest
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-gray-darker">
+              Gray Darker
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-gray-dark">
+              Gray Dark
+            </span>
             <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray">
               Gray
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-black">
-              Black
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-light">
+              Gray Light
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter">
+              Gray Lighter
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lightest">
+              Gray Lightest
             </span>
             <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-red">
               Red
@@ -138,8 +213,14 @@ class Utilities extends Component {
           </ExampleView>
           <Code language="html">
             {`<span class="u--background-color-white">...</span>
-<span class="u--background-color-gray">...</span>
 <span class="u--background-color-black">...</span>
+<span class="u--background-color-gray-darkest">...</span>
+<span class="u--background-color-gray-darker">...</span>
+<span class="u--background-color-gray-dark">...</span>
+<span class="u--background-color-gray">...</span>
+<span class="u--background-color-gray-light">...</span>
+<span class="u--background-color-gray-lighter">...</span>
+<span class="u--background-color-gray-lightest">...</span>
 <span class="u--background-color-red">...</span>
 <span class="u--background-color-yellow">...</span>
 <span class="u--background-color-green">...</span>
@@ -171,11 +252,29 @@ class Utilities extends Component {
             <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-white">
               .u--border-color-white
             </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-black">
+              .u--border-color-black
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-darkest">
+              .u--border-color-gray-darkest
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-darker">
+              .u--border-color-gray-darker
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-dark">
+              .u--border-color-gray-dark
+            </span>
             <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray">
               .u--border-color-gray
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-black">
-              .u--border-color-black
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-light">
+              .u--border-color-gray-light
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-lighter">
+              .u--border-color-gray-lighter
+            </span>
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-lightest">
+              .u--border-color-gray-lightest
             </span>
             <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-red">
               .u--border-color-red
@@ -236,27 +335,27 @@ class Utilities extends Component {
           Add or remove margins from elements with the <code>.u--margin-</code>{' '}
           utility classes.{' '}
           <em>
-            Note that each numerical postfix represents a specific pixel value.
+            Note that each numerical postfix represents a pixel value. When compiled, these get converted to rem units.
           </em>
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-20 u--margin-0 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-0 u--background-color-gray-lighter">
               .u--margin-0
             </span>
-            <span className="u--display-block u--padding-20 u--margin-5 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-5 u--background-color-gray-lighter">
               .u--margin-5
             </span>
-            <span className="u--display-block u--padding-20 u--margin-10 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-10 u--background-color-gray-lighter">
               .u--margin-10
             </span>
-            <span className="u--display-block u--padding-20 u--margin-15 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-15 u--background-color-gray-lighter">
               .u--margin-15
             </span>
-            <span className="u--display-block u--padding-20 u--margin-20 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-20 u--background-color-gray-lighter">
               .u--margin-20
             </span>
-            <span className="u--display-block u--padding-20 u--margin-30 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-30 u--background-color-gray-lighter">
               .u--margin-30
             </span>
           </ExampleView>
@@ -276,7 +375,7 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-20 u--margin-top-10 u--margin-right-20 u--margin-bottom-15 u--margin-left-30 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-top-10 u--margin-right-20 u--margin-bottom-15 u--margin-left-30 u--background-color-gray-lighter">
               .u--margin-top-10.u--margin-right-20.u--margin-bottom-15.u--margin-left-30
             </span>
           </ExampleView>
@@ -290,27 +389,27 @@ class Utilities extends Component {
           Add or remove padding from elements with the <code>.u--padding-</code>{' '}
           utility classes.{' '}
           <em>
-            Note that each numerical postfix represents a specific pixel value.
+            Note that each numerical postfix represents a pixel value. When compiled, these get converted to rem units.
           </em>
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-0 u--margin-bottom-15 u--background-color-gray">
+            <span className="u--display-block u--padding-0 u--margin-bottom-15 u--background-color-gray-lighter">
               .u--padding-0
             </span>
-            <span className="u--display-block u--padding-5 u--margin-bottom-15 u--background-color-gray">
+            <span className="u--display-block u--padding-5 u--margin-bottom-15 u--background-color-gray-lighter">
               .u--padding-5
             </span>
-            <span className="u--display-block u--padding-10 u--margin-bottom-15 u--background-color-gray">
+            <span className="u--display-block u--padding-10 u--margin-bottom-15 u--background-color-gray-lighter">
               .u--padding-10
             </span>
-            <span className="u--display-block u--padding-15 u--margin-bottom-15 u--background-color-gray">
+            <span className="u--display-block u--padding-15 u--margin-bottom-15 u--background-color-gray-lighter">
               .u--padding-15
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter">
               .u--padding-20
             </span>
-            <span className="u--display-block u--padding-30 u--background-color-gray">
+            <span className="u--display-block u--padding-30 u--background-color-gray-lighter">
               .u--padding-30
             </span>
           </ExampleView>
@@ -330,7 +429,7 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-top-20 u--padding-left-15 u--padding-top-30 u--padding-bottom-5 u--background-color-gray">
+            <span className="u--display-block u--padding-top-20 u--padding-left-15 u--padding-top-30 u--padding-bottom-5 u--background-color-gray-lighter">
               .u--padding-top-20.u--padding-left-15.u--padding-top-30.u--padding-bottom-5
             </span>
           </ExampleView>
@@ -350,22 +449,22 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-25">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--width-25">
               25%
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-33">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--width-33">
               33%
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-50">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--width-50">
               50%
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-66">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--width-66">
               66%
             </span>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--width-75">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--width-75">
               75%
             </span>
-            <span className="u--display-block u--padding-20 u--background-color-gray u--width-100">
+            <span className="u--display-block u--padding-20 u--background-color-gray-lighter u--width-100">
               100%
             </span>
           </ExampleView>
@@ -387,15 +486,15 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--float-left">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--float-left">
               Float left
             </span>
             <div className="u--clearfix" />
-            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray u--float-right">
+            <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter u--float-right">
               Float right
             </span>
             <div className="u--clearfix" />
-            <span className="u--display-block u--padding-20 u--background-color-gray u--float-none">
+            <span className="u--display-block u--padding-20 u--background-color-gray-lighter u--float-none">
               Float none
             </span>
           </ExampleView>
@@ -413,7 +512,7 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-block u--padding-20 u--margin-left-30 u--margin-bottom-15 u--background-color-gray u--width-33 u--float-right">
+            <span className="u--display-block u--padding-20 u--margin-left-30 u--margin-bottom-15 u--background-color-gray-lighter u--width-33 u--float-right">
               Float right
             </span>
             <p>
@@ -654,17 +753,17 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--display-inline u--background-color-gray">
+            <span className="u--display-inline u--background-color-gray-lighter">
               .u--display-inline
             </span>
             <br />
             <br />
-            <span className="u--display-inline-block u--background-color-gray">
+            <span className="u--display-inline-block u--background-color-gray-lighter">
               .u--display-inline-block
             </span>
             <br />
             <br />
-            <span className="u--display-block u--background-color-gray">
+            <span className="u--display-block u--background-color-gray-lighter">
               .u--display-block
             </span>
           </ExampleView>

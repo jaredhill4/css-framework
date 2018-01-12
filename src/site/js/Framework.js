@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/light';
 import js from 'react-syntax-highlighter/languages/hljs/javascript';
 import html from 'react-syntax-highlighter/languages/hljs/xml';
@@ -27,9 +27,12 @@ const Title = ({ children, id = '' }) =>
   </h2>;
 
 const SubTitle = ({ children, id = '' }) =>
-  <h3 id={id} className="h3 framework__subtitle">
-    {children}
-  </h3>;
+  <div>
+    <hr />
+    <h3 id={id} className="h3 framework__subtitle">
+      {children}
+    </h3>
+  </div>;
 
 const Description = ({ children }) =>
   <div className="framework__description">

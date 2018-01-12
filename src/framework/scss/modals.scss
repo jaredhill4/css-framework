@@ -2,11 +2,11 @@
 // variables
 // --------------------------------------------------
 
-$modal-z-index: 1050;
-$modal-padding: 1.875em;
+$modal-padding: rem(30);
 
-$modal-dialog-border-radius: $global-border-radius;
-$modal-dialog-padding: 2.5em;
+$modal-dialog-padding: $type-margin-base * 1.5;
+
+$modal-header-padding-bottom: $modal-dialog-padding / 2;
 
 $modal-sizes: (
   'default': 570px,
@@ -45,7 +45,7 @@ html.html--modal-visible {
 }
 
 .modal {
-  z-index: $modal-z-index;
+  z-index: $z-index-modal;
   position: fixed;
   display: flex;
   flex: 0 1 auto;
@@ -59,7 +59,7 @@ html.html--modal-visible {
   bottom: 0;
   overflow: hidden;
   visibility: hidden;
-  padding: 5px;
+  padding: rem(5);
   background: rgba(#000, 0);
   transition: all 0.15s ease-in-out;
 
@@ -119,7 +119,7 @@ html.html--modal-visible {
   max-height: 100%;
   padding: $modal-dialog-padding / 2;
   background: $color-white;
-  border-radius: $modal-dialog-border-radius;
+  border-radius: $global-border-radius;
   overflow-y: auto;
 
   @media #{$mq-min-xs} {
