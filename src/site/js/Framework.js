@@ -2,11 +2,13 @@ import React from 'react';
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/light';
 import js from 'react-syntax-highlighter/languages/hljs/javascript';
 import html from 'react-syntax-highlighter/languages/hljs/xml';
+import scss from 'react-syntax-highlighter/languages/hljs/scss';
 import { ocean } from 'react-syntax-highlighter/styles/hljs';
 import classnames from 'classnames';
 
 registerLanguage('html', html);
 registerLanguage('javascript', js);
+registerLanguage('scss', scss);
 
 const Section = ({ children, id = '', container = true }) => {
   const containerClassNames = classnames({

@@ -37,6 +37,11 @@ class Menu extends Component {
           </li>
           <li className="framework__nav-title">Base</li>
           <li>
+            <NavLink to="/colors" onClick={toggleMenu}>
+              Colors
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/typography" onClick={toggleMenu}>
               Typography
             </NavLink>

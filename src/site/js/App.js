@@ -6,6 +6,7 @@ import MenuToggle from './MenuToggle';
 import Grid from './Grid';
 import Containers from './Containers';
 import Sections from './Sections';
+import Colors from './Colors';
 import Typography from './Typography';
 import Buttons from './Buttons';
 import Forms from './Forms';
@@ -43,6 +44,7 @@ class App extends Component {
           <Route exact path="/grid" component={Grid} />
           <Route exact path="/containers" component={Containers} />
           <Route exact path="/sections" component={Sections} />
+          <Route exact path="/colors" component={Colors} />
           <Route exact path="/typography" component={Typography} />
           <Route exact path="/buttons" component={Buttons} />
           <Route exact path="/forms" component={Forms} />

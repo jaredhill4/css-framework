@@ -329,14 +329,15 @@ body {
   .framework__code {
     margin-top: 0;
     margin-bottom: 0;
-    padding: rem(20) !important;
-    line-height: $line-height-base;
   }
 }
 
 .framework__code {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-top: $type-margin-base;
+  margin-bottom: $type-margin-base;
+  padding: rem(20) !important;
+  line-height: $line-height-base;
+  border-radius: $global-border-radius !important;
 
   &:last-child,
   & > :last-child {

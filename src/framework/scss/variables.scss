@@ -42,58 +42,67 @@ $color-primary-hover: $color-blue-hover;
 // theme
 $colors-theme: (
   'white': (
+    'name': 'White',
     'base': $color-white,
     'hover': $color-white-hover
   ),
   'black': (
+    'name': 'Black',
     'base': $color-black,
     'hover': $color-black-hover
   ),
-  'primary': (
-    'base': $color-primary,
-    'hover': $color-primary-hover
-  ),
   'blue': (
+    'name': 'Blue',
     'base': $color-blue,
     'hover': $color-blue-hover
   ),
   'green': (
+    'name': 'green',
     'base': $color-green,
     'hover': $color-green-hover
   ),
   'yellow': (
+    'name': 'yellow',
     'base': $color-yellow,
     'hover': $color-yellow-hover
   ),
   'red': (
+    'name': 'red',
     'base': $color-red,
     'hover': $color-red-hover
   ),
   'gray-lightest': (
+    'name': 'Gray Lightest',
     'base': $color-gray-lightest,
     'hover': $color-gray-lightest-hover
   ),
   'gray-lighter': (
+    'name': 'Gray Lighter',
     'base': $color-gray-lighter,
     'hover': $color-gray-lighter-hover
   ),
   'gray-light': (
+    'name': 'Gray Light',
     'base': $color-gray-light,
     'hover': $color-gray-light-hover
   ),
   'gray': (
+    'name': 'Gray',
     'base': $color-gray,
     'hover': $color-gray-hover
   ),
   'gray-dark': (
+    'name': 'Gray Dark',
     'base': $color-gray-dark,
     'hover': $color-gray-dark-hover
   ),
   'gray-darker': (
+    'name': 'Gray Darker',
     'base': $color-gray-darker,
     'hover': $color-gray-darker-hover
   ),
   'gray-darkest': (
+    'name': 'Gray Darkest',
     'base': $color-gray-darkest,
     'hover': $color-gray-darkest-hover
   )
