@@ -99,8 +99,9 @@ blockquote {
   border-left: solid 5px $color-gray-lighter;
 
   footer {
-    margin-top: $type-margin-base * 0.75;
+    margin-top: $type-margin-base/2;
     font-size: $font-size-md;
+    color: $color-gray-dark;
   }
 }
 
@@ -116,7 +117,7 @@ ol {
 
   ul,
   ol {
-    margin-top: $type-margin-base;
+    margin-bottom: 0;
   }
 }
 

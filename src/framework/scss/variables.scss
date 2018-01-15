@@ -186,21 +186,21 @@ $font-size-base: 16px;
 $font-size-xs: rem(12);
 $font-size-sm: rem(14);
 $font-size-md: rem($font-size-base);
-$font-size-lg: rem(20);
-$font-size-xl: rem(24);
+$font-size-lg: rem(18);
+$font-size-xl: rem(22);
 
 $font-size-h1: rem(48);
 $font-size-h2: rem(36);
 $font-size-h3: rem(28);
 $font-size-h4: rem(24);
-$font-size-h5: rem(20);
+$font-size-h5: rem(18);
 $font-size-h6: rem(16);
 
 // --------------------------------------------------
 // line height
 // --------------------------------------------------
 
-$line-height-base: 1.75;
+$line-height-base: 1.5;
 $line-height-headings: $line-height-base * 0.75;
 
 // --------------------------------------------------
