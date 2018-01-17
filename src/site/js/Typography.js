@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import lorem from './lorem';
 import {
   Section,
@@ -76,71 +77,115 @@ class Typography extends Component {
           <ExampleView>
             <blockquote>
               {lorem(66)}
-              <footer>
-                <cite>&mdash; Some Person</cite>
-              </footer>
+              <cite>Some Person</cite>
             </blockquote>
           </ExampleView>
           <Code language="html">
             {`<blockquote>
     ...
-    <footer>
-        <cite>&mdash; ...</cite>
-    </footer>
+    <cite>...</cite>
 </blockquote>`}
           </Code>
         </Example>
-        <SubTitle id="typography-lists">Lists</SubTitle>
+        <SubTitle id="typography-unordered-lists">Unordered Lists</SubTitle>
         <Example>
           <ExampleView>
             <ul>
+              <li>List item</li>
+              <li>List item</li>
               <li>
-                {lorem(3)}
-              </li>
-              <li>
-                {lorem(27)}
-                <ol>
-                  <li>
-                    {lorem(37)}
-                  </li>
-                  <li>
-                    {lorem(17)}
-                  </li>
-                </ol>
-              </li>
-            </ul>
-            <ol>
-              <li>
-                {lorem(32)}
-              </li>
-              <li>
-                {lorem(72)}
+                List item
                 <ul>
-                  <li>
-                    {lorem(86)}
-                  </li>
+                  <li>Nested list item</li>
+                  <li>Nested list item</li>
+                  <li>Nested list item</li>
                 </ul>
               </li>
-            </ol>
+              <li>List item</li>
+              <li>List item</li>
+            </ul>
           </ExampleView>
           <Code language="html">
             {`<ul>
     <li>...</li>
-    <li>...
-      <ol>
-          <li>...</li>
-          <li>...</li>
-      </ol>
-    </li>
-</ul>
-<ol>
     <li>...</li>
     <li>...
         <ul>
             <li>...</li>
+            <li>...</li>
+            <li>...</li>
         </ul>
-  </li>
+    </li>
+    <li>...</li>
+    <li>...</li>
+</ul>`}
+          </Code>
+        </Example>
+        <SubTitle id="typography-ordered-lists">Ordered Lists</SubTitle>
+        <Example>
+          <ExampleView>
+            <ol>
+              <li>List item</li>
+              <li>List item</li>
+              <li>
+                List item
+                <ol>
+                  <li>Nested list item</li>
+                  <li>Nested list item</li>
+                  <li>Nested list item</li>
+                </ol>
+              </li>
+              <li>List item</li>
+              <li>List item</li>
+            </ol>
+          </ExampleView>
+          <Code language="html">
+            {`<ol>
+    <li>...</li>
+    <li>...</li>
+    <li>...
+        <ol>
+            <li>...</li>
+            <li>...</li>
+            <li>...</li>
+        </ol>
+    </li>
+    <li>...</li>
+    <li>...</li>
 </ol>`}
+          </Code>
+        </Example>
+        <SubTitle id="typography-definition-lists">Definition Lists</SubTitle>
+        <Example>
+          <ExampleView>
+            <dl>
+              <dt>Term to define</dt>
+              <dd>
+                {lorem(23)}
+              </dd>
+
+              <dt>Term to define</dt>
+              <dd>
+                {lorem(57)}
+              </dd>
+
+              <dt>Term to define</dt>
+              <dd>
+                {lorem(66)}
+              </dd>
+            </dl>
+          </ExampleView>
+          <Code language="html">
+            {`<dl>
+    <dt>...</dt>
+    <dd>...</dd>
+
+    <dt>...</dt>
+    <dd>...</dd>
+
+    <dt>...</dt>
+    <dd>...</dd>
+</dl>`}
           </Code>
         </Example>
         <SubTitle id="typography-horizontal-rules">Horizontal Rules</SubTitle>
@@ -179,6 +224,118 @@ class Typography extends Component {
         </body>
     </html>
 </pre>`}
+          </Code>
+        </Example>
+        <SubTitle id="typography-links">Links</SubTitle>
+        <Example>
+          <ExampleView>
+            <Link to="typography">Default</Link>
+          </ExampleView>
+          <Code language="html">
+            {`<a href="#">...</a>`}
+          </Code>
+        </Example>
+        <Description>
+          Link color can be modified by adding a color modifier class like{' '}
+          <code>.link--red</code>.
+        </Description>
+        <Example>
+          <ExampleView>
+            <Link
+              to="/typography"
+              className="link--white u--display-inline-block u--padding-5 u--padding-left-10 u--padding-right-10 u--background-color-black"
+            >
+              White
+            </Link>
+            {` `}
+            <Link
+              to="/typography"
+              className="link--black u--display-inline-block u--padding-5"
+            >
+              Black
+            </Link>
+            <Link
+              to="/typography"
+              className="link--blue u--display-inline-block u--padding-5"
+            >
+              Blue
+            </Link>
+            <Link
+              to="/typography"
+              className="link--green u--display-inline-block u--padding-5"
+            >
+              Green
+            </Link>
+            <Link
+              to="/typography"
+              className="link--yellow u--display-inline-block u--padding-5"
+            >
+              Yellow
+            </Link>
+            <Link
+              to="/typography"
+              className="link--red u--display-inline-block u--padding-5"
+            >
+              Red
+            </Link>
+            <br />
+            <Link
+              to="/typography"
+              className="link--gray-darkest u--display-inline-block u--padding-5"
+            >
+              Gray Darkest
+            </Link>
+            <Link
+              to="/typography"
+              className="link--gray-darker u--display-inline-block u--padding-5"
+            >
+              Gray Darker
+            </Link>
+            <Link
+              to="/typography"
+              className="link--gray-dark u--display-inline-block u--padding-5"
+            >
+              Gray Dark
+            </Link>
+            <Link
+              to="/typography"
+              className="link--gray u--display-inline-block u--padding-5"
+            >
+              Gray
+            </Link>
+            <Link
+              to="/typography"
+              className="link--gray-light u--display-inline-block u--padding-5"
+            >
+              Gray Light
+            </Link>
+            <Link
+              to="/typography"
+              className="link--gray-lighter u--display-inline-block u--padding-5"
+            >
+              Gray Lighter
+            </Link>
+            <Link
+              to="/typography"
+              className="link--gray-lightest u--display-inline-block u--padding-5"
+            >
+              Gray Lightest
+            </Link>
+          </ExampleView>
+          <Code language="html">
+            {`<a href="#" class="link--white">...</a>
+<a href="#" class="link--black">...</a>
+<a href="#" class="link--red">...</a>
+<a href="#" class="link--green">...</a>
+<a href="#" class="link--blue">...</a>
+<a href="#" class="link--yellow">...</a>
+<a href="#" class="link--gray-darkest">...</a>
+<a href="#" class="link--gray-darker">...</a>
+<a href="#" class="link--gray-dark">...</a>
+<a href="#" class="link--gray">...</a>
+<a href="#" class="link--gray-light">...</a>
+<a href="#" class="link--gray-lighter">...</a>
+<a href="#" class="link--gray-lightest">...</a>`}
           </Code>
         </Example>
         <SubTitle id="typography-inline-elements">Inline Elements</SubTitle>

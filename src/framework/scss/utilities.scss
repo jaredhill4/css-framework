@@ -3,9 +3,9 @@
 // --------------------------------------------------
 
 $utilities-border-sizes: (0);
-$utilities-margin-sizes: (0, 5, 10, 15, 20, 30);
+$utilities-margin-sizes: (auto, 0, 5, 10, 15, 20, 30);
 $utilities-padding-sizes: (0, 5, 10, 15, 20, 30);
-$utilities-width-sizes: (25, 33, 50, 66, 75, 100);
+$utilities-width-sizes: (auto, 25, 33, 50, 66, 75, 100);
 $utilities-display: (
   none,
   inline,
@@ -18,7 +18,10 @@ $utilities-display: (
   inline-flex
 );
 $utilities-text-align: (left, right, center, justify);
-$utilities-font-weights: ('normal': $font-weight-normal, 'bold': $font-weight-bold);
+$utilities-font-weights: (
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold
+);
 $utilities-font-style: (normal, italic, oblique);
 $utilities-vertical-align: (
   baseline,
@@ -32,8 +35,30 @@ $utilities-vertical-align: (
 );
 $utilities-text-transform: (uppercase, lowercase, capitalize);
 $utilities-float: (left, right, none);
-$utilities-aspect-ratios: ((21, 9), (16, 9), (4, 3), (1, 1));
+$utilities-aspect-ratios: ((21, 9),  (16, 9),  (4, 3),  (1, 1));
 $utilities-sides: (top, right, bottom, left);
+$utilities-flex-wrap: (nowrap, wrap, wrap-reverse);
+$utilities-flex-direction: (row, row-reverse, column, column-reverse);
+$utilities-justify-content: (
+  flex-start,
+  flex-end,
+  center,
+  space-between,
+  space-around,
+  space-evenly
+);
+$utilities-align-items: (flex-start, flex-end, center, stretch, baseline);
+$utilities-align-content: (
+  flex-start,
+  flex-end,
+  center,
+  space-between,
+  space-around
+);
+$utilities-align-self: (auto, flex-start, flex-end, center, baseline, stretch);
+$utilities-flex-grow: (0, 1);
+$utilities-flex-shrink: (0, 1);
+$utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 
 // --------------------------------------------------
 // mixins
@@ -50,6 +75,7 @@ $utilities-sides: (top, right, bottom, left);
     '#{$selector}-#{$key}' {
       color: $color-base !important;
     }
+
     'a#{$selector}-#{$key}:hover' {
       color: $color-hover !important;
     }
@@ -58,10 +84,12 @@ $utilities-sides: (top, right, bottom, left);
 
 // background color
 @mixin u--background-color($colors: $colors-theme) {
+  $selector: '.u--background-color';
+
   @each $key, $color in $colors {
     $color-base: map-get($color, 'base');
 
-    .u--background-color-#{$key} {
+    '#{$selector}-#{$key}' {
       background-color: $color-base !important;
     }
   }
@@ -69,10 +97,12 @@ $utilities-sides: (top, right, bottom, left);
 
 // border color
 @mixin u--border-color($colors: $colors-theme) {
+  $selector: '.u--border-color';
+
   @each $key, $color in $colors {
     $color-base: map-get($color, 'base');
 
-    .u--border-color-#{$key} {
+    '#{$selector}-#{$key}' {
       border-color: $color-base !important;
     }
   }
@@ -86,6 +116,7 @@ $utilities-sides: (top, right, bottom, left);
     '#{$selector}-#{$size}' {
       border-width: #{$size}px !important;
     }
+
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
         border-#{$side}-width: #{$size}px !important;
@@ -99,22 +130,37 @@ $utilities-sides: (top, right, bottom, left);
   $selector: '.u--margin';
 
   @each $size in $sizes {
-    '#{$selector}-#{$size}' {
-      margin: rem($size) !important;
+    $margin: $size;
+
+    @if ($size != auto) {
+      $margin: rem($size);
     }
+
+    '#{$selector}-#{$size}' {
+      margin: $margin !important;
+    }
+
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
-        margin-#{$side}: rem($size) !important;
+        margin-#{$side}: $margin !important;
       }
     }
   }
+
   @each $size in $sizes {
-    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      margin: rem($size) !important;
+    $margin: $size;
+
+    @if ($size != auto) {
+      $margin: rem($size);
     }
+
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+      margin: $margin !important;
+    }
+
     @each $side in $sides {
       @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
-        margin-#{$side}: rem($size) !important;
+        margin-#{$side}: $margin !important;
       }
     }
   }
@@ -128,6 +174,7 @@ $utilities-sides: (top, right, bottom, left);
     '#{$selector}-#{$size}' {
       padding: rem($size) !important;
     }
+
     @each $side in $sides {
       '#{$selector}-#{$side}-#{$size}' {
         padding-#{$side}: rem($size) !important;
@@ -137,8 +184,9 @@ $utilities-sides: (top, right, bottom, left);
 
   @each $size in $sizes {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      padding: rem($size)!important;
+      padding: rem($size) !important;
     }
+
     @each $side in $sides {
       @include apply-breakpoint-postfixes('min', '#{$selector}-#{$side}-#{$size}', true) {
         padding-#{$side}: rem($size) !important;
@@ -151,21 +199,36 @@ $utilities-sides: (top, right, bottom, left);
   $selector: '.u--width';
 
   @each $size in $sizes {
+    $width: $size;
+
+    @if ($size != auto) {
+      $width: percentage($size) / 100;
+    }
+
     '#{$selector}-#{$size}' {
-      width: percentage($size) / 100 !important;
+      width: $width !important;
     }
   }
+
   @each $size in $sizes {
+    $width: $size;
+
+    @if ($size != auto) {
+      $width: percentage($size) / 100;
+    }
+
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
-      width: percentage($size) / 100 !important;
+      width: $width !important;
     }
   }
 }
 
 // font weight
 @mixin u--font-weight($options: $utilities-font-weights) {
+  $selector: '.u--font-weight';
+
   @each $key, $value in $options {
-    .u--font-weight-#{$key} {
+    '#{$selector}-#{$key}' {
       font-weight: $value !important;
     }
   }
@@ -173,8 +236,10 @@ $utilities-sides: (top, right, bottom, left);
 
 // font style
 @mixin u--font-style($options: $utilities-font-style) {
+  $selector: '.u--font-style';
+
   @each $option in $options {
-    .u--font-style-#{$option} {
+    '#{$selector}-#{$option}' {
       font-style: $option !important;
     }
   }
@@ -189,6 +254,7 @@ $utilities-sides: (top, right, bottom, left);
       text-align: $option !important;
     }
   }
+
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
       text-align: $option !important;
@@ -198,8 +264,10 @@ $utilities-sides: (top, right, bottom, left);
 
 // text transform
 @mixin u--text-transform($options: $utilities-text-transform) {
+  $selector: '.u--text-transform';
+
   @each $option in $options {
-    .u--text-transform-#{$option} {
+    '#{$selector}-#{$option}' {
       text-transform: $option !important;
     }
   }
@@ -214,6 +282,7 @@ $utilities-sides: (top, right, bottom, left);
       vertical-align: $option !important;
     }
   }
+
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
       vertical-align: $option !important;
@@ -230,6 +299,7 @@ $utilities-sides: (top, right, bottom, left);
       float: $option !important;
     }
   }
+
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
       float: $option !important;
@@ -276,6 +346,7 @@ $utilities-sides: (top, right, bottom, left);
       display: $option !important;
     }
   }
+
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
       display: $option !important;
@@ -289,6 +360,159 @@ $utilities-sides: (top, right, bottom, left);
 
   @include apply-breakpoint-postfixes('min', '#{$selector}', true, true) {
     display: none !important;
+  }
+}
+
+// flex wrap
+@mixin u--flex-wrap($options: $utilities-flex-wrap) {
+  $selector: '.u--flex-wrap';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      flex-wrap: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      flex-wrap: $option !important;
+    }
+  }
+}
+
+// flex direction
+@mixin u--flex-direction($options: $utilities-flex-direction) {
+  $selector: '.u--flex-direction';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      flex-direction: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      flex-direction: $option !important;
+    }
+  }
+}
+
+// justify content
+@mixin u--justify-content($options: $utilities-justify-content) {
+  $selector: '.u--justify-content';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      justify-content: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      justify-content: $option !important;
+    }
+  }
+}
+
+// align items
+@mixin u--align-items($options: $utilities-align-items) {
+  $selector: '.u--align-items';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      align-items: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      align-items: $option !important;
+    }
+  }
+}
+
+// align content
+@mixin u--align-content($options: $utilities-align-content) {
+  $selector: '.u--align-content';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      align-content: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      align-content: $option !important;
+    }
+  }
+}
+
+// align self
+@mixin u--align-self($options: $utilities-align-self) {
+  $selector: '.u--align-self';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      align-self: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      align-self: $option !important;
+    }
+  }
+}
+
+// flex grow
+@mixin u--flex-grow($options: $utilities-flex-grow) {
+  $selector: '.u--flex-grow';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      flex-grow: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      flex-grow: $option !important;
+    }
+  }
+}
+
+// flex shrink
+@mixin u--flex-shrink($options: $utilities-flex-shrink) {
+  $selector: '.u--flex-shrink';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      flex-shrink: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      flex-shrink: $option !important;
+    }
+  }
+}
+
+// order
+@mixin u--order($options: $utilities-order) {
+  $selector: '.u--order';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      order: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      order: $option !important;
+    }
   }
 }
 
@@ -343,7 +567,7 @@ $utilities-sides: (top, right, bottom, left);
 
 // border
 .u--border {
-  border: solid $global-border-width $global-border-color;
+  border: $global-border;
 }
 
 // border color
@@ -423,3 +647,57 @@ $utilities-sides: (top, right, bottom, left);
 // --------------------------------------------------
 
 @include u--hidden();
+
+// --------------------------------------------------
+// flex wrap
+// --------------------------------------------------
+
+@include u--flex-wrap();
+
+// --------------------------------------------------
+// flex direction
+// --------------------------------------------------
+
+@include u--flex-direction();
+
+// --------------------------------------------------
+// justify content
+// --------------------------------------------------
+
+@include u--justify-content();
+
+// --------------------------------------------------
+// align items
+// --------------------------------------------------
+
+@include u--align-items();
+
+// --------------------------------------------------
+// align content
+// --------------------------------------------------
+
+@include u--align-content();
+
+// --------------------------------------------------
+// align self
+// --------------------------------------------------
+
+@include u--align-self();
+
+// --------------------------------------------------
+// flex grow
+// --------------------------------------------------
+
+@include u--flex-grow();
+
+// --------------------------------------------------
+// flex shrink
+// --------------------------------------------------
+
+@include u--flex-shrink();
+
+// --------------------------------------------------
+// order
+// --------------------------------------------------
+
+@include u--order();

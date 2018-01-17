@@ -83,6 +83,11 @@ class Menu extends Component {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/pagination" onClick={toggleMenu}>
+              Pagination
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/toggles" onClick={toggleMenu}>
               Toggles
             </NavLink>

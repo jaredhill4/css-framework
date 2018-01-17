@@ -11,12 +11,13 @@ import Typography from './Typography';
 import Buttons from './Buttons';
 import Forms from './Forms';
 import Tables from './Tables';
-import Notices from './Notices';
-import Modals from './Modals';
-import Dropdowns from './Dropdowns';
-import Tooltips from './Tooltips';
 import Carousels from './Carousels';
+import Dropdowns from './Dropdowns';
+import Modals from './Modals';
+import Notices from './Notices';
+import Pagination from './Pagination';
 import Toggles from './Toggles';
+import Tooltips from './Tooltips';
 import Utilities from './Utilities';
 import NotFound from './NotFound';
 
@@ -49,12 +50,13 @@ class App extends Component {
           <Route exact path="/buttons" component={Buttons} />
           <Route exact path="/forms" component={Forms} />
           <Route exact path="/tables" component={Tables} />
-          <Route exact path="/notices" component={Notices} />
-          <Route exact path="/modals" component={Modals} />
-          <Route exact path="/dropdowns" component={Dropdowns} />
-          <Route exact path="/tooltips" component={Tooltips} />
           <Route exact path="/carousels" component={Carousels} />
+          <Route exact path="/dropdowns" component={Dropdowns} />
+          <Route exact path="/modals" component={Modals} />
+          <Route exact path="/notices" component={Notices} />
+          <Route exact path="/pagination" component={Pagination} />
           <Route exact path="/toggles" component={Toggles} />
+          <Route exact path="/tooltips" component={Tooltips} />
           <Route exact path="/utilities" component={Utilities} />
           <Redirect exact from="/" to="/grid" />
           <Route component={NotFound} />

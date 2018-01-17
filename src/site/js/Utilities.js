@@ -43,7 +43,8 @@ class Utilities extends Component {
             </span>
             <span className="u--display-inline-block u--padding-5 u--color-yellow">
               Yellow
-            </span><br />
+            </span>
+            <br />
             <span className="u--display-inline-block u--padding-5 u--color-gray-darkest">
               Gray Darkest
             </span>
@@ -125,25 +126,46 @@ class Utilities extends Component {
               Yellow
             </Link>
             <br />
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-darkest">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray-darkest"
+            >
               Gray Darkest
             </Link>
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-darker">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray-darker"
+            >
               Gray Darker
             </Link>
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-dark">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray-dark"
+            >
               Gray Dark
             </Link>
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray"
+            >
               Gray
             </Link>
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-light">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray-light"
+            >
               Gray Light
             </Link>
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-lighter">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray-lighter"
+            >
               Gray Lighter
             </Link>
-            <Link to="/utilities" className="u--display-inline-block u--padding-5 u--color-gray-lightest">
+            <Link
+              to="/utilities"
+              className="u--display-inline-block u--padding-5 u--color-gray-lightest"
+            >
               Gray Lightest
             </Link>
           </ExampleView>
@@ -335,7 +357,8 @@ class Utilities extends Component {
           Add or remove margins from elements with the <code>.u--margin-</code>{' '}
           utility classes.{' '}
           <em>
-            Note that each numerical postfix represents a pixel value. When compiled, these get converted to rem units.
+            Note that each numerical postfix represents a pixel value. When
+            compiled, these get converted to rem units.
           </em>
         </Description>
         <Example>
@@ -389,7 +412,8 @@ class Utilities extends Component {
           Add or remove padding from elements with the <code>.u--padding-</code>{' '}
           utility classes.{' '}
           <em>
-            Note that each numerical postfix represents a pixel value. When compiled, these get converted to rem units.
+            Note that each numerical postfix represents a pixel value. When
+            compiled, these get converted to rem units.
           </em>
         </Description>
         <Example>
@@ -807,17 +831,516 @@ class Utilities extends Component {
           </p>
         </Description>
 
+        <SubTitle id="utilities-flex">Flex</SubTitle>
+        <Description>
+          Adjust flex containers and items with these helpful flex utilities.
+        </Description>
+        <Example>
+          <ExampleView>
+            <div className="example__grid">
+              <div className="example__grid__text">
+                .u--display-flex (default)
+              </div>
+              <div className="u--display-flex">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+          </ExampleView>
+          <Code>
+            {`<div class="u--display-flex">
+    ...
+</div>`}
+          </Code>
+        </Example>
+
+        <Description>
+          <h4>Flex Direction</h4>
+          <p>Alter the horizontal and vertical direction of flex items.</p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--flex-direction-row-reverse
+              </div>
+              <div className="u--display-flex u--flex-direction-row-reverse">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--flex-direction-column
+              </div>
+              <div className="u--display-flex u--flex-direction-column">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--flex-direction-column-reverse
+              </div>
+              <div className="u--display-flex u--flex-direction-column-reverse">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+          </ExampleView>
+          <Code>
+            {`<div class="u--display-flex u--flex-direction-row-reverse">
+    ...
+</div>
+<div class="u--display-flex u--flex-direction-column">
+    ...
+</div>
+<div class="u--display-flex u--flex-direction-column-reverse">
+    ...
+</div>`}
+          </Code>
+        </Example>
+
+        <Description>
+          <h4>Flex Wrap</h4>
+          <p>Control the wrapping behavior of flex items.</p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">.u--flex-wrap-wrap</div>
+              <div className="u--display-flex u--flex-wrap-wrap">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+                <span className="example__grid u--width-auto">Flex item 6</span>
+                <span className="example__grid u--width-auto">Flex item 7</span>
+                <span className="example__grid u--width-auto">Flex item 8</span>
+                <span className="example__grid u--width-auto">Flex item 9</span>
+                <span className="example__grid u--width-auto">
+                  Flex item 10
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 11
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 12
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 13
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 14
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 15
+                </span>
+              </div>
+            </div>
+
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">.u--flex-wrap-nowrap</div>
+              <div className="u--display-flex u--flex-wrap-nowrap">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+                <span className="example__grid u--width-auto">Flex item 6</span>
+                <span className="example__grid u--width-auto">Flex item 7</span>
+                <span className="example__grid u--width-auto">Flex item 8</span>
+                <span className="example__grid u--width-auto">Flex item 9</span>
+                <span className="example__grid u--width-auto">
+                  Flex item 10
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 11
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 12
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 13
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 14
+                </span>
+                <span className="example__grid u--width-auto">
+                  Flex item 15
+                </span>
+              </div>
+            </div>
+          </ExampleView>
+          <Code>
+            {`<div class="u--display-flex u--flex-wrap-wrap">
+    ...
+</div>
+<div class="u--display-flex u--flex-wrap-nowrap">
+    ...
+</div>`}
+          </Code>
+        </Example>
+        <Description>
+          <h4>Justify Content</h4>
+          <p>Adjust the horizontal alignment of flex items.</p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--justify-content-space-between
+              </div>
+              <div className="u--display-flex u--justify-content-space-between">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--justify-content-space-around
+              </div>
+              <div className="u--display-flex u--justify-content-space-around">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--justify-content-flex-end
+              </div>
+              <div className="u--display-flex u--justify-content-flex-end">
+                <span className="example__grid u--width-auto">Flex item 1</span>
+                <span className="example__grid u--width-auto">Flex item 2</span>
+                <span className="example__grid u--width-auto">Flex item 3</span>
+                <span className="example__grid u--width-auto">Flex item 4</span>
+                <span className="example__grid u--width-auto">Flex item 5</span>
+              </div>
+            </div>
+          </ExampleView>
+          <Code language="html">
+            {`<div class="u--display-flex u--justify-content-space-between">
+    ...
+</div>
+<div class="u--display-flex u--justify-content-space-around">
+    ...
+</div>
+<div class="u--display-flex u--justify-content-flex-end">
+    ...
+</div>`}
+          </Code>
+        </Example>
+
+        <Description>
+          <h4>Align Items / Align Self</h4>
+          <p>Adjust the vertical alignment of flex items.</p>
+          <p>
+            Below is an example of how you can combine a few different utility
+            classes to set a default alignment on the parent flex container
+            (using <code>.u--align-items-</code>), and then align each child
+            flex item individually, using <code>.u--align-self-</code>.
+          </p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div className="example__grid u--margin-top-20">
+              <div className="example__grid__text">
+                .u--align-items-flex-end
+              </div>
+              <div className="u--display-flex example__grid--static-height u--align-items-flex-end">
+                <span className="example__grid">Flex item 1</span>
+                <span className="example__grid u--align-self-center">
+                  Flex item 2 (.u--align-self-center)
+                </span>
+                <span className="example__grid u--align-self-flex-start">
+                  Flex item 3 (.u--align-self-flex-start)
+                </span>
+              </div>
+            </div>
+          </ExampleView>
+          <Code language="html">
+            {`<div class="u--display-flex u--align-items-flex-end">
+    <span>
+        ...
+    </span>
+    <span class="u--align-self-center">
+        ...
+    </span>
+    <span class="u--align-self-flex-start">
+        ...
+    </span>
+</div>`}
+          </Code>
+        </Example>
+
+        <Description>
+          <h4>Order</h4>
+          <p>
+            Change the order of flex items by applying the{' '}
+            <code>.u--order-</code> class with a value between 1 and 12.
+          </p>
+        </Description>
+        <Example>
+          <ExampleView>
+            <div className="example__grid">
+              <div className="example__grid__text">.u--display-flex</div>
+              <div className="u--display-flex">
+                <span className="example__grid u--order-5">
+                  Flex item 1<br />(.u--order-5)
+                </span>
+                <span className="example__grid u--order-4">
+                  Flex item 2<br />(.u--order-4)
+                </span>
+                <span className="example__grid u--order-3">
+                  Flex item 3<br />(.u--order-3)
+                </span>
+                <span className="example__grid u--order-2">
+                  Flex item 4<br />(.u--order-2)
+                </span>
+                <span className="example__grid u--order-1">
+                  Flex item 5<br />(.u--order-1)
+                </span>
+              </div>
+            </div>
+          </ExampleView>
+          <Code>
+            {`<div class="u--display-flex">
+    <span className="u--order-5">
+        Flex item 1
+    </span>
+    <span className="u--order-4">
+        Flex item 2
+    </span>
+    <span className="u--order-3">
+        Flex item 3
+    </span>
+    <span className="u--order-2">
+        Flex item 4
+    </span>
+    <span className="u--order-1">
+        Flex item 5
+    </span>
+</div>`}
+          </Code>
+        </Example>
+
+        <Description>
+          <p>The following table shows all the available flex utilities:</p>
+          <table className="table table--bordered">
+            <tbody>
+              <tr>
+                <th>Base</th>
+                <th>Postfix</th>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--flex-wrap-</code>
+                </td>
+                <td>
+                  <code>nowrap</code>
+                  <br />
+                  <code>wrap</code>
+                  <br />
+                  <code>wrap-reverse</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--flex-direction-</code>
+                </td>
+                <td>
+                  <code>row</code>
+                  <br />
+                  <code>row-reverse</code>
+                  <br />
+                  <code>column</code>
+                  <br />
+                  <code>column-reverse</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--justify-content-</code>
+                </td>
+                <td>
+                  <code>flex-start</code>
+                  <br />
+                  <code>flex-end</code>
+                  <br />
+                  <code>center</code>
+                  <br />
+                  <code>space-between</code>
+                  <br />
+                  <code>space-around</code>
+                  <br />
+                  <code>space-evenly</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--align-items-</code>
+                </td>
+                <td>
+                  <code>flex-start</code>
+                  <br />
+                  <code>flex-end</code>
+                  <br />
+                  <code>center</code>
+                  <br />
+                  <code>stretch</code>
+                  <br />
+                  <code>baseline</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--align-content-</code>
+                </td>
+                <td>
+                  <code>flex-start</code>
+                  <br />
+                  <code>flex-end</code>
+                  <br />
+                  <code>center</code>
+                  <br />
+                  <code>space-between</code>
+                  <br />
+                  <code>space-around</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--align-self-</code>
+                </td>
+                <td>
+                  <code>auto</code>
+                  <br />
+                  <code>flex-start</code>
+                  <br />
+                  <code>flex-end</code>
+                  <br />
+                  <code>center</code>
+                  <br />
+                  <code>baseline</code>
+                  <br />
+                  <code>stretch</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--flex-grow-</code>
+                </td>
+                <td>
+                  <code>0</code>
+                  <br />
+                  <code>1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--flex-shrink-</code>
+                </td>
+                <td>
+                  <code>0</code>
+                  <br />
+                  <code>1</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>u--order-</code>
+                </td>
+                <td>
+                  A number <code>1</code> through <code>12</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </Description>
+
         <SubTitle id="utilities-responsive-postfixes">
           Responsive Utility Postfixes
         </SubTitle>
         <Description>
           <p>
-            You may also apply responsive postfixes to any of the{' '}
-            <code>.u--margin-</code>, <code>.u--padding-</code>,{' '}
-            <code>.u--width-</code>, <code>.u--float-</code>,{' '}
-            <code>.u--display-</code> and <code>.u--hidden</code> utility
-            classes to make them apply only for certain screen sizes:
+            You may also apply responsive postfixes to any of the following
+            utility classes to make them apply only for certain screen sizes.
           </p>
+          <div className="grid">
+            <div className="grid__col">
+              <ul>
+                <li>
+                  <code>.u--margin-</code>
+                </li>
+                <li>
+                  <code>.u--width-</code>
+                </li>
+                <li>
+                  <code>.u--float-</code>
+                </li>
+                <li>
+                  <code>.u--display-</code>
+                </li>
+                <li>
+                  <code>.u--padding-</code>
+                </li>
+                <li>
+                  <code>.u--flex-wrap-</code>
+                </li>
+                <li>
+                  <code>.u--flex-direction-</code>
+                </li>
+              </ul>
+            </div>
+            <div className="grid__col">
+              <ul>
+                <li>
+                  <code>.u--justify-content-</code>
+                </li>
+                <li>
+                  <code>.u--align-items-</code>
+                </li>
+                <li>
+                  <code>.u--align-content-</code>
+                </li>
+                <li>
+                  <code>.u--align-self-</code>
+                </li>
+                <li>
+                  <code>.u--flex-grow-</code>
+                </li>
+                <li>
+                  <code>.u--flex-shrink-</code>
+                </li>
+                <li>
+                  <code>.u--order-</code>
+                </li>
+              </ul>
+            </div>
+          </div>
           <table className="table table--bordered">
             <tbody>
               <tr>

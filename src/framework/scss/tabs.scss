@@ -34,7 +34,9 @@
     button {
       color: $link-color;
       display: block;
-      padding: rem(14) rem(18);
+      padding: 0.75em 1.25em;
+      line-height: 1.25;
+      letter-spacing: .025em;
       border: solid $global-border-width transparent;
       border-bottom-color: $global-border-color;
       border-radius: $global-border-radius $global-border-radius 0 0;

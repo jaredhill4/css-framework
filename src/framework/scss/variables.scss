@@ -143,9 +143,11 @@ $link-color-hover: $color-primary-hover;
 // globals
 // --------------------------------------------------
 
-$global-border-color: $color-gray-lighter;
-$global-border-radius: .25rem;
 $global-border-width: 1px;
+$global-border-style: solid;
+$global-border-color: $color-gray-lighter;
+$global-border: $global-border-width $global-border-style $global-border-color;
+$global-border-radius: .25rem;
 
 $global-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -187,7 +189,7 @@ $font-size-xs: rem(12);
 $font-size-sm: rem(14);
 $font-size-md: rem($font-size-base);
 $font-size-lg: rem(18);
-$font-size-xl: rem(22);
+$font-size-xl: rem(20);
 
 $font-size-h1: rem(48);
 $font-size-h2: rem(36);

@@ -93,31 +93,52 @@ p {
 // --------------------------------------------------
 
 blockquote {
-  font-size: $font-size-xl;
   margin: 0 0 $type-margin-base;
   padding-left: rem(24);
+  font-size: $font-size-xl;
   border-left: solid 5px $color-gray-lighter;
 
-  footer {
+  cite {
+    display: block;
     margin-top: $type-margin-base/2;
     font-size: $font-size-md;
     color: $color-gray-dark;
+
+    &::before {
+      content: '\2014';
+      margin-right: 4px;
+    }
   }
 }
 
 // --------------------------------------------------
-// lists
+// unordered & ordered lists
 // --------------------------------------------------
 
 ul,
 ol {
-  margin-bottom: $type-margin-base;
-  margin-top: 0;
+  margin: 0 0 $type-margin-base;
   padding-left: rem(20);
 
   ul,
   ol {
     margin-bottom: 0;
+  }
+}
+
+// --------------------------------------------------
+// definition lists
+// --------------------------------------------------
+
+dl {
+  margin: 0 0 $type-margin-base;
+
+  dt {
+    font-weight: $font-weight-bold;
+  }
+
+  dd {
+    margin: 0;
   }
 }
 

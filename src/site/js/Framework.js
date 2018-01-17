@@ -1,5 +1,7 @@
 import React from 'react';
-import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/light';
+import SyntaxHighlighter, {
+  registerLanguage,
+} from 'react-syntax-highlighter/light';
 import js from 'react-syntax-highlighter/languages/hljs/javascript';
 import html from 'react-syntax-highlighter/languages/hljs/xml';
 import scss from 'react-syntax-highlighter/languages/hljs/scss';
@@ -52,7 +54,13 @@ const ExampleView = ({ children }) =>
   </div>;
 
 const Code = ({ children, language }) =>
-  <SyntaxHighlighter language={language} style={ocean} showLineNumbers={false} customStyle={{ borderRadius: 0, padding: '1rem' }} className="framework__code">
+  <SyntaxHighlighter
+    language={language}
+    style={ocean}
+    showLineNumbers={false}
+    customStyle={{ borderRadius: 0, padding: '1rem' }}
+    className="framework__code"
+  >
     {children}
   </SyntaxHighlighter>;
 
