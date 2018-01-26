@@ -11,7 +11,8 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
     "react-syntax-highlighter": "^6.1.1",
-    "seedable-random": "0.0.1"
+    "seedable-random": "0.0.1",
+    "source-map-explorer": "^1.5.0"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
@@ -57,6 +58,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
     "watch": "node scripts/start.js",
     "prettier": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.{js,scss}\"",
     "build": "node scripts/build.js",
