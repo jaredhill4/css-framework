@@ -48,7 +48,7 @@ class Forms extends Component {
                     />
                   </div>
                 </div>
-                <div className="grid__col">
+                <div className="grid__col-xs-12">
                   <div className="form__field">
                     <label className="form__label" htmlFor="email">
                       Email address
