@@ -2,10 +2,11 @@
 // variables
 // --------------------------------------------------
 
-$utilities-border-sizes: (0);
+$utilities-border-sizes: (0, 1, 2, 3, 4, 5);
 $utilities-margin-sizes: (auto, 0, 5, 10, 15, 20, 30);
 $utilities-padding-sizes: (0, 5, 10, 15, 20, 30);
 $utilities-width-sizes: (auto, 25, 33, 50, 66, 75, 100);
+$utilities-height-sizes: (auto, 25, 33, 50, 66, 75, 100);
 $utilities-display: (
   none,
   inline,
@@ -18,9 +19,23 @@ $utilities-display: (
   inline-flex
 );
 $utilities-text-align: (left, right, center, justify);
+$utilities-font-sizes: (
+  'xs': $font-size-xs,
+  'sm': $font-size-sm,
+  'md': $font-size-md,
+  'lg': $font-size-lg,
+  'xl': $font-size-xl
+);
 $utilities-font-weights: (
+  'thin': $font-weight-thin,
+  'extra-light': $font-weight-extra-light,
+  'light': $font-weight-light,
   'normal': $font-weight-normal,
-  'bold': $font-weight-bold
+  'medium': $font-weight-medium,
+  'semi-bold': $font-weight-semi-bold,
+  'bold': $font-weight-bold,
+  'extra-bold': $font-weight-extra-bold,
+  'black': $font-weight-black
 );
 $utilities-font-style: (normal, italic, oblique);
 $utilities-vertical-align: (
@@ -40,22 +55,40 @@ $utilities-sides: (top, right, bottom, left);
 $utilities-flex-wrap: (nowrap, wrap, wrap-reverse);
 $utilities-flex-direction: (row, row-reverse, column, column-reverse);
 $utilities-justify-content: (
+  center,
   flex-start,
   flex-end,
-  center,
   space-between,
   space-around,
   space-evenly
 );
-$utilities-align-items: (flex-start, flex-end, center, stretch, baseline);
-$utilities-align-content: (
+$utilities-justify-items: (
+  auto,
+  center,
   flex-start,
   flex-end,
+  self-start,
+  self-end,
+  baseline,
+  stretch
+);
+$utilities-justify-self: (
+  auto,
   center,
+  flex-start,
+  flex-end,
+  baseline,
+  stretch
+);
+$utilities-align-content: (
+  center,
+  flex-start,
+  flex-end,
   space-between,
   space-around
 );
-$utilities-align-self: (auto, flex-start, flex-end, center, baseline, stretch);
+$utilities-align-items: (flex-start, flex-end, center, stretch, baseline);
+$utilities-align-self: (auto, center, flex-start, flex-end, baseline, stretch);
 $utilities-flex-grow: (0, 1);
 $utilities-flex-shrink: (0, 1);
 $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
@@ -96,7 +129,7 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 }
 
 // border color
-@mixin u--border-color($colors: $colors-theme) {
+@mixin u--border-color($colors: $colors-theme, $sides: $utilities-sides) {
   $selector: '.u--border-color';
 
   @each $key, $color in $colors {
@@ -104,6 +137,12 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 
     '#{$selector}-#{$key}' {
       border-color: $color-base !important;
+    }
+
+    @each $side in $sides {
+      '#{$selector}-#{$side}-#{$key}' {
+        border-#{$side}-color: $color-base !important;
+      }
     }
   }
 }
@@ -223,6 +262,34 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   }
 }
 
+@mixin u--height($sizes: $utilities-height-sizes) {
+  $selector: '.u--height';
+
+  @each $size in $sizes {
+    $height: $size;
+
+    @if ($size != auto) {
+      $height: percentage($size) / 100;
+    }
+
+    '#{$selector}-#{$size}' {
+      height: $height !important;
+    }
+  }
+
+  @each $size in $sizes {
+    $height: $size;
+
+    @if ($size != auto) {
+      $height: percentage($size) / 100;
+    }
+
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+      height: $height !important;
+    }
+  }
+}
+
 // font weight
 @mixin u--font-weight($options: $utilities-font-weights) {
   $selector: '.u--font-weight';
@@ -230,6 +297,17 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   @each $key, $value in $options {
     '#{$selector}-#{$key}' {
       font-weight: $value !important;
+    }
+  }
+}
+
+// font weight
+@mixin u--font-size($options: $utilities-font-sizes) {
+  $selector: '.u--font-size';
+
+  @each $key, $value in $options {
+    '#{$selector}-#{$key}' {
+      font-size: $value !important;
     }
   }
 }
@@ -414,19 +492,36 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   }
 }
 
-// align items
-@mixin u--align-items($options: $utilities-align-items) {
-  $selector: '.u--align-items';
+// justify items
+@mixin u--justify-items($options: $utilities-justify-items) {
+  $selector: '.u--justify-items';
 
   @each $option in $options {
     '#{$selector}-#{$option}' {
-      align-items: $option !important;
+      justify-items: $option !important;
     }
   }
 
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
-      align-items: $option !important;
+      justify-items: $option !important;
+    }
+  }
+}
+
+// justify self
+@mixin u--justify-self($options: $utilities-justify-self) {
+  $selector: '.u--justify-self';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      justify-self: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      justify-self: $option !important;
     }
   }
 }
@@ -444,6 +539,23 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
   @each $option in $options {
     @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
       align-content: $option !important;
+    }
+  }
+}
+
+// align items
+@mixin u--align-items($options: $utilities-align-items) {
+  $selector: '.u--align-items';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      align-items: $option !important;
+    }
+  }
+
+  @each $option in $options {
+    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$option}', true) {
+      align-items: $option !important;
     }
   }
 }
@@ -595,6 +707,18 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 @include u--width();
 
 // --------------------------------------------------
+// height
+// --------------------------------------------------
+
+@include u--height();
+
+// --------------------------------------------------
+// font size
+// --------------------------------------------------
+
+@include u--font-size();
+
+// --------------------------------------------------
 // font weight
 // --------------------------------------------------
 
@@ -667,16 +791,28 @@ $utilities-order: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 @include u--justify-content();
 
 // --------------------------------------------------
-// align items
+// justify items
 // --------------------------------------------------
 
-@include u--align-items();
+@include u--justify-items();
+
+// --------------------------------------------------
+// justify self
+// --------------------------------------------------
+
+@include u--justify-self();
 
 // --------------------------------------------------
 // align content
 // --------------------------------------------------
 
 @include u--align-content();
+
+// --------------------------------------------------
+// align items
+// --------------------------------------------------
+
+@include u--align-items();
 
 // --------------------------------------------------
 // align self

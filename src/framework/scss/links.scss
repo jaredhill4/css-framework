@@ -24,6 +24,7 @@ a,
 a.link {
   color: $link-color;
   transition: $global-transition-fast;
+  text-decoration: none;
 
   &:hover {
     color: $link-color-hover;

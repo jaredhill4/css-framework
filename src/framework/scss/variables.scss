@@ -41,71 +41,54 @@ $color-primary-hover: $color-blue-hover;
 
 // theme
 $colors-theme: (
-  'white': (
-    'name': 'White',
-    'base': $color-white,
-    'hover': $color-white-hover
-  ),
-  'black': (
-    'name': 'Black',
-    'base': $color-black,
-    'hover': $color-black-hover
-  ),
-  'blue': (
-    'name': 'Blue',
-    'base': $color-blue,
-    'hover': $color-blue-hover
-  ),
-  'green': (
-    'name': 'green',
-    'base': $color-green,
-    'hover': $color-green-hover
-  ),
-  'yellow': (
-    'name': 'yellow',
-    'base': $color-yellow,
-    'hover': $color-yellow-hover
-  ),
-  'red': (
-    'name': 'red',
-    'base': $color-red,
-    'hover': $color-red-hover
-  ),
-  'gray-lightest': (
-    'name': 'Gray Lightest',
-    'base': $color-gray-lightest,
-    'hover': $color-gray-lightest-hover
-  ),
-  'gray-lighter': (
-    'name': 'Gray Lighter',
-    'base': $color-gray-lighter,
-    'hover': $color-gray-lighter-hover
-  ),
-  'gray-light': (
-    'name': 'Gray Light',
-    'base': $color-gray-light,
-    'hover': $color-gray-light-hover
-  ),
-  'gray': (
-    'name': 'Gray',
-    'base': $color-gray,
-    'hover': $color-gray-hover
-  ),
-  'gray-dark': (
-    'name': 'Gray Dark',
-    'base': $color-gray-dark,
-    'hover': $color-gray-dark-hover
-  ),
-  'gray-darker': (
-    'name': 'Gray Darker',
-    'base': $color-gray-darker,
-    'hover': $color-gray-darker-hover
-  ),
-  'gray-darkest': (
-    'name': 'Gray Darkest',
-    'base': $color-gray-darkest,
-    'hover': $color-gray-darkest-hover
-  )
+  'white': ('name': 'White', 'base': $color-white, 'hover': $color-white-hover),
+  'black': ('name': 'Black', 'base': $color-black, 'hover': $color-black-hover),
+  'blue': ('name': 'Blue', 'base': $color-blue, 'hover': $color-blue-hover),
+  'green': ('name': 'green', 'base': $color-green, 'hover': $color-green-hover),
+  'yellow':
+    (
+      'name': 'yellow',
+      'base': $color-yellow,
+      'hover': $color-yellow-hover
+    ),
+  'red': ('name': 'red', 'base': $color-red, 'hover': $color-red-hover),
+  'gray-lightest':
+    (
+      'name': 'Gray Lightest',
+      'base': $color-gray-lightest,
+      'hover': $color-gray-lightest-hover
+    ),
+  'gray-lighter':
+    (
+      'name': 'Gray Lighter',
+      'base': $color-gray-lighter,
+      'hover': $color-gray-lighter-hover
+    ),
+  'gray-light':
+    (
+      'name': 'Gray Light',
+      'base': $color-gray-light,
+      'hover': $color-gray-light-hover
+    ),
+  'gray': ('name': 'Gray', 'base': $color-gray, 'hover': $color-gray-hover),
+  'gray-dark':
+    (
+      'name': 'Gray Dark',
+      'base': $color-gray-dark,
+      'hover': $color-gray-dark-hover
+    ),
+  'gray-darker':
+    (
+      'name': 'Gray Darker',
+      'base': $color-gray-darker,
+      'hover': $color-gray-darker-hover
+    ),
+  'gray-darkest':
+    (
+      'name': 'Gray Darkest',
+      'base': $color-gray-darkest,
+      'hover': $color-gray-darkest-hover
+    )
 );
 
 // --------------------------------------------------
@@ -176,8 +159,15 @@ $font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono',
 // font weight
 // --------------------------------------------------
 
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
 $font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
 
 // --------------------------------------------------
 // font size
@@ -195,7 +185,7 @@ $font-size-h1: rem(48);
 $font-size-h2: rem(36);
 $font-size-h3: rem(28);
 $font-size-h4: rem(24);
-$font-size-h5: rem(18);
+$font-size-h5: rem(20);
 $font-size-h6: rem(16);
 
 // --------------------------------------------------

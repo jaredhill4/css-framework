@@ -350,6 +350,10 @@ body {
   padding: 2rem 1rem 1rem;
 }
 
+.example__view + .framework__code {
+  border-radius: 0 !important;
+}
+
 .example__grid,
 .example__container {
   background-color: rgba(#3ecf8e, .3);

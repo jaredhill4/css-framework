@@ -22,7 +22,7 @@ class Forms extends Component {
           <ExampleView>
             <form className="form">
               <div className="grid grid--gapless-vertical">
-                <div className="grid__col-xs-12 grid__col-sm-6">
+                <div className="grid__col grid__col-sm-6">
                   <div className="form__field">
                     <label className="form__label" htmlFor="fname">
                       First Name
@@ -35,7 +35,7 @@ class Forms extends Component {
                     />
                   </div>
                 </div>
-                <div className="grid__col-xs-12 grid__col-sm-6">
+                <div className="grid__col grid__col-sm-6">
                   <div className="form__field">
                     <label className="form__label" htmlFor="lname">
                       Last Name
@@ -48,7 +48,7 @@ class Forms extends Component {
                     />
                   </div>
                 </div>
-                <div className="grid__col-xs-12">
+                <div className="grid__col">
                   <div className="form__field">
                     <label className="form__label" htmlFor="email">
                       Email address
@@ -126,7 +126,7 @@ class Forms extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="grid__col-xs-12 grid__col-sm-3">
+                <div className="grid__col grid__col-sm-3">
                   <div className="form__field">
                     <label className="form__label" htmlFor="zip">
                       Zip
@@ -139,7 +139,7 @@ class Forms extends Component {
                     />
                   </div>
                 </div>
-                <div className="grid__col-xs-12">
+                <div className="grid__col">
                   <div className="form__field">
                     <label className="form__checkbox">
                       <input type="checkbox" /> I agree to the terms and

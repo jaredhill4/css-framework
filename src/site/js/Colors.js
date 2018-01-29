@@ -27,25 +27,25 @@ class Colors extends Component {
           </p>
         </Description>
         <div className="grid">
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--blue">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--green">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--yellow">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--red">
               <div class="swatch__color" />
             </div>
@@ -53,55 +53,55 @@ class Colors extends Component {
         </div>
 
         <div className="grid">
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--black">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray-darkest">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray-darker">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray-dark">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray-light">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray-lighter">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--gray-lightest">
               <div class="swatch__color" />
             </div>
           </div>
 
-          <div class="grid__col grid__col-xs-12 grid__col-sm-6 grid__col-md-3">
+          <div class="grid__col grid__col-sm-6 grid__col-md-3">
             <div class="swatch swatch--white">
               <div class="swatch__color" />
             </div>

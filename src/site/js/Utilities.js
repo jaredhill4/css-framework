@@ -627,11 +627,41 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <span className="u--font-weight-normal">
-              .u--font-weight-normal
+            <span className="u--font-weight-thin">
+              .u--font-weight-thin (100)
             </span>
             <br />
-            <span className="u--font-weight-bold">.u--font-weight-bold</span>
+            <span className="u--font-weight-extra-light">
+              .u--font-weight-extra-light (200)
+            </span>
+            <br />
+            <span className="u--font-weight-light">
+              .u--font-weight-light (300)
+            </span>
+            <br />
+            <span className="u--font-weight-normal">
+              .u--font-weight-normal (400)
+            </span>
+            <br />
+            <span className="u--font-weight-medium">
+              .u--font-weight-medium (500)
+            </span>
+            <br />
+            <span className="u--font-weight-semi-bold">
+              .u--font-weight-semi-bold (600)
+            </span>
+            <br />
+            <span className="u--font-weight-bold">
+              .u--font-weight-bold (700)
+            </span>
+            <br />
+            <span className="u--font-weight-extra-bold">
+              .u--font-weight-extra-bold (800)
+            </span>
+            <br />
+            <span className="u--font-weight-black">
+              .u--font-weight-black (900)
+            </span>
           </ExampleView>
           <Code language="html">
             {`<span class="u--font-weight-normal">...</span>

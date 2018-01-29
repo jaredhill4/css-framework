@@ -63,6 +63,11 @@ class Menu extends Component {
           </li>
           <li className="framework__nav-title">Components</li>
           <li>
+            <NavLink to="/cards" onClick={toggleMenu}>
+              Cards
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/carousels" onClick={toggleMenu}>
               Carousels
             </NavLink>

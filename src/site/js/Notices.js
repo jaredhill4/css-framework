@@ -91,7 +91,7 @@ class Notices extends Component {
               </p>
             </div>
             <div className="notice notice--red u--margin-bottom-0">
-              <span className="notice__title">Error</span> {lorem(64)}
+              <strong className="notice__title">Error</strong> {lorem(64)}
             </div>
           </ExampleView>
           <Code language="html">

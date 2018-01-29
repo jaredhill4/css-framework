@@ -11,6 +11,7 @@ import Typography from './Typography';
 import Buttons from './Buttons';
 import Forms from './Forms';
 import Tables from './Tables';
+import Cards from './Cards';
 import Carousels from './Carousels';
 import Dropdowns from './Dropdowns';
 import Modals from './Modals';
@@ -50,6 +51,7 @@ class App extends Component {
           <Route exact path="/buttons" component={Buttons} />
           <Route exact path="/forms" component={Forms} />
           <Route exact path="/tables" component={Tables} />
+          <Route exact path="/cards" component={Cards} />
           <Route exact path="/carousels" component={Carousels} />
           <Route exact path="/dropdowns" component={Dropdowns} />
           <Route exact path="/modals" component={Modals} />

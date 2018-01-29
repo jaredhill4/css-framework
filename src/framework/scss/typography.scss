@@ -35,7 +35,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-weight: 300;
+  font-weight: $font-weight-semi-bold;
   line-height: $line-height-headings;
   margin-top: $type-margin-base * 1.5;
   margin-bottom: $type-margin-base;
