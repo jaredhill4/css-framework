@@ -2,70 +2,97 @@
 // variables
 // --------------------------------------------------
 
-$button-border-radius: $global-border-radius;
-$button-border-width: $global-border-width;
-$button-font-size: 1rem;
-$button-font-weight: 400;
-$button-letter-spacing: .025em;
-$button-line-height: 1.25;
+$button-default-color: 'gray-lighter';
+
 $button-padding-x: 1em;
 $button-padding-y: .5em;
-$button-text-transform: none;
-$button-transition: $global-transition-fast;
 
-$button-focus-box-shadow: $global-focus-box-shadow;
+// --------------------------------------------------
+// functions
+// --------------------------------------------------
+
+@function calc-btn-color($background-color) {
+  @if (lightness($background-color) > 70) {
+    @return $color-black;
+  } @else {
+    @return $color-white;
+  }
+}
+
+@function calc-btn-outline-color($color) {
+  @if (lightness($color) > 70) {
+    @return $color-black;
+  } @else {
+    @return $color;
+  }
+}
 
 // --------------------------------------------------
 // mixins
 // --------------------------------------------------
 
-@mixin btn($background, $border, $color) {
-  $hover-background: tint($background, 10%);
-  $hover-border: tint($border, 10%);
-  $hover-color: $color;
-  $active-background: shade($background, 10%);
-  $active-border: shade($border, 10%);
-  $active-color: $color;
-
-  background-color: $background;
-  border-color: $border;
-  color: $color;
+@mixin create-button($color-base, $color-hover) {
+  background-color: $color-base;
+  border-color: $color-base;
+  color: calc-btn-color($color-base);
 
   &:hover {
-    background-color: $hover-background;
-    border-color: $hover-border;
-    color: $hover-color;
+    background-color: $color-hover;
+    border-color: $color-hover;
+    color: calc-btn-color($color-base);
   }
 
   &:active {
-    background-color: $active-background;
-    border-color: $active-border;
-    color: $active-color;
+    background-color: $color-hover;
+    border-color: $color-hover;
+    color: calc-btn-color($color-base);
   }
 }
 
-@mixin btn--outline($background-hover, $border, $color, $color-hover:$color-white) {
-  $background-hover: $background-hover;
-  $border-hover: $border;
-  $background-active: shade($background-hover, 10%);
-  $border-active: shade($border-hover, 10%);
-  $color-active: $color-hover;
+@mixin create-button-outline($color-base) {
+  background-color: transparent;
+  border-color: $color-base;
+  color: calc-btn-outline-color($color-base);
 
-  &.btn--outline {
-    background-color: transparent;
-    border-color: $border;
-    color: $color;
+  &:hover {
+    background-color: $color-base;
+    border-color: $color-base;
+    color: calc-btn-color($color-base);
+  }
 
-    &:hover {
-      background-color: $background-hover;
-      border-color: $border-hover;
-      color: $color-hover;
+  &:active {
+    background-color: $color-base;
+    border-color: $color-base;
+    color: calc-btn-color($color-base);
+  }
+}
+
+@mixin btn($colors: $colors-theme) {
+  $selector: '.btn';
+  $selector-outline: '#{$selector}.btn--outline';
+  $color-base: map-get(map-get($colors, $button-default-color), 'base');
+  $color-hover: map-get(map-get($colors, $button-default-color), 'hover');
+
+  #{$selector} {
+    @include create-button($color-base, $color-hover);
+  }
+
+  #{$selector-outline} {
+    @include create-button-outline($color-base);
+  }
+
+  @each $key, $color in $colors {
+    $selector: '.btn--#{$key}';
+    $selector-outline: '#{$selector}.btn--outline';
+    $color-base: map-get($color, 'base');
+    $color-hover: map-get($color, 'hover');
+
+    #{$selector} {
+      @include create-button($color-base, $color-hover);
     }
 
-    &:active {
-      background-color: $background-active;
-      border-color: $border-active;
-      color: $color-active;
+    #{$selector-outline} {
+      @include create-button-outline($color-base);
     }
   }
 }
@@ -76,19 +103,19 @@ $button-focus-box-shadow: $global-focus-box-shadow;
 
 .btn {
   border-style: solid;
-  border-width: $button-border-width;
-  border-radius: $button-border-radius;
+  border-width: $global-border-width;
+  border-radius: $global-border-radius;
   cursor: pointer;
   display: inline-block;
-  font-size: $button-font-size;
-  font-weight: $button-font-weight;
-  letter-spacing: $button-letter-spacing;
-  line-height: $button-line-height;
+  font-size: $font-size-md;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.025em;
+  line-height: 1.25;
   padding: $button-padding-y $button-padding-x;
   text-align: center;
   text-decoration: none;
-  text-transform: $button-text-transform;
-  transition: $button-transition;
+  text-transform: none;
+  transition: $global-transition-fast;
   user-select: none;
   vertical-align: top;
   white-space: nowrap;
@@ -99,7 +126,7 @@ $button-focus-box-shadow: $global-focus-box-shadow;
   }
 
   &:focus {
-    box-shadow: $button-focus-box-shadow;
+    box-shadow: $global-focus-box-shadow;
     outline: 0;
     text-decoration: none;
   }
@@ -125,41 +152,7 @@ fieldset[disabled] a.btn {
 // color variants
 // --------------------------------------------------
 
-.btn {
-  @include btn($color-gray-lighter, $color-gray-lighter, $color-black);
-  @include btn--outline($color-gray-lighter, $color-gray-lighter, $color-black, $color-black);
-}
-
-.btn--white {
-  @include btn($color-white, $color-white, $color-black);
-}
-
-.btn--black {
-  @include btn($color-black, $color-black, $color-white);
-  @include btn--outline($color-black, $color-black, $color-black);
-}
-
-.btn--red {
-  @include btn($color-red, $color-red, $color-white);
-  @include btn--outline($color-red, $color-red, $color-red);
-}
-
-.btn--yellow {
-  @include btn($color-yellow, $color-yellow, $color-white);
-  @include btn--outline($color-yellow, $color-yellow, $color-yellow);
-}
-
-.btn--green {
-  @include btn($color-green, $color-green, $color-white);
-  @include btn--outline($color-green, $color-green, $color-green);
-}
-
-.btn--blue {
-  @include btn($color-blue, $color-blue, $color-white);
-  @include btn--outline($color-blue, $color-blue, $color-blue);
-}
-
-// TODO: black/white/social button variants
+@include btn();
 
 // --------------------------------------------------
 // styles
@@ -207,9 +200,10 @@ fieldset[disabled] a.btn {
   font-size: $font-size-sm;
 }
 
+/* md is default
 .btn--md,
 .form__input-group--md .btn {
-}
+} */
 
 .btn--lg,
 .form__input-group--lg .btn {

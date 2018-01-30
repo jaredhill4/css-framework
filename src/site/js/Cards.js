@@ -27,10 +27,10 @@ class Cards extends Component {
         <Example>
           <ExampleView>
             <div className="grid">
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-sm-6 grid__col-md-4">
                 <article className="card">
                   <section className="card__body">
-                    <p class="u--font-size-sm u--color-gray-dark">
+                    <p className="u--font-size-sm u--color-gray-dark">
                       Category Name
                     </p>
                     <h4>This is a card title</h4>
@@ -64,10 +64,10 @@ class Cards extends Component {
         <Example>
           <ExampleView>
             <div className="grid">
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
                 <article className="card u--height-100">
-                  <header class="card__header">
-                    <p class="u--font-size-sm u--color-gray-dark">
+                  <header className="card__header">
+                    <p className="u--font-size-sm u--color-gray-dark">
                       Category Name
                     </p>
                   </header>
@@ -82,8 +82,8 @@ class Cards extends Component {
                       <button className="btn btn--blue">Learn More</button>
                     </p>
                   </section>
-                  <footer class="card__footer">
-                    <p class="u--font-size-sm u--color-gray-dark">
+                  <footer className="card__footer">
+                    <p className="u--font-size-sm u--color-gray-dark">
                       Last updated 3 mins ago
                     </p>
                   </footer>
@@ -115,10 +115,10 @@ class Cards extends Component {
         <Example>
           <ExampleView>
             <div className="grid">
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
                 <article className="card u--height-100">
                   <img
-                    src="http://placehold.it/1600x900"
+                    src="//placehold.it/1600x900"
                     className="card__media"
                     alt="Card media"
                   />
@@ -132,13 +132,13 @@ class Cards extends Component {
                 </article>
               </div>
 
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
                 <article className="card u--height-100">
-                  <div class="card__media u--embed-responsive">
+                  <div className="card__media u--embed-responsive">
                     <iframe
                       src="https://www.youtube.com/embed/WQJuGeqdbn4"
                       title="Responsive embed with default 16x9 aspect ratio"
-                      allowfullscreen=""
+                      allowFullScreen
                     />
                   </div>
                   <section className="card__body">
@@ -182,10 +182,10 @@ class Cards extends Component {
         <Example>
           <ExampleView>
             <div className="grid">
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
                 <article className="card">
-                  <header class="card__header">
-                    <p class="u--font-size-sm">Category Name</p>
+                  <header className="card__header">
+                    <p className="u--font-size-sm">Category Name</p>
                   </header>
                   <section className="card__body">
                     <h4>This is a card title</h4>
@@ -203,17 +203,17 @@ class Cards extends Component {
                       <button className="btn btn--red">Learn More</button>
                     </p>
                   </section>
-                  <footer class="card__footer">
-                    <p class="u--font-size-sm u--color-gray-dark">
+                  <footer className="card__footer">
+                    <p className="u--font-size-sm u--color-gray-dark">
                       Last updated 3 mins ago
                     </p>
                   </footer>
                 </article>
               </div>
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
                 <article className="card">
                   <img
-                    src="http://placehold.it/600x400"
+                    src="//placehold.it/600x400"
                     className="card__media"
                     alt="Card media"
                   />
@@ -228,14 +228,14 @@ class Cards extends Component {
                       <button className="btn btn--green">Learn More</button>
                     </p>
                   </section>
-                  <footer class="card__footer">
-                    <p class="u--font-size-sm u--color-gray-dark">
+                  <footer className="card__footer">
+                    <p className="u--font-size-sm u--color-gray-dark">
                       Last updated 3 mins ago
                     </p>
                   </footer>
                 </article>
               </div>
-              <div class="grid__col grid__col-md-4">
+              <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
                 <article className="card">
                   <section className="card__body">
                     <h4>This is a card title</h4>
@@ -248,8 +248,8 @@ class Cards extends Component {
                       <button className="btn btn--blue">Learn More</button>
                     </p>
                   </section>
-                  <footer class="card__footer">
-                    <p class="u--font-size-sm u--color-gray-dark">
+                  <footer className="card__footer">
+                    <p className="u--font-size-sm u--color-gray-dark">
                       Last updated 3 mins ago
                     </p>
                   </footer>
@@ -259,17 +259,17 @@ class Cards extends Component {
           </ExampleView>
           <Code language="html">
             {`<div class="grid">
-    <div class="grid__col grid__col-md-4">
+    <div class="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
         <article class="card">
             ...
         </article>
     </div>
-    <div class="grid__col grid__col-md-4">
+    <div class="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
         <article class="card">
             ...
         </article>
     </div>
-    <div class="grid__col grid__col-md-4">
+    <div class="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
         <article class="card">
             ...
         </article>

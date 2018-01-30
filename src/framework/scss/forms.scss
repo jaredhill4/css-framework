@@ -57,11 +57,11 @@ $form-input-group-background-color: $form-input-border-color;
   border-width: $form-input-border-width;
   color: $form-input-color;
   display: block;
-  font-size: $form-input-font-size;
-  font-weight: $form-input-font-weight;
-  line-height: $form-input-line-height;
+  font-size: $font-size-md;
+  font-weight: $font-weight-normal;
+  line-height: 1.25;
   padding: $form-input-padding-y $form-input-padding-x;
-  transition: $form-input-transition;
+  transition: $global-transition-fast;
   width: 100%;
 
   &:focus {
@@ -305,6 +305,7 @@ $form-input-group-background-color: $form-input-border-color;
   font-size: $font-size-sm;
 }
 
+/* md is default
 .form__input--md,
 .form__checkbox--md,
 .form__radio--md,
@@ -312,7 +313,7 @@ $form-input-group-background-color: $form-input-border-color;
 .form__select--md > select,
 .form__input-group--md .form__select > select,
 .form__input-group--md .form__input {
-}
+} */
 
 .form__input--lg,
 .form__checkbox--lg,
@@ -406,9 +407,10 @@ $form-input-group-background-color: $form-input-border-color;
 .form__input-group--sm .form__input-group-addon {
   font-size: $font-size-sm;
 }
+/* md is default
 .form__input-group-addon--md,
 .form__input-group--md .form__input-group-addon {
-}
+} */
 .form__input-group-addon--lg,
 .form__input-group--lg .form__input-group-addon {
   font-size: $font-size-lg;

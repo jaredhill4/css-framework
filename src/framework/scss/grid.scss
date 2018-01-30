@@ -148,6 +148,7 @@ $grid-gutter-width: $type-margin-base;
 [class*="grid__col-"] {
   box-sizing: border-box;
   padding: $grid-gutter-width / 2;
+  max-width: 100%;
 
   .grid--gapless & {
     padding: 0;
@@ -166,7 +167,6 @@ $grid-gutter-width: $type-margin-base;
 
 .grid__col {
   flex: 1 0 auto;
-  max-width: 100%;
 }
 
 [class*="grid__col-"] {
