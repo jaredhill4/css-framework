@@ -163,9 +163,7 @@ $colors-theme: (
           of each component. For example, you could now use a "burnt orange"
           button, like this:
         </Description>
-        <Code>
-          {`<button class="btn btn--burnt-orange">...</button>`}
-        </Code>
+        <Code>{`<button class="btn btn--burnt-orange">...</button>`}</Code>
       </Section>
     );
   }

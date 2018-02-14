@@ -226,9 +226,7 @@ class Toggles extends Component {
                 className="toggle__target"
                 data-toggle-target="styled-accordion-item-1"
               >
-                <div className="accordion__content">
-                  {lorem(117)}
-                </div>
+                <div className="accordion__content">{lorem(117)}</div>
               </dd>
 
               <dt
@@ -242,9 +240,7 @@ class Toggles extends Component {
                 className="toggle__target"
                 data-toggle-target="styled-accordion-item-2"
               >
-                <div className="accordion__content">
-                  {lorem(118)}
-                </div>
+                <div className="accordion__content">{lorem(118)}</div>
               </dd>
 
               <dt
@@ -258,9 +254,7 @@ class Toggles extends Component {
                 className="toggle__target"
                 data-toggle-target="styled-accordion-item-3"
               >
-                <div className="accordion__content">
-                  {lorem(119)}
-                </div>
+                <div className="accordion__content">{lorem(119)}</div>
               </dd>
             </dl>
           </ExampleView>

@@ -4,7 +4,7 @@
 
 $code-background-color: #263238;
 
-$code-font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco,
+$code-font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco,
   Consolas, monospace;
 $code-font-size: 14px;
 $code-line-height: 32px;
@@ -124,7 +124,7 @@ ol.code__lines {
     position: relative;
     padding: 0;
     counter-increment: lines-counter;
-    background: rgba(0, 0, 0, 0.0);
+    background: rgba(0, 0, 0, 0);
     transition: $global-transition-fast;
 
     span {

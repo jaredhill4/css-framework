@@ -46,13 +46,9 @@ class Typography extends Component {
         <SubTitle id="typography-paragraphs">Paragraphs</SubTitle>
         <Example>
           <ExampleView>
-            <p>
-              {lorem(9)}
-            </p>
+            <p>{lorem(9)}</p>
           </ExampleView>
-          <Code language="html">
-            {`<p>...</p>`}
-          </Code>
+          <Code language="html">{`<p>...</p>`}</Code>
         </Example>
         <Description>
           Add the <code>.p--lead</code> class to a paragraph to apply the lead
@@ -60,12 +56,8 @@ class Typography extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <p className="p--lead">
-              {lorem(6)}
-            </p>
-            <p>
-              {lorem(12)}
-            </p>
+            <p className="p--lead">{lorem(6)}</p>
+            <p>{lorem(12)}</p>
           </ExampleView>
           <Code language="html">
             {`<p class="p--lead">...</p>
@@ -160,19 +152,13 @@ class Typography extends Component {
           <ExampleView>
             <dl>
               <dt>Term to define</dt>
-              <dd>
-                {lorem(23)}
-              </dd>
+              <dd>{lorem(23)}</dd>
 
               <dt>Term to define</dt>
-              <dd>
-                {lorem(57)}
-              </dd>
+              <dd>{lorem(57)}</dd>
 
               <dt>Term to define</dt>
-              <dd>
-                {lorem(66)}
-              </dd>
+              <dd>{lorem(66)}</dd>
             </dl>
           </ExampleView>
           <Code language="html">
@@ -193,9 +179,7 @@ class Typography extends Component {
           <ExampleView>
             <hr />
           </ExampleView>
-          <Code language="html">
-            {`<hr />`}
-          </Code>
+          <Code language="html">{`<hr />`}</Code>
         </Example>
         <SubTitle id="typography-preformatted-text">Preformatted Text</SubTitle>
         <Example>
@@ -231,9 +215,7 @@ class Typography extends Component {
           <ExampleView>
             <Link to="typography">Default</Link>
           </ExampleView>
-          <Code language="html">
-            {`<a href="#">...</a>`}
-          </Code>
+          <Code language="html">{`<a href="#">...</a>`}</Code>
         </Example>
         <Description>
           Link color can be modified by adding a color modifier class like{' '}

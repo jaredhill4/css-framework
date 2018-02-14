@@ -84,9 +84,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(77)}
-                    </p>
+                    <p>{lorem(77)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a href="#modal-sample" className="btn" data-modal-close>
@@ -185,9 +183,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(94)}
-                    </p>
+                    <p>{lorem(94)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a
@@ -221,9 +217,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(94)}
-                    </p>
+                    <p>{lorem(94)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a href="#modal-small" className="btn" data-modal-close>
@@ -253,9 +247,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(94)}
-                    </p>
+                    <p>{lorem(94)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a href="#modal-medium" className="btn" data-modal-close>
@@ -285,9 +277,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(94)}
-                    </p>
+                    <p>{lorem(94)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a href="#modal-large" className="btn" data-modal-close>
@@ -317,9 +307,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(94)}
-                    </p>
+                    <p>{lorem(94)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a
@@ -349,9 +337,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(94)}
-                    </p>
+                    <p>{lorem(94)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a href="#modal-full" className="btn" data-modal-close>
@@ -392,9 +378,7 @@ class Modals extends Component {
                     <h3 className="modal__title">This is a modal title</h3>
                   </header>
                   <section className="modal__body">
-                    <p>
-                      {lorem(13)}
-                    </p>
+                    <p>{lorem(13)}</p>
                   </section>
                   <footer className="modal__footer u--text-align-right">
                     <a

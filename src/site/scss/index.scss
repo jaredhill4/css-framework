@@ -4,10 +4,10 @@
  * previewing the framework components.
  */
 
-@import "../../framework/scss/functions.scss";
-@import "../../framework/scss/variables.scss";
-@import "../../framework/scss/mixins.scss";
-@import "../../framework/scss/placeholders.scss";
+@import '../../framework/scss/functions.scss';
+@import '../../framework/scss/variables.scss';
+@import '../../framework/scss/mixins.scss';
+@import '../../framework/scss/placeholders.scss';
 
 body {
   background-color: #fff;
@@ -155,7 +155,7 @@ body {
   }
 
   &::before {
-    content: "Close";
+    content: 'Close';
     opacity: 0;
     transform: translateY(-6px);
 
@@ -166,7 +166,7 @@ body {
   }
 
   &::after {
-    content: "Menu";
+    content: 'Menu';
     letter-spacing: 1px;
     transition: $global-transition-fast;
 
@@ -312,7 +312,7 @@ body {
 
   &::before {
     background: #ffdd57;
-    content: "Example";
+    content: 'Example';
     color: rgba(0, 0, 0, 0.7);
     display: inline-block;
     font-size: 7px;
@@ -356,7 +356,7 @@ body {
 
 .example__grid,
 .example__container {
-  background-color: rgba(#3ecf8e, .3);
+  background-color: rgba(#3ecf8e, 0.3);
   border-radius: 3px;
   font-size: rem(14px);
   padding: 8px;

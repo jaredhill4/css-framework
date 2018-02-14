@@ -18,42 +18,37 @@ const Section = ({ children, id = '', container = true }) => {
   });
   return (
     <section id={id} className="framework__section">
-      <div className={containerClassNames}>
-        {children}
-      </div>
+      <div className={containerClassNames}>{children}</div>
     </section>
   );
 };
 
-const Title = ({ children, id = '' }) =>
+const Title = ({ children, id = '' }) => (
   <h2 id={id} className="h1 framework__title">
     {children}
-  </h2>;
+  </h2>
+);
 
-const SubTitle = ({ children, id = '' }) =>
+const SubTitle = ({ children, id = '' }) => (
   <div>
     <hr />
     <h3 id={id} className="h3 framework__subtitle">
       {children}
     </h3>
-  </div>;
+  </div>
+);
 
-const Description = ({ children }) =>
-  <div className="framework__description">
-    {children}
-  </div>;
+const Description = ({ children }) => (
+  <div className="framework__description">{children}</div>
+);
 
-const Example = ({ children }) =>
-  <div className="example">
-    {children}
-  </div>;
+const Example = ({ children }) => <div className="example">{children}</div>;
 
-const ExampleView = ({ children }) =>
-  <div className="example__view">
-    {children}
-  </div>;
+const ExampleView = ({ children }) => (
+  <div className="example__view">{children}</div>
+);
 
-const Code = ({ children, language }) =>
+const Code = ({ children, language }) => (
   <SyntaxHighlighter
     language={language}
     style={ocean}
@@ -62,6 +57,7 @@ const Code = ({ children, language }) =>
     className="framework__code"
   >
     {children}
-  </SyntaxHighlighter>;
+  </SyntaxHighlighter>
+);
 
 export { Section, Title, SubTitle, Description, Example, ExampleView, Code };

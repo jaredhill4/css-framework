@@ -6,13 +6,13 @@ $tooltip-background: $color-black;
 $tooltip-border-radius: $global-border-radius;
 $tooltip-box-shadow: none;
 $tooltip-color: $color-white;
-$tooltip-font-size: .9rem;
+$tooltip-font-size: 0.9rem;
 $tooltip-line-height: 1.15;
 $tooltip-max-width: 200px;
-$tooltip-opacity: .9;
-$tooltip-padding-x: .5em;
-$tooltip-padding-y: .3em;
-$tooltip-transition: opacity .25s ease;
+$tooltip-opacity: 0.9;
+$tooltip-padding-x: 0.5em;
+$tooltip-padding-y: 0.3em;
+$tooltip-transition: opacity 0.25s ease;
 $tooltip-z-index: 1070;
 
 // --------------------------------------------------
@@ -40,14 +40,14 @@ $tooltip-z-index: 1070;
 
   &::after {
     border: 5px solid transparent;
-    content: " ";
+    content: ' ';
     height: 0;
     pointer-events: none;
     position: absolute;
     width: 0;
   }
 
-  &[x-placement^="bottom"] {
+  &[x-placement^='bottom'] {
     margin-top: 5px;
 
     &::after {
@@ -58,7 +58,7 @@ $tooltip-z-index: 1070;
     }
   }
 
-  &[x-placement^="left"] {
+  &[x-placement^='left'] {
     margin-right: 5px;
 
     &::after {
@@ -69,7 +69,7 @@ $tooltip-z-index: 1070;
     }
   }
 
-  &[x-placement^="right"] {
+  &[x-placement^='right'] {
     margin-left: 5px;
 
     &::after {
@@ -80,7 +80,7 @@ $tooltip-z-index: 1070;
     }
   }
 
-  &[x-placement^="top"] {
+  &[x-placement^='top'] {
     margin-bottom: 5px;
 
     &::after {

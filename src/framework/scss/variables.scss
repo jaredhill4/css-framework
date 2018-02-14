@@ -130,14 +130,14 @@ $global-border-width: 1px;
 $global-border-style: solid;
 $global-border-color: $color-gray-lighter;
 $global-border: $global-border-width $global-border-style $global-border-color;
-$global-border-radius: .25rem;
+$global-border-radius: 0.25rem;
 
 $global-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-$global-focus-box-shadow: 0 0 0 2px rgba($color-primary, .5);
+$global-focus-box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
 
-$global-transition-fast: all .15s ease;
-$global-transition-slow: all .3s ease;
+$global-transition-fast: all 0.15s ease;
+$global-transition-slow: all 0.3s ease;
 
 // --------------------------------------------------
 // z-indexes

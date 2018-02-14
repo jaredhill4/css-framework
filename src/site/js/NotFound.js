@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Section, Title, Description } from './Framework';
 
-const NotFound = ({ location }) =>
+const NotFound = ({ location }) => (
   <Section>
     <Title id="grid">Page not found</Title>
     <Description>
@@ -11,6 +11,7 @@ const NotFound = ({ location }) =>
         <Link to="/">Let's go home</Link>.
       </p>
     </Description>
-  </Section>;
+  </Section>
+);
 
 export default NotFound;

@@ -9,7 +9,7 @@ import {
   Code,
 } from './Framework';
 
-const createTableWithClassNames = classNames =>
+const createTableWithClassNames = classNames => (
   <table className={classNames}>
     <thead>
       <tr>
@@ -53,7 +53,8 @@ const createTableWithClassNames = classNames =>
         <th>Col 4</th>
       </tr>
     </tfoot>
-  </table>;
+  </table>
+);
 
 class Tables extends Component {
   shouldComponentUpdate() {
@@ -68,9 +69,7 @@ class Tables extends Component {
           Style a table by adding the <code>.table</code> class.
         </Description>
         <Example>
-          <ExampleView>
-            {createTableWithClassNames('table')}
-          </ExampleView>
+          <ExampleView>{createTableWithClassNames('table')}</ExampleView>
           <Code language="html">
             {`<table class="table">
     <thead>

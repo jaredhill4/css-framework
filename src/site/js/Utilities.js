@@ -261,9 +261,7 @@ class Utilities extends Component {
               .u--border
             </span>
           </ExampleView>
-          <Code language="html">
-            {`<span class="u--border">...</span>`}
-          </Code>
+          <Code language="html">{`<span class="u--border">...</span>`}</Code>
         </Example>
         <Description>
           Modify the border color of an element with the{' '}
@@ -585,9 +583,7 @@ class Utilities extends Component {
               ante ipsum primis in faucibus.
             </span>
           </ExampleView>
-          <Code language="html">
-            {`<span class="u--truncate">...</span>`}
-          </Code>
+          <Code language="html">{`<span class="u--truncate">...</span>`}</Code>
         </Example>
 
         <SubTitle id="utilities-squash">Squash</SubTitle>
@@ -602,12 +598,8 @@ class Utilities extends Component {
         <Example>
           <ExampleView>
             <div className="u--squash">
-              <p>
-                {lorem(131)}
-              </p>
-              <p>
-                {lorem(132)}
-              </p>
+              <p>{lorem(131)}</p>
+              <p>{lorem(132)}</p>
             </div>
           </ExampleView>
           <Code language="html">
@@ -694,18 +686,10 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <p className="u--text-align-left">
-              {lorem(1)}
-            </p>
-            <p className="u--text-align-center">
-              {lorem(2)}
-            </p>
-            <p className="u--text-align-right">
-              {lorem(3)}
-            </p>
-            <p className="u--text-align-justify">
-              {lorem(4)}
-            </p>
+            <p className="u--text-align-left">{lorem(1)}</p>
+            <p className="u--text-align-center">{lorem(2)}</p>
+            <p className="u--text-align-right">{lorem(3)}</p>
+            <p className="u--text-align-justify">{lorem(4)}</p>
           </ExampleView>
           <Code language="html">
             {`<p class="u--text-align-left">...</p>
@@ -720,15 +704,9 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <p className="u--text-transform-uppercase">
-              {lorem(11)}
-            </p>
-            <p className="u--text-transform-lowercase">
-              {lorem(12)}
-            </p>
-            <p className="u--text-transform-capitalize">
-              {lorem(13)}
-            </p>
+            <p className="u--text-transform-uppercase">{lorem(11)}</p>
+            <p className="u--text-transform-lowercase">{lorem(12)}</p>
+            <p className="u--text-transform-capitalize">{lorem(13)}</p>
           </ExampleView>
           <Code language="html">
             {`<p class="u--text-transform-uppercase">...</p>
@@ -1436,8 +1414,9 @@ class Utilities extends Component {
           </Code>
         </Example>
         <Description>
-          Or if you only wanted something to display for extra small (<code>xs</code>)
-          and small (<code>sm</code>) screen sizes, you could do:
+          Or if you only wanted something to display for extra small (<code>
+            xs
+          </code>) and small (<code>sm</code>) screen sizes, you could do:
         </Description>
         <Example>
           <ExampleView>

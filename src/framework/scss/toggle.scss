@@ -14,7 +14,7 @@
 .toggle__target {
   display: none;
   overflow: hidden;
-  transition: height 0.35s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+  transition: height 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &[data-toggle-target-transition='none'] {
     transition: none;
@@ -23,8 +23,8 @@
   &[data-toggle-target-transition='fade'] {
     opacity: 0;
     visibility: hidden;
-    transition: height 0.25s cubic-bezier(0.075, 0.820, 0.165, 1.000),
-      opacity 1.5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    transition: height 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
+      opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   &.toggle__target--showing,

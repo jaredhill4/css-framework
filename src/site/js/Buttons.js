@@ -27,9 +27,7 @@ class Buttons extends Component {
               Default
             </button>
           </ExampleView>
-          <Code language="html">
-            {`<button class="btn">...</button>`}
-          </Code>
+          <Code language="html">{`<button class="btn">...</button>`}</Code>
         </Example>
         <SubTitle id="buttons-colors">Colors</SubTitle>
         <Description>
@@ -143,11 +141,11 @@ class Buttons extends Component {
             {`<button class="btn btn--link">...</button>`}
           </Code>
         </Example>
-        <SubTitle id="buttons-rounded">Rounded</SubTitle>
+        <SubTitle id="buttons-round">Round</SubTitle>
         <Example>
           <ExampleView>
             <button type="button" className="btn btn--round">
-              Rounded
+              Round
             </button>
           </ExampleView>
           <Code language="html">

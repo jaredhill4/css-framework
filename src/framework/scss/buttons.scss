@@ -5,7 +5,7 @@
 $button-default-color: 'gray-lighter';
 
 $button-padding-x: 1em;
-$button-padding-y: .5em;
+$button-padding-y: 0.5em;
 
 // --------------------------------------------------
 // functions
@@ -133,7 +133,7 @@ $button-padding-y: .5em;
 
   &:disabled {
     cursor: not-allowed;
-    opacity: .65;
+    opacity: 0.65;
   }
 
   &:active {

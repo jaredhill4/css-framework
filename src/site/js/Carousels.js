@@ -47,10 +47,9 @@ class Carousels extends Component {
         <Description>
           <p>
             Our carousel component is an extension of the{' '}
-            <a href="http://kenwheeler.github.io/slick/">
-              Slick jQuery plugin
-            </a>, so all the same settings, events and methods are available for
-            you to use.
+            <a href="http://kenwheeler.github.io/slick/">Slick jQuery plugin</a>,
+            so all the same settings, events and methods are available for you
+            to use.
           </p>
           <p>
             One caveat to this is how we handle the Slick methods. For these, we

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MenuToggle = ({ toggleMenu }) =>
+const MenuToggle = ({ toggleMenu }) => (
   <button className="framework__toggle" onClick={toggleMenu}>
     <div className="framework__toggle-icon">
       <span />
@@ -8,6 +8,7 @@ const MenuToggle = ({ toggleMenu }) =>
       <span />
     </div>
     <span className="framework__toggle-label" />
-  </button>;
+  </button>
+);
 
 export default MenuToggle;

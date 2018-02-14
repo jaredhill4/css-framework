@@ -10,15 +10,15 @@ $form-input-border-width: $global-border-width;
 $form-input-font-size: 1rem;
 $form-input-font-weight: 400;
 $form-input-line-height: 1.25;
-$form-input-padding-x: .75em;
-$form-input-padding-y: .5em;
+$form-input-padding-x: 0.75em;
+$form-input-padding-y: 0.5em;
 $form-input-transition: $global-transition-fast;
 
 $form-input-focus-box-shadow: $global-focus-box-shadow;
 $form-input-focus-border-color: $color-primary;
 $form-input-focus-color: $form-input-color;
 
-$form-input-placeholder-color: rgba($form-input-color, .35);
+$form-input-placeholder-color: rgba($form-input-color, 0.35);
 
 $form-input-disabled-background-color: $color-gray-lighter;
 
@@ -38,7 +38,7 @@ $form-input-group-background-color: $form-input-border-color;
 
 .form__label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   touch-action: manipulation;
 }
 
@@ -105,7 +105,7 @@ $form-input-group-background-color: $form-input-border-color;
     border: 1px solid $form-input-color;
     border-right: 0;
     border-top: 0;
-    content: " ";
+    content: ' ';
     display: block;
     height: 0.5em;
     pointer-events: none;
@@ -142,8 +142,8 @@ $form-input-group-background-color: $form-input-border-color;
   padding-left: 30px;
   position: relative;
 
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type='checkbox'],
+  input[type='radio'] {
     appearance: none;
     background-color: $form-input-background-color;
     border-color: $form-input-border-color;
@@ -173,14 +173,14 @@ $form-input-group-background-color: $form-input-border-color;
 }
 
 .form__checkbox {
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     border-radius: $form-input-border-radius;
 
     &::after {
       display: block;
       border-bottom: 2px solid $color-white;
       border-right: 2px solid $color-white;
-      content: " ";
+      content: ' ';
       left: 6px;
       height: 13px;
       opacity: 0;
@@ -208,13 +208,13 @@ $form-input-group-background-color: $form-input-border-color;
 }
 
 .form__radio {
-  input[type="radio"] {
+  input[type='radio'] {
     border-radius: 50%;
 
     &::before {
       background: $color-primary;
       border-radius: 50%;
-      content: " ";
+      content: ' ';
       display: block;
       height: 12px;
       left: 3px;
@@ -247,10 +247,10 @@ $form-input-group-background-color: $form-input-border-color;
   cursor: default;
   opacity: 0.5;
 }
-.form__checkbox--disabled input[type="checkbox"] {
+.form__checkbox--disabled input[type='checkbox'] {
   cursor: default;
 }
-.form__radio--disabled input[type="radio"] {
+.form__radio--disabled input[type='radio'] {
   cursor: default;
 }
 

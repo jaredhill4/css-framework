@@ -30,9 +30,7 @@ class Notices extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <div className="notice u--margin-bottom-0">
-              {lorem(101)}
-            </div>
+            <div className="notice u--margin-bottom-0">{lorem(101)}</div>
           </ExampleView>
           <Code language="html">
             {`<div class="notice">
@@ -47,15 +45,9 @@ class Notices extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <div className="notice notice--red">
-              {lorem(90)}
-            </div>
-            <div className="notice notice--yellow">
-              {lorem(91)}
-            </div>
-            <div className="notice notice--green">
-              {lorem(92)}
-            </div>
+            <div className="notice notice--red">{lorem(90)}</div>
+            <div className="notice notice--yellow">{lorem(91)}</div>
+            <div className="notice notice--green">{lorem(92)}</div>
             <div className="notice notice--blue u--margin-bottom-0">
               {lorem(93)}
             </div>
@@ -86,9 +78,7 @@ class Notices extends Component {
               <h5 className="notice__title">
                 This is a title for a success notice
               </h5>
-              <p>
-                {lorem(80)}
-              </p>
+              <p>{lorem(80)}</p>
             </div>
             <div className="notice notice--red u--margin-bottom-0">
               <strong className="notice__title">Error</strong> {lorem(64)}
@@ -125,9 +115,7 @@ class Notices extends Component {
             >
               <span className="notice__close" data-notice-close />
               <h5 className="notice__title">This is a dismissible notice</h5>
-              <p>
-                {lorem(61)}
-              </p>
+              <p>{lorem(61)}</p>
             </div>
           </ExampleView>
           <Code language="html">

@@ -27,7 +27,10 @@ class Code {
       .wrap(`<div class="${ClassName.BASE}"></div>`)
       .after(`<textarea class="${ClassName.UNSTYLED_CODE}"></textarea>`);
 
-    this.code.next(`.${ClassName.UNSTYLED_CODE}`).html(this.code.html()).text();
+    this.code
+      .next(`.${ClassName.UNSTYLED_CODE}`)
+      .html(this.code.html())
+      .text();
 
     window.prettyPrint();
 
