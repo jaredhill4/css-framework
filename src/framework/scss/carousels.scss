@@ -131,6 +131,7 @@ $carousel-dot-size: 12px;
   outline: none !important;
   border-radius: 50%;
   cursor: pointer;
+  overflow: hidden;
   transition: $global-transition-fast;
 
   &:hover {
