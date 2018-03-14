@@ -731,12 +731,12 @@ class Utilities extends Component {
                 src="https://www.youtube.com/embed/WQJuGeqdbn4"
                 title="Responsive embed with default 16x9 aspect ratio"
                 allowFullScreen
-              />
+              ></iframe>
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="u--embed-responsive">
-    <iframe src="..." title="..." allowfullscreen />
+    <iframe src="..." title="..." allowfullscreen></iframe>
 </div>`}
           </Code>
         </Example>
@@ -768,12 +768,12 @@ class Utilities extends Component {
                 src="https://www.youtube.com/embed/WQJuGeqdbn4"
                 title="Responsive embed with 4x3 aspect ratio"
                 allowFullScreen
-              />
+              ></iframe>
             </div>
           </ExampleView>
           <Code language="html">
             {`<div class="u--embed-responsive u--embed-responsive--4x3">
-    <iframe src="..." title="..." allowfullscreen />
+    <iframe src="..." title="..." allowfullscreen></iframe>
 </div>`}
           </Code>
         </Example>
