@@ -31,6 +31,7 @@ $modal-sizes: (
     }
 
     #{$selector} .modal__dialog {
+      flex-basis: $value;
       max-width: $value;
     }
   }
