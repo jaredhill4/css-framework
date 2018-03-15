@@ -13,7 +13,12 @@
 // breakpoint postfixes
 // --------------------------------------------------
 
-@mixin apply-breakpoint-postfixes($min-max: 'min', $selector: '&', $include-print: false, $include-default: false) {
+@mixin apply-breakpoint-postfixes(
+  $min-max: 'min',
+  $selector: '&',
+  $include-print: false,
+  $include-default: false
+) {
   $breakpoints: (
     'xs': $breakpoint-xs,
     'sm': $breakpoint-sm,

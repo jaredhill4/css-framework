@@ -46,11 +46,7 @@ $colors-theme: (
   'blue': ('name': 'Blue', 'base': $color-blue, 'hover': $color-blue-hover),
   'green': ('name': 'green', 'base': $color-green, 'hover': $color-green-hover),
   'yellow':
-    (
-      'name': 'yellow',
-      'base': $color-yellow,
-      'hover': $color-yellow-hover
-    ),
+    ('name': 'yellow', 'base': $color-yellow, 'hover': $color-yellow-hover),
   'red': ('name': 'red', 'base': $color-red, 'hover': $color-red-hover),
   'gray-lightest':
     (
