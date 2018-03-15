@@ -43,6 +43,8 @@ $color-primary-hover: $color-blue-hover;
 $colors-theme: (
   'white': ('name': 'White', 'base': $color-white, 'hover': $color-white-hover),
   'black': ('name': 'Black', 'base': $color-black, 'hover': $color-black-hover),
+  'primary':
+    ('name': 'Primary', 'base': $color-primary, 'hover': $color-primary-hover),
   'blue': ('name': 'Blue', 'base': $color-blue, 'hover': $color-blue-hover),
   'green': ('name': 'green', 'base': $color-green, 'hover': $color-green-hover),
   'yellow':
