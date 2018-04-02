@@ -2,8 +2,8 @@
 // base
 // --------------------------------------------------
 
-// This is the theme color map. Manage all colors here
-// and use the "color()" function to apply a specific color.
+// This is the theme color map. Manage all colors here.
+// Use the "color()" function to apply a specific color.
 $colors: (
   'white': ('name': 'White', 'base': #fff, 'hover': darken(#fff, 15%)),
   'black': ('name': 'Black', 'base': #292b2c, 'hover': lighten(#292b2c, 20%)),
@@ -31,8 +31,8 @@ $colors: (
 // functions
 // --------------------------------------------------
 
-// Return a value of an color in the theme color map
-// If no specific key is set, return the base value
+// Return a value of a color in the theme color map.
+// If no specific key is set, return the base value.
 @function color($name: null, $key: null) {
   $color: null;
   $value: '';
