@@ -98,7 +98,7 @@ $table-hover-background-color: $table-striped-background-color;
 }
 
 .table--responsive {
-  @include apply-breakpoint-postfixes($min-max: 'max', $include-default: true) {
+  @include apply-breakpoint-postfixes($include-default: true) {
     display: block;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;

@@ -2,18 +2,18 @@
 // variables
 // --------------------------------------------------
 
-$hr-border-color: rgba(#000, 0.1);
+$hr-border-color: rgba(color('black'), 0.1);
 $hr-width: 1px;
 
-$pre-background-color: $color-gray-lightest;
+$pre-background-color: color('gray-lightest');
 $pre-border-radius: $global-border-radius;
-$pre-color: $color-black;
+$pre-color: color('black');
 
-$code-background-color: $color-gray-lightest;
+$code-background-color: color('gray-lightest');
 $code-border-radius: $global-border-radius;
 $code-color: #bd4147;
 
-$kbd-background-color: $color-black;
+$kbd-background-color: color('black');
 $kbd-border-radius: $global-border-radius;
 $kbd-color: #fff;
 
@@ -96,13 +96,13 @@ blockquote {
   margin: 0 0 $type-margin-base;
   padding-left: rem(24);
   font-size: $font-size-xl;
-  border-left: solid 5px $color-gray-lighter;
+  border-left: solid 5px color('gray-lighter');
 
   cite {
     display: block;
     margin-top: $type-margin-base/2;
     font-size: $font-size-md;
-    color: $color-gray-dark;
+    color: color('gray-dark');
 
     &::before {
       content: '\2014';

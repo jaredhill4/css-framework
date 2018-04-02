@@ -83,7 +83,7 @@
     height: 2px;
     top: 50%;
     margin-top: -(2px / 2);
-    background: $color-black;
+    background: color('black');
   }
 
   &::before {

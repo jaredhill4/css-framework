@@ -46,7 +46,7 @@
       &:hover,
       &:focus {
         color: $link-color-hover;
-        background: lighten($color-gray-lighter, 5%);
+        background: lighten(color('gray-lighter'), 5%);
         outline: 0;
       }
 
@@ -55,8 +55,8 @@
       }
 
       &.toggle__switch--on {
-        color: $color-black;
-        background: $color-white;
+        color: color('black');
+        background: color('white');
         border-color: $global-border-color;
         border-bottom-color: transparent;
       }

@@ -56,6 +56,12 @@ $utilities-display: (
   flex,
   inline-flex
 );
+$utilities-overflow: (
+  visible,
+  hidden,
+  scroll,
+  auto
+);
 $utilities-text-align: (
   left,
   right,
@@ -79,6 +85,11 @@ $utilities-font-weights: (
   'bold': $font-weight-bold,
   'extra-bold': $font-weight-extra-bold,
   'black': $font-weight-black
+);
+$utilities-font-families: (
+  'sans-serif': $font-family-sans-serif,
+  'serif': $font-family-serif,
+  'monospace': $font-family-monospace
 );
 $utilities-font-style: (
   normal,
@@ -204,7 +215,7 @@ $utilities-order: (
 // --------------------------------------------------
 
 // color
-@mixin u--color($colors: $colors-theme) {
+@mixin u--color($colors: $colors) {
   $selector: '.u--color';
 
   @each $key, $color in $colors {
@@ -222,7 +233,7 @@ $utilities-order: (
 }
 
 // background color
-@mixin u--background-color($colors: $colors-theme) {
+@mixin u--background-color($colors: $colors) {
   $selector: '.u--background-color';
 
   @each $key, $color in $colors {
@@ -235,7 +246,7 @@ $utilities-order: (
 }
 
 // border color
-@mixin u--border-color($colors: $colors-theme, $sides: $utilities-sides) {
+@mixin u--border-color($colors: $colors, $sides: $utilities-sides) {
   $selector: '.u--border-color';
 
   @each $key, $color in $colors {
@@ -302,13 +313,12 @@ $utilities-order: (
       $margin: rem($size);
     }
 
-    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$size}', true) {
       margin: $margin !important;
     }
 
     @each $side in $sides {
       @include apply-breakpoint-postfixes(
-        'min',
         '#{$selector}-#{$side}-#{$size}',
         true
       ) {
@@ -335,13 +345,12 @@ $utilities-order: (
   }
 
   @each $size in $sizes {
-    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$size}', true) {
       padding: rem($size) !important;
     }
 
     @each $side in $sides {
       @include apply-breakpoint-postfixes(
-        'min',
         '#{$selector}-#{$side}-#{$size}',
         true
       ) {
@@ -373,7 +382,7 @@ $utilities-order: (
       $width: percentage($size) / 100;
     }
 
-    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$size}', true) {
       width: $width !important;
     }
   }
@@ -401,8 +410,19 @@ $utilities-order: (
       $height: percentage($size) / 100;
     }
 
-    @include apply-breakpoint-postfixes('min', '#{$selector}-#{$size}', true) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$size}', true) {
       height: $height !important;
+    }
+  }
+}
+
+// font weight
+@mixin u--font-size($options: $utilities-font-sizes) {
+  $selector: '.u--font-size';
+
+  @each $key, $value in $options {
+    '#{$selector}-#{$key}' {
+      font-size: $value !important;
     }
   }
 }
@@ -419,12 +439,12 @@ $utilities-order: (
 }
 
 // font weight
-@mixin u--font-size($options: $utilities-font-sizes) {
-  $selector: '.u--font-size';
+@mixin u--font-family($options: $utilities-font-families) {
+  $selector: '.u--font-family';
 
   @each $key, $value in $options {
     '#{$selector}-#{$key}' {
-      font-size: $value !important;
+      font-family: $value !important;
     }
   }
 }
@@ -451,11 +471,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       text-align: $option !important;
     }
   }
@@ -483,11 +499,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       vertical-align: $option !important;
     }
   }
@@ -504,11 +516,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       float: $option !important;
     }
   }
@@ -555,12 +563,25 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       display: $option !important;
+    }
+  }
+}
+
+// overflow
+@mixin u--overflow($options: $utilities-overflow) {
+  $selector: '.u--overflow';
+
+  @each $option in $options {
+    '#{$selector}-#{$option}' {
+      overflow: $option !important;
+    }
+    '#{$selector}-x-#{$option}' {
+      overflow-x: $option !important;
+    }
+    '#{$selector}-y-#{$option}' {
+      overflow-y: $option !important;
     }
   }
 }
@@ -569,7 +590,7 @@ $utilities-order: (
 @mixin u--hidden() {
   $selector: '.u--hidden';
 
-  @include apply-breakpoint-postfixes('min', '#{$selector}', true, true) {
+  @include apply-breakpoint-postfixes('#{$selector}', true, true) {
     display: none !important;
   }
 }
@@ -585,11 +606,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       flex-wrap: $option !important;
     }
   }
@@ -606,11 +623,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       flex-direction: $option !important;
     }
   }
@@ -627,11 +640,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       justify-content: $option !important;
     }
   }
@@ -648,11 +657,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       justify-items: $option !important;
     }
   }
@@ -669,11 +674,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       justify-self: $option !important;
     }
   }
@@ -690,11 +691,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       align-content: $option !important;
     }
   }
@@ -711,11 +708,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       align-items: $option !important;
     }
   }
@@ -732,11 +725,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       align-self: $option !important;
     }
   }
@@ -753,11 +742,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       flex-grow: $option !important;
     }
   }
@@ -774,11 +759,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       flex-shrink: $option !important;
     }
   }
@@ -795,11 +776,7 @@ $utilities-order: (
   }
 
   @each $option in $options {
-    @include apply-breakpoint-postfixes(
-      'min',
-      '#{$selector}-#{$option}',
-      true
-    ) {
+    @include apply-breakpoint-postfixes('#{$selector}-#{$option}', true) {
       order: $option !important;
     }
   }
@@ -900,6 +877,12 @@ $utilities-order: (
 // --------------------------------------------------
 
 @include u--font-weight();
+
+// --------------------------------------------------
+// font family
+// --------------------------------------------------
+
+@include u--font-family();
 
 // --------------------------------------------------
 // font style

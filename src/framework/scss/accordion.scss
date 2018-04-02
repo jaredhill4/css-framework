@@ -24,7 +24,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $color-primary;
+    color: color('primary');
   }
 
   &:first-of-type {

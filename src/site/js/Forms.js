@@ -156,7 +156,7 @@ class Forms extends Component {
                   </div>
                   <div className="form__field">
                     <div className="form__submit">
-                      <button className="btn btn--blue" type="button">
+                      <button className="btn btn--primary" type="button">
                         Submit
                       </button>
                     </div>
@@ -268,7 +268,7 @@ class Forms extends Component {
             <form className="form">
               <div className="form__field">
                 <div className="form__submit">
-                  <button type="submit" className="btn btn--blue">
+                  <button type="submit" className="btn btn--primary">
                     Submit
                   </button>
                 </div>
@@ -279,7 +279,7 @@ class Forms extends Component {
             {`<form class="form">
     <div class="form__field">
         <div class="form__submit">
-            <button type="submit" class="btn btn--blue">...</button>
+            <button type="submit" class="btn btn--primary">...</button>
         </div>
     </div>
 </form>`}
@@ -425,7 +425,7 @@ class Forms extends Component {
                 <div className="form__input-group">
                   <span className="form__input-group-addon">Addon</span>
                   <input type="text" className="form__input" />
-                  <button className="btn btn--blue">Button</button>
+                  <button className="btn btn--primary">Button</button>
                 </div>
               </div>
             </form>
@@ -436,7 +436,7 @@ class Forms extends Component {
         <div class="form__input-group">
             <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">...</button>
+            <button class="btn btn--primary">...</button>
         </div>
     </div>
 </form>`}
@@ -458,7 +458,7 @@ class Forms extends Component {
                     className="form__input"
                     placeholder="Extra small"
                   />
-                  <button className="btn btn--blue">Button</button>
+                  <button className="btn btn--primary">Button</button>
                 </div>
               </div>
               <div className="form__field">
@@ -469,7 +469,7 @@ class Forms extends Component {
                     className="form__input"
                     placeholder="Small"
                   />
-                  <button className="btn btn--blue">Button</button>
+                  <button className="btn btn--primary">Button</button>
                 </div>
               </div>
               <div className="form__field">
@@ -480,7 +480,7 @@ class Forms extends Component {
                     className="form__input"
                     placeholder="Medium (default)"
                   />
-                  <button className="btn btn--blue">Button</button>
+                  <button className="btn btn--primary">Button</button>
                 </div>
               </div>
               <div className="form__field">
@@ -491,7 +491,7 @@ class Forms extends Component {
                     className="form__input"
                     placeholder="Large"
                   />
-                  <button className="btn btn--blue">Button</button>
+                  <button className="btn btn--primary">Button</button>
                 </div>
               </div>
               <div className="form__field">
@@ -502,7 +502,7 @@ class Forms extends Component {
                     className="form__input"
                     placeholder="Extra large"
                   />
-                  <button className="btn btn--blue">Button</button>
+                  <button className="btn btn--primary">Button</button>
                 </div>
               </div>
             </form>
@@ -513,35 +513,35 @@ class Forms extends Component {
         <div class="form__input-group form__input-group--xs">
             <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">...</button>
+            <button class="btn btn--primary">...</button>
         </div>
     </div>
     <div class="form__field">
         <div class="form__input-group form__input-group--sm">
             <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">...</button>
+            <button class="btn btn--primary">...</button>
         </div>
     </div>
     <div class="form__field">
         <div class="form__input-group form__input-group--md">
             <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">...</button>
+            <button class="btn btn--primary">...</button>
         </div>
     </div>
     <div class="form__field">
         <div class="form__input-group form__input-group--lg">
             <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">...</button>
+            <button class="btn btn--primary">...</button>
         </div>
     </div>
     <div class="form__field">
         <div class="form__input-group form__input-group--xl">
             <span class="form__input-group-addon">...</span>
             <input type="text" class="form__input" />
-            <button class="btn btn--blue">...</button>
+            <button class="btn btn--primary">...</button>
         </div>
     </div>
 </form>`}

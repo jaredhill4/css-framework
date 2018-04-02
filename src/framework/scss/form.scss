@@ -2,8 +2,8 @@
 // variables
 // --------------------------------------------------
 
-$form-input-color: $color-black;
-$form-input-background-color: $color-white;
+$form-input-color: color('black');
+$form-input-background-color: color('white');
 $form-input-border-color: $global-border-color;
 $form-input-border-radius: $global-border-radius;
 $form-input-border-width: $global-border-width;
@@ -15,12 +15,12 @@ $form-input-padding-y: 0.5em;
 $form-input-transition: $global-transition-fast;
 
 $form-input-focus-box-shadow: $global-focus-box-shadow;
-$form-input-focus-border-color: $color-primary;
+$form-input-focus-border-color: color('primary');
 $form-input-focus-color: $form-input-color;
 
 $form-input-placeholder-color: rgba($form-input-color, 0.35);
 
-$form-input-disabled-background-color: $color-gray-lighter;
+$form-input-disabled-background-color: color('gray-lighter');
 
 $form-input-group-color: $form-input-color;
 $form-input-group-background-color: $form-input-border-color;
@@ -30,6 +30,19 @@ $form-input-group-background-color: $form-input-border-color;
 // --------------------------------------------------
 
 .form {
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  display: block;
+  font-weight: $font-weight-bold;
+  margin-top: $type-margin-base * 1.5;
+  margin-bottom: $type-margin-base;
 }
 
 .form__field {
@@ -178,8 +191,8 @@ $form-input-group-background-color: $form-input-border-color;
 
     &::after {
       display: block;
-      border-bottom: 2px solid $color-white;
-      border-right: 2px solid $color-white;
+      border-bottom: 2px solid color('white');
+      border-right: 2px solid color('white');
       content: ' ';
       left: 6px;
       height: 13px;
@@ -212,7 +225,7 @@ $form-input-group-background-color: $form-input-border-color;
     border-radius: 50%;
 
     &::before {
-      background: $color-primary;
+      background: color('primary');
       border-radius: 50%;
       content: ' ';
       display: block;
@@ -261,6 +274,10 @@ $form-input-group-background-color: $form-input-border-color;
 .form__help {
   display: block;
   margin-top: 0.25rem;
+
+  .form__checkbox + & .form__radio + & {
+    padding-left: 30px;
+  }
 }
 
 // --------------------------------------------------

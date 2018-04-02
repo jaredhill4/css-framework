@@ -8,11 +8,11 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import dropdowns from '../../framework/js/dropdowns';
+import dropdown from '../../framework/js/dropdown';
 
 class Dropdowns extends Component {
   componentDidMount() {
-    dropdowns('[data-dropdown]');
+    dropdown('[data-dropdown]');
   }
 
   shouldComponentUpdate() {

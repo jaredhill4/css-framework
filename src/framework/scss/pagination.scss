@@ -25,7 +25,7 @@
     line-height: 1.25;
     letter-spacing: 0.025em;
     border: $global-border;
-    background-color: $color-white;
+    background-color: color('white');
     transition: $global-transition-fast;
   }
 
@@ -33,7 +33,7 @@
     text-decoration: none;
 
     &:hover {
-      background-color: $color-gray-lighter;
+      background-color: color('gray-lighter');
     }
   }
 
@@ -56,16 +56,16 @@
   &.pagination__item--active {
     a,
     span {
-      color: $color-white;
-      border-color: $color-primary;
-      background-color: $color-primary;
+      color: color('white');
+      border-color: color('primary');
+      background-color: color('primary');
     }
   }
 
   &.pagination__item--disabled {
     a,
     span {
-      color: $color-gray;
+      color: color('gray');
       pointer-events: none;
     }
   }

@@ -14,7 +14,6 @@
 // --------------------------------------------------
 
 @mixin apply-breakpoint-postfixes(
-  $min-max: 'min',
   $selector: '&',
   $include-print: false,
   $include-default: false
@@ -32,29 +31,66 @@
   }
 
   @if ($include-print) {
-    $breakpoints: map-merge(('pr': 'print'), $breakpoints);
+    $breakpoints: map-merge($breakpoints, ('pr': 'print'));
   }
 
   @each $key, $value in $breakpoints {
+    $index: index(($breakpoints), ($key $value));
+    $min: $value;
+    $max: null;
+    $next-breakpoint: null;
     $postfix: '';
     $media: '';
 
     @if ($key != 'default') {
       $postfix: '-#{$key}';
+    }
 
-      @if ($key == 'pr') {
-        $media: 'print';
-      } @else {
-        $media: 'screen and (#{$min-max}-width: #{$value})';
+    @if ($index != length($breakpoints)) {
+      $next-breakpoint: nth($breakpoints, $index + 1);
+      $next-breakpoint-key: nth($next-breakpoint, 1);
+      $next-breakpoint-value: nth($next-breakpoint, 2);
+
+      @if ($next-breakpoint-key != 'pr') {
+        $max: $next-breakpoint-value - 1;
       }
     }
 
-    #{$selector}#{$postfix} {
-      @if ($key != 'default') {
-        @media #{$media} {
+    @if ($key == 'pr') {
+      @media print {
+        #{$selector}#{$postfix} {
           @content;
         }
+      }
+    }
+    @elseif ($key != 'default') {
+      @media screen and (min-width: $min) {
+        #{$selector}#{$postfix}-min {
+          @content;
+        }
+      }
+
+      @if ($max) {
+        @media screen and (max-width: $max) {
+          #{$selector}#{$postfix}-max {
+            @content;
+          }
+        }
+
+        @media screen and (min-width: $min) and (max-width: $max) {
+          #{$selector}#{$postfix} {
+            @content;
+          }
+        }
       } @else {
+        @media screen and (min-width: $min) {
+          #{$selector}#{$postfix} {
+            @content;
+          }
+        }
+      }
+    } @else {
+      #{$selector} {
         @content;
       }
     }

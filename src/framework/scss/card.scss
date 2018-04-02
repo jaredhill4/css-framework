@@ -13,6 +13,7 @@ $card-padding: $type-margin-base;
   flex-direction: column;
   flex: 1 0 0%;
   height: 100%;
+  background-color: color('white');
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: $global-border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -43,11 +44,11 @@ $card-padding: $type-margin-base;
   padding: $card-padding;
   flex: 1 1 auto;
 
-  * {
+  > * {
     margin-bottom: 0;
   }
 
-  * + * {
+  > * + * {
     margin-top: $type-margin-base/2;
   }
 }

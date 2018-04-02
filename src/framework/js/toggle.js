@@ -253,10 +253,10 @@ class Toggle {
   }
 }
 
-const toggles = selector => {
+const toggle = selector => {
   $(selector).each((index, element) => {
     new Toggle(element);
   });
 };
 
-export default toggles;
+export default toggle;

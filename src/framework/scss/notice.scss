@@ -8,14 +8,14 @@ $notice-padding: $type-margin-base;
 // mixins
 // --------------------------------------------------
 
-@mixin notice-colors($colors: $colors-theme) {
+@mixin notice-colors($colors: $colors) {
   @each $key, $color in $colors {
     $selector: '.notice--#{$key}';
     $border-color: map-get($color, 'base');
     $title-color: map-get($color, 'base');
 
     @if (str-index($key, 'gray-light') != null) {
-      $title-color: $color-black;
+      $title-color: color('black');
     }
 
     #{$selector} {

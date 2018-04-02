@@ -20,10 +20,10 @@ class Notice {
   }
 }
 
-const notices = selector => {
+const notice = selector => {
   $(selector).each((index, element) => {
     new Notice(element);
   });
 };
 
-export default notices;
+export default notice;

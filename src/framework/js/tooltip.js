@@ -83,10 +83,10 @@ class Tooltip {
   }
 }
 
-const tooltips = selector => {
+const tooltip = selector => {
   $(selector).each((index, element) => {
     new Tooltip(element);
   });
 };
 
-export default tooltips;
+export default tooltip;

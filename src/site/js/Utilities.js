@@ -656,8 +656,37 @@ class Utilities extends Component {
             </span>
           </ExampleView>
           <Code language="html">
-            {`<span class="u--font-weight-normal">...</span>
-<span class="u--font-weight-bold">...</span>`}
+            {`<span class="u--font-weight-thin">...</span>
+<span class="u--font-weight-extra-light">...</span>
+<span class="u--font-weight-light">...</span>
+<span class="u--font-weight-normal">...</span>
+<span class="u--font-weight-medium">...</span>
+<span class="u--font-weight-semi-bold">...</span>
+<span class="u--font-weight-bold">...</span>
+<span class="u--font-weight-extra-bold">...</span>
+<span class="u--font-weight-black">...</span>`}
+          </Code>
+        </Example>
+        <Description>
+          Modify the font family with the <code>.u--font-family-</code> utility
+          classes.
+        </Description>
+        <Example>
+          <ExampleView>
+            <span className="u--font-family-sans-serif">
+              .u--font-family-sans-serif
+            </span>
+            <br />
+            <span className="u--font-family-serif">.u--font-family-serif</span>
+            <br />
+            <span className="u--font-family-monospace">
+              .u--font-family-monospace
+            </span>
+          </ExampleView>
+          <Code language="html">
+            {`<span class="u--font-family-sans-serif">...</span>
+<span class="u--font-family-serif">...</span>
+<span class="u--font-family-monospace">...</span>`}
           </Code>
         </Example>
         <Description>
@@ -1356,47 +1385,101 @@ class Utilities extends Component {
           <table className="table table--bordered">
             <tbody>
               <tr>
-                <th>Screen Size</th>
+                <th>Screen/Device Size</th>
                 <th>Postfix</th>
+                <th>Meaning</th>
               </tr>
               <tr>
                 <td>All</td>
                 <td>(no postfix)</td>
+                <td>
+                  <em>all screen/device sizes</em>
+                </td>
               </tr>
               <tr>
-                <td>Extra Small (and up)</td>
+                <td>Extra Small</td>
                 <td>
                   <code>-xs</code>
+                  <br />
+                  <code>-xs-min</code>
+                </td>
+                <td>
+                  <em>xs only</em>
+                  <br />
+                  <em>xs and up</em>
                 </td>
               </tr>
               <tr>
-                <td>Small (and up)</td>
+                <td>Small</td>
                 <td>
                   <code>-sm</code>
+                  <br />
+                  <code>-sm-min</code>
+                  <br />
+                  <code>-sm-max</code>
+                </td>
+                <td>
+                  <em>sm only</em>
+                  <br />
+                  <em>sm and up</em>
+                  <br />
+                  <em>sm and down</em>
                 </td>
               </tr>
               <tr>
-                <td>Medium (and up)</td>
+                <td>Medium</td>
                 <td>
                   <code>-md</code>
+                  <br />
+                  <code>-md-min</code>
+                  <br />
+                  <code>-md-max</code>
+                </td>
+                <td>
+                  <em>md only</em>
+                  <br />
+                  <em>md and up</em>
+                  <br />
+                  <em>md and down</em>
                 </td>
               </tr>
               <tr>
-                <td>Large (and up)</td>
+                <td>Large</td>
                 <td>
                   <code>-lg</code>
+                  <br />
+                  <code>-lg-min</code>
+                  <br />
+                  <code>-lg-max</code>
+                </td>
+                <td>
+                  <em>lg only</em>
+                  <br />
+                  <em>lg and up</em>
+                  <br />
+                  <em>lg and down</em>
                 </td>
               </tr>
               <tr>
-                <td>Extra Large (and up)</td>
+                <td>Extra Large</td>
                 <td>
                   <code>-xl</code>
+                  <br />
+                  <code>-xl-min</code>
+                </td>
+                <td>
+                  <em>xl only</em>
+                  <br />
+                  <em>xl and up</em>
                 </td>
               </tr>
               <tr>
-                <td>Print (only)</td>
+                <td>Print</td>
                 <td>
-                  <code>-print</code>
+                  <code>-pr</code>
+                </td>
+                <td>
+                  <em>print only</em>
                 </td>
               </tr>
             </tbody>
@@ -1409,27 +1492,36 @@ class Utilities extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <p className="u--display-none u--display-block-lg">
-              I'm only visible on large screen sizes!
+            <p className="u--display-none u--display-block-lg-min">
+              I'm only visible on large and extra large screen sizes!
             </p>
           </ExampleView>
           <Code language="html">
-            {`<p class="u--display-none u--display-block-lg">...</p>`}
+            {`<p class="u--display-none u--display-block-lg-min">...</p>`}
           </Code>
         </Example>
         <Description>
           Or if you only wanted something to display for extra small (<code>
             xs
-          </code>) and small (<code>sm</code>) screen sizes, you could do:
+          </code>) and small (<code>sm</code>) screen sizes, you could do one of
+          the following:
         </Description>
         <Example>
           <ExampleView>
-            <p className="u--display-block u--display-none-md">
+            <p className="u--display-block u--display-none-md-min">
+              I'm only visible on extra small and small screen sizes!
+            </p>
+            <p className="u--display-block-xs u--display-block-sm u--display-none-md u--display-none-lg u--display-none-xl">
+              I'm only visible on extra small and small screen sizes!
+            </p>
+            <p className="u--hidden-md-min">
               I'm only visible on extra small and small screen sizes!
             </p>
           </ExampleView>
           <Code language="html">
-            {`<p class="u--display-block u--display-none-md">...</p>`}
+            {`<p class="u--display-block u--display-none-md-min">...</p>
+<p class="u--display-block-xs u--display-block-sm u--display-none-md u--display-none-lg u--display-none-xl">...</p>
+<p class="u--hidden-md-min">...</p>`}
           </Code>
         </Example>
       </Section>

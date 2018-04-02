@@ -16,7 +16,7 @@ class Containers extends Component {
   render() {
     return (
       <Section container={false}>
-        <div className="container container--md">
+        <div className="container container--sm">
           <Title id="containers">Containers</Title>
           <Description>
             Wrap content in a <code>.container</code> class to center it and

@@ -2,7 +2,7 @@
 // mixins
 // --------------------------------------------------
 
-@mixin link-colors($colors: $colors-theme) {
+@mixin link-colors($colors: $colors) {
   @each $key, $color in $colors {
     $selector: 'a.link--#{$key}';
 

@@ -9,11 +9,11 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import notices from '../../framework/js/notices';
+import notice from '../../framework/js/notice';
 
 class Notices extends Component {
   componentDidMount() {
-    notices('[data-notice-dismissible]');
+    notice('[data-notice-dismissible]');
   }
 
   shouldComponentUpdate() {

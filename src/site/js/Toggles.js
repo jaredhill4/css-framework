@@ -9,11 +9,11 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import toggles from '../../framework/js/toggles';
+import toggle from '../../framework/js/toggle';
 
 class Toggles extends Component {
   componentDidMount() {
-    toggles('[data-toggle-target]');
+    toggle('[data-toggle-target]');
   }
 
   shouldComponentUpdate() {

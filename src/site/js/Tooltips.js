@@ -7,11 +7,11 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import tooltips from '../../framework/js/tooltips';
+import tooltip from '../../framework/js/tooltip';
 
 class Tooltips extends Component {
   componentDidMount() {
-    tooltips('[data-tooltip]');
+    tooltip('[data-tooltip]');
   }
 
   shouldComponentUpdate() {

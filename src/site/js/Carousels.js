@@ -8,7 +8,7 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import carousels from '../../framework/js/carousels';
+import carousel from '../../framework/js/carousel';
 
 const slideStyles = {
   width: '100%',
@@ -19,8 +19,8 @@ const slideStyles = {
 
 class Carousels extends Component {
   componentDidMount() {
-    carousels('[data-carousel="sample-carousel"]');
-    carousels('[data-carousel="sample-carousel-dots"]', {
+    carousel('[data-carousel="sample-carousel"]');
+    carousel('[data-carousel="sample-carousel-dots"]', {
       infinite: false,
       autoplay: true,
       dots: true,
@@ -73,20 +73,20 @@ class Carousels extends Component {
           "sample-carousel."
         </Description>
         <Code language="html">
-          {`<div data-carousel="sample-carousel">
-    <div>
+          {`<div class="carousel" data-carousel="sample-carousel">
+    <div class="carousel__slide">
         Slide 1
     </div>
-    <div>
+    <div class="carousel__slide">
         Slide 2
     </div>
-    <div>
+    <div class="carousel__slide">
         Slide 3
     </div>
-    <div>
+    <div class="carousel__slide">
         Slide 4
     </div>
-    <div>
+    <div class="carousel__slide">
         Slide 5
     </div>
 </div>`}
@@ -107,12 +107,22 @@ class Carousels extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <div data-carousel="sample-carousel">
-              <div style={slideStyles}>Slide 1</div>
-              <div style={slideStyles}>Slide 2</div>
-              <div style={slideStyles}>Slide 3</div>
-              <div style={slideStyles}>Slide 4</div>
-              <div style={slideStyles}>Slide 5</div>
+            <div className="carousel" data-carousel="sample-carousel">
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 1
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 2
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 3
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 4
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 5
+              </div>
             </div>
           </ExampleView>
         </Example>
@@ -139,12 +149,22 @@ const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarou
         </Description>
         <Example>
           <ExampleView>
-            <div data-carousel="sample-carousel-dots">
-              <div style={slideStyles}>Slide 1</div>
-              <div style={slideStyles}>Slide 2</div>
-              <div style={slideStyles}>Slide 3</div>
-              <div style={slideStyles}>Slide 4</div>
-              <div style={slideStyles}>Slide 5</div>
+            <div className="carousel" data-carousel="sample-carousel-dots">
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 1
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 2
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 3
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 4
+              </div>
+              <div className="carousel__slide" style={slideStyles}>
+                Slide 5
+              </div>
             </div>
           </ExampleView>
         </Example>

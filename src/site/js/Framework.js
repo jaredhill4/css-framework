@@ -14,7 +14,7 @@ registerLanguage('scss', scss);
 
 const Section = ({ children, id = '', container = true }) => {
   const containerClassNames = classnames({
-    'container container--md': container,
+    'container container--sm': container,
   });
   return (
     <section id={id} className="framework__section">

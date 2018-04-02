@@ -111,10 +111,10 @@ class Modal {
   }
 }
 
-const modals = selector => {
+const modal = selector => {
   $(selector).each((index, element) => {
     new Modal(element);
   });
 };
 
-export default modals;
+export default modal;

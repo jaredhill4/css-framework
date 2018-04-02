@@ -93,10 +93,10 @@ class Dropdown {
   }
 }
 
-const dropdowns = selector => {
+const dropdown = selector => {
   $(selector).each((index, element) => {
     new Dropdown(element);
   });
 };
 
-export default dropdowns;
+export default dropdown;

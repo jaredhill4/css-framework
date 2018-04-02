@@ -5,6 +5,7 @@
  */
 
 @import '../../framework/scss/functions.scss';
+@import '../../framework/scss/colors.scss';
 @import '../../framework/scss/variables.scss';
 @import '../../framework/scss/mixins.scss';
 @import '../../framework/scss/placeholders.scss';
@@ -40,12 +41,12 @@ body {
 
   &:hover,
   .html--menu-open & {
-    background-color: $color-blue;
+    background-color: color('blue');
   }
 
   .html--menu-open & {
     transform: translateX(260px);
-    background-color: shade($color-blue, 10%);
+    background-color: shade(color('blue'), 10%);
   }
 
   &:focus {
@@ -60,7 +61,7 @@ body {
   margin-top: -7px;
 
   span {
-    background-color: $color-black;
+    background-color: color('black');
     border-radius: 0;
     display: block;
     height: 2px;
@@ -136,7 +137,7 @@ body {
 
   &::before,
   &::after {
-    color: $color-black;
+    color: color('black');
     font-size: 12px;
     font-weight: bold;
     left: 0;
@@ -228,14 +229,14 @@ body {
   height: 64px;
   line-height: 64px;
   padding: 0 20px;
-  color: $color-white;
+  color: color('white');
   font-weight: bold;
-  background: $color-blue;
+  background: color('blue');
   text-decoration: none !important;
 
   &:hover {
-    color: $color-white;
-    background: tint($color-blue, 10%);
+    color: color('white');
+    background: tint(color('blue'), 10%);
   }
 }
 
@@ -252,7 +253,7 @@ body {
 }
 
 .framework__nav > .framework__nav-title {
-  color: rgba($color-black, 0.5);
+  color: rgba(color('black'), 0.5);
   font-size: rem(12px);
   padding: 30px 20px 15px 20px;
   margin-top: 30px;
@@ -267,8 +268,8 @@ body {
 }
 
 .framework__nav > li > a {
-  background-color: $color-white;
-  color: $color-black;
+  background-color: color('white');
+  color: color('black');
   display: block;
   line-height: 1.5;
   padding: 8px 20px 8px 40px;
@@ -276,13 +277,13 @@ body {
   transition: $global-transition-fast;
 
   &:hover {
-    background-color: $color-white;
-    color: $color-blue;
+    background-color: color('white');
+    color: color('blue');
   }
 
   &.active {
     font-weight: bold;
-    color: $color-blue;
+    color: color('blue');
   }
 }
 

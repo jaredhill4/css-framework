@@ -21,10 +21,6 @@ html {
   line-height: $line-height-base;
   overflow-x: hidden;
 
-  @media #{$mq-min-xs} {
-    font-size: $font-size-base;
-  }
-
   @media #{$mq-min-sm} {
     font-size: $font-size-base;
   }
@@ -47,7 +43,7 @@ html {
 // --------------------------------------------------
 
 body {
-  color: $color-black;
+  color: $font-color-base;
   font-family: $font-family-sans-serif;
   line-height: $line-height-base;
   text-rendering: optimizeLegibility;

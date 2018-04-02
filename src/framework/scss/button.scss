@@ -13,15 +13,15 @@ $button-padding-y: 0.5em;
 
 @function calc-btn-color($background-color) {
   @if (lightness($background-color) > 70) {
-    @return $color-black;
+    @return color('black');
   } @else {
-    @return $color-white;
+    @return color('white');
   }
 }
 
 @function calc-btn-outline-color($color) {
   @if (lightness($color) > 70) {
-    @return $color-black;
+    @return color('black');
   } @else {
     @return $color;
   }
@@ -67,11 +67,11 @@ $button-padding-y: 0.5em;
   }
 }
 
-@mixin btn($colors: $colors-theme) {
+@mixin btn($colors: $colors) {
   $selector: '.btn';
   $selector-outline: '#{$selector}.btn--outline';
-  $color-base: map-get(map-get($colors, $button-default-color), 'base');
-  $color-hover: map-get(map-get($colors, $button-default-color), 'hover');
+  $color-base: map-deep-get($colors, $button-default-color, 'base');
+  $color-hover: map-deep-get($colors, $button-default-color, 'hover');
 
   #{$selector} {
     @include create-button($color-base, $color-hover);

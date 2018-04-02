@@ -9,11 +9,11 @@ import {
   ExampleView,
   Code,
 } from './Framework';
-import modals from '../../framework/js/modals';
+import modal from '../../framework/js/modal';
 
 class Modals extends Component {
   componentDidMount() {
-    modals('[data-modal]');
+    modal('[data-modal]');
   }
 
   shouldComponentUpdate() {

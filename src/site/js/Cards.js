@@ -40,7 +40,7 @@ class Cards extends Component {
                       culpa deserunt.
                     </p>
                     <p>
-                      <button className="btn btn--blue">Learn More</button>
+                      <button className="btn btn--primary">Learn More</button>
                     </p>
                   </section>
                 </article>
@@ -79,7 +79,7 @@ class Cards extends Component {
                       culpa deserunt.
                     </p>
                     <p>
-                      <button className="btn btn--blue">Learn More</button>
+                      <button className="btn btn--primary">Learn More</button>
                     </p>
                   </section>
                   <footer className="card__footer">
@@ -245,7 +245,7 @@ class Cards extends Component {
                       culpa deserunt.
                     </p>
                     <p>
-                      <button className="btn btn--blue">Learn More</button>
+                      <button className="btn btn--primary">Learn More</button>
                     </p>
                   </section>
                   <footer className="card__footer">

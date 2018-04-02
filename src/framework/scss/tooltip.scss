@@ -2,10 +2,10 @@
 // variables
 // --------------------------------------------------
 
-$tooltip-background: $color-black;
+$tooltip-background: color('black');
 $tooltip-border-radius: $global-border-radius;
 $tooltip-box-shadow: none;
-$tooltip-color: $color-white;
+$tooltip-color: color('white');
 $tooltip-font-size: 0.9rem;
 $tooltip-line-height: 1.15;
 $tooltip-max-width: 200px;

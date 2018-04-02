@@ -1,124 +1,38 @@
 // --------------------------------------------------
-// color palette
-// --------------------------------------------------
-
-// base
-$color-black: #292b2c;
-$color-white: #fff;
-
-$color-blue: #6772e5;
-$color-green: #3ecf8e;
-$color-yellow: #ffd65a;
-$color-red: #e56767;
-
-$color-gray-lightest: #f2f2f2;
-$color-gray-lighter: #e3e3e3;
-$color-gray-light: #c8cbcc;
-$color-gray: #9ea3a8;
-$color-gray-dark: #72757a;
-$color-gray-darker: #4d4d4d;
-$color-gray-darkest: #353535;
-
-// hover
-$color-white-hover: darken($color-white, 15%);
-$color-black-hover: lighten($color-black, 20%);
-
-$color-blue-hover: darken($color-blue, 15%);
-$color-green-hover: darken($color-green, 15%);
-$color-yellow-hover: darken($color-yellow, 15%);
-$color-red-hover: darken($color-red, 15%);
-
-$color-gray-lightest-hover: darken($color-gray-lightest, 15%);
-$color-gray-lighter-hover: darken($color-gray-lighter, 15%);
-$color-gray-light-hover: darken($color-gray-light, 15%);
-$color-gray-hover: darken($color-gray, 15%);
-$color-gray-dark-hover: lighten($color-gray-dark, 15%);
-$color-gray-darker-hover: lighten($color-gray-darker, 20%);
-$color-gray-darkest-hover: lighten($color-gray-darkest, 20%);
-
-$color-primary: $color-blue;
-$color-primary-hover: $color-blue-hover;
-
-// theme
-$colors-theme: (
-  'white': ('name': 'White', 'base': $color-white, 'hover': $color-white-hover),
-  'black': ('name': 'Black', 'base': $color-black, 'hover': $color-black-hover),
-  'primary':
-    ('name': 'Primary', 'base': $color-primary, 'hover': $color-primary-hover),
-  'blue': ('name': 'Blue', 'base': $color-blue, 'hover': $color-blue-hover),
-  'green': ('name': 'green', 'base': $color-green, 'hover': $color-green-hover),
-  'yellow':
-    ('name': 'yellow', 'base': $color-yellow, 'hover': $color-yellow-hover),
-  'red': ('name': 'red', 'base': $color-red, 'hover': $color-red-hover),
-  'gray-lightest':
-    (
-      'name': 'Gray Lightest',
-      'base': $color-gray-lightest,
-      'hover': $color-gray-lightest-hover
-    ),
-  'gray-lighter':
-    (
-      'name': 'Gray Lighter',
-      'base': $color-gray-lighter,
-      'hover': $color-gray-lighter-hover
-    ),
-  'gray-light':
-    (
-      'name': 'Gray Light',
-      'base': $color-gray-light,
-      'hover': $color-gray-light-hover
-    ),
-  'gray': ('name': 'Gray', 'base': $color-gray, 'hover': $color-gray-hover),
-  'gray-dark':
-    (
-      'name': 'Gray Dark',
-      'base': $color-gray-dark,
-      'hover': $color-gray-dark-hover
-    ),
-  'gray-darker':
-    (
-      'name': 'Gray Darker',
-      'base': $color-gray-darker,
-      'hover': $color-gray-darker-hover
-    ),
-  'gray-darkest':
-    (
-      'name': 'Gray Darkest',
-      'base': $color-gray-darkest,
-      'hover': $color-gray-darkest-hover
-    )
-);
-
-// --------------------------------------------------
 // breakpoints & media queries
 // --------------------------------------------------
 
-$breakpoint-xs: 480px;
-$breakpoint-sm: 768px;
-$breakpoint-md: 992px;
-$breakpoint-lg: 1200px;
-$breakpoint-xl: 1600px;
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
 
 $mq-pr: 'print';
 
-$mq-min-xs: 'screen and (min-width: #{$breakpoint-xs})';
 $mq-min-sm: 'screen and (min-width: #{$breakpoint-sm})';
 $mq-min-md: 'screen and (min-width: #{$breakpoint-md})';
 $mq-min-lg: 'screen and (min-width: #{$breakpoint-lg})';
 $mq-min-xl: 'screen and (min-width: #{$breakpoint-xl})';
 
-$mq-max-xs: 'screen and (max-width: #{$breakpoint-xs - 1px})';
-$mq-max-sm: 'screen and (max-width: #{$breakpoint-sm - 1px})';
-$mq-max-md: 'screen and (max-width: #{$breakpoint-md - 1px})';
-$mq-max-lg: 'screen and (max-width: #{$breakpoint-lg - 1px})';
-$mq-max-xl: 'screen and (max-width: #{$breakpoint-xl - 1px})';
+$mq-max-xs: 'screen and (max-width: #{$breakpoint-sm - 1px})';
+$mq-max-sm: 'screen and (max-width: #{$breakpoint-md - 1px})';
+$mq-max-md: 'screen and (max-width: #{$breakpoint-lg - 1px})';
+$mq-max-lg: 'screen and (max-width: #{$breakpoint-xl - 1px})';
+
+// --------------------------------------------------
+// grid
+// --------------------------------------------------
+
+$grid-column-count: 12;
+$grid-gutter-width: 30px;
 
 // --------------------------------------------------
 // links
 // --------------------------------------------------
 
-$link-color: $color-primary;
-$link-color-hover: $color-primary-hover;
+$link-color: color('primary');
+$link-color-hover: color('primary', 'hover');
 
 // --------------------------------------------------
 // globals
@@ -126,13 +40,13 @@ $link-color-hover: $color-primary-hover;
 
 $global-border-width: 1px;
 $global-border-style: solid;
-$global-border-color: $color-gray-lighter;
+$global-border-color: color('gray-lighter');
 $global-border: $global-border-width $global-border-style $global-border-color;
 $global-border-radius: 0.25rem;
 
 $global-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-$global-focus-box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
+$global-focus-box-shadow: 0 0 0 2px rgba(color('primary'), 0.5);
 
 $global-transition-fast: all 0.15s ease;
 $global-transition-slow: all 0.3s ease;
@@ -142,6 +56,12 @@ $global-transition-slow: all 0.3s ease;
 // --------------------------------------------------
 
 $z-index-modal: 1050;
+
+// --------------------------------------------------
+// font color
+// --------------------------------------------------
+
+$font-color-base: color('black');
 
 // --------------------------------------------------
 // font families
