@@ -155,7 +155,7 @@ $carousel-dot-size: 12px;
     background: color('primary');
   }
   &:focus {
-    box-shadow: $global-focus-box-shadow;
+    @include focus;
   }
 
   &::before,

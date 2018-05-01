@@ -22,25 +22,31 @@ export default () => (
       </p>
     </Description>
     <div className="grid">
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
+        <div className="swatch swatch--dual swatch--teal">
+          <div className="swatch__color" />
+        </div>
+      </div>
+
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--dual swatch--blue">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--dual swatch--green">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--dual swatch--yellow">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--dual swatch--red">
           <div className="swatch__color" />
         </div>
@@ -48,55 +54,55 @@ export default () => (
     </div>
 
     <div className="grid">
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--black">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray-darkest">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray-darker">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray-dark">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray-light">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray-lighter">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--gray-lightest">
           <div className="swatch__color" />
         </div>
       </div>
 
-      <div className="grid__col grid__col-sm-6 grid__col-md-3">
+      <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--white">
           <div className="swatch__color" />
         </div>
@@ -132,7 +138,7 @@ export default () => (
     </Description>
     <Code language="scss">
       {`$colors: (
-  ..., // other colors
+  // other colors...
   'burnt-orange': ('name': 'Burnt Orange', 'base': #e87420, 'hover': darken(#e87420, 8%))
 );`}
     </Code>

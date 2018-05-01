@@ -14,7 +14,6 @@ $form-input-padding-x: 0.75em;
 $form-input-padding-y: 0.5em;
 $form-input-transition: $global-transition-fast;
 
-$form-input-focus-box-shadow: $global-focus-box-shadow;
 $form-input-focus-border-color: color('primary');
 $form-input-focus-color: $form-input-color;
 
@@ -78,8 +77,8 @@ legend {
   width: 100%;
 
   &:focus {
+    @include focus;
     border-color: $form-input-focus-border-color;
-    box-shadow: $form-input-focus-box-shadow;
     color: $form-input-focus-color;
     outline: 0;
   }
@@ -174,8 +173,8 @@ legend {
     width: 20px;
 
     &:focus {
+      @include focus;
       border-color: $form-input-focus-border-color;
-      box-shadow: $form-input-focus-box-shadow;
       outline: 0;
     }
 

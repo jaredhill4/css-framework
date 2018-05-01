@@ -11,7 +11,7 @@
  @import '../framework/scss/placeholders.scss';
 
  body {
-   background-color: #fff;
+   background-color: color('white');
    position: relative;
  }
 
@@ -20,7 +20,7 @@
  }
 
  .framework__toggle {
-   background-color: rgba(#fff, 0.85);
+   background-color: rgba(color('white'), 0.85);
    border: none;
    cursor: pointer;
    display: block;
@@ -41,12 +41,12 @@
 
    &:hover,
    .html--menu-open & {
-     background-color: color('blue');
+     background-color: color('primary');
    }
 
    .html--menu-open & {
      transform: translateX(260px);
-     background-color: shade(color('blue'), 10%);
+     background-color: shade(color('primary'), 10%);
    }
 
    &:focus {
@@ -75,7 +75,7 @@
 
      .framework__toggle:hover &,
      .html--menu-open & {
-       background-color: #fff;
+       background-color: color('white');
      }
    }
 
@@ -151,7 +151,7 @@
 
      .framework__toggle:hover &,
      .html--menu-open & {
-       color: #fff;
+       color: color('white');
      }
    }
 
@@ -179,7 +179,7 @@
  }
 
  .framework__sidebar {
-   background-color: #fff;
+   background-color: color('white');
    bottom: 0;
    left: 0;
    overflow-y: auto;
@@ -197,7 +197,7 @@
  }
 
  .framework__backdrop {
-   background-color: rgba(#000, 0);
+   background-color: rgba(0, 0, 0, 0);
    bottom: 0;
    left: 0;
    position: fixed;
@@ -208,7 +208,7 @@
    z-index: 990;
 
    .html--menu-open & {
-     background-color: rgba(#000, 0.7);
+     background-color: rgba(0, 0, 0, 0.7);
      visibility: visible;
    }
  }
@@ -231,12 +231,12 @@
    padding: 0 20px;
    color: color('white');
    font-weight: bold;
-   background: color('blue');
+   background: color('primary');
    text-decoration: none !important;
 
    &:hover {
      color: color('white');
-     background: tint(color('blue'), 10%);
+     background: tint(color('primary'), 10%);
    }
  }
 
@@ -278,33 +278,25 @@
 
    &:hover {
      background-color: color('white');
-     color: color('blue');
+     color: color('primary');
    }
 
    &.active {
      font-weight: bold;
-     color: color('blue');
+     color: color('primary');
    }
  }
 
  .framework__section {
    padding: rem(80) 0;
-
-   &:nth-of-type(even) {
-     background-color: #f8f9fa;
-   }
-
-   &:last-of-type {
-     border-bottom: none;
-   }
  }
 
  .example {
    position: relative;
    margin-top: $type-margin-base;
    margin-bottom: 2rem;
-   background: #fff;
-   border: 1px solid #ffdd57;
+   background: color('white');
+   border: 1px solid color('yellow');
 
    &:last-child,
    & > :last-child {
@@ -312,7 +304,7 @@
    }
 
    &::before {
-     background: #ffdd57;
+     background: color('yellow');
      content: 'Example';
      color: rgba(0, 0, 0, 0.7);
      display: inline-block;
@@ -357,7 +349,7 @@
 
  .example__grid,
  .example__container {
-   background-color: rgba(#3ecf8e, 0.3);
+   background-color: rgba(color('primary'), 0.3);
    border-radius: 3px;
    font-size: rem(14px);
    padding: 8px;

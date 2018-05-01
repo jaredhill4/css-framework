@@ -898,7 +898,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="example__grid u--margin-top-20">
+        <div className="example__grid">
           <div className="example__grid__text">
             .u--flex-direction-row-reverse
           </div>
@@ -956,7 +956,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="example__grid u--margin-top-20">
+        <div className="example__grid">
           <div className="example__grid__text">.u--flex-wrap-wrap</div>
           <div className="u--display-flex u--flex-wrap-wrap">
             <span className="example__grid u--width-auto">Flex item 1</span>
@@ -1037,7 +1037,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="example__grid u--margin-top-20">
+        <div className="example__grid">
           <div className="example__grid__text">
             .u--justify-content-space-between
           </div>
@@ -1101,7 +1101,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="example__grid u--margin-top-20">
+        <div className="example__grid">
           <div className="example__grid__text">
             .u--align-items-flex-end
           </div>

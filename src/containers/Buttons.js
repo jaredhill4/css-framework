@@ -30,11 +30,11 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <button type="button" className="btn btn--white">
-          White
+        <button type="button" className="btn">
+          Default
         </button>
-        <button type="button" className="btn btn--black">
-          Black
+        <button type="button" className="btn btn--primary">
+          Primary
         </button>
         <button type="button" className="btn btn--red">
           Red
@@ -48,14 +48,18 @@ export default () => (
         <button type="button" className="btn btn--yellow">
           Yellow
         </button>
+        <button type="button" className="btn btn--black">
+          Black
+        </button>
       </ExampleView>
       <Code language="html">
-        {`<button class="btn btn--white">...</button>
-<button class="btn btn--black">...</button>
+        {`<button class="btn btn--default">...</button>
+<button class="btn btn--primary">...</button>
 <button class="btn btn--red">...</button>
 <button class="btn btn--green">...</button>
 <button class="btn btn--blue">...</button>
-<button class="btn btn--yellow">...</button>`}
+<button class="btn btn--yellow">...</button>
+<button class="btn btn--black">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-outlined">Outlined</SubTitle>
@@ -68,8 +72,8 @@ export default () => (
         <button type="button" className="btn btn--outline">
           Default
         </button>
-        <button type="button" className="btn btn--black btn--outline">
-          Black
+        <button type="button" className="btn btn--primary btn--outline">
+          Primary
         </button>
         <button type="button" className="btn btn--red btn--outline">
           Red
@@ -83,14 +87,18 @@ export default () => (
         <button type="button" className="btn btn--yellow btn--outline">
           Yellow
         </button>
+        <button type="button" className="btn btn--black btn--outline">
+          Black
+        </button>
       </ExampleView>
       <Code language="html">
         {`<button class="btn btn--outline">...</button>
-<button class="btn btn--black btn--outline">...</button>
+<button class="btn btn--primary btn--outline">...</button>
 <button class="btn btn--red btn--outline">...</button>
 <button class="btn btn--green btn--outline">...</button>
 <button class="btn btn--blue btn--outline">...</button>
-<button class="btn btn--yellow btn--outline">...</button>`}
+<button class="btn btn--yellow btn--outline">...</button>
+<button class="btn btn--black btn--outline">...</button>`}
       </Code>
     </Example>
     <SubTitle id="buttons-sizes">Sizes</SubTitle>

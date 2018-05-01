@@ -12,7 +12,7 @@ $button-padding-y: 0.5em;
 // --------------------------------------------------
 
 @function calc-btn-color($background-color) {
-  @if (lightness($background-color) > 70) {
+  @if (lightness($background-color) > 60) {
     @return color('black');
   } @else {
     @return color('white');
@@ -40,6 +40,10 @@ $button-padding-y: 0.5em;
     background-color: $color-hover;
     border-color: $color-hover;
     color: calc-btn-color($color-base);
+  }
+
+  &:focus {
+    @include focus($color-base);
   }
 
   &:active {
@@ -126,7 +130,6 @@ $button-padding-y: 0.5em;
   }
 
   &:focus {
-    box-shadow: $global-focus-box-shadow;
     outline: 0;
     text-decoration: none;
   }
@@ -184,6 +187,11 @@ fieldset[disabled] a.btn {
     background-color: transparent;
     border-color: transparent;
     color: $link-color-hover;
+  }
+
+  &:focus {
+    box-shadow: none;
+    text-decoration: underline;
   }
 }
 
