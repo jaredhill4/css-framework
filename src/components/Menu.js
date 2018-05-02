@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-static';
+import componentMap from '../../componentMap';
+
+const PageLink = ({ item, toggleMenu }) => (
+  <li key={item.path}>
+    <Link to={item.path} onClick={toggleMenu}>{item.name}</Link>
+  </li>
+);
 
 export default class Menu extends Component {
   componentDidUpdate(prevProps) {
@@ -20,94 +27,21 @@ export default class Menu extends Component {
         </Link>
         <ul className="framework__nav">
           <li className="framework__nav-title">Layout</li>
-          <li>
-            <Link to="/grid" onClick={toggleMenu}>
-              Grid
-            </Link>
-          </li>
-          <li>
-            <Link to="/containers" onClick={toggleMenu}>
-              Containers
-            </Link>
-          </li>
-          <li>
-            <Link to="/sections" onClick={toggleMenu}>
-              Sections
-            </Link>
-          </li>
+          {componentMap
+            .filter(x => x.category === 'layout')
+            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
           <li className="framework__nav-title">Base</li>
-          <li>
-            <Link to="/colors" onClick={toggleMenu}>
-              Colors
-            </Link>
-          </li>
-          <li>
-            <Link to="/typography" onClick={toggleMenu}>
-              Typography
-            </Link>
-          </li>
-          <li>
-            <Link to="/buttons" onClick={toggleMenu}>
-              Buttons
-            </Link>
-          </li>
-          <li>
-            <Link to="/forms" onClick={toggleMenu}>
-              Forms
-            </Link>
-          </li>
-          <li>
-            <Link to="/tables" onClick={toggleMenu}>
-              Tables
-            </Link>
-          </li>
+          {componentMap
+            .filter(x => x.category === 'base')
+            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
           <li className="framework__nav-title">Components</li>
-          <li>
-            <Link to="/cards" onClick={toggleMenu}>
-              Cards
-            </Link>
-          </li>
-          <li>
-            <Link to="/carousels" onClick={toggleMenu}>
-              Carousels
-            </Link>
-          </li>
-          <li>
-            <Link to="/dropdowns" onClick={toggleMenu}>
-              Dropdowns
-            </Link>
-          </li>
-          <li>
-            <Link to="/modals" onClick={toggleMenu}>
-              Modals
-            </Link>
-          </li>
-          <li>
-            <Link to="/notices" onClick={toggleMenu}>
-              Notices
-            </Link>
-          </li>
-          <li>
-            <Link to="/pagination" onClick={toggleMenu}>
-              Pagination
-            </Link>
-          </li>
-          <li>
-            <Link to="/toggles" onClick={toggleMenu}>
-              Toggles
-            </Link>
-          </li>
-          <li>
-            <Link to="/tooltips" onClick={toggleMenu}>
-              Tooltips
-            </Link>
-          </li>
+          {componentMap
+            .filter(x => x.category === 'components')
+            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
           <li className="framework__nav-title">Other</li>
-          <li>
-            <Link to="/utilities" onClick={toggleMenu}>
-              Utilities
-            </Link>
-          </li>
+          {componentMap
+            .filter(x => x.category === 'other')
+            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
         </ul>
       </div>
     );
