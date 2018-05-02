@@ -4,6 +4,7 @@
   - [npm start](#npm-run-start)
   - [npm run prettier](#npm-run-prettier)
   - [npm run build](#npm-run-build)
+  - [npm run stage](#npm-run-stage)
   - [npm run serve](#npm-run-serve)
 
 ## Available Scripts
@@ -24,10 +25,12 @@ Runs all CSS/JS through [Prettier](https://github.com/prettier/prettier) to prop
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder.<br>
+Builds the app for production to the `dist` folder.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### `npm run stage`
+
+Builds the app for staging to the `dist` folder.
+Use this to preview the app locally with `npm run serve`.
 
 ### `npm run serve`
 

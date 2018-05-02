@@ -1,0 +1,11 @@
+[build]
+  publish = "dist/"
+
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run stage"
+
+[context.branch-deploy]
+  command = "npm run stage"
