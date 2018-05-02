@@ -69,7 +69,7 @@ export default class Carousels extends Component {
           "sample-carousel."
         </Description>
         <Code language="html">
-{`<div class="carousel" data-carousel="sample-carousel">
+          {`<div class="carousel" data-carousel="sample-carousel">
     <div class="carousel__slide">
         Slide 1
     </div>
@@ -131,7 +131,7 @@ export default class Carousels extends Component {
           </p>
         </Description>
         <Code language="javascript">
-{`const sampleCarouselSettings = {
+          {`const sampleCarouselSettings = {
   infinite: false,     // prevent slides from looping
   autoplay: true,      // enable automatic slide progression
   dots: true,          // display dot indicators
@@ -174,7 +174,7 @@ const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarou
           </p>
         </Description>
         <Code language="javascript">
-{`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
+          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
 
 sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
   // do something after the slide changes...
@@ -363,7 +363,7 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
           </tbody>
         </table>
         <Code language="javascript">
-{`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
+          {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
 // Set the autoplaySpeed to 3 seconds
 sampleCarousel.setOption('autoplaySpeed', 3000);
 // Return the current slide index and store it in a variable

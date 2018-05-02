@@ -14,9 +14,9 @@ export default () => (
     <Description>
       <p>
         Wrap page sections in a <code>{`<section>`}</code> tag with the{' '}
-        <code>.section</code> class to apply vertical (top and bottom)
-        padding. The padding of the section can be adjusted with size
-        modifiers. Available modifiers are <code>xs</code>, <code>sm</code>,{' '}
+        <code>.section</code> class to apply vertical (top and bottom) padding.
+        The padding of the section can be adjusted with size modifiers.
+        Available modifiers are <code>xs</code>, <code>sm</code>,{' '}
         <code>md</code>, <code>lg</code> and <code>xl</code>. The default
         setting is <code>md</code>.
       </p>

@@ -136,8 +136,7 @@ export default () => (
             <div className="grid__col">
               <div className="form__field">
                 <label className="form__checkbox">
-                  <input type="checkbox" /> I agree to the terms and
-                  conditions.
+                  <input type="checkbox" /> I agree to the terms and conditions.
                 </label>
               </div>
               <div className="form__field">
@@ -231,11 +230,7 @@ export default () => (
           </div>
           <div className="form__field">
             <label className="form__radio" htmlFor="radio-sample-1">
-              <input
-                id="radio-sample-1"
-                type="radio"
-                name="radio-sample-1"
-              />{' '}
+              <input id="radio-sample-1" type="radio" name="radio-sample-1" />{' '}
               Radio
             </label>
           </div>
@@ -458,11 +453,7 @@ export default () => (
           <div className="form__field">
             <div className="form__input-group form__input-group--sm">
               <span className="form__input-group-addon">Addon</span>
-              <input
-                type="text"
-                className="form__input"
-                placeholder="Small"
-              />
+              <input type="text" className="form__input" placeholder="Small" />
               <button className="btn btn--primary">Button</button>
             </div>
           </div>
@@ -480,11 +471,7 @@ export default () => (
           <div className="form__field">
             <div className="form__input-group form__input-group--lg">
               <span className="form__input-group-addon">Addon</span>
-              <input
-                type="text"
-                className="form__input"
-                placeholder="Large"
-              />
+              <input type="text" className="form__input" placeholder="Large" />
               <button className="btn btn--primary">Button</button>
             </div>
           </div>
@@ -546,11 +533,7 @@ export default () => (
       <ExampleView>
         <form className="form">
           <div className="form__field">
-            <input
-              type="text"
-              className="form__input"
-              defaultValue="Default"
-            />
+            <input type="text" className="form__input" defaultValue="Default" />
           </div>
           <div className="form__field">
             <input

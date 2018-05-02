@@ -62,7 +62,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--color-white">...</span>
+        {`<span class="u--color-white">...</span>
 <span class="u--color-black">...</span>
 <span class="u--color-red">...</span>
 <span class="u--color-green">...</span>
@@ -78,8 +78,8 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Modify link colors by adding a <code>.u--color-</code> utility class
-      to an <code>a</code> tag.
+      Modify link colors by adding a <code>.u--color-</code> utility class to an{' '}
+      <code>a</code> tag.
     </Description>
     <Example>
       <ExampleView>
@@ -164,7 +164,7 @@ export default () => (
         </Link>
       </ExampleView>
       <Code language="html">
-{`<a href="#" class="u--color-white">...</a>
+        {`<a href="#" class="u--color-white">...</a>
 <a href="#" class="u--color-black">...</a>
 <a href="#" class="u--color-red">...</a>
 <a href="#" class="u--color-green">...</a>
@@ -228,7 +228,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--background-color-white">...</span>
+        {`<span class="u--background-color-white">...</span>
 <span class="u--background-color-black">...</span>
 <span class="u--background-color-gray-darkest">...</span>
 <span class="u--background-color-gray-darker">...</span>
@@ -246,8 +246,7 @@ export default () => (
 
     <SubTitle id="utilities-borders">Borders</SubTitle>
     <Description>
-      Add a border to an element with the <code>.u--border</code> utility
-      class.
+      Add a border to an element with the <code>.u--border</code> utility class.
     </Description>
     <Example>
       <ExampleView>
@@ -304,7 +303,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--border u--border-color-white">...</span>
+        {`<span class="u--border u--border-color-white">...</span>
 <span class="u--border u--border-color-gray">...</span>
 <span class="u--border u--border-color-black">...</span>
 <span class="u--border u--border-color-red">...</span>
@@ -336,7 +335,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--border u--border-width-0">...</span>
+        {`<span class="u--border u--border-width-0">...</span>
 <span class="u--border u--border-width-top-0">...</span>
 <span class="u--border u--border-width-right-0">...</span>
 <span class="u--border u--border-width-bottom-0">...</span>
@@ -375,7 +374,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--margin-0">...</span>
+        {`<span class="u--margin-0">...</span>
 <span class="u--margin-5">...</span>
 <span class="u--margin-10">...</span>
 <span class="u--margin-15">...</span>
@@ -430,7 +429,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--padding-0">...</span>
+        {`<span class="u--padding-0">...</span>
 <span class="u--padding-5">...</span>
 <span class="u--padding-10">...</span>
 <span class="u--padding-15">...</span>
@@ -440,8 +439,8 @@ export default () => (
     </Example>
     <Description>
       As with margins, you may apply padding to specific sides of element by
-      using the <code>top</code>, <code>right</code>, <code>bottom</code>{' '}
-      and <code>left</code> modifiers, like so:
+      using the <code>top</code>, <code>right</code>, <code>bottom</code> and{' '}
+      <code>left</code> modifiers, like so:
     </Description>
     <Example>
       <ExampleView>
@@ -456,8 +455,8 @@ export default () => (
 
     <SubTitle id="utilities-width">Width</SubTitle>
     <Description>
-      Adjust the width of an element with the <code>.u--width-</code>{' '}
-      utility classes.{' '}
+      Adjust the width of an element with the <code>.u--width-</code> utility
+      classes.{' '}
       <em>
         Note that each numerical postfix represents a percentage of the
         containing element.
@@ -485,7 +484,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--width-25">...</span>
+        {`<span class="u--width-25">...</span>
 <span class="u--width-33">...</span>
 <span class="u--width-50">...</span>
 <span class="u--width-66">...</span>
@@ -496,9 +495,9 @@ export default () => (
 
     <SubTitle id="utilities-floats">Floats</SubTitle>
     <Description>
-      Add or remove float from elements with the <code>.u--float-</code>{' '}
-      utility classes. You can also use the <code>.u--clearfix</code>{' '}
-      utility to clear floats.
+      Add or remove float from elements with the <code>.u--float-</code> utility
+      classes. You can also use the <code>.u--clearfix</code> utility to clear
+      floats.
     </Description>
     <Example>
       <ExampleView>
@@ -515,7 +514,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--float-left">...</span>
+        {`<span class="u--float-left">...</span>
 <div class="u--clearfix"></div>
 <span class="u--float-right">...</span>
 <div class="u--clearfix"></div>
@@ -532,30 +531,30 @@ export default () => (
           Float right
         </span>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          tempor dolor at suscipit tristique. Curabitur condimentum euismod
-          velit non feugiat. Praesent tincidunt nibh non ullamcorper
-          convallis. Suspendisse potenti. Interdum et malesuada fames ac
-          ante ipsum primis in faucibus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+          dolor at suscipit tristique. Curabitur condimentum euismod velit non
+          feugiat. Praesent tincidunt nibh non ullamcorper convallis.
+          Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis
+          in faucibus.
         </p>
         <p>
-          Donec euismod, turpis sed facilisis congue, sem risus tempus nunc,
-          in rutrum mauris neque non est. Phasellus imperdiet gravida
-          ligula. Mauris in augue blandit, iaculis turpis a, hendrerit nisl.
-          Fusce sem sem, commodo id orci vel, mollis pellentesque nisi. Cras
-          a lorem iaculis, cursus leo id, tempor neque.
+          Donec euismod, turpis sed facilisis congue, sem risus tempus nunc, in
+          rutrum mauris neque non est. Phasellus imperdiet gravida ligula.
+          Mauris in augue blandit, iaculis turpis a, hendrerit nisl. Fusce sem
+          sem, commodo id orci vel, mollis pellentesque nisi. Cras a lorem
+          iaculis, cursus leo id, tempor neque.
         </p>
         <p>
-          Class aptent taciti sociosqu ad litora torquent per conubia
-          nostra, per inceptos himenaeos. Cras aliquam sit amet metus vel
-          vestibulum. Suspendisse ultricies, eros et venenatis vulputate,
-          lorem magna rhoncus eros, quis ultricies eros augue at felis.
-          Phasellus finibus suscipit aliquet. Cras mattis dui a nisl dictum
-          sagittis. Suspendisse pulvinar venenatis aliquet.
+          Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+          per inceptos himenaeos. Cras aliquam sit amet metus vel vestibulum.
+          Suspendisse ultricies, eros et venenatis vulputate, lorem magna
+          rhoncus eros, quis ultricies eros augue at felis. Phasellus finibus
+          suscipit aliquet. Cras mattis dui a nisl dictum sagittis. Suspendisse
+          pulvinar venenatis aliquet.
         </p>
       </ExampleView>
       <Code language="html">
-{`<span class="u--float-right">...</span>
+        {`<span class="u--float-right">...</span>
 <p>...</p>
 <p>...</p>
 <p>...</p>`}
@@ -564,17 +563,17 @@ export default () => (
 
     <SubTitle id="utilities-truncate">Truncate</SubTitle>
     <Description>
-      Strings can be truncated to fit on one line with a trailing ellipsis
-      by adding the class <code>.u--truncate</code>.
+      Strings can be truncated to fit on one line with a trailing ellipsis by
+      adding the class <code>.u--truncate</code>.
     </Description>
     <Example>
       <ExampleView>
         <span className="u--truncate">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          tempor dolor at suscipit tristique. Curabitur condimentum euismod
-          velit non feugiat. Praesent tincidunt nibh non ullamcorper
-          convallis. Suspendisse potenti. Interdum et malesuada fames ac
-          ante ipsum primis in faucibus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor
+          dolor at suscipit tristique. Curabitur condimentum euismod velit non
+          feugiat. Praesent tincidunt nibh non ullamcorper convallis.
+          Suspendisse potenti. Interdum et malesuada fames ac ante ipsum primis
+          in faucibus.
         </span>
       </ExampleView>
       <Code language="html">{`<span class="u--truncate">...</span>`}</Code>
@@ -582,12 +581,12 @@ export default () => (
 
     <SubTitle id="utilities-squash">Squash</SubTitle>
     <Description>
-      A parent element can be given a class of <code>.u--squash</code> to
-      remove margin top from the first child and margin bottom from the last
-      child. Alternatively, classes of <code>.u--squash-start</code> or{' '}
-      <code>.u--squash-end</code> can be used to squash spacing
-      individually. A common use case, as seen below, is to remove the
-      margin from the last paragraph in a sequence of paragraphs.
+      A parent element can be given a class of <code>.u--squash</code> to remove
+      margin top from the first child and margin bottom from the last child.
+      Alternatively, classes of <code>.u--squash-start</code> or{' '}
+      <code>.u--squash-end</code> can be used to squash spacing individually. A
+      common use case, as seen below, is to remove the margin from the last
+      paragraph in a sequence of paragraphs.
     </Description>
     <Example>
       <ExampleView>
@@ -597,25 +596,20 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<div class="u--squash">
+        {`<div class="u--squash">
     <p>...</p>
     <p>...</p>
 </div>`}
       </Code>
     </Example>
 
-    <SubTitle id="utilities-text-styles">
-      Text Styles &amp; Formatting
-    </SubTitle>
+    <SubTitle id="utilities-text-styles">Text Styles &amp; Formatting</SubTitle>
     <Description>
-      Modify font weight with the <code>.u--font-weight-</code> utility
-      classes.
+      Modify font weight with the <code>.u--font-weight-</code> utility classes.
     </Description>
     <Example>
       <ExampleView>
-        <span className="u--font-weight-thin">
-          .u--font-weight-thin (100)
-        </span>
+        <span className="u--font-weight-thin">.u--font-weight-thin (100)</span>
         <br />
         <span className="u--font-weight-extra-light">
           .u--font-weight-extra-light (200)
@@ -637,9 +631,7 @@ export default () => (
           .u--font-weight-semi-bold (600)
         </span>
         <br />
-        <span className="u--font-weight-bold">
-          .u--font-weight-bold (700)
-        </span>
+        <span className="u--font-weight-bold">.u--font-weight-bold (700)</span>
         <br />
         <span className="u--font-weight-extra-bold">
           .u--font-weight-extra-bold (800)
@@ -650,7 +642,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--font-weight-thin">...</span>
+        {`<span class="u--font-weight-thin">...</span>
 <span class="u--font-weight-extra-light">...</span>
 <span class="u--font-weight-light">...</span>
 <span class="u--font-weight-normal">...</span>
@@ -678,14 +670,13 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--font-family-sans-serif">...</span>
+        {`<span class="u--font-family-sans-serif">...</span>
 <span class="u--font-family-serif">...</span>
 <span class="u--font-family-monospace">...</span>`}
       </Code>
     </Example>
     <Description>
-      Modify font style with the <code>.u--font-style-</code> utility
-      classes.
+      Modify font style with the <code>.u--font-style-</code> utility classes.
     </Description>
     <Example>
       <ExampleView>
@@ -693,12 +684,10 @@ export default () => (
         <br />
         <span className="u--font-style-italic">.u--font-style-italic</span>
         <br />
-        <span className="u--font-style-oblique">
-          .u--font-style-oblique
-        </span>
+        <span className="u--font-style-oblique">.u--font-style-oblique</span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--font-style-normal">...</span>
+        {`<span class="u--font-style-normal">...</span>
 <span class="u--font-style-italic">...</span>
 <span class="u--font-style-oblique">...</span>`}
       </Code>
@@ -715,15 +704,14 @@ export default () => (
         <p className="u--text-align-justify">{lorem(4)}</p>
       </ExampleView>
       <Code language="html">
-{`<p class="u--text-align-left">...</p>
+        {`<p class="u--text-align-left">...</p>
 <p class="u--text-align-center">...</p>
 <p class="u--text-align-right">...</p>
 <p class="u--text-align-justify">...</p>`}
       </Code>
     </Example>
     <Description>
-      Transform text with the <code>.u--text-transform-</code> utility
-      classes.
+      Transform text with the <code>.u--text-transform-</code> utility classes.
     </Description>
     <Example>
       <ExampleView>
@@ -732,7 +720,7 @@ export default () => (
         <p className="u--text-transform-capitalize">{lorem(13)}</p>
       </ExampleView>
       <Code language="html">
-{`<p class="u--text-transform-uppercase">...</p>
+        {`<p class="u--text-transform-uppercase">...</p>
 <p class="u--text-transform-lowercase">...</p>
 <p class="u--text-transform-capitalize">...</p>`}
       </Code>
@@ -742,8 +730,8 @@ export default () => (
     <Description>
       <p>
         To make media embeds like <code>iframe</code>, <code>video</code>,{' '}
-        <code>embed</code> and <code>object</code> elements responsive,
-        simply wrap them in a <code>div</code> element with the{' '}
+        <code>embed</code> and <code>object</code> elements responsive, simply
+        wrap them in a <code>div</code> element with the{' '}
         <code>.u--embed-responsive</code> class.
       </p>
     </Description>
@@ -760,7 +748,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<div class="u--embed-responsive">
+        {`<div class="u--embed-responsive">
     <iframe src="..." title="..." allowfullscreen>&nbsp;</iframe>
 </div>`}
       </Code>
@@ -799,7 +787,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<div class="u--embed-responsive u--embed-responsive--4x3">
+        {`<div class="u--embed-responsive u--embed-responsive--4x3">
     <iframe src="..." title="..." allowfullscreen>&nbsp;</iframe>
 </div>`}
       </Code>
@@ -827,7 +815,7 @@ export default () => (
         </span>
       </ExampleView>
       <Code language="html">
-{`<span class="u--display-inline">...</span>
+        {`<span class="u--display-inline">...</span>
 <span class="u--display-inline-block">...</span>
 <span class="u--display-block">...</span>`}
       </Code>
@@ -861,8 +849,8 @@ export default () => (
         </li>
       </ul>
       <p>
-        To simply hide elements, use the <code>.u--hidden</code> utility
-        class. This will set the style to <code>display: none</code>.
+        To simply hide elements, use the <code>.u--hidden</code> utility class.
+        This will set the style to <code>display: none</code>.
       </p>
     </Description>
 
@@ -873,9 +861,7 @@ export default () => (
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .u--display-flex (default)
-          </div>
+          <div className="example__grid__text">.u--display-flex (default)</div>
           <div className="u--display-flex">
             <span className="example__grid u--width-auto">Flex item 1</span>
             <span className="example__grid u--width-auto">Flex item 2</span>
@@ -886,7 +872,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code>
-{`<div class="u--display-flex">
+        {`<div class="u--display-flex">
     ...
 </div>`}
       </Code>
@@ -912,9 +898,7 @@ export default () => (
         </div>
 
         <div className="example__grid u--margin-top-20">
-          <div className="example__grid__text">
-            .u--flex-direction-column
-          </div>
+          <div className="example__grid__text">.u--flex-direction-column</div>
           <div className="u--display-flex u--flex-direction-column">
             <span className="example__grid u--width-auto">Flex item 1</span>
             <span className="example__grid u--width-auto">Flex item 2</span>
@@ -938,7 +922,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code>
-{`<div class="u--display-flex u--flex-direction-row-reverse">
+        {`<div class="u--display-flex u--flex-direction-row-reverse">
     ...
 </div>
 <div class="u--display-flex u--flex-direction-column">
@@ -968,24 +952,12 @@ export default () => (
             <span className="example__grid u--width-auto">Flex item 7</span>
             <span className="example__grid u--width-auto">Flex item 8</span>
             <span className="example__grid u--width-auto">Flex item 9</span>
-            <span className="example__grid u--width-auto">
-              Flex item 10
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 11
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 12
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 13
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 14
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 15
-            </span>
+            <span className="example__grid u--width-auto">Flex item 10</span>
+            <span className="example__grid u--width-auto">Flex item 11</span>
+            <span className="example__grid u--width-auto">Flex item 12</span>
+            <span className="example__grid u--width-auto">Flex item 13</span>
+            <span className="example__grid u--width-auto">Flex item 14</span>
+            <span className="example__grid u--width-auto">Flex item 15</span>
           </div>
         </div>
 
@@ -1001,29 +973,17 @@ export default () => (
             <span className="example__grid u--width-auto">Flex item 7</span>
             <span className="example__grid u--width-auto">Flex item 8</span>
             <span className="example__grid u--width-auto">Flex item 9</span>
-            <span className="example__grid u--width-auto">
-              Flex item 10
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 11
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 12
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 13
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 14
-            </span>
-            <span className="example__grid u--width-auto">
-              Flex item 15
-            </span>
+            <span className="example__grid u--width-auto">Flex item 10</span>
+            <span className="example__grid u--width-auto">Flex item 11</span>
+            <span className="example__grid u--width-auto">Flex item 12</span>
+            <span className="example__grid u--width-auto">Flex item 13</span>
+            <span className="example__grid u--width-auto">Flex item 14</span>
+            <span className="example__grid u--width-auto">Flex item 15</span>
           </div>
         </div>
       </ExampleView>
       <Code>
-{`<div class="u--display-flex u--flex-wrap-wrap">
+        {`<div class="u--display-flex u--flex-wrap-wrap">
     ...
 </div>
 <div class="u--display-flex u--flex-wrap-nowrap">
@@ -1077,7 +1037,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<div class="u--display-flex u--justify-content-space-between">
+        {`<div class="u--display-flex u--justify-content-space-between">
     ...
 </div>
 <div class="u--display-flex u--justify-content-space-around">
@@ -1094,17 +1054,15 @@ export default () => (
       <p>Adjust the vertical alignment of flex items.</p>
       <p>
         Below is an example of how you can combine a few different utility
-        classes to set a default alignment on the parent flex container
-        (using <code>.u--align-items-</code>), and then align each child
-        flex item individually, using <code>.u--align-self-</code>.
+        classes to set a default alignment on the parent flex container (using{' '}
+        <code>.u--align-items-</code>), and then align each child flex item
+        individually, using <code>.u--align-self-</code>.
       </p>
     </Description>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .u--align-items-flex-end
-          </div>
+          <div className="example__grid__text">.u--align-items-flex-end</div>
           <div className="u--display-flex example__grid--static-height u--align-items-flex-end">
             <span className="example__grid">Flex item 1</span>
             <span className="example__grid u--align-self-center">
@@ -1117,7 +1075,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<div class="u--display-flex u--align-items-flex-end">
+        {`<div class="u--display-flex u--align-items-flex-end">
     <span>
         ...
     </span>
@@ -1134,8 +1092,8 @@ export default () => (
     <Description>
       <h4>Order</h4>
       <p>
-        Change the order of flex items by applying the{' '}
-        <code>.u--order-</code> class with a value between 1 and 12.
+        Change the order of flex items by applying the <code>.u--order-</code>{' '}
+        class with a value between 1 and 12.
       </p>
     </Description>
     <Example>
@@ -1162,7 +1120,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code>
-{`<div class="u--display-flex">
+        {`<div class="u--display-flex">
     <span className="u--order-5">
         Flex item 1
     </span>
@@ -1321,8 +1279,8 @@ export default () => (
     </SubTitle>
     <Description>
       <p>
-        You may also apply responsive postfixes to any of the following
-        utility classes to make them apply only for certain screen sizes.
+        You may also apply responsive postfixes to any of the following utility
+        classes to make them apply only for certain screen sizes.
       </p>
       <div className="grid">
         <div className="grid__col">
@@ -1497,8 +1455,8 @@ export default () => (
     <Description>
       Or if you only wanted something to display for extra small (<code>
         xs
-      </code>) and small (<code>sm</code>) screen sizes, you could do one of
-      the following:
+      </code>) and small (<code>sm</code>) screen sizes, you could do one of the
+      following:
     </Description>
     <Example>
       <ExampleView>
@@ -1513,7 +1471,7 @@ export default () => (
         </p>
       </ExampleView>
       <Code language="html">
-{`<p class="u--display-block u--display-none-md-min">...</p>
+        {`<p class="u--display-block u--display-none-md-min">...</p>
 <p class="u--display-block-xs u--display-block-sm u--display-none-md u--display-none-lg u--display-none-xl">...</p>
 <p class="u--hidden-md-min">...</p>`}
       </Code>

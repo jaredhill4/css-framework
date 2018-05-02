@@ -16,8 +16,8 @@ export default () => (
     <Title id="typography">Typography</Title>
     <SubTitle id="typography-headings">Headings</SubTitle>
     <Description>
-      Each heading element has a corresponding class, such as{' '}
-      <code>.h3</code>, that can be used to emulate heading styles.
+      Each heading element has a corresponding class, such as <code>.h3</code>,
+      that can be used to emulate heading styles.
     </Description>
     <Example>
       <ExampleView>

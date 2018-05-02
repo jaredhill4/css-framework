@@ -101,8 +101,8 @@ export default () => (
     </Example>
     <SubTitle id="tables-bordered">Bordered</SubTitle>
     <Description>
-      Add the <code>.table--bordered</code> modifier to add borders around
-      the table and table cells.
+      Add the <code>.table--bordered</code> modifier to add borders around the
+      table and table cells.
     </Description>
     <Example>
       <ExampleView>
@@ -162,8 +162,8 @@ export default () => (
     <Description>
       Add the <code>.table--responsive</code> modifier to make tables scroll
       horizontally across all viewports. You may use the <code>sm</code>,{' '}
-      <code>md</code>, <code>lg</code> and <code>xl</code> modifiers as
-      needed to create responsive tables up to a particular&nbsp;breakpoint.
+      <code>md</code>, <code>lg</code> and <code>xl</code> modifiers as needed
+      to create responsive tables up to a particular&nbsp;breakpoint.
     </Description>
     <Example>
       <ExampleView>

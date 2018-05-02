@@ -92,7 +92,7 @@ class Modals extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<div id="modal-sample" class="modal" data-modal="modal-sample">
+            {`<div id="modal-sample" class="modal" data-modal="modal-sample">
     <div class="modal__dialog">
         <div class="modal__content">
             <span class="modal__close" data-modal-close></span>
@@ -137,7 +137,7 @@ class Modals extends Component {
           </p>
         </Description>
         <Code language="html">
-{`<!-- show modal -->
+          {`<!-- show modal -->
 <a href="#sample-modal" data-modal-show="sample-modal">...</a>
 <!-- hide modal -->
 <a href="#sample-modal" data-modal-hide="sample-modal">...</a>
@@ -421,7 +421,7 @@ class Modals extends Component {
           </tbody>
         </table>
         <Code language="javascript">
-{`// show modal
+          {`// show modal
 $('[data-modal="sample-modal"]').trigger('modal:show');
 // hide modal
 $('[data-modal="sample-modal"]').trigger('modal:hide');
@@ -464,7 +464,7 @@ $('[data-modal="sample-modal"]').trigger('modal:toggle');`}
           </tbody>
         </table>
         <Code language="javascript">
-{`$('[data-modal="sample-modal"]').on('modal:beforeShow', (event) => {
+          {`$('[data-modal="sample-modal"]').on('modal:beforeShow', (event) => {
   // do something...
 }); `}
         </Code>

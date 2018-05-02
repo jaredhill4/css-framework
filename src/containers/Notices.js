@@ -29,7 +29,7 @@ export default class Notices extends Component {
             <div className="notice u--margin-bottom-0">{lorem(101)}</div>
           </ExampleView>
           <Code language="html">
-{`<div class="notice">
+            {`<div class="notice">
     ...
 </div>`}
           </Code>
@@ -49,7 +49,7 @@ export default class Notices extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<div class="notice notice--red">
+            {`<div class="notice notice--red">
     ...
 </div>
 <div class="notice notice--yellow">
@@ -81,7 +81,7 @@ export default class Notices extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<div class="notice notice--green">
+            {`<div class="notice notice--green">
     <h5 class="notice__title">...</h5>
     <p>...</p>
 </div>
@@ -115,7 +115,7 @@ export default class Notices extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<div class="notice notice--blue" data-notice-dismissible>
+            {`<div class="notice notice--blue" data-notice-dismissible>
     <span class="notice__close" data-notice-close></span>
     <h5 class="notice__title">...</h5>
     <p>...</p>
@@ -141,7 +141,7 @@ export default class Notices extends Component {
           </tbody>
         </table>
         <Code language="javascript">
-{`$('#sample-notice').on('notice:afterHide', event => {
+          {`$('#sample-notice').on('notice:afterHide', event => {
   // do something...
 }); `}
         </Code>

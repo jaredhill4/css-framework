@@ -69,7 +69,7 @@ export default class Tooltips extends Component {
             </button>
           </ExampleView>
           <Code language="html">
-{`<button data-tooltip="top" title="Tooltip top">...</button>
+            {`<button data-tooltip="top" title="Tooltip top">...</button>
 <button data-tooltip="right" title="Tooltip right">...</button>
 <button data-tooltip="bottom" title="Tooltip bottom">...</button>
 <button data-tooltip="left" data-tooltip-delay="500" title="Tooltip left with delay">...</button>`}

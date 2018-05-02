@@ -18,8 +18,8 @@ export default () => (
       element can be nested within a <code>.grid__col-*</code> element. A{' '}
       <code>.grid__col</code> element without a defined column width will
       automatically size based on its content. Available size modifiers are{' '}
-      <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>,
-      and <code>xl</code>.
+      <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>, and{' '}
+      <code>xl</code>.
     </Description>
     <Example>
       <ExampleView>
@@ -112,10 +112,9 @@ export default () => (
     </Example>
     <SubTitle id="grid-gapless">Gapless</SubTitle>
     <Description>
-      You can remove column gutters by adding the{' '}
-      <code>.grid--gapless</code> modifier to a grid. There are also{' '}
-      <code>.grid--gapless-horizontal</code> and{' '}
-      <code>.grid--gapless-vertical</code> modifiers to remove the
+      You can remove column gutters by adding the <code>.grid--gapless</code>{' '}
+      modifier to a grid. There are also <code>.grid--gapless-horizontal</code>{' '}
+      and <code>.grid--gapless-vertical</code> modifiers to remove the
       corresponding gutters.
     </Description>
     <Example>
@@ -182,8 +181,8 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-top</code> modifier to align columns along
-      the top.
+      Add the <code>.grid--valign-top</code> modifier to align columns along the
+      top.
     </Description>
     <Example>
       <ExampleView>
@@ -236,8 +235,8 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-bottom</code> modifier to align columns
-      along the bottom.
+      Add the <code>.grid--valign-bottom</code> modifier to align columns along
+      the bottom.
     </Description>
     <Example>
       <ExampleView>
@@ -263,9 +262,8 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-row-top</code> modifier to align rows at
-      the top of the available vertical space.{' '}
-      <em>This is the default setting.</em>
+      Add the <code>.grid--valign-row-top</code> modifier to align rows at the
+      top of the available vertical space. <em>This is the default setting.</em>
     </Description>
     <Example>
       <ExampleView>
@@ -297,15 +295,13 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-row-center</code> modifier to align rows
-      in the center of the available vertical space.
+      Add the <code>.grid--valign-row-center</code> modifier to align rows in
+      the center of the available vertical space.
     </Description>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .grid--valign-row-center
-          </div>
+          <div className="example__grid__text">.grid--valign-row-center</div>
           <div className="grid grid--valign-row-center example__grid--static-height">
             <div className="grid__col-xs-6">
               <div className="example__grid">.grid__col-xs-6</div>
@@ -332,15 +328,13 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-row-bottom</code> modifier to align rows
-      at the bottom of the available vertical space.
+      Add the <code>.grid--valign-row-bottom</code> modifier to align rows at
+      the bottom of the available vertical space.
     </Description>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .grid--valign-row-bottom
-          </div>
+          <div className="example__grid__text">.grid--valign-row-bottom</div>
           <div className="grid grid--valign-row-bottom example__grid--static-height">
             <div className="grid__col-xs-6">
               <div className="example__grid">.grid__col-xs-6</div>
@@ -367,15 +361,13 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-row-stretch</code> modifier to stretch all
-      of the rows to fill available vertical space.
+      Add the <code>.grid--valign-row-stretch</code> modifier to stretch all of
+      the rows to fill available vertical space.
     </Description>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .grid--valign-row-stretch
-          </div>
+          <div className="example__grid__text">.grid--valign-row-stretch</div>
           <div className="grid grid--valign-row-stretch example__grid--static-height">
             <div className="grid__col-xs-6">
               <div className="example__grid example__grid--fill-height">
@@ -410,16 +402,14 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-row-between</code> modifier to add equal
-      space around each row while keeping the first and last justified to
-      the top and bottom.
+      Add the <code>.grid--valign-row-between</code> modifier to add equal space
+      around each row while keeping the first and last justified to the top and
+      bottom.
     </Description>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .grid--valign-row-between
-          </div>
+          <div className="example__grid__text">.grid--valign-row-between</div>
           <div className="grid grid--valign-row-between example__grid--static-height">
             <div className="grid__col-xs-6">
               <div className="example__grid">.grid__col-xs-6</div>
@@ -446,15 +436,13 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--valign-row-around</code> modifier to add equal
-      space around each row.
+      Add the <code>.grid--valign-row-around</code> modifier to add equal space
+      around each row.
     </Description>
     <Example>
       <ExampleView>
         <div className="example__grid">
-          <div className="example__grid__text">
-            .grid--valign-row-around
-          </div>
+          <div className="example__grid__text">.grid--valign-row-around</div>
           <div className="grid grid--valign-row-around example__grid--static-height">
             <div className="grid__col-xs-6">
               <div className="example__grid">.grid__col-xs-6</div>
@@ -482,8 +470,8 @@ export default () => (
     </Example>
     <SubTitle id="grid-horizontal-alignment">Horizontal Alignment</SubTitle>
     <Description>
-      Add the <code>.grid--halign-left</code> modifier to align columns on
-      the left. <em>This is the default setting.</em>
+      Add the <code>.grid--halign-left</code> modifier to align columns on the
+      left. <em>This is the default setting.</em>
     </Description>
     <Example>
       <ExampleView>
@@ -532,8 +520,8 @@ export default () => (
       </Code>
     </Example>
     <Description>
-      Add the <code>.grid--halign-right</code> modifier to align columns on
-      the right.
+      Add the <code>.grid--halign-right</code> modifier to align columns on the
+      right.
     </Description>
     <Example>
       <ExampleView>
@@ -558,8 +546,8 @@ export default () => (
     </Example>
     <Description>
       Add the <code>.grid--halign-between</code> modifier to add equal space
-      around each column while keeping the first and last justified to the
-      left and right.
+      around each column while keeping the first and last justified to the left
+      and right.
     </Description>
     <Example>
       <ExampleView>

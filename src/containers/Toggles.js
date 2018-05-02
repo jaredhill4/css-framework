@@ -81,7 +81,7 @@ export default class Toggles extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<strong data-toggle-switch="simple-toggle-element">...</strong>
+            {`<strong data-toggle-switch="simple-toggle-element">...</strong>
 <div class="toggle__target" data-toggle-target="simple-toggle-element">
     ...
 </div>`}
@@ -168,7 +168,7 @@ export default class Toggles extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<div data-toggle-group="basic-accordion">
+            {`<div data-toggle-group="basic-accordion">
     <div>
         <strong data-toggle-switch="basic-accordion-item-1" data-toggle-parent="basic-accordion">
             ...
@@ -255,7 +255,7 @@ export default class Toggles extends Component {
             </dl>
           </ExampleView>
           <Code language="html">
-{`<dl class="accordion" data-toggle-group="styled-accordion">
+            {`<dl class="accordion" data-toggle-group="styled-accordion">
     <dt class="accordion__header" data-toggle-switch="styled-accordion-item-1" data-toggle-parent="styled-accordion">
         <h5 class="u--margin-0">...</h5>
     </dt>
@@ -359,7 +359,7 @@ export default class Toggles extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<div class="tabs" data-toggle-group="tabs" data-toggle-group-require-active>
+            {`<div class="tabs" data-toggle-group="tabs" data-toggle-group-require-active>
     <nav class="tabs__nav">
         <ul>
             <li>
@@ -438,7 +438,7 @@ export default class Toggles extends Component {
           </tbody>
         </table>
         <Code language="javascript">
-{`// show toggle target
+          {`// show toggle target
 $('[data-toggle-target="simple-toggle-element"]').trigger('toggle:show');
 // show all targets in toggle group
 $('[data-toggle-group="basic-accordion"]').trigger('toggle:groupShowAll');`}
@@ -480,7 +480,7 @@ $('[data-toggle-group="basic-accordion"]').trigger('toggle:groupShowAll');`}
           </tbody>
         </table>
         <Code language="javascript">
-{`$('[data-toggle-target="simple-toggle-element"]').on('toggle:beforeShow', (event) => {
+          {`$('[data-toggle-target="simple-toggle-element"]').on('toggle:beforeShow', (event) => {
   // do something...
 }); `}
         </Code>

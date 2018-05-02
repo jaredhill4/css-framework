@@ -1,15 +1,21 @@
 import React from 'react';
-import { Section, Title, SubTitle, Description, Code } from '../components/Framework';
+import {
+  Section,
+  Title,
+  SubTitle,
+  Description,
+  Code,
+} from '../components/Framework';
 
 export default () => (
   <Section>
     <Title id="colors">Colors</Title>
     <Description>
       <p>
-        The framework includes a foundation of color variables to get
-        started. These colors are stored in <code>$colors</code> map (which
-        can be found in the <code>colors.scss</code> file) and are used to
-        control the colors of all the components in the framework.
+        The framework includes a foundation of color variables to get started.
+        These colors are stored in <code>$colors</code> map (which can be found
+        in the <code>colors.scss</code> file) and are used to control the colors
+        of all the components in the framework.
       </p>
     </Description>
 
@@ -17,8 +23,8 @@ export default () => (
     <Description>
       <p>
         The swatched below represent the default color palette for the
-        framework. Each color includes a "hover" variant, which is the color
-        on the right side of each swatch below.
+        framework. Each color includes a "hover" variant, which is the color on
+        the right side of each swatch below.
       </p>
     </Description>
     <div className="grid">
@@ -113,9 +119,9 @@ export default () => (
     <Description>
       <p>
         To modify the existing color palette, you simply need to change the{' '}
-        <code>$colors</code> map. As mentioned above, each color variable
-        has a hover variant by default, which is simply a darkened or
-        lightened version of the base color.
+        <code>$colors</code> map. As mentioned above, each color variable has a
+        hover variant by default, which is simply a darkened or lightened
+        version of the base color.
       </p>
     </Description>
     <Code language="scss">
@@ -129,11 +135,11 @@ export default () => (
     <SubTitle id="colors-modifying">Adding Colors</SubTitle>
     <Description>
       <p>
-        To avoid duplication, all colors that will need to be reused should
-        be contained in the <code>$color</code> map. To add a color, you
-        will need to add a new item to the <code>$color</code> map. This new
-        item should be set to a map with keys for "name", "base" and
-        "hover". Here is an example of what this would look like:
+        To avoid duplication, all colors that will need to be reused should be
+        contained in the <code>$color</code> map. To add a color, you will need
+        to add a new item to the <code>$color</code> map. This new item should
+        be set to a map with keys for "name", "base" and "hover". Here is an
+        example of what this would look like:
       </p>
     </Description>
     <Code language="scss">
@@ -143,21 +149,20 @@ export default () => (
 );`}
     </Code>
     <Description>
-      This will cause your new color to cascade to all the components that
-      use the <code>$colors</code> map, and will create a new variant of
-      each component. For example, you could now use a "burnt orange"
-      button, like this:
+      This will cause your new color to cascade to all the components that use
+      the <code>$colors</code> map, and will create a new variant of each
+      component. For example, you could now use a "burnt orange" button, like
+      this:
     </Description>
     <Code>{`<button class="btn btn--burnt-orange">...</button>`}</Code>
 
     <SubTitle id="colors-using">Using Colors</SubTitle>
     <Description>
-      To use a specific color from the <code>$color</code> map in your
-      custom SCSS code, we have provided a <code>color()</code> helper
-      function. To use the function, simply call it with a specific color
-      key as the first argument. By default, it will return the "base" value
-      of a given color. To get the "hover" variant, simply provide "hover"
-      as the second argument.
+      To use a specific color from the <code>$color</code> map in your custom
+      SCSS code, we have provided a <code>color()</code> helper function. To use
+      the function, simply call it with a specific color key as the first
+      argument. By default, it will return the "base" value of a given color. To
+      get the "hover" variant, simply provide "hover" as the second argument.
     </Description>
     <Code>
       {`.foo {

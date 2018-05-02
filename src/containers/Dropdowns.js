@@ -72,7 +72,7 @@ export default class Dropdowns extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-{`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1">...</button>
+            {`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1">...</button>
 <div class="dropdown" data-dropdown="dropdown-example-1">
     <a href="#" class="dropdown__item">...</a>
     <a href="#" class="dropdown__item">...</a>

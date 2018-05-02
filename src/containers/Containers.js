@@ -13,11 +13,10 @@ export default () => (
     <div className="container container--sm">
       <Title id="containers">Containers</Title>
       <Description>
-        Wrap content in a <code>.container</code> class to center it and
-        give it a maximum width. Width of the container can be adjusted with
-        size modifiers. Available modifiers are <code>xs</code>,{' '}
-        <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>,
-        and <code>full</code>.{' '}
+        Wrap content in a <code>.container</code> class to center it and give it
+        a maximum width. Width of the container can be adjusted with size
+        modifiers. Available modifiers are <code>xs</code>, <code>sm</code>,{' '}
+        <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>full</code>.{' '}
         <em>
           The default setting is <code>lg</code>.
         </em>

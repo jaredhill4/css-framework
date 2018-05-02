@@ -14,8 +14,8 @@ export default () => (
     <Title id="cards">Cards</Title>
     <Description>
       Cards can be used to represent self-contained bits of content. At a
-      minimum, a card must consist of two elements: a parent element with
-      the <code>.card</code> class, and a child element with a{' '}
+      minimum, a card must consist of two elements: a parent element with the{' '}
+      <code>.card</code> class, and a child element with a{' '}
       <code>.card__body</code> class.
     </Description>
     <Example>
@@ -29,9 +29,8 @@ export default () => (
                 </p>
                 <h4>This is a card title</h4>
                 <p>
-                  Officia et mollit incididunt nisi consectetur esse
-                  laborum. Pariatur proident Lorem eiusmod et adipisicing
-                  culpa deserunt.
+                  Officia et mollit incididunt nisi consectetur esse laborum.
+                  Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
                   <button className="btn btn--primary">Learn More</button>
@@ -42,7 +41,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<article class="card">
+        {`<article class="card">
     <section class="card__body">
         ...
     </section>
@@ -52,8 +51,8 @@ export default () => (
 
     <SubTitle id="buttons-colors">Headers &amp; Footers</SubTitle>
     <Description>
-      Add headers and footers to cards with the <code>.card__header</code>{' '}
-      and <code>.card__footer</code> elements.
+      Add headers and footers to cards with the <code>.card__header</code> and{' '}
+      <code>.card__footer</code> elements.
     </Description>
     <Example>
       <ExampleView>
@@ -68,9 +67,8 @@ export default () => (
               <section className="card__body">
                 <h4>This is a card title</h4>
                 <p>
-                  Officia et mollit incididunt nisi consectetur esse
-                  laborum. Pariatur proident Lorem eiusmod et adipisicing
-                  culpa deserunt.
+                  Officia et mollit incididunt nisi consectetur esse laborum.
+                  Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
                   <button className="btn btn--primary">Learn More</button>
@@ -86,7 +84,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<article class="card">
+        {`<article class="card">
     <header class="card__header">
         ...
     </header>
@@ -102,9 +100,9 @@ export default () => (
 
     <SubTitle id="buttons-colors">Media</SubTitle>
     <Description>
-      Add media (images or videos) to cards with the{' '}
-      <code>.card__media</code> element. To add videos, make sure to use an
-      iframe embed wrapped in the <code>.u--embed-responsive</code> element.
+      Add media (images or videos) to cards with the <code>.card__media</code>{' '}
+      element. To add videos, make sure to use an iframe embed wrapped in the{' '}
+      <code>.u--embed-responsive</code> element.
     </Description>
     <Example>
       <ExampleView>
@@ -147,7 +145,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<article class="card">
+        {`<article class="card">
     <img src="..." class="card__media" />
     <section class="card__body">
         ...
@@ -183,14 +181,12 @@ export default () => (
               <section className="card__body">
                 <h4>This is a card title</h4>
                 <p>
-                  Officia et mollit incididunt nisi consectetur esse
-                  laborum. Pariatur proident Lorem eiusmod et adipisicing
-                  culpa deserunt.
+                  Officia et mollit incididunt nisi consectetur esse laborum.
+                  Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
-                  Officia et mollit incididunt nisi consectetur esse
-                  laborum. Pariatur proident Lorem eiusmod et adipisicing
-                  culpa deserunt.
+                  Officia et mollit incididunt nisi consectetur esse laborum.
+                  Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
                   <button className="btn btn--red">Learn More</button>
@@ -213,9 +209,8 @@ export default () => (
               <section className="card__body">
                 <h4>This is a card title</h4>
                 <p>
-                  Officia et mollit incididunt nisi consectetur esse
-                  laborum. Pariatur proident Lorem eiusmod et adipisicing
-                  culpa deserunt.
+                  Officia et mollit incididunt nisi consectetur esse laborum.
+                  Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
                   <button className="btn btn--green">Learn More</button>
@@ -233,9 +228,8 @@ export default () => (
               <section className="card__body">
                 <h4>This is a card title</h4>
                 <p>
-                  Officia et mollit incididunt nisi consectetur esse
-                  laborum. Pariatur proident Lorem eiusmod et adipisicing
-                  culpa deserunt.
+                  Officia et mollit incididunt nisi consectetur esse laborum.
+                  Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
                   <button className="btn btn--primary">Learn More</button>
@@ -251,7 +245,7 @@ export default () => (
         </div>
       </ExampleView>
       <Code language="html">
-{`<div class="grid">
+        {`<div class="grid">
     <div class="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
         <article class="card">
             ...

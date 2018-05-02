@@ -25,8 +25,8 @@ export default () => (
     </Example>
     <SubTitle id="buttons-colors">Colors</SubTitle>
     <Description>
-      Different button colors can be created by adding a color modifier
-      class like <code>.btn--red</code>.
+      Different button colors can be created by adding a color modifier class
+      like <code>.btn--red</code>.
     </Description>
     <Example>
       <ExampleView>

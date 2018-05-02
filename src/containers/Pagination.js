@@ -15,9 +15,9 @@ export default () => (
     <Title id="pagination">Pagination</Title>
     <Description>
       <p>
-        Apply the <code>.pagination</code> class to an unordered list of
-        anchor tags to setup pagination. For screen readers, wrap the
-        pagination in a <code>&lt;nav&gt;</code> tag.
+        Apply the <code>.pagination</code> class to an unordered list of anchor
+        tags to setup pagination. For screen readers, wrap the pagination in a{' '}
+        <code>&lt;nav&gt;</code> tag.
       </p>
     </Description>
     <Example>
@@ -43,7 +43,7 @@ export default () => (
         </nav>
       </ExampleView>
       <Code language="html">
-{`<nav>
+        {`<nav>
     <ul class="pagination">
         <li class="pagination__item">
             <a href="#">Prev</a>
@@ -69,8 +69,8 @@ export default () => (
       <p>
         To indicate active and disabled states, simply add the{' '}
         <code>.pagination__item--active</code> and{' '}
-        <code>.pagination__item--disabled</code> classes to the list items
-        where applicable.
+        <code>.pagination__item--disabled</code> classes to the list items where
+        applicable.
       </p>
     </Description>
     <Example>
@@ -96,7 +96,7 @@ export default () => (
         </nav>
       </ExampleView>
       <Code language="html">
-{`<nav>
+        {`<nav>
     <ul class="pagination pagination--xl">
         <li class="pagination__item pagination__item--disabled">
             <a href="#" tabindex="-1">Prev</a>
@@ -121,10 +121,10 @@ export default () => (
     <SubTitle id="colors-modifying">Sizes</SubTitle>
     <Description>
       <p>
-        Adjust the size of the pagination by applying a size modifier.
-        Available modifiers are <code>xs</code>, <code>sm</code>,{' '}
-        <code>md</code>, <code>lg</code> and <code>xl</code>. The default
-        setting is <code>md</code>.
+        Adjust the size of the pagination by applying a size modifier. Available
+        modifiers are <code>xs</code>, <code>sm</code>, <code>md</code>,{' '}
+        <code>lg</code> and <code>xl</code>. The default setting is{' '}
+        <code>md</code>.
       </p>
     </Description>
     <Example>
@@ -230,7 +230,7 @@ export default () => (
         </nav>
       </ExampleView>
       <Code language="html">
-{`<nav>
+        {`<nav>
     <ul class="pagination pagination--xs">
         ...
     </ul>
