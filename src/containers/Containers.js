@@ -26,25 +26,25 @@ export default () => (
       <Example>
         <ExampleView>
           <div className="container u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Default</div>
+            <div className="example__container" />
           </div>
           <div className="container container--xs u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Extra small</div>
+            <div className="example__container" />
           </div>
           <div className="container container--sm u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Small</div>
+            <div className="example__container" />
           </div>
           <div className="container container--md u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Medium</div>
+            <div className="example__container" />
           </div>
           <div className="container container--lg u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Large (default)</div>
+            <div className="example__container" />
           </div>
           <div className="container container--xl u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Extra large</div>
+            <div className="example__container" />
           </div>
           <div className="container container--full u--padding-left-0 u--padding-right-0">
-            <div className="example__container">Full</div>
+            <div className="example__container" />
           </div>
         </ExampleView>
         <Code language="html">

@@ -349,20 +349,21 @@ body {
 
 .example__grid,
 .example__container {
-  background-color: rgba(color('primary'), 0.3);
-  border-radius: 3px;
-  font-size: rem(14px);
-  padding: 8px;
-  text-align: left;
+  background-color: color('primary');
+  border-radius: $global-border-radius;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
   width: 100%;
 }
 
 .example__grid--static-height {
   height: 200px;
+  margin-bottom: 0;
 }
 
 .example__grid--fill-height {
   height: 100%;
+  margin-bottom: 0;
 }
 
 .example__grid__text {
@@ -380,4 +381,9 @@ body {
 
 .example .form__input-group .btn {
   margin: 0;
+}
+
+::selection {
+  background: color('primary');
+  color: color('white');
 }

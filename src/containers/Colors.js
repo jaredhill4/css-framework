@@ -27,7 +27,7 @@ export default () => (
         the right side of each swatch below.
       </p>
     </Description>
-    <div className="grid">
+    <div className="grid grid--gutter">
       <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--dual swatch--teal">
           <div className="swatch__color" />
@@ -59,7 +59,7 @@ export default () => (
       </div>
     </div>
 
-    <div className="grid">
+    <div className="grid grid--gutter">
       <div className="grid__col-xs-6 grid__col-md-3">
         <div className="swatch swatch--black">
           <div className="swatch__color" />

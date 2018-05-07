@@ -19,25 +19,25 @@ export default () => (
   <Section>
     <div className="u--squash">
       <SubTitle>Layout</SubTitle>
-      <div className="grid">
+      <div className="grid grid--gutter">
         {componentMap
           .filter(x => x.category === 'layout')
           .map(item => <PageLink key={item.path} item={item} />)}
       </div>
       <SubTitle>Base</SubTitle>
-      <div className="grid">
+      <div className="grid grid--gutter">
         {componentMap
           .filter(x => x.category === 'base')
           .map(item => <PageLink key={item.path} item={item} />)}
       </div>
       <SubTitle>Components</SubTitle>
-      <div className="grid">
+      <div className="grid grid--gutter">
         {componentMap
           .filter(x => x.category === 'components')
           .map(item => <PageLink key={item.path} item={item} />)}
       </div>
       <SubTitle>Other</SubTitle>
-      <div className="grid">
+      <div className="grid grid--gutter">
         {componentMap
           .filter(x => x.category === 'other')
           .map(item => <PageLink key={item.path} item={item} />)}

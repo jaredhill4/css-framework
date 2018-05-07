@@ -20,7 +20,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid">
+        <div className="grid grid--gutter">
           <div className="grid__col-sm-6 grid__col-md-4">
             <article className="card">
               <section className="card__body">
@@ -56,7 +56,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid">
+        <div className="grid grid--gutter">
           <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
             <article className="card u--height-100">
               <header className="card__header">
@@ -106,7 +106,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid">
+        <div className="grid grid--gutter">
           <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
             <article className="card u--height-100">
               <img
@@ -118,7 +118,7 @@ export default () => (
                 <h4>Image card</h4>
                 <p>This card has an image.</p>
                 <p>
-                  <button className="btn btn--green">Learn More</button>
+                  <button className="btn btn--primary">Learn More</button>
                 </p>
               </section>
             </article>
@@ -137,7 +137,7 @@ export default () => (
                 <h4>Video card</h4>
                 <p>This card has a video.</p>
                 <p>
-                  <button className="btn btn--green">Learn More</button>
+                  <button className="btn btn--primary">Learn More</button>
                 </p>
               </section>
             </article>
@@ -172,7 +172,7 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid">
+        <div className="grid grid--gutter">
           <div className="grid__col-xs-12 grid__col-sm-6 grid__col-md-4">
             <article className="card">
               <header className="card__header">
@@ -189,7 +189,7 @@ export default () => (
                   Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
-                  <button className="btn btn--red">Learn More</button>
+                  <button className="btn btn--primary">Learn More</button>
                 </p>
               </section>
               <footer className="card__footer">
@@ -213,7 +213,7 @@ export default () => (
                   Pariatur proident Lorem eiusmod et adipisicing culpa deserunt.
                 </p>
                 <p>
-                  <button className="btn btn--green">Learn More</button>
+                  <button className="btn btn--primary">Learn More</button>
                 </p>
               </section>
               <footer className="card__footer">

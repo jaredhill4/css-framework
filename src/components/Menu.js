@@ -4,7 +4,9 @@ import componentMap from '../../componentMap';
 
 const PageLink = ({ item, toggleMenu }) => (
   <li key={item.path}>
-    <Link to={item.path} onClick={toggleMenu}>{item.name}</Link>
+    <Link to={item.path} onClick={toggleMenu}>
+      {item.name}
+    </Link>
   </li>
 );
 
@@ -29,19 +31,27 @@ export default class Menu extends Component {
           <li className="framework__nav-title">Layout</li>
           {componentMap
             .filter(x => x.category === 'layout')
-            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
+            .map(item => (
+              <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />
+            ))}
           <li className="framework__nav-title">Base</li>
           {componentMap
             .filter(x => x.category === 'base')
-            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
+            .map(item => (
+              <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />
+            ))}
           <li className="framework__nav-title">Components</li>
           {componentMap
             .filter(x => x.category === 'components')
-            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
+            .map(item => (
+              <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />
+            ))}
           <li className="framework__nav-title">Other</li>
           {componentMap
             .filter(x => x.category === 'other')
-            .map(item => <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />)}
+            .map(item => (
+              <PageLink key={item.path} item={item} toggleMenu={toggleMenu} />
+            ))}
         </ul>
       </div>
     );
