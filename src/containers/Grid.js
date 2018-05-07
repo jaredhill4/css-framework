@@ -115,7 +115,7 @@ export default () => (
 </div>`}
       </Code>
     </Example>
-    <SubTitle id="grid-offsets">Auto sizing</SubTitle>
+    <SubTitle id="grid-auto-sizing">Auto sizing</SubTitle>
     <Description>
       Columns can be sized automatically based on content if a column count
       isn't provided.
@@ -143,6 +143,32 @@ export default () => (
     <div class="grid__col"></div>
     <div class="grid__col"></div>
     <div class="grid__col"></div>
+</div>`}
+      </Code>
+    </Example>
+    <SubTitle id="grid-order">Order</SubTitle>
+    <Description>
+      Column order can be reversed with <code>.grid--reverse</code>.
+    </Description>
+    <Example>
+      <ExampleView>
+        <div className="grid grid--reverse">
+          <div className="grid__col-xs-2">
+            <GridPlaceholder />
+          </div>
+          <div className="grid__col-xs-4">
+            <GridPlaceholder />
+          </div>
+          <div className="grid__col-xs-6">
+            <GridPlaceholder />
+          </div>
+        </div>
+      </ExampleView>
+      <Code language="html">
+        {`<div class="grid grid--reverse">
+    <div class="grid__col-xs-2"></div>
+    <div class="grid__col-xs-4"></div>
+    <div class="grid__col-xs-6"></div>
 </div>`}
       </Code>
     </Example>

@@ -49,8 +49,10 @@
   align-items: stretch;
   box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
+  flex-basis: auto;
   flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-left: -$grid-gutter-width / 2;
@@ -159,13 +161,24 @@
   align-content: space-around;
 }
 
+.grid--reverse {
+  flex-direction: row-reverse;
+}
+
 // --------------------------------------------------
 // grid__col
 // --------------------------------------------------
 
 .grid__col,
-[class*='grid__col-'] {
+[class*='grid__col-xs-'],
+[class*='grid__col-sm-'],
+[class*='grid__col-md-'],
+[class*='grid__col-lg-'],
+[class*='grid__col-xl-'] {
   box-sizing: border-box;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
   max-width: 100%;
 
   .grid--gutter &,
@@ -187,20 +200,11 @@
     padding-right: 0;
   }
 
-  &,
   .grid--no-gutter &,
   .grid--no-gutter-vertical & {
     padding-bottom: 0;
     padding-top: 0;
   }
-}
-
-.grid__col {
-  flex: 1 0 auto;
-}
-
-[class*='grid__col-'] {
-  flex: 0 0 auto;
 }
 
 @include grid__col();
