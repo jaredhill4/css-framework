@@ -10,15 +10,15 @@ $breakpoint-xl: 1200px;
 
 $mq-pr: 'print';
 
-$mq-min-sm: 'screen and (min-width: #{$breakpoint-sm})';
-$mq-min-md: 'screen and (min-width: #{$breakpoint-md})';
-$mq-min-lg: 'screen and (min-width: #{$breakpoint-lg})';
-$mq-min-xl: 'screen and (min-width: #{$breakpoint-xl})';
+$mq-min-sm: '(min-width: #{$breakpoint-sm})';
+$mq-min-md: '(min-width: #{$breakpoint-md})';
+$mq-min-lg: '(min-width: #{$breakpoint-lg})';
+$mq-min-xl: '(min-width: #{$breakpoint-xl})';
 
-$mq-max-xs: 'screen and (max-width: #{$breakpoint-sm - 1px})';
-$mq-max-sm: 'screen and (max-width: #{$breakpoint-md - 1px})';
-$mq-max-md: 'screen and (max-width: #{$breakpoint-lg - 1px})';
-$mq-max-lg: 'screen and (max-width: #{$breakpoint-xl - 1px})';
+$mq-max-xs: '(max-width: #{$breakpoint-sm - 1px})';
+$mq-max-sm: '(max-width: #{$breakpoint-md - 1px})';
+$mq-max-md: '(max-width: #{$breakpoint-lg - 1px})';
+$mq-max-lg: '(max-width: #{$breakpoint-xl - 1px})';
 
 // --------------------------------------------------
 // grid
@@ -46,8 +46,8 @@ $global-border-radius: 0.25rem;
 
 $global-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-$global-transition-fast: all 0.15s ease;
-$global-transition-slow: all 0.3s ease;
+$global-transition-fast: all 0.15s ease-in-out;
+$global-transition-slow: all 0.3s ease-in-out;
 
 // --------------------------------------------------
 // z-indexes

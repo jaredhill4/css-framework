@@ -8,18 +8,8 @@ import {
   Example,
   ExampleView,
   Code,
+  Placeholder,
 } from '../components/Framework';
-
-const GridPlaceholder = ({ fill, fixed, noMargin }) => (
-  <div
-    className={classnames(
-      'example__grid',
-      { 'example__grid--fill-height': fill },
-      { 'example__grid--static-height': fixed },
-      { 'u--margin-bottom-0': fill || fixed || noMargin }
-    )}
-  />
-);
 
 export default () => (
   <Section>
@@ -35,34 +25,34 @@ export default () => (
       <ExampleView>
         <div className="grid">
           <div className="grid__col-xs-10">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-2">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-8">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-4">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-4">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-8">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-2">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-10">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -89,19 +79,19 @@ export default () => (
       <ExampleView>
         <div className="grid">
           <div className="grid__col-xs-2 grid__col-xs-offset-10">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-4 grid__col-xs-offset-8">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6 grid__col-xs-offset-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-8 grid__col-xs-offset-4">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-10 grid__col-xs-offset-2">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -124,16 +114,16 @@ export default () => (
       <ExampleView>
         <div className="grid">
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -154,13 +144,13 @@ export default () => (
       <ExampleView>
         <div className="grid grid--reverse">
           <div className="grid__col-xs-2">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-4">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -186,16 +176,16 @@ export default () => (
       <ExampleView>
         <div className="grid grid--no-gutter">
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -216,18 +206,18 @@ export default () => (
     <Example>
       <ExampleView>
         <div className="grid grid--left">
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--left">
-    <div class="grid__col-sm-4"></div>
-    <div class="grid__col-sm-4"></div>
+    <div class="grid__col-xs-4"></div>
+    <div class="grid__col-xs-4"></div>
 </div>`}
       </Code>
     </Example>
@@ -238,18 +228,18 @@ export default () => (
     <Example>
       <ExampleView>
         <div className="grid grid--center">
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--center">
-    <div class="grid__col-sm-4"></div>
-    <div class="grid__col-sm-4"></div>
+    <div class="grid__col-xs-4"></div>
+    <div class="grid__col-xs-4"></div>
 </div>`}
       </Code>
     </Example>
@@ -259,18 +249,18 @@ export default () => (
     <Example>
       <ExampleView>
         <div className="grid grid--right">
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--right">
-    <div class="grid__col-sm-4"></div>
-    <div class="grid__col-sm-4"></div>
+    <div class="grid__col-xs-4"></div>
+    <div class="grid__col-xs-4"></div>
 </div>`}
       </Code>
     </Example>
@@ -282,18 +272,18 @@ export default () => (
     <Example>
       <ExampleView>
         <div className="grid grid--between">
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--between">
-    <div class="grid__col-sm-4"></div>
-    <div class="grid__col-sm-4"></div>
+    <div class="grid__col-xs-4"></div>
+    <div class="grid__col-xs-4"></div>
 </div>`}
       </Code>
     </Example>
@@ -304,18 +294,18 @@ export default () => (
     <Example>
       <ExampleView>
         <div className="grid grid--around">
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
-          <div className="grid__col-sm-4">
-            <GridPlaceholder />
+          <div className="grid__col-xs-4">
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
       <Code language="html">
         {`<div class="grid grid--around">
-    <div class="grid__col-sm-4"></div>
-    <div class="grid__col-sm-4"></div>
+    <div class="grid__col-xs-4"></div>
+    <div class="grid__col-xs-4"></div>
 </div>`}
       </Code>
     </Example>
@@ -326,10 +316,10 @@ export default () => (
       <ExampleView>
         <div className="grid grid--top">
           <div className="grid__col-xs-6">
-            <GridPlaceholder fixed />
+            <Placeholder fixed />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
         </div>
       </ExampleView>
@@ -347,10 +337,10 @@ export default () => (
       <ExampleView>
         <div className="grid grid--middle">
           <div className="grid__col-xs-6">
-            <GridPlaceholder fixed />
+            <Placeholder fixed />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder noMargin />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -369,10 +359,10 @@ export default () => (
       <ExampleView>
         <div className="grid grid--bottom">
           <div className="grid__col-xs-6">
-            <GridPlaceholder fixed />
+            <Placeholder fixed />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder noMargin />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -389,18 +379,18 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid grid--row-top example__grid--static-height">
+        <div className="grid grid--row-top placeholder--static-height">
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
         </div>
       </ExampleView>
@@ -419,18 +409,18 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid grid--row-middle example__grid--static-height">
+        <div className="grid grid--row-middle placeholder--static-height">
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -449,18 +439,18 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid grid--row-bottom example__grid--static-height">
+        <div className="grid grid--row-bottom placeholder--static-height">
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -479,18 +469,18 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid grid--row-stretch example__grid--static-height">
+        <div className="grid grid--row-stretch placeholder--static-height">
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder fill />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder fill />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder fill />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder fill />
           </div>
         </div>
       </ExampleView>
@@ -509,18 +499,18 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid grid--row-between example__grid--static-height">
+        <div className="grid grid--row-between placeholder--static-height">
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>
@@ -539,18 +529,18 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
-        <div className="grid grid--row-around example__grid--static-height">
+        <div className="grid grid--row-around placeholder--static-height">
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
           <div className="grid__col-xs-6">
-            <GridPlaceholder fill />
+            <Placeholder noMargin />
           </div>
         </div>
       </ExampleView>

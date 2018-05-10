@@ -347,8 +347,7 @@ body {
   border-radius: 0 !important;
 }
 
-.example__grid,
-.example__container {
+.placeholder {
   background-color: color('primary');
   border-radius: $global-border-radius;
   margin-bottom: 1rem;
@@ -356,17 +355,17 @@ body {
   width: 100%;
 }
 
-.example__grid--static-height {
+.placeholder--static-height {
   height: 200px;
   margin-bottom: 0;
 }
 
-.example__grid--fill-height {
+.placeholder--fill-height {
   height: 100%;
   margin-bottom: 0;
 }
 
-.example__grid__text {
+.placeholder__text {
   margin-bottom: 8px;
 }
 

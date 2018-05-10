@@ -6,6 +6,7 @@ import {
   Example,
   ExampleView,
   Code,
+  Placeholder,
 } from '../components/Framework';
 
 export default () => (
@@ -26,25 +27,25 @@ export default () => (
       <Example>
         <ExampleView>
           <div className="container u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder />
           </div>
           <div className="container container--xs u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder />
           </div>
           <div className="container container--sm u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder />
           </div>
           <div className="container container--md u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder />
           </div>
           <div className="container container--lg u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder />
           </div>
           <div className="container container--xl u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder />
           </div>
           <div className="container container--full u--padding-left-0 u--padding-right-0">
-            <div className="example__container" />
+            <Placeholder noMargin />
           </div>
         </ExampleView>
         <Code language="html">
