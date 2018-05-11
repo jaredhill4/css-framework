@@ -52,10 +52,17 @@ export default class Dropdowns extends Component {
               type="button"
               className="btn"
               data-dropdown-toggle="dropdown-example-1"
+              id="dropdown-example-1-label"
+              aria-haspopup="true"
+              aria-expanded="false"
             >
               Dropdown
             </button>
-            <div className="dropdown" data-dropdown="dropdown-example-1">
+            <div
+              className="dropdown"
+              data-dropdown="dropdown-example-1"
+              aria-labelledby="dropdown-example-1-label"
+            >
               <a href="#dropdown-example-link-1" className="dropdown__item">
                 Link 1
               </a>
@@ -72,8 +79,8 @@ export default class Dropdowns extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-            {`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1">...</button>
-<div class="dropdown" data-dropdown="dropdown-example-1">
+            {`<button type="button" class="btn" data-dropdown-toggle="dropdown-example-1" id="dropdown-example-1-label" aria-haspopup="true" aria-expanded="false">...</button>
+<div class="dropdown" data-dropdown="dropdown-example-1" aria-labelledby="dropdown-example-1-label">
     <a href="#" class="dropdown__item">...</a>
     <a href="#" class="dropdown__item">...</a>
     <a href="#" class="dropdown__item">...</a>
@@ -99,6 +106,9 @@ export default class Dropdowns extends Component {
               type="button"
               className="btn"
               data-dropdown-toggle="dropdown-example-2"
+              id="dropdown-example-2-label"
+              aria-haspopup="true"
+              aria-expanded="false"
             >
               Dropdown (top-end)
             </button>
@@ -106,6 +116,7 @@ export default class Dropdowns extends Component {
               className="dropdown"
               data-dropdown="dropdown-example-2"
               data-dropdown-position="top-end"
+              aria-labelledby="dropdown-example-2-label"
             >
               <a href="#dropdown-example-link-1" className="dropdown__item">
                 Link 1
@@ -125,6 +136,9 @@ export default class Dropdowns extends Component {
               type="button"
               className="btn"
               data-dropdown-toggle="dropdown-example-3"
+              id="dropdown-example-3-label"
+              aria-haspopup="true"
+              aria-expanded="false"
             >
               Dropdown (right-start)
             </button>
@@ -132,6 +146,7 @@ export default class Dropdowns extends Component {
               className="dropdown"
               data-dropdown="dropdown-example-3"
               data-dropdown-position="right-start"
+              aria-labelledby="dropdown-example-3-label"
             >
               <a href="#dropdown-example-link-1" className="dropdown__item">
                 Link 1

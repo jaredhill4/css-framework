@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import { Head, Router, withSiteData } from 'react-static';
 import { hot } from 'react-hot-loader';
 import Routes from 'react-static-routes';
@@ -10,7 +10,7 @@ import MenuToggle from './components/MenuToggle';
 import './app.scss';
 import '../framework/scss/index.scss';
 
-class App extends Component {
+class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = { menuOpen: false };
@@ -34,8 +34,8 @@ class App extends Component {
           <Head>
             <title>{title}</title>
           </Head>
+          <MenuToggle toggleMenu={this.toggleMenu} menuIsOpen={menuOpen} />
           <Menu toggleMenu={this.toggleMenu} menuIsOpen={menuOpen} />
-          <MenuToggle toggleMenu={this.toggleMenu} />
           <Routes />
           <div className="framework__backdrop" onClick={this.toggleMenu} />
         </Fragment>

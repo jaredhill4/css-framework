@@ -52,6 +52,7 @@ const Code = ({ children, language }) => (
     showLineNumbers={false}
     customStyle={{ borderRadius: 0, padding: '1rem' }}
     className="framework__code"
+    aria-hidden="true"
   >
     {children}
   </SyntaxHighlighter>
@@ -68,4 +69,13 @@ const Placeholder = ({ fill, fixed, noMargin }) => (
   />
 );
 
-export { Section, Title, SubTitle, Description, Example, ExampleView, Code, Placeholder };
+export {
+  Section,
+  Title,
+  SubTitle,
+  Description,
+  Example,
+  ExampleView,
+  Code,
+  Placeholder,
+};

@@ -72,12 +72,25 @@ class Modals extends Component {
             >
               Sample Modal
             </a>
-            <div id="modal-sample" className="modal" data-modal="modal-sample">
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+            <div
+              id="modal-sample"
+              className="modal"
+              data-modal="modal-sample"
+              aria-labelledby="modal-sample-label"
+              role="dialog"
+            >
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-sample-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(77)}</p>
@@ -92,12 +105,12 @@ class Modals extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-            {`<div id="modal-sample" class="modal" data-modal="modal-sample">
-    <div class="modal__dialog">
+            {`<div id="modal-sample" class="modal" data-modal="modal-sample" aria-labelledby="modal-sample-label" role="dialog">
+    <div class="modal__dialog" role="document">
         <div class="modal__content">
-            <span class="modal__close" data-modal-close></span>
+            <button type="button" class="modal__close" data-modal-close aria-label="Close"></button>
             <header class="modal__header">
-                <h2 class="modal__title">...</h2>
+                <h2 class="modal__title" id="modal-sample-label">...</h2>
             </header>
             <section class="modal__body">
                 <p>...</p>
@@ -171,12 +184,21 @@ class Modals extends Component {
               id="modal-extra-small"
               className="modal modal--xs"
               data-modal="modal-extra-small"
+              aria-labelledby="modal-extra-small-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-extra-small-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(94)}</p>
@@ -205,12 +227,21 @@ class Modals extends Component {
               id="modal-small"
               className="modal modal--sm"
               data-modal="modal-small"
+              aria-labelledby="modal-small-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-small-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(94)}</p>
@@ -235,12 +266,21 @@ class Modals extends Component {
               id="modal-medium"
               className="modal modal--md"
               data-modal="modal-medium"
+              aria-labelledby="modal-medium-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-medium-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(94)}</p>
@@ -265,12 +305,21 @@ class Modals extends Component {
               id="modal-large"
               className="modal modal--lg"
               data-modal="modal-large"
+              aria-labelledby="modal-large-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-large-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(94)}</p>
@@ -295,12 +344,21 @@ class Modals extends Component {
               id="modal-extra-large"
               className="modal modal--xl"
               data-modal="modal-extra-large"
+              aria-labelledby="modal-extra-large-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-extra-large-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(94)}</p>
@@ -325,12 +383,21 @@ class Modals extends Component {
               id="modal-full"
               className="modal modal--full"
               data-modal="modal-full"
+              aria-labelledby="modal-full-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3 className="modal__title" id="modal-full-label">
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(94)}</p>
@@ -366,12 +433,24 @@ class Modals extends Component {
               id="modal-vertically-centered"
               className="modal modal--valign-center"
               data-modal="modal-vertically-centered"
+              aria-labelledby="modal-vertically-centered-label"
+              role="dialog"
             >
-              <div className="modal__dialog">
-                <span className="modal__close" data-modal-close />
+              <div className="modal__dialog" role="document">
+                <button
+                  type="button"
+                  className="modal__close"
+                  data-modal-close
+                  aria-label="Close"
+                />
                 <div className="modal__content">
                   <header className="modal__header">
-                    <h3 className="modal__title">This is a modal title</h3>
+                    <h3
+                      className="modal__title"
+                      id="modal-vertically-centered-label"
+                    >
+                      This is a modal title
+                    </h3>
                   </header>
                   <section className="modal__body">
                     <p>{lorem(13)}</p>

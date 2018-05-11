@@ -1,7 +1,11 @@
 import React from 'react';
 
-const MenuToggle = ({ toggleMenu }) => (
-  <button className="framework__toggle" onClick={toggleMenu}>
+const MenuToggle = ({ menuIsOpen, toggleMenu }) => (
+  <button
+    className="framework__toggle"
+    onClick={toggleMenu}
+    aria-label={menuIsOpen ? 'Close menu' : 'Open menu'}
+  >
     <div className="framework__toggle-icon">
       <span />
       <span />

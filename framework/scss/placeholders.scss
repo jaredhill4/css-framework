@@ -65,6 +65,8 @@
 // --------------------------------------------------
 
 %close {
+  border: none;
+  cursor: pointer;
   position: absolute;
   display: block;
   top: 0;
@@ -72,7 +74,8 @@
   width: 14px;
   height: 14px;
   opacity: 0.3;
-  cursor: pointer;
+  padding: 0;
+  z-index: 5;
 
   &::before,
   &::after {
@@ -97,4 +100,35 @@
   &:hover {
     opacity: 0.5;
   }
+}
+
+// --------------------------------------------------
+// print visibility
+// --------------------------------------------------
+
+%hidden-print {
+  @media #{$mq-pr} {
+    display: none !important;
+  }
+}
+
+%visible-print {
+  @media #{$mq-pr} {
+    display: none !important;
+  }
+}
+
+// --------------------------------------------------
+// screen reader visibility
+// --------------------------------------------------
+
+%visible-sr {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

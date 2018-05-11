@@ -48,6 +48,8 @@ class Dropdown {
       this.onDropdownClick(event)
     );
 
+    this.reference.attr('aria-expanded', true);
+
     this._popper = new Popper(this.reference, this.dropdown, {
       placement: this.options.position,
       removeOnDestroy: false,
@@ -77,6 +79,8 @@ class Dropdown {
     $(this.dropdown).off(this._getBodyEvent());
 
     this.dropdown.removeClass(ClassName.VISIBLE);
+
+    this.reference.attr('aria-expanded', false);
 
     setTimeout(() => {
       this.dropdown.hide();

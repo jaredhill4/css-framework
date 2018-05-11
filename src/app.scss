@@ -197,7 +197,7 @@ body {
 }
 
 .framework__backdrop {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(#000, 0);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -208,7 +208,7 @@ body {
   z-index: 990;
 
   .html--menu-open & {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(#000, 0.7);
     visibility: visible;
   }
 }

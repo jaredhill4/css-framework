@@ -26,10 +26,12 @@ export default class Notices extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <div className="notice u--margin-bottom-0">{lorem(101)}</div>
+            <div className="notice u--margin-bottom-0" role="alert">
+              {lorem(101)}
+            </div>
           </ExampleView>
           <Code language="html">
-            {`<div class="notice">
+            {`<div class="notice" role="alert">
     ...
 </div>`}
           </Code>
@@ -41,24 +43,33 @@ export default class Notices extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <div className="notice notice--red">{lorem(90)}</div>
-            <div className="notice notice--yellow">{lorem(91)}</div>
-            <div className="notice notice--green">{lorem(92)}</div>
-            <div className="notice notice--blue u--margin-bottom-0">
+            <div className="notice notice--red" role="alert">
+              {lorem(90)}
+            </div>
+            <div className="notice notice--yellow" role="alert">
+              {lorem(91)}
+            </div>
+            <div className="notice notice--green" role="alert">
+              {lorem(92)}
+            </div>
+            <div
+              className="notice notice--blue u--margin-bottom-0"
+              role="alert"
+            >
               {lorem(93)}
             </div>
           </ExampleView>
           <Code language="html">
-            {`<div class="notice notice--red">
+            {`<div class="notice notice--red" role="alert">
     ...
 </div>
-<div class="notice notice--yellow">
+<div class="notice notice--yellow" role="alert">
     ...
 </div>
-<div class="notice notice--green">
+<div class="notice notice--green" role="alert">
     ...
 </div>
-<div class="notice notice--blue">
+<div class="notice notice--blue" role="alert">
     ...
 </div>`}
           </Code>
@@ -70,7 +81,7 @@ export default class Notices extends Component {
         </Description>
         <Example>
           <ExampleView>
-            <div className="notice notice--green">
+            <div className="notice notice--green" role="alert">
               <h5 className="notice__title">
                 This is a title for a success notice
               </h5>
@@ -81,11 +92,11 @@ export default class Notices extends Component {
             </div>
           </ExampleView>
           <Code language="html">
-            {`<div class="notice notice--green">
+            {`<div class="notice notice--green" role="alert">
     <h5 class="notice__title">...</h5>
     <p>...</p>
 </div>
-<div class="notice notice--red">
+<div class="notice notice--red" role="alert">
     <span class="notice__title">...</span> ...
 </div>`}
           </Code>
@@ -95,8 +106,8 @@ export default class Notices extends Component {
           <p>
             To make a notice dismissible add the attribute{' '}
             <code>[data-notice-dismissible]</code> and prepend the notice with a{' '}
-            <code>span.notice__close</code> or <code>a.notice__close</code> with
-            the attribute <code>[data-notice-close]</code>.
+            <code>button.notice__close</code> with the attribute{' '}
+            <code>[data-notice-close]</code>.
           </p>
           <p>
             In order to use dismissible notices you must import the library and
@@ -107,16 +118,22 @@ export default class Notices extends Component {
           <ExampleView>
             <div
               className="notice notice--blue u--margin-bottom-0"
+              role="alert"
               data-notice-dismissible
             >
-              <span className="notice__close" data-notice-close />
+              <button
+                type="button"
+                className="notice__close"
+                data-notice-close
+                aria-label="Close"
+              />
               <h5 className="notice__title">This is a dismissible notice</h5>
               <p>{lorem(61)}</p>
             </div>
           </ExampleView>
           <Code language="html">
-            {`<div class="notice notice--blue" data-notice-dismissible>
-    <span class="notice__close" data-notice-close></span>
+            {`<div class="notice notice--blue" role="alert" data-notice-dismissible>
+    <button type="button" className="notice__close" data-notice-close aria-label="Close"></button>
     <h5 class="notice__title">...</h5>
     <p>...</p>
 </div>`}

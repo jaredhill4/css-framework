@@ -70,8 +70,8 @@ html.html--modal-visible {
 }
 
 .modal--visible {
-  visibility: visible;
   background: rgba(#000, 0.7);
+  visibility: visible;
 }
 
 .modal--valign-center {
@@ -158,7 +158,6 @@ html.html--modal-visible {
 
 .modal__close {
   @extend %close;
-  z-index: 5;
-  top: $modal-dialog-padding / 2;
   right: $modal-dialog-padding / 2;
+  top: $modal-dialog-padding / 2;
 }
