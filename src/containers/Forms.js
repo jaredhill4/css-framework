@@ -649,5 +649,74 @@ export default () => (
 </form>`}
       </Code>
     </Example>
+    <SubTitle id="forms-validation">Validation</SubTitle>
+    <Description>
+      Form fields can be highlighted with validation state classes with <code>.form__field--*</code>. Available modifiers are <code>success</code>, <code>error</code>, <code>warning</code>, and <code>info</code>.
+    </Description>
+    <Example>
+      <ExampleView>
+        <div className="form__field form__field--success">
+          <label className="form__label">Success</label>
+          <input
+            type="text"
+            className="form__input"
+            placeholder="Success"
+          />
+          <small className="form__help">Form field with success.</small>
+        </div>
+        <div className="form__field form__field--error">
+          <label className="form__label">Error</label>
+          <input
+            type="text"
+            className="form__input"
+            placeholder="Info"
+          />
+          <small className="form__help">Form field with error.</small>
+        </div>
+        <div className="form__field form__field--warning">
+          <label className="form__label">Warning</label>
+          <input
+            type="text"
+            className="form__input"
+            placeholder="Warning"
+          />
+          <small className="form__help">Form field with warning.</small>
+        </div>
+        <div className="form__field form__field--info">
+          <label className="form__label">Info</label>
+          <input
+            type="text"
+            className="form__input"
+            placeholder="Info"
+          />
+          <small className="form__help">Form field with info.</small>
+        </div>
+      </ExampleView>
+      <Code language="html">
+        {`<div class="form__field form__field--success">
+    <label class="form__label">...</label>
+    <input type="text" class="form__input" />
+    <small class="form__help">...</small>
+</div>
+
+<div class="form__field form__field--error">
+    <label class="form__label">...</label>
+    <input type="text" class="form__input" />
+    <small class="form__help">...</small>
+</div>
+
+<div class="form__field form__field--warning">
+    <label class="form__label">...</label>
+    <input type="text" class="form__input" />
+    <small class="form__help">...</small>
+</div>
+
+<div class="form__field form__field--info">
+    <label class="form__label">...</label>
+    <input type="text" class="form__input" />
+    <small class="form__help">...</small>
+</div>`}
+      </Code>
+    </Example>
   </Section>
 );

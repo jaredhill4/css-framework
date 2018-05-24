@@ -25,6 +25,63 @@ $form-input-group-color: $form-input-color;
 $form-input-group-background-color: $form-input-border-color;
 
 // --------------------------------------------------
+// mixins
+// --------------------------------------------------
+
+@mixin form__field--validation($name, $color) {
+  .form__field--#{$name} {
+    color: $color;
+
+    .form__input,
+    .form__select > select {
+      border-color: $color;
+
+      &:focus {
+        @include focus($color);
+      }
+    }
+
+    .form__checkbox,
+    .form__radio {
+      input[type='checkbox'],
+      input[type='radio'] {
+
+        &:focus {
+          @include focus($color);
+          border-color: $color;
+        }
+
+        &:checked {
+          border-color: $color;
+        }
+      }
+    }
+
+    .form__checkbox {
+      input[type='checkbox'] {
+
+        &:checked {
+          background-color: $color;
+        }
+      }
+    }
+
+    .form__radio {
+      input[type='radio'] {
+
+        &::before {
+          background: $color;
+        }
+
+        &:checked {
+          border-color: $color;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
 // form
 // --------------------------------------------------
 
@@ -483,3 +540,12 @@ legend {
 .form__input + .form__input-group-addon:not(:first-child) {
   border-left: 0;
 }
+
+// --------------------------------------------------
+// validation
+// --------------------------------------------------
+
+@include form__field--validation('success', color('green'));
+@include form__field--validation('error', color('red'));
+@include form__field--validation('warning', color('yellow'));
+@include form__field--validation('info', color('blue'));
