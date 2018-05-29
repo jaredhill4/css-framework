@@ -437,7 +437,7 @@ export default class Toggles extends Component {
             </tr>
           </tbody>
         </table>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`// show toggle target
 $('[data-toggle-target="simple-toggle-element"]').trigger('toggle:show');
 // show all targets in toggle group
@@ -479,7 +479,7 @@ $('[data-toggle-group="basic-accordion"]').trigger('toggle:groupShowAll');`}
             </tr>
           </tbody>
         </table>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`$('[data-toggle-target="simple-toggle-element"]').on('toggle:beforeShow', (event) => {
   // do something...
 }); `}

@@ -68,7 +68,7 @@ export default class Carousels extends Component {
           this example, we will use a data attribute selector, with the value
           "sample-carousel."
         </Description>
-        <Code language="html">
+        <Code language="html" collapsible={false}>
           {`<div class="carousel" data-carousel="sample-carousel">
     <div class="carousel__slide">
         Slide 1
@@ -95,7 +95,7 @@ export default class Carousels extends Component {
             first argument) and assign it to a variable, like so:
           </p>
         </Description>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');`}
         </Code>
         <Description>
@@ -130,7 +130,7 @@ export default class Carousels extends Component {
             so:
           </p>
         </Description>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`const sampleCarouselSettings = {
   infinite: false,     // prevent slides from looping
   autoplay: true,      // enable automatic slide progression
@@ -173,7 +173,7 @@ const sampleCarousel = carousel('[data-carousel="sample-carousel"]', sampleCarou
             second argument, like so:
           </p>
         </Description>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
 
 sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
@@ -362,7 +362,7 @@ sampleCarousel.on('afterChange', (event, slick, currentSlide) => {
             </tr>
           </tbody>
         </table>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`const sampleCarousel = carousel('[data-carousel="sample-carousel"]');
 // Set the autoplaySpeed to 3 seconds
 sampleCarousel.setOption('autoplaySpeed', 3000);

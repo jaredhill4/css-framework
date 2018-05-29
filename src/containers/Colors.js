@@ -124,7 +124,7 @@ export default () => (
         version of the base color.
       </p>
     </Description>
-    <Code language="scss">
+    <Code language="scss" collapsible={false}>
       {`$colors: (
   'blue': ('name': 'Blue', 'base': #6772e5, 'hover': darken(#6772e5, 15%)),
   'green': ('name': 'green', 'base': #3ecf8e, 'hover': darken(#3ecf8e, 15%)),
@@ -142,7 +142,7 @@ export default () => (
         example of what this would look like:
       </p>
     </Description>
-    <Code language="scss">
+    <Code language="scss" collapsible={false}>
       {`$colors: (
   // other colors...
   'burnt-orange': ('name': 'Burnt Orange', 'base': #e87420, 'hover': darken(#e87420, 8%))
@@ -154,7 +154,10 @@ export default () => (
       component. For example, you could now use a "burnt orange" button, like
       this:
     </Description>
-    <Code>{`<button class="btn btn--burnt-orange">...</button>`}</Code>
+    <Code
+      language="html"
+      collapsible={false}
+    >{`<button class="btn btn--burnt-orange">...</button>`}</Code>
 
     <SubTitle id="colors-using">Using Colors</SubTitle>
     <Description>
@@ -164,7 +167,7 @@ export default () => (
       argument. By default, it will return the "base" value of a given color. To
       get the "hover" variant, simply provide "hover" as the second argument.
     </Description>
-    <Code>
+    <Code language="scss" collapsible={false}>
       {`.foo {
   color: color('blue');
 }`}

@@ -332,11 +332,6 @@ body {
   padding: rem(20) !important;
   line-height: $line-height-base;
   border-radius: $global-border-radius !important;
-
-  &:last-child,
-  & > :last-child {
-    margin-bottom: 0;
-  }
 }
 
 .example__view {
@@ -345,6 +340,43 @@ body {
 
 .example__view + .framework__code {
   border-radius: 0 !important;
+}
+
+.example__code {
+  margin: 0;
+  padding: 0;
+}
+
+.example__code--collapsed {
+  height: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.example__code-toggle {
+  appearance: none;
+  background-color: color('gray-lightest');
+  border: none;
+  bottom: 0;
+  color: $font-color-base;
+  cursor: pointer;
+  font-family: $font-family-monospace;
+  font-size: $font-size-sm;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: $global-transition-fast;
+  width: 100%;
+  z-index: 1;
+
+  &:hover {
+    background-color: color('gray-lightest', 'hover');
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .placeholder {

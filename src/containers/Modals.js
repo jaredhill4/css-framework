@@ -149,7 +149,7 @@ class Modals extends Component {
             necessary.
           </p>
         </Description>
-        <Code language="html">
+        <Code language="html" collapsible={false}>
           {`<!-- show modal -->
 <a href="#sample-modal" data-modal-show="sample-modal">...</a>
 <!-- hide modal -->
@@ -499,7 +499,7 @@ class Modals extends Component {
             </tr>
           </tbody>
         </table>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`// show modal
 $('[data-modal="sample-modal"]').trigger('modal:show');
 // hide modal
@@ -542,7 +542,7 @@ $('[data-modal="sample-modal"]').trigger('modal:toggle');`}
             </tr>
           </tbody>
         </table>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`$('[data-modal="sample-modal"]').on('modal:beforeShow', (event) => {
   // do something...
 }); `}

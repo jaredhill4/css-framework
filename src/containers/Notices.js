@@ -157,7 +157,7 @@ export default class Notices extends Component {
             </tr>
           </tbody>
         </table>
-        <Code language="javascript">
+        <Code language="javascript" collapsible={false}>
           {`$('#sample-notice').on('notice:afterHide', event => {
   // do something...
 }); `}
