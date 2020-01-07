@@ -3,12 +3,7 @@
  * will not be part of the actual framework and are only used for
  * previewing the framework components.
  */
-
-@import '../framework/scss/functions.scss';
-@import '../framework/scss/colors.scss';
-@import '../framework/scss/variables.scss';
-@import '../framework/scss/mixins.scss';
-@import '../framework/scss/placeholders.scss';
+@import './framework/scss/index.scss';
 
 body {
   background-color: color('white');

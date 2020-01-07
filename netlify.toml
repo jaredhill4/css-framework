@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/"
+  publish = "build/"
 
 [context.production]
   command = "npm run build"

@@ -1,4 +1,4 @@
-import loremIpsum from 'lorem-ipsum';
+import { loremIpsum } from 'lorem-ipsum';
 import random from 'seedable-random';
 
 export default (seed = 0) => {
@@ -11,7 +11,7 @@ export default (seed = 0) => {
     sentenceLowerBound: 5,
     sentenceUpperBound: 15,
     random,
-    units: 'paragraphs',
+    units: 'paragraphs'
   };
   return loremIpsum(options);
 };

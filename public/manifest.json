@@ -1,0 +1,15 @@
+{
+  "short_name": "WL CSS Framework",
+  "name": "White Lion CSS Framework",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2bb1b6",
+  "background_color": "#ffffff"
+}

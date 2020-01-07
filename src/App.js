@@ -1,59 +1,48 @@
-import React, { Fragment, PureComponent } from 'react';
-import { Head, Router, withSiteData } from 'react-static';
-import { hot } from 'react-hot-loader';
-import Routes from 'react-static-routes';
-import $ from 'jquery';
+// @flow
 
-import Menu from './components/Menu';
-import MenuToggle from './components/MenuToggle';
+// Vendors
+import React, { useEffect, useState, Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import routes from './config/routes';
 
+// Components
+import { Menu, MenuToggle, Page } from './components';
+
+// Styles
 import './app.scss';
-import '../framework/scss/index.scss';
 
-class App extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = { menuOpen: false };
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
+const App = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  componentDidMount() {
-    this.sideEffects();
-  }
-
-  componentDidUpdate() {
-    this.sideEffects();
-  }
-
-  render() {
-    const { menuOpen } = this.state;
-    const { title } = this.props;
-    return (
-      <Router>
-        <Fragment>
-          <Head>
-            <title>{title}</title>
-          </Head>
-          <MenuToggle toggleMenu={this.toggleMenu} menuIsOpen={menuOpen} />
-          <Menu toggleMenu={this.toggleMenu} menuIsOpen={menuOpen} />
-          <Routes />
-          <div className="framework__backdrop" onClick={this.toggleMenu} />
-        </Fragment>
-      </Router>
-    );
-  }
-
-  sideEffects() {
-    if (this.state.menuOpen) {
-      $('html').addClass('html--menu-open');
-    } else {
-      $('html').removeClass('html--menu-open');
+  useEffect(() => {
+    const root = document.documentElement;
+    if (root) {
+      if (menuOpen) root.classList.add('html--menu-open');
+      else root.classList.remove('html--menu-open');
     }
-  }
+  }, [menuOpen]);
 
-  toggleMenu() {
-    this.setState({ menuOpen: !this.state.menuOpen });
-  }
-}
+  return (
+    <Router>
+      <>
+        <MenuToggle toggleMenu={toggleMenu} menuIsOpen={menuOpen} />
+        <Menu toggleMenu={toggleMenu} menuIsOpen={menuOpen} />
+        <Switch>
+          {routes.map(({ path, exact, name, component: RouteComponent }) => (
+            <Route key={path} exact={exact} path={path}>
+              <Suspense fallback={<div>Loading...</div>}>
+                <Page title={name}>
+                  <RouteComponent />
+                </Page>
+              </Suspense>
+            </Route>
+          ))}
+        </Switch>
+        <div className="framework__backdrop" onClick={toggleMenu} />
+      </>
+    </Router>
+  );
+};
 
-export default hot(module)(withSiteData(App));
+export default App;

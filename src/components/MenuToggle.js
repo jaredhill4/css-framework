@@ -1,6 +1,13 @@
+// @flow
+
 import React from 'react';
 
-const MenuToggle = ({ menuIsOpen, toggleMenu }) => (
+type Props = {
+  menuIsOpen: boolean,
+  toggleMenu: Function
+};
+
+const MenuToggle = ({ menuIsOpen, toggleMenu }: Props) => (
   <button
     className="framework__toggle"
     onClick={toggleMenu}
