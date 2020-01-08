@@ -28,20 +28,20 @@ export default () => (
         <span className="u--display-inline-block u--padding-5 u--color-black">
           Black
         </span>
-        <span className="u--display-inline-block u--padding-5 u--color-purple">
-          Purple
-        </span>
-        <span className="u--display-inline-block u--padding-5 u--color-red">
-          Red
-        </span>
-        <span className="u--display-inline-block u--padding-5 u--color-green">
-          Green
+        <span className="u--display-inline-block u--padding-5 u--color-primary">
+          Primary
         </span>
         <span className="u--display-inline-block u--padding-5 u--color-blue">
           Blue
         </span>
+        <span className="u--display-inline-block u--padding-5 u--color-green">
+          Green
+        </span>
         <span className="u--display-inline-block u--padding-5 u--color-yellow">
           Yellow
+        </span>
+        <span className="u--display-inline-block u--padding-5 u--color-red">
+          Red
         </span>
         <br />
         <span className="u--display-inline-block u--padding-5 u--color-gray-darkest">
@@ -69,11 +69,11 @@ export default () => (
       <Code language="html">
         {`<span class="u--color-white">...</span>
 <span class="u--color-black">...</span>
-<span class="u--color-purple">...</span>
-<span class="u--color-red">...</span>
-<span class="u--color-green">...</span>
+<span class="u--color-primary">...</span>
 <span class="u--color-blue">...</span>
+<span class="u--color-green">...</span>
 <span class="u--color-yellow">...</span>
+<span class="u--color-red">...</span>
 <span class="u--color-gray-darkest">...</span>
 <span class="u--color-gray-darker">...</span>
 <span class="u--color-gray-dark">...</span>
@@ -103,21 +103,9 @@ export default () => (
         </Link>
         <Link
           to="/utilities"
-          className="u--display-inline-block u--padding-5 u--color-purple"
+          className="u--display-inline-block u--padding-5 u--color-primary"
         >
-          Purple
-        </Link>
-        <Link
-          to="/utilities"
-          className="u--display-inline-block u--padding-5 u--color-red"
-        >
-          Red
-        </Link>
-        <Link
-          to="/utilities"
-          className="u--display-inline-block u--padding-5 u--color-green"
-        >
-          Green
+          Primary
         </Link>
         <Link
           to="/utilities"
@@ -127,9 +115,21 @@ export default () => (
         </Link>
         <Link
           to="/utilities"
+          className="u--display-inline-block u--padding-5 u--color-green"
+        >
+          Green
+        </Link>
+        <Link
+          to="/utilities"
           className="u--display-inline-block u--padding-5 u--color-yellow"
         >
           Yellow
+        </Link>
+        <Link
+          to="/utilities"
+          className="u--display-inline-block u--padding-5 u--color-red"
+        >
+          Red
         </Link>
         <br />
         <Link
@@ -178,11 +178,11 @@ export default () => (
       <Code language="html">
         {`<a href="#" class="u--color-white">...</a>
 <a href="#" class="u--color-black">...</a>
-<a href="#" class="u--color-purple">...</a>
-<a href="#" class="u--color-red">...</a>
-<a href="#" class="u--color-green">...</a>
+<a href="#" class="u--color-primary">...</a>
 <a href="#" class="u--color-blue">...</a>
+<a href="#" class="u--color-green">...</a>
 <a href="#" class="u--color-yellow">...</a>
+<a href="#" class="u--color-red">...</a>
 <a href="#" class="u--color-gray-darkest">...</a>
 <a href="#" class="u--color-gray-darker">...</a>
 <a href="#" class="u--color-gray-dark">...</a>
@@ -200,6 +200,21 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-primary">
+          Primary
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-blue">
+          Blue
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-green">
+          Green
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-yellow">
+          Yellow
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-red">
+          Red
+        </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-white">
           White
         </span>
@@ -224,27 +239,17 @@ export default () => (
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lighter">
           Gray Lighter
         </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--background-color-gray-lightest">
+        <span className="u--display-block u--padding-20 u--background-color-gray-lightest">
           Gray Lightest
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-red">
-          Red
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-yellow">
-          Yellow
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-green">
-          Green
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--color-white u--background-color-blue">
-          Blue
-        </span>
-        <span className="u--display-block u--padding-20 u--color-white u--background-color-purple">
-          Purple
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--background-color-white">...</span>
+        {`<span class="u--background-color-primary">...</span>
+<span class="u--background-color-blue">...</span>
+<span class="u--background-color-green">...</span>
+<span class="u--background-color-yellow">...</span>
+<span class="u--background-color-red">...</span>
+<span class="u--background-color-white">...</span>
 <span class="u--background-color-black">...</span>
 <span class="u--background-color-gray-darkest">...</span>
 <span class="u--background-color-gray-darker">...</span>
@@ -252,11 +257,7 @@ export default () => (
 <span class="u--background-color-gray">...</span>
 <span class="u--background-color-gray-light">...</span>
 <span class="u--background-color-gray-lighter">...</span>
-<span class="u--background-color-gray-lightest">...</span>
-<span class="u--background-color-red">...</span>
-<span class="u--background-color-yellow">...</span>
-<span class="u--background-color-green">...</span>
-<span class="u--background-color-blue">...</span>`}
+<span class="u--background-color-gray-lightest">...</span>`}
       </Code>
     </Example>
 
@@ -278,6 +279,21 @@ export default () => (
     </Description>
     <Example>
       <ExampleView>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-primary">
+          .u--border-color-primary
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-blue">
+          .u--border-color-blue
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-green">
+          .u--border-color-green
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-yellow">
+          .u--border-color-yellow
+        </span>
+        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-red">
+          .u--border-color-red
+        </span>
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-white">
           .u--border-color-white
         </span>
@@ -302,33 +318,25 @@ export default () => (
         <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-lighter">
           .u--border-color-gray-lighter
         </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-gray-lightest">
+        <span className="u--display-block u--padding-20 u--border u--border-color-gray-lightest">
           .u--border-color-gray-lightest
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-red">
-          .u--border-color-red
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-yellow">
-          .u--border-color-yellow
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-green">
-          .u--border-color-green
-        </span>
-        <span className="u--display-block u--padding-20 u--margin-bottom-15 u--border u--border-color-blue">
-          .u--border-color-blue
-        </span>
-        <span className="u--display-block u--padding-20 u--border u--border-color-purple">
-          .u--border-color-purple
         </span>
       </ExampleView>
       <Code language="html">
-        {`<span class="u--border u--border-color-white">...</span>
-<span class="u--border u--border-color-gray">...</span>
-<span class="u--border u--border-color-black">...</span>
-<span class="u--border u--border-color-red">...</span>
-<span class="u--border u--border-color-yellow">...</span>
+        {`<span class="u--border u--border-color-primary">...</span>
+<span class="u--border u--border-color-blue">...</span>
 <span class="u--border u--border-color-green">...</span>
-<span class="u--border u--border-color-blue">...</span>`}
+<span class="u--border u--border-color-yellow">...</span>
+<span class="u--border u--border-color-red">...</span>
+<span class="u--border u--border-color-white">...</span>
+<span class="u--border u--border-color-black">...</span>
+<span class="u--border u--border-color-gray-darkest">...</span>
+<span class="u--border u--border-color-gray-darker">...</span>
+<span class="u--border u--border-color-gray-dark">...</span>
+<span class="u--border u--border-color-gray">...</span>
+<span class="u--border u--border-color-light">...</span>
+<span class="u--border u--border-color-lighter">...</span>
+<span class="u--border u--border-color-lightest">...</span>`}
       </Code>
     </Example>
     <Description>

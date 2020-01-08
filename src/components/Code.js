@@ -2,15 +2,8 @@
 
 import React, { type Node, useState, useEffect } from 'react';
 import classnames from 'classnames';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-import html from 'react-syntax-highlighter/dist/esm/languages/hljs/xml';
-import scss from 'react-syntax-highlighter/dist/esm/languages/hljs/scss';
-import { ocean as theme } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-SyntaxHighlighter.registerLanguage('html', html);
-SyntaxHighlighter.registerLanguage('javascript', js);
-SyntaxHighlighter.registerLanguage('scss', scss);
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 type Props = {
   children: Node,
@@ -49,7 +42,7 @@ export default ({ collapsible = true, language, children }: Props) => {
           language={language}
           style={theme}
           showLineNumbers={false}
-          customStyle={{ borderRadius: 0, padding: '1rem' }}
+          customStyle={{ borderRadius: 0, padding: '1rem', margin: '0' }}
           className="framework__code"
           aria-hidden="true"
         >

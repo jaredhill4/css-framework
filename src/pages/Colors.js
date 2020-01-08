@@ -25,7 +25,7 @@ export default () => (
     </Description>
     <div className="grid grid--gutter">
       <div className="grid__col-xs-6 grid__col-md-3">
-        <div className="swatch swatch--dual swatch--purple">
+        <div className="swatch swatch--dual swatch--primary">
           <div className="swatch__color" />
         </div>
       </div>

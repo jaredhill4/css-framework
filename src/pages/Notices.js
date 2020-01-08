@@ -57,7 +57,7 @@ export default () => {
             {lorem(93)}
           </div>
           <div
-            className="notice notice--purple u--margin-bottom-0"
+            className="notice notice--primary u--margin-bottom-0"
             role="alert"
           >
             {lorem(94)}
@@ -76,7 +76,7 @@ export default () => {
 <div class="notice notice--blue" role="alert">
     ...
 </div>
-<div class="notice notice--purple" role="alert">
+<div class="notice notice--primary" role="alert">
     ...
 </div>`}
         </Code>
