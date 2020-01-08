@@ -152,9 +152,9 @@ export default () => (
     <section class="card__body">
         ...
     </section>
-    </article>
+</article>
 
-    <article class="card">
+<article class="card">
     <div class="card__media u--embed-responsive">
         <iframe src="..." title="..." allowfullscreen></iframe>
     </div>
