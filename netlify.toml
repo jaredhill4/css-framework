@@ -10,7 +10,7 @@
 [context.branch-deploy]
   command = "npm run stage"
 
-[redirects]
+[[redirects]]
   from = "/*"
   to = "/"
   status = 301
