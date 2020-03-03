@@ -1,5 +1,4 @@
-import $ from 'jquery';
-import Popper from 'popper.js';
+import { createPopper } from '@popperjs/core';
 
 const CLASS_NAMES = {
   VISIBLE: 'dropdown--visible'
@@ -7,10 +6,7 @@ const CLASS_NAMES = {
 
 class Dropdown {
   constructor(element) {
-    const dropdown = $(element).appendTo('body');
-    const reference = $(
-      `[data-dropdown-toggle="${dropdown.data('dropdown')}"]`
-    );
+    document.body.appendChild(element);
 
     // Private
     this._active = false;
@@ -18,50 +14,38 @@ class Dropdown {
     this._popper = null;
 
     // Protected
-    this.html = $('html');
-    this.reference = reference;
-    this.dropdown = dropdown;
+    this.html = document.documentElement;
+    this.dropdown = element;
+    this.dropdownId = this.dropdown.dataset.dropdown;
+    this.references = document.querySelectorAll(
+      `[data-dropdown-toggle="${this.dropdownId}"]`
+    );
     this.options = {
-      position: dropdown.data('dropdownPosition') || 'bottom-start'
+      position: this.dropdown.dataset.dropdownPosition || 'bottom-start'
     };
+
+    this.onBodyClick = this.onBodyClick.bind(this);
+    this.onDropdownClick = this.onDropdownClick.bind(this);
 
     this._setListeners();
   }
 
   _setListeners() {
-    this.reference.on('click', event => this.toggle(event));
-  }
-
-  _getBodyEvent() {
-    return `click.dropdown_${this.reference.data('dropdown-toggle')}`;
+    this.references.forEach(reference =>
+      reference.addEventListener('click', event => this.toggle(event))
+    );
   }
 
   isActive() {
-    return this.dropdown.hasClass(CLASS_NAMES.VISIBLE);
-  }
-
-  show(event) {
-    event.preventDefault();
-
-    $(document).on(this._getBodyEvent(), event => this.onBodyClick(event));
-    $(this.dropdown).on(this._getBodyEvent(), event =>
-      this.onDropdownClick(event)
-    );
-
-    this.reference.attr('aria-expanded', true);
-
-    this._popper = new Popper(this.reference, this.dropdown, {
-      placement: this.options.position,
-      removeOnDestroy: false
-    });
-
-    this.dropdown.show(0, () => {
-      this.dropdown.addClass(CLASS_NAMES.VISIBLE);
-    });
+    return this.dropdown.classList.contains(CLASS_NAMES.VISIBLE);
   }
 
   onBodyClick(event) {
-    if (event.target !== this.reference[0]) {
+    // Convert NodeList to array
+    let references = [];
+    this.references.forEach(reference => references.push(reference));
+
+    if (!references.includes(event.target)) {
       this.hide();
     }
   }
@@ -70,20 +54,48 @@ class Dropdown {
     event.stopPropagation();
   }
 
+  show(event) {
+    event.preventDefault();
+
+    this.html.addEventListener('click', this.onBodyClick);
+    this.dropdown.addEventListener('click', this.onDropdownClick);
+
+    this.references.forEach(reference => {
+      reference.setAttribute('aria-expanded', true);
+
+      this._popper = createPopper(reference, this.dropdown, {
+        placement: this.options.position,
+        strategy: 'absolute',
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 4]
+            }
+          }
+        ]
+      });
+    });
+
+    this.dropdown.style.display = 'block';
+    setTimeout(() => this.dropdown.classList.add(CLASS_NAMES.VISIBLE));
+  }
+
   hide(event = null) {
     if (event) {
       event.preventDefault();
     }
 
-    $(document).off(this._getBodyEvent());
-    $(this.dropdown).off(this._getBodyEvent());
+    this.html.removeEventListener('click', this.onBodyClick);
+    this.dropdown.removeEventListener('click', this.onDropdownClick);
+    this.dropdown.classList.remove(CLASS_NAMES.VISIBLE);
 
-    this.dropdown.removeClass(CLASS_NAMES.VISIBLE);
-
-    this.reference.attr('aria-expanded', false);
+    this.references.forEach(reference =>
+      reference.setAttribute('aria-expanded', false)
+    );
 
     setTimeout(() => {
-      this.dropdown.hide();
+      this.dropdown.style.display = 'none';
       this._popper.destroy();
     }, 250);
   }
@@ -97,10 +109,7 @@ class Dropdown {
   }
 }
 
-const dropdown = selector => {
-  $(selector).each((index, element) => {
-    new Dropdown(element);
-  });
-};
+const dropdown = selector =>
+  document.querySelectorAll(selector).forEach(element => new Dropdown(element));
 
 export default dropdown;

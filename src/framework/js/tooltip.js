@@ -1,5 +1,4 @@
-import $ from 'jquery';
-import Popper from 'popper.js';
+import { createPopper } from '@popperjs/core';
 
 const CLASS_NAMES = {
   VISIBLE: 'tooltip--visible'
@@ -14,12 +13,12 @@ class Tooltip {
     this._tooltip = null;
 
     // Protected
-    this.reference = $(element);
+    this.reference = element;
     this.options = {
-      delay: this.reference.data('tooltip-delay') || 0,
+      delay: this.reference.dataset.tooltipDelay || 0,
       placement:
-        typeof this.reference.data('tooltip') === 'string'
-          ? this.reference.data('tooltip')
+        typeof this.reference.dataset.tooltip === 'string'
+          ? this.reference.dataset.tooltip
           : 'top',
       transition: 250 // This should match the CSS transition duration
     };
@@ -29,19 +28,20 @@ class Tooltip {
   }
 
   _moveTitle() {
-    this.reference
-      .attr('data-original-title', this.reference.attr('title'))
-      .attr('title', '');
+    this.reference.setAttribute(
+      'data-original-title',
+      this.reference.getAttribute('title')
+    );
+    this.reference.setAttribute('title', '');
   }
 
   _setListeners() {
-    this.reference
-      .on('mouseenter', event => this.show(event))
-      .on('mouseleave', event => this.hide(event));
+    this.reference.addEventListener('mouseenter', event => this.show(event));
+    this.reference.addEventListener('mouseleave', event => this.hide(event));
   }
 
   getTitle() {
-    return this.reference.attr('data-original-title') || '';
+    return this.reference.getAttribute('data-original-title') || '';
   }
 
   isActive() {
@@ -53,17 +53,26 @@ class Tooltip {
       clearTimeout(this._hideTimeout);
 
       if (!this.isActive()) {
-        this._tooltip = $(`<div class="tooltip">${this.getTitle()}</div>`);
+        this._tooltip = document.createElement('div');
+        this._tooltip.classList.add('tooltip');
+        this._tooltip.innerText = this.getTitle();
+        document.body.appendChild(this._tooltip);
 
-        $('body').append(this._tooltip);
-
-        this._popper = new Popper(this.reference, this._tooltip, {
+        this._popper = createPopper(this.reference, this._tooltip, {
           placement: this.options.placement,
-          removeOnDestroy: false
+          strategy: 'absolute',
+          modifiers: [
+            {
+              name: 'offset',
+              options: {
+                offset: [0, 5]
+              }
+            }
+          ]
         });
       }
 
-      this._tooltip.addClass(CLASS_NAMES.VISIBLE);
+      this._tooltip.classList.add(CLASS_NAMES.VISIBLE);
     }, this.options.delay);
   }
 
@@ -71,11 +80,11 @@ class Tooltip {
     clearTimeout(this._showTimeout);
 
     if (this.isActive()) {
-      this._tooltip.removeClass(CLASS_NAMES.VISIBLE);
+      this._tooltip.classList.remove(CLASS_NAMES.VISIBLE);
 
       this._hideTimeout = setTimeout(() => {
         this._popper.destroy();
-        this._tooltip.remove();
+        document.body.removeChild(this._tooltip);
         this._popper = null;
         this._tooltip = null;
       }, this.options.transition);
@@ -83,10 +92,7 @@ class Tooltip {
   }
 }
 
-const tooltip = selector => {
-  $(selector).each((index, element) => {
-    new Tooltip(element);
-  });
-};
+const tooltip = selector =>
+  document.querySelectorAll(selector).forEach(element => new Tooltip(element));
 
 export default tooltip;
