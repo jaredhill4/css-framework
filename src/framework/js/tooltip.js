@@ -84,7 +84,7 @@ class Tooltip {
 
       this._hideTimeout = setTimeout(() => {
         this._popper.destroy();
-        document.body.removeChild(this._tooltip);
+        this._tooltip.parentNode.removeChild(this._tooltip);
         this._popper = null;
         this._tooltip = null;
       }, this.options.transition);

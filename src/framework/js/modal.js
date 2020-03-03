@@ -45,23 +45,23 @@ class Modal {
     this.modalDialog.addEventListener('click', event =>
       event.stopPropagation()
     );
+    this.modalClose.forEach(element =>
+      element.addEventListener('click', event => this.hide(event))
+    );
     this.modalShow.forEach(element =>
       element.addEventListener('click', event => this.show(event))
     );
     this.modalHide.forEach(element =>
       element.addEventListener('click', event => this.hide(event))
     );
-    this.modalClose.forEach(element =>
-      element.addEventListener('click', event => this.hide(event))
-    );
   }
 
   _getTransitionDuration() {
     const modalTransitionDuration = cssTimeToMilliseconds(
-      this.modal.style.transitionDuration
+      getComputedStyle(this.modal).transitionDuration
     );
     const modalDialogTransitionDuration = cssTimeToMilliseconds(
-      this.modalDialog.style.transitionDuration
+      getComputedStyle(this.modalDialog).transitionDuration
     );
     return Math.max(modalTransitionDuration, modalDialogTransitionDuration);
   }
